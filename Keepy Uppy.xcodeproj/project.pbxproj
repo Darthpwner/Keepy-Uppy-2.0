@@ -21,6 +21,9 @@
 		6B6897421B98B62800C5069E /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B68973D1B98B62800C5069E /* gameover.mp3 */; };
 		6B6897461B98B6D100C5069E /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897451B98B6D100C5069E /* hit.mp3 */; };
 		6B6897481B98B96000C5069E /* theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897471B98B96000C5069E /* theme.mp3 */; };
+		6B68974A1B98BA5700C5069E /* Basketball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897491B98BA5700C5069E /* Basketball.jpg */; };
+		6B68974C1B98BA6000C5069E /* Beach Ball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B68974B1B98BA6000C5069E /* Beach Ball.jpg */; };
+		6B68974E1B98BA6700C5069E /* Bowling Ball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B68974D1B98BA6700C5069E /* Bowling Ball.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		6B68973D1B98B62800C5069E /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameover.mp3; sourceTree = "<group>"; };
 		6B6897451B98B6D100C5069E /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
 		6B6897471B98B96000C5069E /* theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = theme.mp3; sourceTree = "<group>"; };
+		6B6897491B98BA5700C5069E /* Basketball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Basketball.jpg; sourceTree = "<group>"; };
+		6B68974B1B98BA6000C5069E /* Beach Ball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Beach Ball.jpg"; sourceTree = "<group>"; };
+		6B68974D1B98BA6700C5069E /* Bowling Ball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bowling Ball.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +114,11 @@
 		6B68970E1B98B2CA00C5069E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6B6897491B98BA5700C5069E /* Basketball.jpg */,
 				6B6897381B98B4E600C5069E /* Basketball Background.jpg */,
+				6B68974B1B98BA6000C5069E /* Beach Ball.jpg */,
 				6B6897341B98B4D300C5069E /* Beach Background.jpg */,
+				6B68974D1B98BA6700C5069E /* Bowling Ball.jpg */,
 				6B6897361B98B4E000C5069E /* Bowling Alley.jpg */,
 				6B68970F1B98B2CA00C5069E /* Info.plist */,
 			);
@@ -226,9 +235,12 @@
 			files = (
 				6B68971F1B98B2CA00C5069E /* LaunchScreen.xib in Resources */,
 				6B6897461B98B6D100C5069E /* hit.mp3 in Resources */,
+				6B68974E1B98BA6700C5069E /* Bowling Ball.jpg in Resources */,
 				6B68971C1B98B2CA00C5069E /* Images.xcassets in Resources */,
+				6B68974C1B98BA6000C5069E /* Beach Ball.jpg in Resources */,
 				6B6897481B98B96000C5069E /* theme.mp3 in Resources */,
 				6B6897351B98B4D300C5069E /* Beach Background.jpg in Resources */,
+				6B68974A1B98BA5700C5069E /* Basketball.jpg in Resources */,
 				6B6897411B98B62800C5069E /* drop.mp3 in Resources */,
 				6B6897391B98B4E600C5069E /* Basketball Background.jpg in Resources */,
 				6B6897371B98B4E000C5069E /* Bowling Alley.jpg in Resources */,
