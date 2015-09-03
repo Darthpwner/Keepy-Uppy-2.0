@@ -22,6 +22,12 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Load Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="liT-0K-ib2">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
+                                        <rect key="frame" x="14" y="65" width="572" height="111"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
+                                        <color key="textColor" red="0.93532707216273403" green="1" blue="0.18536318490964154" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
