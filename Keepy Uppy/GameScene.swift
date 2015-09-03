@@ -20,10 +20,15 @@ class GameScene: SKScene {
         
         anchorPoint = CGPoint(x: 0, y: 1.0)
         
-        let background = SKSpriteNode(imageNamed: "background")
+        let background = SKSpriteNode(imageNamed: "Beach Background.jpg")
         background.position = CGPoint(x: 0, y: 0)
         background.anchorPoint = CGPoint(x: 0, y: 1.0)
         addChild(background)
+    runAction(SKAction.repeatActionForever(SKAction.playSoundFileNamed("theme.mp3", waitForCompletion: true)))
+    }
+    
+    func playSound(sound: String) {
+        runAction(SKAction.playSoundFileNamed(sound, waitForCompletion: false))
     }
     
     override func update(currentTime: CFTimeInterval) {
