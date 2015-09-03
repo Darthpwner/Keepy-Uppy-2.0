@@ -15,8 +15,6 @@
 		6B68971F1B98B2CA00C5069E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B68971D1B98B2CA00C5069E /* LaunchScreen.xib */; };
 		6B68972B1B98B2CA00C5069E /* Keepy_UppyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68972A1B98B2CA00C5069E /* Keepy_UppyTests.swift */; };
 		6B6897351B98B4D300C5069E /* Beach Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897341B98B4D300C5069E /* Beach Background.jpg */; };
-		6B6897371B98B4E000C5069E /* Bowling Alley.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897361B98B4E000C5069E /* Bowling Alley.jpg */; };
-		6B6897391B98B4E600C5069E /* Basketball Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897381B98B4E600C5069E /* Basketball Background.jpg */; };
 		6B6897411B98B62800C5069E /* drop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B68973C1B98B62800C5069E /* drop.mp3 */; };
 		6B6897421B98B62800C5069E /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B68973D1B98B62800C5069E /* gameover.mp3 */; };
 		6B6897461B98B6D100C5069E /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897451B98B6D100C5069E /* hit.mp3 */; };
@@ -24,6 +22,8 @@
 		6B68974A1B98BA5700C5069E /* Basketball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897491B98BA5700C5069E /* Basketball.jpg */; };
 		6B68974C1B98BA6000C5069E /* Beach Ball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B68974B1B98BA6000C5069E /* Beach Ball.jpg */; };
 		6B68974E1B98BA6700C5069E /* Bowling Ball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B68974D1B98BA6700C5069E /* Bowling Ball.jpg */; };
+		6B6897501B98BEAB00C5069E /* Forest Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B68974F1B98BEAB00C5069E /* Forest Background.png */; };
+		6B6897541B98BF5A00C5069E /* Desert Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897531B98BF5A00C5069E /* Desert Background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +49,6 @@
 		6B6897291B98B2CA00C5069E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B68972A1B98B2CA00C5069E /* Keepy_UppyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keepy_UppyTests.swift; sourceTree = "<group>"; };
 		6B6897341B98B4D300C5069E /* Beach Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Beach Background.jpg"; sourceTree = "<group>"; };
-		6B6897361B98B4E000C5069E /* Bowling Alley.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bowling Alley.jpg"; sourceTree = "<group>"; };
-		6B6897381B98B4E600C5069E /* Basketball Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Basketball Background.jpg"; sourceTree = "<group>"; };
 		6B68973C1B98B62800C5069E /* drop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drop.mp3; sourceTree = "<group>"; };
 		6B68973D1B98B62800C5069E /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameover.mp3; sourceTree = "<group>"; };
 		6B6897451B98B6D100C5069E /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
@@ -58,6 +56,8 @@
 		6B6897491B98BA5700C5069E /* Basketball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Basketball.jpg; sourceTree = "<group>"; };
 		6B68974B1B98BA6000C5069E /* Beach Ball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Beach Ball.jpg"; sourceTree = "<group>"; };
 		6B68974D1B98BA6700C5069E /* Bowling Ball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bowling Ball.jpg"; sourceTree = "<group>"; };
+		6B68974F1B98BEAB00C5069E /* Forest Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Forest Background.png"; sourceTree = "<group>"; };
+		6B6897531B98BF5A00C5069E /* Desert Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Desert Background.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +115,11 @@
 			isa = PBXGroup;
 			children = (
 				6B6897491B98BA5700C5069E /* Basketball.jpg */,
-				6B6897381B98B4E600C5069E /* Basketball Background.jpg */,
-				6B68974B1B98BA6000C5069E /* Beach Ball.jpg */,
 				6B6897341B98B4D300C5069E /* Beach Background.jpg */,
+				6B68974B1B98BA6000C5069E /* Beach Ball.jpg */,
 				6B68974D1B98BA6700C5069E /* Bowling Ball.jpg */,
-				6B6897361B98B4E000C5069E /* Bowling Alley.jpg */,
+				6B6897531B98BF5A00C5069E /* Desert Background.jpg */,
+				6B68974F1B98BEAB00C5069E /* Forest Background.png */,
 				6B68970F1B98B2CA00C5069E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -145,9 +145,9 @@
 		6B68973A1B98B62800C5069E /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				6B6897451B98B6D100C5069E /* hit.mp3 */,
 				6B68973C1B98B62800C5069E /* drop.mp3 */,
 				6B68973D1B98B62800C5069E /* gameover.mp3 */,
+				6B6897451B98B6D100C5069E /* hit.mp3 */,
 				6B6897471B98B96000C5069E /* theme.mp3 */,
 			);
 			path = Sounds;
@@ -235,15 +235,15 @@
 			files = (
 				6B68971F1B98B2CA00C5069E /* LaunchScreen.xib in Resources */,
 				6B6897461B98B6D100C5069E /* hit.mp3 in Resources */,
+				6B6897541B98BF5A00C5069E /* Desert Background.jpg in Resources */,
 				6B68974E1B98BA6700C5069E /* Bowling Ball.jpg in Resources */,
+				6B6897501B98BEAB00C5069E /* Forest Background.png in Resources */,
 				6B68971C1B98B2CA00C5069E /* Images.xcassets in Resources */,
 				6B68974C1B98BA6000C5069E /* Beach Ball.jpg in Resources */,
 				6B6897481B98B96000C5069E /* theme.mp3 in Resources */,
 				6B6897351B98B4D300C5069E /* Beach Background.jpg in Resources */,
 				6B68974A1B98BA5700C5069E /* Basketball.jpg in Resources */,
 				6B6897411B98B62800C5069E /* drop.mp3 in Resources */,
-				6B6897391B98B4E600C5069E /* Basketball Background.jpg in Resources */,
-				6B6897371B98B4E000C5069E /* Bowling Alley.jpg in Resources */,
 				6B68971A1B98B2CA00C5069E /* Main.storyboard in Resources */,
 				6B6897421B98B62800C5069E /* gameover.mp3 in Resources */,
 			);
