@@ -35,6 +35,16 @@
                                         <color key="textColor" red="0.93532707216273403" green="1" blue="0.18536318490964154" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="START" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="36" translatesAutoresizingMaskIntoConstraints="NO" id="hCh-k7-QZf">
+                                        <rect key="frame" x="14" y="336" width="572" height="111"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="572" id="8ag-OY-9cl"/>
+                                            <constraint firstAttribute="height" constant="111" id="9df-d5-ji2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
+                                        <color key="textColor" red="1" green="0.37926816039538125" blue="0.37506674931186612" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
