@@ -54,10 +54,8 @@ class GameScene: SKScene {
         // this is the most important line, we define the body
         ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width/2)
         setPhysicsAttributes(0.3, restitution: 0.8, mass: 0.5)
-//        ball.physicsBody!.friction = 0.3
-//        ball.physicsBody!.restitution = 0.8
-//        ball.physicsBody!.mass = 0.5
-//        // this will allow the balls to rotate when bouncing off each other
+
+        // this will allow the balls to rotate when bouncing off each other
         ball.physicsBody!.allowsRotation = true
     }
     
