@@ -10,6 +10,8 @@ import SpriteKit
 
 class GameScene: SKScene {
     
+    //Add feature to have more balls later
+    let ball = SKSpriteNode(imageNamed: "Basketball.jpg");
     
     required init(coder aDecoder: NSCoder) {
         fatalError("NSCoder not supported")
@@ -29,6 +31,11 @@ class GameScene: SKScene {
     
     func playSound(sound: String) {
         runAction(SKAction.playSoundFileNamed(sound, waitForCompletion: false))
+    }
+    
+    override func didMoveToView(view: SKView) {        
+        ball.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
+        addChild(ball)
     }
     
     override func update(currentTime: CFTimeInterval) {
