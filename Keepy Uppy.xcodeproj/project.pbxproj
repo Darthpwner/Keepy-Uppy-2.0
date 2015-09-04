@@ -31,6 +31,9 @@
 		6B6897B61B994BF700C5069E /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6897B51B994BF700C5069E /* Ball.swift */; };
 		6B6897B81B995F0800C5069E /* Choose Ball Screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897B71B995F0800C5069E /* Choose Ball Screen.jpg */; };
 		6B6897BC1B99687C00C5069E /* Choose Background Screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897BB1B99687C00C5069E /* Choose Background Screen.jpg */; };
+		6B6897BE1B9970DD00C5069E /* ChooseBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6897BD1B9970DD00C5069E /* ChooseBall.swift */; };
+		6B6897C01B9970E500C5069E /* ChooseBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6897BF1B9970E500C5069E /* ChooseBackground.swift */; };
+		6B6897C21B9970EE00C5069E /* GamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6897C11B9970EE00C5069E /* GamePlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		6B6897B51B994BF700C5069E /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
 		6B6897B71B995F0800C5069E /* Choose Ball Screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Choose Ball Screen.jpg"; sourceTree = "<group>"; };
 		6B6897BB1B99687C00C5069E /* Choose Background Screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Choose Background Screen.jpg"; sourceTree = "<group>"; };
+		6B6897BD1B9970DD00C5069E /* ChooseBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBall.swift; sourceTree = "<group>"; };
+		6B6897BF1B9970E500C5069E /* ChooseBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBackground.swift; sourceTree = "<group>"; };
+		6B6897C11B9970EE00C5069E /* GamePlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,9 @@
 				6B6897B11B994BC200C5069E /* Beach Ball.swift */,
 				6B6897B31B994BCF00C5069E /* Bowling Ball.swift */,
 				6B6897141B98B2CA00C5069E /* GameScene.swift */,
+				6B6897BD1B9970DD00C5069E /* ChooseBall.swift */,
+				6B6897BF1B9970E500C5069E /* ChooseBackground.swift */,
+				6B6897C11B9970EE00C5069E /* GamePlay.swift */,
 				6B6897161B98B2CA00C5069E /* GameViewController.swift */,
 				6B6897181B98B2CA00C5069E /* Main.storyboard */,
 				6B68971B1B98B2CA00C5069E /* Images.xcassets */,
@@ -290,10 +299,13 @@
 				6B6897B21B994BC200C5069E /* Beach Ball.swift in Sources */,
 				6B6897B01B994BAD00C5069E /* Basketball.swift in Sources */,
 				6B6897151B98B2CA00C5069E /* GameScene.swift in Sources */,
+				6B6897C01B9970E500C5069E /* ChooseBackground.swift in Sources */,
 				6B6897171B98B2CA00C5069E /* GameViewController.swift in Sources */,
+				6B6897C21B9970EE00C5069E /* GamePlay.swift in Sources */,
 				6B6897B41B994BCF00C5069E /* Bowling Ball.swift in Sources */,
 				6B6897B61B994BF700C5069E /* Ball.swift in Sources */,
 				6B6897111B98B2CA00C5069E /* AppDelegate.swift in Sources */,
+				6B6897BE1B9970DD00C5069E /* ChooseBall.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

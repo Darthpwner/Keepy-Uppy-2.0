@@ -25,24 +25,6 @@
                                             <constraint firstAttribute="height" constant="600" id="0ZJ-fg-QZ2"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
-                                        <rect key="frame" x="14" y="65" width="572" height="111"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="572" id="Lgc-Cy-A1b"/>
-                                            <constraint firstAttribute="height" constant="111" id="MqS-GK-IA7"/>
-                                            <constraint firstAttribute="height" constant="111" id="VwU-dQ-Avg"/>
-                                            <constraint firstAttribute="width" constant="572" id="rGg-6c-BHp"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
-                                        <color key="textColor" red="0.93532707216273403" green="1" blue="0.18536318490964154" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="VwU-dQ-Avg"/>
-                                                <exclude reference="rGg-6c-BHp"/>
-                                            </mask>
-                                        </variation>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
                                         <rect key="frame" x="160" y="417" width="281" height="81"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
@@ -54,6 +36,24 @@
                                             <segue destination="r2j-HC-Fb8" kind="show" id="64f-IQ-vbD"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
+                                        <rect key="frame" x="14" y="65" width="572" height="111"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="572" id="Lgc-Cy-A1b"/>
+                                            <constraint firstAttribute="height" constant="111" id="MqS-GK-IA7"/>
+                                            <constraint firstAttribute="height" constant="111" id="VwU-dQ-Avg"/>
+                                            <constraint firstAttribute="width" constant="572" id="rGg-6c-BHp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
+                                        <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="VwU-dQ-Avg"/>
+                                                <exclude reference="rGg-6c-BHp"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
