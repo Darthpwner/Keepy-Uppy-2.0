@@ -12,6 +12,8 @@ class GameScene: SKScene {
     
     //Add feature to have more balls later
     let ball = SKSpriteNode(imageNamed: "Basketball.jpg");
+    //let ball = SKSpriteNode(imageNamed: "Beach Ball.jpg");
+    //let ball = SKSpriteNode(imageNamed: "Bowling Ball.jpg");
     
     required init(coder aDecoder: NSCoder) {
         fatalError("NSCoder not supported")
