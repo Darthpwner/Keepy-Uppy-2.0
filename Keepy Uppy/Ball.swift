@@ -35,4 +35,6 @@ class Ball {
         self.friction = friction
         self.restitution = restitution
     }
+
+    //Worry about the class shit later, let's hack this!
 }

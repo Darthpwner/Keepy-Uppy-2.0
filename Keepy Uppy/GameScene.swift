@@ -9,6 +9,10 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    //Restitution == how much energy the physics body loses when it bounces
+    let basketballRestitution: CGFloat = 0.5
+    let beachBallRestitution: CGFloat = 0.8
+    let bowlingBallRestiution: CGFloat = 0.2
     
     //Add feature to have more balls later
     let ball = SKSpriteNode(imageNamed: "Basketball.jpg");
@@ -55,7 +59,13 @@ class GameScene: SKScene {
         
         // this is the most important line, we define the body
         ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width/2)
-        setPhysicsAttributes(0.3, restitution: 0.8, mass: 0.5)
+        
+        //if basketball
+        setPhysicsAttributes(0.3, restitution: basketballRestitution, mass: 0.5)
+        //else if beach ball
+        //setPhysicsAttributes(0.3, restitution: beachBallRestitution, mass: 0.5)
+        //else (bowling ball)
+        //setPhysicsAttributes(0.3, restitution: bowlingBallRestiution, mass: 0.5)
 
         // this will allow the balls to rotate when bouncing off each other
         ball.physicsBody!.allowsRotation = true
