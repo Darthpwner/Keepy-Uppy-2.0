@@ -58,7 +58,7 @@ class GameScene: SKScene {
         addChild(ball)  //Add ball to the display list
         
         // this is the most important line, we define the body
-        ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width/2)
+        ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width/2)  //Not sure why this needs to be shape???
         
         //if basketball
         setPhysicsAttributes(0.3, restitution: basketballRestitution, mass: 0.5)
