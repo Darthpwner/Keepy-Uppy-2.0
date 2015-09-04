@@ -146,18 +146,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Zh-Bn-N67">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Choose Ball Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="U8z-BR-7Ij">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="1Zh-Bn-N67" secondAttribute="trailing" id="5WM-Md-NEE"/>
-                            <constraint firstItem="1Zh-Bn-N67" firstAttribute="leading" secondItem="dLU-Cl-CIg" secondAttribute="leading" id="OQc-KZ-bsF"/>
-                            <constraint firstItem="1Zh-Bn-N67" firstAttribute="bottom" secondItem="UY2-3V-Th9" secondAttribute="top" id="mc6-0O-qTP"/>
-                            <constraint firstItem="1Zh-Bn-N67" firstAttribute="top" secondItem="dLU-Cl-CIg" secondAttribute="top" id="qjI-OE-p5A"/>
-                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
@@ -176,6 +169,11 @@
                     <view key="view" contentMode="scaleToFill" id="sN3-8J-zNh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Choose Background Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ro6-gK-RRm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -195,6 +193,11 @@
                     <view key="view" contentMode="scaleToFill" id="O77-o2-k6H">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Beach Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ecP-gB-TMS">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -205,6 +208,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Beach Background.jpg" width="700" height="438"/>
+        <image name="Choose Background Screen.jpg" width="1280" height="720"/>
+        <image name="Choose Ball Screen.jpg" width="3264" height="2448"/>
         <image name="Load Screen.jpg" width="3840" height="2160"/>
     </resources>
 </document>
