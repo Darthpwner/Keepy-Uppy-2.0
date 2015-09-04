@@ -48,24 +48,24 @@ class GameScene: SKScene {
         shape.strokeColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.5)
         shape.lineWidth = 4
         
-        // we add each circle to the display list
-        self.addChild(shape)
-        
-        // this is the most important line, we define the body
-        shape.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width/2)
-        // this defines the mass, roughness and bounciness
-        shape.physicsBody!.friction = 0.3
-        shape.physicsBody!.restitution = 0.8
-        shape.physicsBody!.mass = 0.5
-        // this will allow the balls to rotate when bouncing off each other
-        shape.physicsBody!.allowsRotation = true
-
-        
         ball.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)  //Set the ball's position
         addChild(ball)  //Add ball to the display list
         
+        // this is the most important line, we define the body
         ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width/2)
-        
+        setPhysicsAttributes(0.3, restitution: 0.8, mass: 0.5)
+//        ball.physicsBody!.friction = 0.3
+//        ball.physicsBody!.restitution = 0.8
+//        ball.physicsBody!.mass = 0.5
+//        // this will allow the balls to rotate when bouncing off each other
+        ball.physicsBody!.allowsRotation = true
+    }
+    
+    // this defines the mass, roughness and bounciness
+    func setPhysicsAttributes(friction: CGFloat, restitution: CGFloat, mass: CGFloat) {
+        ball.physicsBody!.friction = friction
+        ball.physicsBody!.restitution = restitution
+        ball.physicsBody!.mass = mass
     }
     
     override func update(currentTime: CFTimeInterval) {
