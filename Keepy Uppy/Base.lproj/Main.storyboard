@@ -20,7 +20,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-1j-TOz">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Load Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="liT-0K-ib2">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Load Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="liT-0K-ib2">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
@@ -126,7 +126,7 @@
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" constant="20" id="UfR-VQ-faf"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="top" secondItem="dbZ-Ff-5GE" secondAttribute="bottom" constant="-176" id="V7S-lB-gyf"/>
                                     <constraint firstAttribute="trailing" secondItem="liT-0K-ib2" secondAttribute="trailing" id="Vfy-E9-0Zf"/>
-                                    <constraint firstItem="liT-0K-ib2" firstAttribute="centerX" secondItem="Ecg-ok-cqe" secondAttribute="centerX" id="Vrd-O7-eAJ"/>
+                                    <constraint firstItem="liT-0K-ib2" firstAttribute="centerX" secondItem="Ecg-ok-cqe" secondAttribute="centerX" constant="145" id="Vrd-O7-eAJ"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" id="Y3Q-W4-PE8"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" id="ZJx-kJ-vNM"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" constant="14" id="ZPI-Tg-4bL"/>
