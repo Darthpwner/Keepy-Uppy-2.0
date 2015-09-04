@@ -53,8 +53,8 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
-                                        <rect key="frame" x="160" y="418" width="281" height="81"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
+                                        <rect key="frame" x="10" y="417" width="290" height="81"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="281" id="Cyc-GA-gOg"/>
                                             <constraint firstAttribute="height" constant="81" id="HYX-Cv-vxl"/>
