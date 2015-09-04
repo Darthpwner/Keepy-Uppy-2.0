@@ -154,18 +154,27 @@
                                 <state key="normal" image="Beach Ball.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="wBn-0a-jPG" kind="show" id="17R-99-Jd4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cny-Ib-fge">
                                 <rect key="frame" x="239" y="221" width="150" height="158"/>
                                 <state key="normal" image="Basketball.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="wBn-0a-jPG" kind="show" id="DOG-zm-51d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cv-yL-g9N">
                                 <rect key="frame" x="447" y="221" width="137" height="158"/>
                                 <state key="normal" image="Bowling Ball.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="wBn-0a-jPG" kind="show" id="THn-KC-SbK"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSS-7z-2ho">
                                 <rect key="frame" x="16" y="48" width="568" height="78"/>
@@ -197,6 +206,39 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Choose Background Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ro6-gK-RRm">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpy-yz-FYA">
+                                <rect key="frame" x="221" y="205" width="158" height="192"/>
+                                <state key="normal" image="Beach Background.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1Bh-kf-fhP" kind="show" id="pIF-LE-td1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS2-uD-Zs5">
+                                <rect key="frame" x="16" y="205" width="179" height="192"/>
+                                <state key="normal" image="Desert Background.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1Bh-kf-fhP" kind="show" id="cfK-05-s9e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atY-VD-MFA">
+                                <rect key="frame" x="405" y="205" width="179" height="192"/>
+                                <state key="normal" image="Forest Background.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1Bh-kf-fhP" kind="show" id="uLn-PQ-dLP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qS9-HL-rds">
+                                <rect key="frame" x="-22" y="68" width="645" height="82"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="48"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -236,8 +278,14 @@
         <image name="Beach Background.jpg" width="700" height="438"/>
         <image name="Beach Ball.jpg" width="300" height="300"/>
         <image name="Bowling Ball.jpg" width="378" height="378"/>
-        <image name="Choose Background Screen.jpg" width="1280" height="720"/>
+        <image name="Choose Background Screen.jpg" width="265" height="190"/>
         <image name="Choose Ball Screen.jpg" width="3264" height="2448"/>
+        <image name="Desert Background.jpg" width="600" height="338"/>
+        <image name="Forest Background.png" width="900" height="473"/>
         <image name="Load Screen.jpg" width="3840" height="2160"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="THn-KC-SbK"/>
+        <segue reference="uLn-PQ-dLP"/>
+    </inferredMetricsTieBreakers>
 </document>
