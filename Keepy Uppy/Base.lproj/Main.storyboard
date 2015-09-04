@@ -19,13 +19,13 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-1j-TOz">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Load Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="liT-0K-ib2">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Load Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="liT-0K-ib2">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="600" id="0ZJ-fg-QZ2"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
                                         <rect key="frame" x="160" y="417" width="281" height="81"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="281" id="Cyc-GA-gOg"/>
@@ -48,7 +48,7 @@
                                             <segue destination="r2j-HC-Fb8" kind="show" id="64f-IQ-vbD"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
                                         <rect key="frame" x="14" y="65" width="572" height="111"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="111" id="8e9-yr-Gq5"/>
