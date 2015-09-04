@@ -6,7 +6,9 @@
 //  Copyright (c) 2015 Matthew Allen Lin. All rights reserved.
 //
 
+import SpriteKit
+
 //Choose ball screen
-class ChooseBall {
+class ChooseBall: UIViewController {
     
 }
