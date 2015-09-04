@@ -251,7 +251,7 @@
         <!--Gameplay Page-->
         <scene sceneID="eG8-eG-xe6">
             <objects>
-                <viewController title="Gameplay Page" id="1Bh-kf-fhP" customClass="GamePlayView" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Gameplay Page" id="1Bh-kf-fhP" customClass="GamePlayControler" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XeW-YT-WgQ"/>
                         <viewControllerLayoutGuide type="bottom" id="GcZ-xE-wgw"/>
