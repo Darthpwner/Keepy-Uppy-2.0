@@ -17,13 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-1j-TOz">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-1j-TOz">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Load Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="liT-0K-ib2">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
                                         <rect key="frame" x="20" y="65" width="572" height="111"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="111" id="8e9-yr-Gq5"/>
@@ -53,7 +50,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
                                         <rect key="frame" x="160" y="417" width="281" height="81"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="281" id="Cyc-GA-gOg"/>
@@ -79,6 +76,9 @@
                                             <segue destination="r2j-HC-Fb8" kind="show" id="64f-IQ-vbD"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Load Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="liT-0K-ib2">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -97,6 +97,7 @@
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="centerX" secondItem="dbZ-Ff-5GE" secondAttribute="centerX" id="8Yi-1D-9Xl"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" constant="65" id="Acz-gs-SU1"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" constant="65" id="CWp-d3-Nwo"/>
+                                    <constraint firstItem="dbZ-Ff-5GE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Nes-1j-TOz" secondAttribute="leading" constant="20" id="INI-IF-seW"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" id="IlH-y6-fza"/>
                                     <constraint firstAttribute="bottom" secondItem="liT-0K-ib2" secondAttribute="bottom" id="JYi-Ce-WXo"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" id="LEa-42-VYO"/>
@@ -109,6 +110,7 @@
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" id="MkO-CF-GHB"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" id="NJt-4b-VZm"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" id="PB9-ht-hvD"/>
+                                    <constraint firstItem="Ecg-ok-cqe" firstAttribute="top" secondItem="dbZ-Ff-5GE" secondAttribute="bottom" constant="241" id="QNW-Kk-ZP1"/>
                                     <constraint firstAttribute="bottom" secondItem="liT-0K-ib2" secondAttribute="bottom" id="Qc6-2M-PX0"/>
                                     <constraint firstItem="Ecg-ok-cqe" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" constant="417" id="Qft-Vr-zuQ"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" constant="14" id="ROE-aB-O51"/>
@@ -117,6 +119,8 @@
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" id="Szn-xZ-5lu"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" constant="65" id="T17-i4-99U"/>
                                     <constraint firstAttribute="trailing" secondItem="liT-0K-ib2" secondAttribute="trailing" id="T4B-Jo-BZZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ecg-ok-cqe" secondAttribute="trailing" constant="159" id="TXL-s6-7JE"/>
+                                    <constraint firstItem="dbZ-Ff-5GE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Nes-1j-TOz" secondAttribute="top" constant="65" id="Ta5-ei-lQW"/>
                                     <constraint firstAttribute="trailing" secondItem="liT-0K-ib2" secondAttribute="trailing" id="U6r-ov-1ql"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" constant="20" id="UfR-VQ-faf"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="top" secondItem="dbZ-Ff-5GE" secondAttribute="bottom" constant="-176" id="V7S-lB-gyf"/>
@@ -128,6 +132,7 @@
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" constant="65" id="ZVK-IR-CIU"/>
                                     <constraint firstAttribute="bottom" secondItem="liT-0K-ib2" secondAttribute="bottom" id="aTx-V3-GGy"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="leading" secondItem="liT-0K-ib2" secondAttribute="trailing" constant="-586" id="aWN-A7-SZQ"/>
+                                    <constraint firstItem="Ecg-ok-cqe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Nes-1j-TOz" secondAttribute="leading" constant="160" id="acp-RT-XQf"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="centerX" secondItem="dbZ-Ff-5GE" secondAttribute="centerX" id="adh-BX-0fq"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="centerX" secondItem="Nes-1j-TOz" secondAttribute="centerX" id="bRt-1C-QXh"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" constant="65" id="bbD-Au-pkJ"/>
@@ -140,6 +145,7 @@
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" id="eCL-wh-Y1M"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="trailing" secondItem="Nes-1j-TOz" secondAttribute="trailingMargin" id="efF-nc-tcs"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="centerX" secondItem="Nes-1j-TOz" secondAttribute="centerX" id="epT-n4-R5d"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dbZ-Ff-5GE" secondAttribute="trailing" constant="8" id="fLz-6B-cV9"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" constant="65" id="fjT-t1-QrT"/>
                                     <constraint firstAttribute="bottom" secondItem="liT-0K-ib2" secondAttribute="bottom" id="heq-q3-Y3b"/>
                                     <constraint firstItem="Ecg-ok-cqe" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" constant="160" id="i8E-2H-wGx"/>
@@ -148,6 +154,7 @@
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" constant="65" id="m5W-ld-HOX"/>
                                     <constraint firstItem="Ecg-ok-cqe" firstAttribute="centerX" secondItem="Nes-1j-TOz" secondAttribute="centerX" id="n26-w3-bdd"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="centerY" secondItem="Nes-1j-TOz" secondAttribute="centerY" id="n6V-mQ-z0u"/>
+                                    <constraint firstItem="Ecg-ok-cqe" firstAttribute="top" secondItem="dbZ-Ff-5GE" secondAttribute="bottom" constant="241" id="nW3-Ob-9P6"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" constant="14" id="nd8-Xv-xeW"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" id="nqf-eQ-HZk"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" constant="14" id="oee-7e-D5b"/>
@@ -158,6 +165,7 @@
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" constant="20" id="rxa-hc-cOk"/>
                                     <constraint firstAttribute="trailing" secondItem="liT-0K-ib2" secondAttribute="trailing" id="s0q-Yi-d0b"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" id="t4s-Rs-qcu"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ecg-ok-cqe" secondAttribute="bottom" constant="102" id="tbi-rC-d7w"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" id="uNX-Fe-btv"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" id="uqU-Ku-wyu"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" id="yAp-D0-SCx"/>
@@ -223,6 +231,8 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Nes-1j-TOz" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leading" id="0Y2-Jm-Vc7"/>
+                            <constraint firstItem="Nes-1j-TOz" firstAttribute="bottom" secondItem="b3d-qh-BLL" secondAttribute="top" id="NSk-Ct-cdP"/>
                             <constraint firstItem="Nes-1j-TOz" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leading" id="REq-A5-B5E"/>
                         </constraints>
                         <variation key="default">
