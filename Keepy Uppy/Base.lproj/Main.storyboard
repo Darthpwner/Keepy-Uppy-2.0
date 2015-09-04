@@ -19,13 +19,38 @@
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-1j-TOz">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Load Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="liT-0K-ib2">
-                                        <rect key="frame" x="0.0" y="0.0" width="612" height="600"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Load Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="liT-0K-ib2">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="600" id="0ZJ-fg-QZ2"/>
                                             <constraint firstAttribute="width" constant="600" id="IW5-yI-GWv"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
+                                        <rect key="frame" x="166" y="417" width="281" height="81"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="281" id="Cyc-GA-gOg"/>
+                                            <constraint firstAttribute="height" constant="81" id="dEv-Il-0mP"/>
+                                            <constraint firstAttribute="height" constant="81" id="qAd-ol-7wU"/>
+                                            <constraint firstAttribute="width" constant="281" id="wVG-k9-bBb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
+                                        <state key="normal" title="START">
+                                            <color key="titleColor" red="1" green="0.3792681604" blue="0.3750667493" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Cyc-GA-gOg"/>
+                                                <exclude reference="dEv-Il-0mP"/>
+                                                <exclude reference="qAd-ol-7wU"/>
+                                                <exclude reference="wVG-k9-bBb"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="r2j-HC-Fb8" kind="show" id="64f-IQ-vbD"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
                                         <rect key="frame" x="20" y="65" width="572" height="111"/>
                                         <constraints>
@@ -54,31 +79,6 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
-                                        <rect key="frame" x="166" y="417" width="281" height="81"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="281" id="Cyc-GA-gOg"/>
-                                            <constraint firstAttribute="height" constant="81" id="dEv-Il-0mP"/>
-                                            <constraint firstAttribute="height" constant="81" id="qAd-ol-7wU"/>
-                                            <constraint firstAttribute="width" constant="281" id="wVG-k9-bBb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
-                                        <state key="normal" title="START">
-                                            <color key="titleColor" red="1" green="0.3792681604" blue="0.3750667493" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="Cyc-GA-gOg"/>
-                                                <exclude reference="dEv-Il-0mP"/>
-                                                <exclude reference="qAd-ol-7wU"/>
-                                                <exclude reference="wVG-k9-bBb"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <segue destination="r2j-HC-Fb8" kind="show" id="64f-IQ-vbD"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -130,6 +130,7 @@
                                     <constraint firstAttribute="bottom" secondItem="liT-0K-ib2" secondAttribute="bottom" id="heq-q3-Y3b"/>
                                     <constraint firstAttribute="bottom" secondItem="Ecg-ok-cqe" secondAttribute="bottom" constant="102" id="jqL-sO-AXI"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" constant="14" id="kCN-cO-OZa"/>
+                                    <constraint firstItem="dbZ-Ff-5GE" firstAttribute="centerX" secondItem="liT-0K-ib2" secondAttribute="centerX" constant="6" id="kUO-ds-ezQ"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" constant="65" id="m5W-ld-HOX"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="centerY" secondItem="Nes-1j-TOz" secondAttribute="centerY" id="n6V-mQ-z0u"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" constant="14" id="nd8-Xv-xeW"/>
