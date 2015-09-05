@@ -420,7 +420,10 @@
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="158" id="3eb-NO-jrc"/>
+                                    <constraint firstAttribute="width" secondItem="Qpy-yz-FYA" secondAttribute="height" multiplier="11:12" id="6KP-mQ-snR"/>
                                     <constraint firstAttribute="height" constant="192" id="8aU-bx-x0E"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="192" id="taV-fs-kyp"/>
+                                    <constraint firstAttribute="width" constant="176" id="xIN-LJ-HnG"/>
                                 </constraints>
                                 <state key="normal" image="Beach Background.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
