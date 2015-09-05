@@ -375,7 +375,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Choose Background Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ro6-gK-RRm">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="546" height="600"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="wcX-W3-bMO"/>
                                 </constraints>
@@ -386,7 +386,7 @@
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpy-yz-FYA">
-                                <rect key="frame" x="221" y="221" width="158" height="176"/>
+                                <rect key="frame" x="194" y="221" width="158" height="176"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="158" id="3eb-NO-jrc"/>
                                     <constraint firstAttribute="height" constant="192" id="8aU-bx-x0E"/>
@@ -394,12 +394,17 @@
                                 <state key="normal" image="Beach Background.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3eb-NO-jrc"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="1Bh-kf-fhP" kind="show" id="pIF-LE-td1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atY-VD-MFA">
-                                <rect key="frame" x="405" y="221" width="179" height="176"/>
+                                <rect key="frame" x="372" y="221" width="158" height="176"/>
                                 <state key="normal" image="Forest Background.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -408,7 +413,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="qS9-HL-rds">
-                                <rect key="frame" x="16" y="20" width="569" height="78"/>
+                                <rect key="frame" x="16" y="20" width="514" height="78"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="78" id="4EW-WE-lAa"/>
                                 </constraints>
@@ -417,7 +422,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS2-uD-Zs5">
-                                <rect key="frame" x="16" y="221" width="179" height="176"/>
+                                <rect key="frame" x="16" y="221" width="158" height="176"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="179" id="KBx-WT-RCv"/>
                                     <constraint firstAttribute="height" constant="192" id="gkl-8O-2A3"/>
@@ -455,6 +460,7 @@
                             <constraint firstItem="Qpy-yz-FYA" firstAttribute="centerX" secondItem="Ro6-gK-RRm" secondAttribute="centerX" id="Vau-QM-Nul"/>
                             <constraint firstItem="5eP-uw-gwE" firstAttribute="top" secondItem="eS2-uD-Zs5" secondAttribute="bottom" constant="203" id="VcZ-yc-eit"/>
                             <constraint firstItem="atY-VD-MFA" firstAttribute="leading" secondItem="Qpy-yz-FYA" secondAttribute="trailing" constant="26" id="Vd8-vw-f9H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qS9-HL-rds" secondAttribute="trailing" id="WQn-c2-rCM"/>
                             <constraint firstItem="atY-VD-MFA" firstAttribute="leading" secondItem="Qpy-yz-FYA" secondAttribute="trailing" constant="20" id="WUV-Tq-fA3"/>
                             <constraint firstItem="eS2-uD-Zs5" firstAttribute="top" secondItem="Qpy-yz-FYA" secondAttribute="top" id="YCK-Bs-n3l"/>
                             <constraint firstItem="Qpy-yz-FYA" firstAttribute="leading" secondItem="eS2-uD-Zs5" secondAttribute="trailing" constant="26" id="agu-B3-bHK"/>
@@ -476,9 +482,11 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="MAg-ok-pAH"/>
+                                <exclude reference="WQn-c2-rCM"/>
                                 <exclude reference="4OO-D5-3iS"/>
                                 <exclude reference="Fb9-b4-aUI"/>
                                 <exclude reference="agu-B3-bHK"/>
+                                <exclude reference="haX-E5-CNO"/>
                                 <exclude reference="CzL-04-aio"/>
                                 <exclude reference="TXU-96-5zj"/>
                                 <exclude reference="Vd8-vw-f9H"/>
