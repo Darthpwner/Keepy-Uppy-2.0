@@ -283,22 +283,13 @@
                                     <segue destination="wBn-0a-jPG" kind="show" id="17R-99-Jd4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cny-Ib-fge">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cny-Ib-fge">
                                 <rect key="frame" x="239" y="221" width="150" height="158"/>
                                 <state key="normal" image="Basketball.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="wBn-0a-jPG" kind="show" id="DOG-zm-51d"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cv-yL-g9N">
-                                <rect key="frame" x="447" y="221" width="137" height="158"/>
-                                <state key="normal" image="Bowling Ball.jpg">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="wBn-0a-jPG" kind="show" id="THn-KC-SbK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rSS-7z-2ho">
@@ -310,15 +301,30 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cv-yL-g9N">
+                                <rect key="frame" x="447" y="221" width="137" height="158"/>
+                                <state key="normal" image="Bowling Ball.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wBn-0a-jPG" kind="show" id="THn-KC-SbK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rSS-7z-2ho" firstAttribute="top" secondItem="8io-fK-Mpn" secondAttribute="bottom" id="1MD-gD-iAb"/>
                             <constraint firstItem="9Cv-yL-g9N" firstAttribute="top" secondItem="rSS-7z-2ho" secondAttribute="bottom" constant="95" id="5r6-Ax-xOp"/>
+                            <constraint firstItem="9Cv-yL-g9N" firstAttribute="leading" secondItem="cny-Ib-fge" secondAttribute="trailing" constant="58" id="7Q5-RS-rNv"/>
+                            <constraint firstItem="cny-Ib-fge" firstAttribute="height" secondItem="9Cv-yL-g9N" secondAttribute="height" id="90k-xj-XZv"/>
                             <constraint firstItem="rSS-7z-2ho" firstAttribute="leading" secondItem="dLU-Cl-CIg" secondAttribute="leadingMargin" id="FSU-F5-sar"/>
+                            <constraint firstItem="r3F-Na-wee" firstAttribute="leading" secondItem="dLU-Cl-CIg" secondAttribute="leadingMargin" constant="20" id="GRs-qs-yLT"/>
+                            <constraint firstItem="r3F-Na-wee" firstAttribute="height" secondItem="cny-Ib-fge" secondAttribute="height" id="KAF-93-7dL"/>
                             <constraint firstAttribute="trailing" secondItem="U8z-BR-7Ij" secondAttribute="trailing" id="NVy-3P-C3t"/>
                             <constraint firstAttribute="trailingMargin" secondItem="U8z-BR-7Ij" secondAttribute="trailing" constant="16" id="RcP-vv-7q5"/>
+                            <constraint firstItem="cny-Ib-fge" firstAttribute="width" secondItem="9Cv-yL-g9N" secondAttribute="width" id="TmN-J6-YKb"/>
                             <constraint firstItem="rSS-7z-2ho" firstAttribute="leading" secondItem="r3F-Na-wee" secondAttribute="leading" id="W0U-rf-bkz"/>
+                            <constraint firstItem="r3F-Na-wee" firstAttribute="height" secondItem="cny-Ib-fge" secondAttribute="height" id="X28-yf-GVx"/>
                             <constraint firstItem="U8z-BR-7Ij" firstAttribute="leading" secondItem="dLU-Cl-CIg" secondAttribute="leading" id="YM3-PO-8Vh"/>
                             <constraint firstItem="U8z-BR-7Ij" firstAttribute="bottom" secondItem="UY2-3V-Th9" secondAttribute="top" id="aqa-9R-mpY"/>
                             <constraint firstItem="rSS-7z-2ho" firstAttribute="centerX" secondItem="U8z-BR-7Ij" secondAttribute="centerX" id="cmi-QT-aUs"/>
@@ -326,8 +332,11 @@
                             <constraint firstItem="U8z-BR-7Ij" firstAttribute="centerY" secondItem="9Cv-yL-g9N" secondAttribute="centerY" id="hlv-NT-bDm"/>
                             <constraint firstItem="U8z-BR-7Ij" firstAttribute="centerY" secondItem="r3F-Na-wee" secondAttribute="centerY" id="iAt-bM-yZW"/>
                             <constraint firstItem="U8z-BR-7Ij" firstAttribute="top" secondItem="dLU-Cl-CIg" secondAttribute="top" id="ie6-Wi-gSd"/>
+                            <constraint firstItem="r3F-Na-wee" firstAttribute="width" secondItem="cny-Ib-fge" secondAttribute="width" id="oIo-xC-HrD"/>
                             <constraint firstItem="U8z-BR-7Ij" firstAttribute="centerY" secondItem="cny-Ib-fge" secondAttribute="centerY" id="qdc-wI-Qtt"/>
+                            <constraint firstItem="cny-Ib-fge" firstAttribute="leading" secondItem="r3F-Na-wee" secondAttribute="trailing" constant="20" id="rRl-Ie-YJp"/>
                             <constraint firstItem="rSS-7z-2ho" firstAttribute="trailing" secondItem="9Cv-yL-g9N" secondAttribute="trailing" id="thN-eW-RU9"/>
+                            <constraint firstItem="9Cv-yL-g9N" firstAttribute="trailing" secondItem="dLU-Cl-CIg" secondAttribute="trailingMargin" id="xD4-5Y-GZi"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
