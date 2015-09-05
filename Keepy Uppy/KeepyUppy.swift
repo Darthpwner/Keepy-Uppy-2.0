@@ -13,12 +13,16 @@ protocol KeepyUppyDelegate {
     func gameDidEnd(keepyUppy: KeepyUppy)
     
     //Invoked when the player begins the game
-    func gameDidBegin(KeepyUppy: KeepyUppy)
+    func gameDidBegin(keepyUppy: KeepyUppy)
+    
+    //Decrement the number of lives if the ball hits the ground
+    func ballDidHitGround(keepyUppy: KeepyUppy)
 }
 
 class KeepyUppy {
     var score: Int
     var lives: Int
+    var delegate: KeepyUppyDelegate?
     
     init() {
         score = 0
@@ -33,11 +37,16 @@ class KeepyUppy {
     func ballHitGround() -> Bool {
         //if the ball hits the ground, return true
             //TODO
+        if(true) {
+            lives--
+            return true
+        }
         return false
     }
     
     //Let the user know that the game did end
     func endGame() {
         //TODO
+        delegate?.gameDidEnd(self)
     }
 }
