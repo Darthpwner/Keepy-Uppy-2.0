@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-1j-TOz">
-                                <rect key="frame" x="0.0" y="0.0" width="575" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Load Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="liT-0K-ib2">
-                                        <rect key="frame" x="0.0" y="0.0" width="575" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
-                                        <rect key="frame" x="179" y="404" width="217" height="81"/>
+                                        <rect key="frame" x="191" y="404" width="217" height="81"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="281" id="Cyc-GA-gOg"/>
                                             <constraint firstAttribute="height" constant="81" id="aQI-fD-Hl5"/>
@@ -50,7 +50,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
-                                        <rect key="frame" x="0.0" y="64" width="572" height="111"/>
+                                        <rect key="frame" x="0.0" y="64" width="597" height="111"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="111" id="8e9-yr-Gq5"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="111" id="Fry-IN-rtS"/>
@@ -239,13 +239,17 @@
                         <constraints>
                             <constraint firstItem="Nes-1j-TOz" firstAttribute="bottom" secondItem="b3d-qh-BLL" secondAttribute="top" id="CG8-XN-Og3"/>
                             <constraint firstItem="Nes-1j-TOz" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leading" id="REq-A5-B5E"/>
+                            <constraint firstAttribute="trailing" secondItem="Nes-1j-TOz" secondAttribute="trailing" id="Tlh-Cr-DBx"/>
                             <constraint firstItem="Nes-1j-TOz" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leading" id="cGW-TM-7bW"/>
                             <constraint firstItem="Nes-1j-TOz" firstAttribute="top" secondItem="bdc-N1-crn" secondAttribute="top" id="n3I-Xg-1Z0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nes-1j-TOz" secondAttribute="trailing" constant="9" id="t9T-ag-3Hv"/>
+                            <constraint firstAttribute="trailing" secondItem="Nes-1j-TOz" secondAttribute="trailing" constant="25" id="zsn-i1-3wm"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="REq-A5-B5E"/>
+                                <exclude reference="t9T-ag-3Hv"/>
+                                <exclude reference="zsn-i1-3wm"/>
                             </mask>
                         </variation>
                     </view>
