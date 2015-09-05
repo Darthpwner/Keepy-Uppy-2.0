@@ -10,6 +10,8 @@
 import SpriteKit
 
 class GamePlayView: SKScene {
+    var lives: Int = 3
+    
     //Restitution == how much energy the physics body loses when it bounces
     let basketballRestitution: CGFloat = 0.5
     let beachBallRestitution: CGFloat = 0.8
@@ -29,7 +31,7 @@ class GamePlayView: SKScene {
         
         anchorPoint = CGPoint(x: 0, y: 1.0)
         
-        let background = SKSpriteNode(imageNamed: "Load Screen.jpg")
+        let background = SKSpriteNode(imageNamed: "Forest Background.png")
         background.position = CGPoint(x: 0, y: 0)
         background.anchorPoint = CGPoint(x: 0, y: 1.0)
         addChild(background)

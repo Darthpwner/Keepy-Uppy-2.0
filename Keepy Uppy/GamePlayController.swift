@@ -10,6 +10,7 @@ import UIKit
 import SpriteKit
 
 class GamePlayController: UIViewController {
+    var lives: Int = 3
     
     var scene: GameScene!
     
@@ -34,4 +35,17 @@ class GamePlayController: UIViewController {
     
     //UITouchGesture Functions
     
+    //Gameplay Functions
+    func gameDidBegin() {
+        
+    }
+    
+    func gameDidEnd() -> Bool {
+        if(lives == 0) {
+            view.userInteractionEnabled = false
+            scene.playSound("gameover.mp3")
+            return true
+        }
+        return false
+    }
 }
