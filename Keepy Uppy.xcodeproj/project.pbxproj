@@ -35,7 +35,7 @@
 		6B6C8D011B9B9DF3008678EC /* KeepyUppy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C8D001B9B9DF3008678EC /* KeepyUppy.swift */; };
 		6B6C8D071B9BAC7B008678EC /* Basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D061B9BAC7B008678EC /* Basketball.png */; };
 		6B6C8D091B9BAC85008678EC /* Beach Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D081B9BAC85008678EC /* Beach Ball.png */; };
-		6B6C8D0B1B9BAC8E008678EC /* Bowling Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D0A1B9BAC8E008678EC /* Bowling Ball.png */; };
+		6B6C8D0F1B9BAE94008678EC /* Bowling Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +82,7 @@
 		6B6C8D001B9B9DF3008678EC /* KeepyUppy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeepyUppy.swift; sourceTree = "<group>"; };
 		6B6C8D061B9BAC7B008678EC /* Basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Basketball.png; sourceTree = "<group>"; };
 		6B6C8D081B9BAC85008678EC /* Beach Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Beach Ball.png"; sourceTree = "<group>"; };
-		6B6C8D0A1B9BAC8E008678EC /* Bowling Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bowling Ball.png"; sourceTree = "<group>"; };
+		6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bowling Ball.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +151,7 @@
 				6B6C8D061B9BAC7B008678EC /* Basketball.png */,
 				6B6897341B98B4D300C5069E /* Beach Background.jpg */,
 				6B6C8D081B9BAC85008678EC /* Beach Ball.png */,
-				6B6C8D0A1B9BAC8E008678EC /* Bowling Ball.png */,
+				6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */,
 				6B6897BB1B99687C00C5069E /* Choose Background Screen.jpg */,
 				6B6897B71B995F0800C5069E /* Choose Ball Screen.jpg */,
 				6B6897531B98BF5A00C5069E /* Desert Background.jpg */,
@@ -271,7 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B6C8D0B1B9BAC8E008678EC /* Bowling Ball.png in Resources */,
+				6B6C8D0F1B9BAE94008678EC /* Bowling Ball.png in Resources */,
 				6B68971F1B98B2CA00C5069E /* LaunchScreen.xib in Resources */,
 				6B6C8D071B9BAC7B008678EC /* Basketball.png in Resources */,
 				6B6897461B98B6D100C5069E /* hit.mp3 in Resources */,
