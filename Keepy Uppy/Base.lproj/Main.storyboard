@@ -385,17 +385,12 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS2-uD-Zs5">
-                                <rect key="frame" x="16" y="205" width="179" height="192"/>
-                                <state key="normal" image="Desert Background.jpg">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="1Bh-kf-fhP" kind="show" id="cfK-05-s9e"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpy-yz-FYA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpy-yz-FYA">
                                 <rect key="frame" x="221" y="205" width="158" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="3eb-NO-jrc"/>
+                                    <constraint firstAttribute="height" constant="192" id="8aU-bx-x0E"/>
+                                </constraints>
                                 <state key="normal" image="Beach Background.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -403,7 +398,7 @@
                                     <segue destination="1Bh-kf-fhP" kind="show" id="pIF-LE-td1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atY-VD-MFA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atY-VD-MFA">
                                 <rect key="frame" x="405" y="205" width="179" height="192"/>
                                 <state key="normal" image="Forest Background.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -421,25 +416,52 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS2-uD-Zs5">
+                                <rect key="frame" x="16" y="205" width="179" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="179" id="KBx-WT-RCv"/>
+                                    <constraint firstAttribute="height" constant="192" id="gkl-8O-2A3"/>
+                                </constraints>
+                                <state key="normal" image="Desert Background.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KBx-WT-RCv"/>
+                                        <exclude reference="gkl-8O-2A3"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="1Bh-kf-fhP" kind="show" id="cfK-05-s9e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="atY-VD-MFA" firstAttribute="bottom" secondItem="Qpy-yz-FYA" secondAttribute="bottom" id="2oU-Sk-bLB"/>
+                            <constraint firstItem="Qpy-yz-FYA" firstAttribute="centerX" secondItem="qS9-HL-rds" secondAttribute="centerX" id="B7i-H5-5tR"/>
                             <constraint firstItem="atY-VD-MFA" firstAttribute="leading" secondItem="Qpy-yz-FYA" secondAttribute="trailing" constant="20" id="CzL-04-aio"/>
+                            <constraint firstItem="atY-VD-MFA" firstAttribute="trailing" secondItem="sN3-8J-zNh" secondAttribute="trailingMargin" id="DY0-dv-Ba0"/>
                             <constraint firstItem="Qpy-yz-FYA" firstAttribute="leading" secondItem="eS2-uD-Zs5" secondAttribute="trailing" constant="26" id="Fb9-b4-aUI"/>
-                            <constraint firstItem="Ro6-gK-RRm" firstAttribute="top" secondItem="sN3-8J-zNh" secondAttribute="top" id="Lcf-XD-DGc"/>
+                            <constraint firstItem="Ro6-gK-RRm" firstAttribute="bottom" secondItem="5eP-uw-gwE" secondAttribute="top" id="GLu-nH-SQP"/>
                             <constraint firstItem="qS9-HL-rds" firstAttribute="leading" secondItem="Ro6-gK-RRm" secondAttribute="trailing" constant="8" symbolic="YES" id="MAg-ok-pAH"/>
-                            <constraint firstItem="Ro6-gK-RRm" firstAttribute="centerX" secondItem="Qpy-yz-FYA" secondAttribute="centerX" id="Njf-qA-c3E"/>
                             <constraint firstItem="atY-VD-MFA" firstAttribute="height" secondItem="Qpy-yz-FYA" secondAttribute="height" id="TXU-96-5zj"/>
-                            <constraint firstItem="qS9-HL-rds" firstAttribute="centerX" secondItem="Qpy-yz-FYA" secondAttribute="centerX" id="UWP-2C-BPQ"/>
+                            <constraint firstItem="Qpy-yz-FYA" firstAttribute="centerX" secondItem="Ro6-gK-RRm" secondAttribute="centerX" id="Vau-QM-Nul"/>
+                            <constraint firstItem="5eP-uw-gwE" firstAttribute="top" secondItem="eS2-uD-Zs5" secondAttribute="bottom" constant="203" id="VcZ-yc-eit"/>
                             <constraint firstItem="atY-VD-MFA" firstAttribute="leading" secondItem="Qpy-yz-FYA" secondAttribute="trailing" constant="26" id="Vd8-vw-f9H"/>
-                            <constraint firstAttribute="trailing" secondItem="Ro6-gK-RRm" secondAttribute="trailing" id="Yd9-4R-A67"/>
-                            <constraint firstItem="Ro6-gK-RRm" firstAttribute="leading" secondItem="sN3-8J-zNh" secondAttribute="leading" id="Yrj-lr-0vl"/>
-                            <constraint firstItem="qS9-HL-rds" firstAttribute="leading" secondItem="eS2-uD-Zs5" secondAttribute="leading" id="bai-Od-kER"/>
-                            <constraint firstItem="Ro6-gK-RRm" firstAttribute="bottom" secondItem="5eP-uw-gwE" secondAttribute="top" id="f0Z-xp-8zc"/>
+                            <constraint firstItem="eS2-uD-Zs5" firstAttribute="top" secondItem="Qpy-yz-FYA" secondAttribute="top" id="YCK-Bs-n3l"/>
+                            <constraint firstItem="Qpy-yz-FYA" firstAttribute="leading" secondItem="eS2-uD-Zs5" secondAttribute="trailing" constant="26" id="agu-B3-bHK"/>
+                            <constraint firstItem="Ro6-gK-RRm" firstAttribute="top" secondItem="sN3-8J-zNh" secondAttribute="top" id="ebf-BZ-rKF"/>
+                            <constraint firstItem="Ro6-gK-RRm" firstAttribute="leading" secondItem="sN3-8J-zNh" secondAttribute="leading" id="gaO-sG-lgp"/>
                             <constraint firstItem="qS9-HL-rds" firstAttribute="leading" secondItem="sN3-8J-zNh" secondAttribute="leadingMargin" id="l52-aa-xwm"/>
                             <constraint firstItem="atY-VD-MFA" firstAttribute="leading" secondItem="Qpy-yz-FYA" secondAttribute="trailing" constant="26" id="m0J-em-eor"/>
+                            <constraint firstAttribute="trailing" secondItem="Ro6-gK-RRm" secondAttribute="trailing" id="mmd-ak-LIS"/>
+                            <constraint firstItem="atY-VD-MFA" firstAttribute="top" secondItem="Qpy-yz-FYA" secondAttribute="top" id="n0Q-Zi-GXj"/>
+                            <constraint firstItem="atY-VD-MFA" firstAttribute="leading" secondItem="Qpy-yz-FYA" secondAttribute="trailing" constant="26" id="osG-Ve-j4d"/>
+                            <constraint firstItem="eS2-uD-Zs5" firstAttribute="leading" secondItem="qS9-HL-rds" secondAttribute="leading" id="qXh-kt-Eyg"/>
                             <constraint firstItem="qS9-HL-rds" firstAttribute="top" secondItem="h3x-L6-Lxj" secondAttribute="bottom" id="rAZ-AV-c94"/>
                             <constraint firstItem="atY-VD-MFA" firstAttribute="height" secondItem="Qpy-yz-FYA" secondAttribute="height" id="wUd-WI-u5q"/>
+                            <constraint firstItem="eS2-uD-Zs5" firstAttribute="bottom" secondItem="Qpy-yz-FYA" secondAttribute="bottom" id="xSv-if-edt"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
