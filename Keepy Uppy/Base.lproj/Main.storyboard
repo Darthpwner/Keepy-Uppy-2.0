@@ -284,7 +284,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3F-Na-wee">
                                 <rect key="frame" x="16" y="221" width="176" height="158"/>
                                 <gestureRecognizers/>
-                                <state key="normal" image="Beach Ball.jpg">
+                                <state key="normal" image="Beach Ball.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -299,7 +299,7 @@
                                     <constraint firstAttribute="width" secondItem="cny-Ib-fge" secondAttribute="height" multiplier="88:79" id="CSM-T8-lJR"/>
                                     <constraint firstAttribute="height" constant="158" id="kyF-Ml-zoW"/>
                                 </constraints>
-                                <state key="normal" image="Basketball.jpg">
+                                <state key="normal" image="Basketball.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -309,7 +309,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cv-yL-g9N">
                                 <rect key="frame" x="408" y="221" width="176" height="158"/>
                                 <gestureRecognizers/>
-                                <state key="normal" image="Bowling Ball.jpg">
+                                <state key="normal" image="Bowling Ball.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -585,10 +585,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Basketball.jpg" width="225" height="225"/>
+        <image name="Basketball.png" width="340" height="340"/>
         <image name="Beach Background.jpg" width="700" height="438"/>
-        <image name="Beach Ball.jpg" width="300" height="300"/>
-        <image name="Bowling Ball.jpg" width="378" height="378"/>
+        <image name="Beach Ball.png" width="1123" height="1126"/>
+        <image name="Bowling Ball.png" width="378" height="378"/>
         <image name="Choose Background Screen.jpg" width="265" height="190"/>
         <image name="Choose Ball Screen.jpg" width="3264" height="2448"/>
         <image name="Desert Background.jpg" width="600" height="338"/>
