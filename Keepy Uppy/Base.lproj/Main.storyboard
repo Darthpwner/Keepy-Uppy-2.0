@@ -25,6 +25,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
                                         <rect key="frame" x="191" y="404" width="217" height="81"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="281" id="Cyc-GA-gOg"/>
                                             <constraint firstAttribute="height" constant="81" id="aQI-fD-Hl5"/>
@@ -46,6 +47,7 @@
                                             </mask>
                                         </variation>
                                         <connections>
+                                            <outletCollection property="gestureRecognizers" destination="G1G-Eh-0pE" appends="YES" id="hhZ-ZH-7Ha"/>
                                             <segue destination="r2j-HC-Fb8" kind="show" id="64f-IQ-vbD"/>
                                         </connections>
                                     </button>
@@ -256,6 +258,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="G1G-Eh-0pE"/>
             </objects>
             <point key="canvasLocation" x="286" y="329"/>
         </scene>
@@ -274,30 +277,25 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Choose Ball Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="U8z-BR-7Ij">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3F-Na-wee">
-                                <rect key="frame" x="16" y="221" width="176" height="158"/>
-                                <state key="normal" image="Beach Ball.jpg">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="wBn-0a-jPG" kind="show" id="17R-99-Jd4"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cny-Ib-fge">
                                 <rect key="frame" x="212" y="221" width="176" height="158"/>
+                                <gestureRecognizers/>
                                 <state key="normal" image="Basketball.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5h3-BA-BEc" appends="YES" id="p2p-Bz-2hX"/>
                                     <segue destination="wBn-0a-jPG" kind="show" id="DOG-zm-51d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cv-yL-g9N">
                                 <rect key="frame" x="408" y="221" width="176" height="158"/>
+                                <gestureRecognizers/>
                                 <state key="normal" image="Bowling Ball.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <outletCollection property="gestureRecognizers" destination="z8p-zU-6by" appends="YES" id="BHo-ab-JMw"/>
                                     <segue destination="wBn-0a-jPG" kind="show" id="THn-KC-SbK"/>
                                 </connections>
                             </button>
@@ -310,6 +308,17 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3F-Na-wee">
+                                <rect key="frame" x="16" y="221" width="176" height="158"/>
+                                <gestureRecognizers/>
+                                <state key="normal" image="Beach Ball.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ifg-jq-ZBg" appends="YES" id="YvY-If-gtG"/>
+                                    <segue destination="wBn-0a-jPG" kind="show" id="17R-99-Jd4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -359,6 +368,9 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Yj-nc-yYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ifg-jq-ZBg"/>
+                <tapGestureRecognizer id="5h3-BA-BEc"/>
+                <tapGestureRecognizer id="z8p-zU-6by"/>
             </objects>
             <point key="canvasLocation" x="325" y="1138"/>
         </scene>
@@ -387,6 +399,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpy-yz-FYA">
                                 <rect key="frame" x="212" y="221" width="176" height="192"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="158" id="3eb-NO-jrc"/>
                                     <constraint firstAttribute="height" constant="192" id="8aU-bx-x0E"/>
@@ -400,15 +413,18 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xwX-Us-L27" appends="YES" id="efn-hs-HOx"/>
                                     <segue destination="1Bh-kf-fhP" kind="show" id="pIF-LE-td1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atY-VD-MFA">
                                 <rect key="frame" x="408" y="221" width="176" height="192"/>
+                                <gestureRecognizers/>
                                 <state key="normal" image="Forest Background.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uxw-pa-dX1" appends="YES" id="HQG-41-xM1"/>
                                     <segue destination="1Bh-kf-fhP" kind="show" id="uLn-PQ-dLP"/>
                                 </connections>
                             </button>
@@ -423,6 +439,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS2-uD-Zs5">
                                 <rect key="frame" x="16" y="221" width="176" height="192"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="179" id="KBx-WT-RCv"/>
                                     <constraint firstAttribute="height" constant="192" id="gkl-8O-2A3"/>
@@ -437,6 +454,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <outletCollection property="gestureRecognizers" destination="DSX-g9-PF8" appends="YES" id="GKA-ye-Qsy"/>
                                     <segue destination="1Bh-kf-fhP" kind="show" id="cfK-05-s9e"/>
                                 </connections>
                             </button>
@@ -500,6 +518,9 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PI2-Mb-fVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="DSX-g9-PF8"/>
+                <tapGestureRecognizer id="xwX-Us-L27"/>
+                <tapGestureRecognizer id="uxw-pa-dX1"/>
             </objects>
             <point key="canvasLocation" x="325" y="1937"/>
         </scene>
@@ -517,6 +538,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Beach Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ecP-gB-TMS">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="w23-cK-0jn" appends="YES" id="S1t-n9-auH"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -524,6 +549,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnn-RG-Eg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="w23-cK-0jn"/>
             </objects>
             <point key="canvasLocation" x="325" y="2767"/>
         </scene>
