@@ -401,7 +401,7 @@
                                     <segue destination="1Bh-kf-fhP" kind="show" id="uLn-PQ-dLP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="qS9-HL-rds">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="qS9-HL-rds">
                                 <rect key="frame" x="16" y="20" width="569" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="kuy-3s-IS9"/>
