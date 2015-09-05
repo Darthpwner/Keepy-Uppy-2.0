@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-let NumerOfBalls: UInt32 = 4
+let NumberOfBalls: UInt32 = 3
 
 enum BallType: Int, Printable {
     case Basketball = 0, BeachBall, BowlingBall
