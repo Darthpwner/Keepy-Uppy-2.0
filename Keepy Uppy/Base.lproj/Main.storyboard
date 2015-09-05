@@ -274,8 +274,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Choose Ball Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="U8z-BR-7Ij">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3F-Na-wee">
-                                <rect key="frame" x="16" y="221" width="164" height="158"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3F-Na-wee">
+                                <rect key="frame" x="16" y="221" width="176" height="158"/>
                                 <state key="normal" image="Beach Ball.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -283,8 +283,8 @@
                                     <segue destination="wBn-0a-jPG" kind="show" id="17R-99-Jd4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cny-Ib-fge">
-                                <rect key="frame" x="239" y="221" width="150" height="158"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cny-Ib-fge">
+                                <rect key="frame" x="212" y="221" width="176" height="158"/>
                                 <state key="normal" image="Basketball.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -301,8 +301,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cv-yL-g9N">
-                                <rect key="frame" x="447" y="221" width="137" height="158"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cv-yL-g9N">
+                                <rect key="frame" x="408" y="221" width="176" height="158"/>
                                 <state key="normal" image="Bowling Ball.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -347,6 +347,8 @@
                             <mask key="constraints">
                                 <exclude reference="RcP-vv-7q5"/>
                                 <exclude reference="hRz-pe-hOi"/>
+                                <exclude reference="GRs-qs-yLT"/>
+                                <exclude reference="KAF-93-7dL"/>
                                 <exclude reference="zmf-Zf-5Qg"/>
                                 <exclude reference="O3c-0Y-5tJ"/>
                             </mask>
