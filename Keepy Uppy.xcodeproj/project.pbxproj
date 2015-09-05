@@ -80,6 +80,7 @@
 		6B6897BF1B9970E500C5069E /* ChooseBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBackground.swift; sourceTree = "<group>"; };
 		6B6897C11B9970EE00C5069E /* GamePlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlayView.swift; sourceTree = "<group>"; };
 		6B6897C31B9973F100C5069E /* GamePlayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlayController.swift; sourceTree = "<group>"; };
+		6B6C8CF91B9B40E7008678EC /* Gameplay Song.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gameplay Song.m4a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +181,7 @@
 			children = (
 				6B68973C1B98B62800C5069E /* drop.mp3 */,
 				6B68973D1B98B62800C5069E /* gameover.mp3 */,
+				6B6C8CF91B9B40E7008678EC /* Gameplay Song.m4a */,
 				6B6897451B98B6D100C5069E /* hit.mp3 */,
 				6B6897471B98B96000C5069E /* theme.mp3 */,
 			);
