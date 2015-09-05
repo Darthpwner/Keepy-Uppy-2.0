@@ -269,7 +269,7 @@
         <!--Choose Ball Page-->
         <scene sceneID="GWd-FR-LhM">
             <objects>
-                <viewController title="Choose Ball Page" id="r2j-HC-Fb8" customClass="ChooseBall" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Choose Ball Page" id="r2j-HC-Fb8" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8io-fK-Mpn"/>
                         <viewControllerLayoutGuide type="bottom" id="UY2-3V-Th9"/>
@@ -395,7 +395,7 @@
         <!--Choose Background Page-->
         <scene sceneID="NFF-yY-RRn">
             <objects>
-                <viewController title="Choose Background Page" id="wBn-0a-jPG" customClass="ChooseBackground" sceneMemberID="viewController">
+                <viewController title="Choose Background Page" id="wBn-0a-jPG" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h3x-L6-Lxj"/>
                         <viewControllerLayoutGuide type="bottom" id="5eP-uw-gwE"/>
@@ -453,7 +453,7 @@
                                     <constraint firstAttribute="height" constant="78" id="4EW-WE-lAa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="48"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS2-uD-Zs5">
