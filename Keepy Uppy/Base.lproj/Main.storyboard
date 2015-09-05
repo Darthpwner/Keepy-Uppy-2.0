@@ -48,7 +48,6 @@
                                         </variation>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="G1G-Eh-0pE" appends="YES" id="hhZ-ZH-7Ha"/>
-                                            <segue destination="r2j-HC-Fb8" kind="show" id="64f-IQ-vbD"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
@@ -258,7 +257,11 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="G1G-Eh-0pE"/>
+                <tapGestureRecognizer id="G1G-Eh-0pE">
+                    <connections>
+                        <segue destination="r2j-HC-Fb8" kind="show" identifier="Title to Choose Ball" id="7lL-68-6ou"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="286" y="329"/>
         </scene>
@@ -566,7 +569,7 @@
         <image name="Load Screen.jpg" width="3840" height="2160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="THn-KC-SbK"/>
         <segue reference="uLn-PQ-dLP"/>
+        <segue reference="THn-KC-SbK"/>
     </inferredMetricsTieBreakers>
 </document>
