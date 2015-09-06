@@ -12,8 +12,7 @@ import SpriteKit
 class ChooseBackground: ChooseBall {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        song.play()
+        //super.viewDidLoad()
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -21,14 +20,14 @@ class ChooseBackground: ChooseBall {
     }
     
     @IBAction func chooseDesert(sender: UIButton) {
-        song.stop()
+        super.stopSong()
     }
     
     @IBAction func chooseBeach(sender: UIButton) {
-        song.stop()
+        super.stopSong()
     }
     
     @IBAction func chooseForest(sender: UIButton) {
-        song.stop()
+        super.stopSong()
     }
 }

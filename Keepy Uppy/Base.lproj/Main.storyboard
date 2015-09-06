@@ -48,7 +48,6 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="stopMusic:" destination="LVB-YS-i5n" eventType="touchUpInside" id="cNy-Bs-9pH"/>
                                             <segue destination="r2j-HC-Fb8" kind="show" id="HFi-7Q-Rq1"/>
                                         </connections>
                                     </button>

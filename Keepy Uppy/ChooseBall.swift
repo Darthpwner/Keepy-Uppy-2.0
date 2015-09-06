@@ -12,26 +12,15 @@ import AVFoundation
 
 class ChooseBall: GameViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        prepareAudios()
-        song.play()
-    }
+    override func viewDidLoad() {}
     
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
     
-    @IBAction func chooseBeachBall(sender: UIButton) {
-        song.pause()
-    }
+    @IBAction func chooseBeachBall(sender: UIButton) {}
     
-    @IBAction func chooseBasketball(sender: UIButton) {
-        song.pause()
-    }
+    @IBAction func chooseBasketball(sender: UIButton) {}
     
-    @IBAction func chooseBowlingBall(sender: UIButton) {
-        song.pause()
-    }
+    @IBAction func chooseBowlingBall(sender: UIButton) {}
 }
