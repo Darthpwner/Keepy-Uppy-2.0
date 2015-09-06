@@ -8,11 +8,13 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
 
 class GamePlayController: UIViewController {
     var lives: Int = 3
     
     var scene: GameScene!
+    var song: AVAudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,15 @@ class GamePlayController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    func prepareAudios() {
+        
+        var path = NSBundle.mainBundle().pathForResource("gameplay", ofType: "mp3")
+        song = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path!), error: nil)
+        song.prepareToPlay()
+        
+        song.numberOfLoops = -1 //Makes the song play repeatedly
     }
     
     //UITouchGesture Functions
