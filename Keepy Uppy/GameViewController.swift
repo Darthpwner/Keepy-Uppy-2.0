@@ -20,6 +20,8 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     var song: AVAudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
+        println("SECOND")
+        
         super.viewDidLoad()
         
         //I am not sure what the code below does

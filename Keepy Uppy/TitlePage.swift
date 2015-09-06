@@ -35,6 +35,8 @@ class TitlePage: UIViewController {
         //Plays start song
         singleton.prepareAudios()
         singleton.song.play()
+        
+        println("FIRST")
     }
     
     override func prefersStatusBarHidden() -> Bool {

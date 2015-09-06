@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 
 class ChooseBackground: UIViewController {
-
+    
     let singleton = PlayStartSong.sharedInstance
     
     override func prefersStatusBarHidden() -> Bool {

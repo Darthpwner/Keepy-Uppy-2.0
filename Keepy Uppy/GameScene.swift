@@ -38,6 +38,8 @@ class GameScene: SKScene {
     override init(size: CGSize) {
         super.init(size: size)
         
+        println("LOL INIT")
+        
         anchorPoint = CGPoint(x: 0, y: 1.0)
         
         //if forest background chosen
@@ -63,6 +65,8 @@ class GameScene: SKScene {
     }
     
     override func didMoveToView(view: SKView) {
+        println("LOL DIDMOVETOVIEW")
+        
         // we live in a world with gravity on the y axis
         self.physicsWorld.gravity = CGVectorMake(0, -6)
         // we put contraints on the top, left, right, bottom so that our balls can bounce off them
