@@ -48,7 +48,8 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="G1G-Eh-0pE" appends="YES" id="hhZ-ZH-7Ha"/>
+                                            <action selector="stopMusic:" destination="LVB-YS-i5n" eventType="touchUpInside" id="cNy-Bs-9pH"/>
+                                            <segue destination="r2j-HC-Fb8" kind="show" id="HFi-7Q-Rq1"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
@@ -258,12 +259,6 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="G1G-Eh-0pE">
-                    <connections>
-                        <action selector="stopPlayingSong:" destination="LVB-YS-i5n" id="YZs-aK-hkS"/>
-                        <segue destination="r2j-HC-Fb8" kind="show" identifier="Title to Choose Ball" id="7lL-68-6ou"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="286" y="329"/>
         </scene>
@@ -289,7 +284,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ifg-jq-ZBg" appends="YES" id="YvY-If-gtG"/>
+                                    <segue destination="wBn-0a-jPG" kind="show" id="7Ad-wY-Qj2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cny-Ib-fge">
@@ -304,7 +299,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="5h3-BA-BEc" appends="YES" id="p2p-Bz-2hX"/>
+                                    <segue destination="wBn-0a-jPG" kind="show" id="yhu-8F-ARz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cv-yL-g9N">
@@ -314,7 +309,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="z8p-zU-6by" appends="YES" id="BHo-ab-JMw"/>
+                                    <segue destination="wBn-0a-jPG" kind="show" id="3eZ-j1-xFl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rSS-7z-2ho">
@@ -375,21 +370,6 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Yj-nc-yYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="ifg-jq-ZBg">
-                    <connections>
-                        <segue destination="wBn-0a-jPG" kind="show" id="Gg0-X9-gzt"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="5h3-BA-BEc">
-                    <connections>
-                        <segue destination="wBn-0a-jPG" kind="show" id="fbh-Gs-sAy"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="z8p-zU-6by">
-                    <connections>
-                        <segue destination="wBn-0a-jPG" kind="show" id="mWx-wg-Dxj"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="325" y="1138"/>
         </scene>
@@ -435,7 +415,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="xwX-Us-L27" appends="YES" id="efn-hs-HOx"/>
+                                    <segue destination="1Bh-kf-fhP" kind="show" id="ukl-sZ-4G6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atY-VD-MFA">
@@ -445,7 +425,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="uxw-pa-dX1" appends="YES" id="HQG-41-xM1"/>
+                                    <segue destination="1Bh-kf-fhP" kind="show" id="f5A-CJ-CWh"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="qS9-HL-rds">
@@ -474,7 +454,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="DSX-g9-PF8" appends="YES" id="GKA-ye-Qsy"/>
+                                    <segue destination="1Bh-kf-fhP" kind="show" id="XiM-DH-DuR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -537,21 +517,6 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PI2-Mb-fVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="DSX-g9-PF8">
-                    <connections>
-                        <segue destination="1Bh-kf-fhP" kind="show" id="NGp-Bp-0qR"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="xwX-Us-L27">
-                    <connections>
-                        <segue destination="1Bh-kf-fhP" kind="show" id="jGr-Ds-JUe"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="uxw-pa-dX1">
-                    <connections>
-                        <segue destination="1Bh-kf-fhP" kind="show" id="6fL-wU-sLu"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="325" y="1937"/>
         </scene>
@@ -601,7 +566,7 @@
         <image name="Load Screen.jpg" width="3840" height="2160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mWx-wg-Dxj"/>
-        <segue reference="jGr-Ds-JUe"/>
+        <segue reference="yhu-8F-ARz"/>
+        <segue reference="ukl-sZ-4G6"/>
     </inferredMetricsTieBreakers>
 </document>

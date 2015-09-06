@@ -48,4 +48,8 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate  {
         
         song.numberOfLoops = -1 //Makes the song play repeatedly
     }
+    
+    @IBAction func stopMusic(sender: UIButton) {
+        song.stop()
+    }
 }
