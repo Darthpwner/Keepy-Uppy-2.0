@@ -42,6 +42,9 @@
                                         <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bouncing Ball.gif" translatesAutoresizingMaskIntoConstraints="NO" id="SjE-2F-ikP">
+                                        <rect key="frame" x="269" y="242" width="240" height="128"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -68,6 +71,9 @@
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="animation" destination="SjE-2F-ikP" id="FA6-fZ-qVW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
             </objects>
@@ -273,6 +279,7 @@
         <image name="Basketball.png" width="340" height="340"/>
         <image name="Beach Background.jpg" width="700" height="438"/>
         <image name="Beach Ball.png" width="1123" height="1126"/>
+        <image name="Bouncing Ball.gif" width="250" height="300"/>
         <image name="Bowling Ball.png" width="220" height="223"/>
         <image name="Choose Background Screen.jpg" width="265" height="190"/>
         <image name="Choose Ball Screen.jpg" width="3264" height="2448"/>

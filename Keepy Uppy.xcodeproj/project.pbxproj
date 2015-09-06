@@ -37,6 +37,7 @@
 		6B6C8D151B9BF13B008678EC /* gameplay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D141B9BF13B008678EC /* gameplay.mp3 */; };
 		6B94375C1B9C0F080049AA91 /* PlayStartSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */; };
 		6B94375E1B9C1A090049AA91 /* TitlePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94375D1B9C1A090049AA91 /* TitlePage.swift */; };
+		6BD2D38B1B9D05EE0052FBA7 /* Bouncing Ball.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6BD2D38A1B9D05EE0052FBA7 /* Bouncing Ball.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		6B6C8D141B9BF13B008678EC /* gameplay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gameplay.mp3; path = ../gameplay.mp3; sourceTree = "<group>"; };
 		6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayStartSong.swift; sourceTree = "<group>"; };
 		6B94375D1B9C1A090049AA91 /* TitlePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlePage.swift; sourceTree = "<group>"; };
+		6BD2D38A1B9D05EE0052FBA7 /* Bouncing Ball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Bouncing Ball.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				6B6C8D061B9BAC7B008678EC /* Basketball.png */,
 				6B6897341B98B4D300C5069E /* Beach Background.jpg */,
 				6B6C8D081B9BAC85008678EC /* Beach Ball.png */,
+				6BD2D38A1B9D05EE0052FBA7 /* Bouncing Ball.gif */,
 				6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */,
 				6B6897BB1B99687C00C5069E /* Choose Background Screen.jpg */,
 				6B6897B71B995F0800C5069E /* Choose Ball Screen.jpg */,
@@ -274,6 +277,7 @@
 			files = (
 				6B6C8D0F1B9BAE94008678EC /* Bowling Ball.png in Resources */,
 				6B68971F1B98B2CA00C5069E /* LaunchScreen.xib in Resources */,
+				6BD2D38B1B9D05EE0052FBA7 /* Bouncing Ball.gif in Resources */,
 				6B6C8D071B9BAC7B008678EC /* Basketball.png in Resources */,
 				6B6897461B98B6D100C5069E /* hit.mp3 in Resources */,
 				6B6897541B98BF5A00C5069E /* Desert Background.jpg in Resources */,

@@ -12,6 +12,10 @@ import AVFoundation
 
 class TitlePage: UIViewController {
     
+
+    @IBOutlet weak var animation: UIImageView!
+    
+    
     var scene: GameScene!
     
     let singleton = PlayStartSong.sharedInstance
