@@ -31,10 +31,6 @@ class GameScene: SKScene {
     //else
     //let ball = SKSpriteNode(imageNamed: "Bowling Ball.jpg");
     
-    required init(coder aDecoder: NSCoder) {
-        fatalError("NSCoder not supported")
-    }
-    
     override init(size: CGSize) {
         super.init(size: size)
         
@@ -54,10 +50,14 @@ class GameScene: SKScene {
         
         addChild(gameLayer)
         
-        let gameBoardTexture = SKTexture(imageNamed: "Beach Background.jpg")
+        //let gameBoardTexture = SKTexture(imageNamed: "Beach Background.jpg")
         
         shapeLayer.position = LayerPosition
         gameLayer.addChild(shapeLayer)
+    }
+
+    required init(coder decoder: NSCoder) {
+        super.init()
     }
     
     func playSound(sound: String) {
@@ -97,6 +97,8 @@ class GameScene: SKScene {
         // this will allow the balls to rotate when bouncing off each other
         ball.physicsBody!.allowsRotation = true
     }
+    
+    
     
     // this defines the mass, roughness and bounciness
     func setPhysicsAttributes(friction: CGFloat, restitution: CGFloat, mass: CGFloat) {

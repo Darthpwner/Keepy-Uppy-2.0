@@ -12,6 +12,10 @@ import AVFoundation
 
 class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
+    @IBOutlet var GameSceneOutlet: GameScene!
+    
+    ViewController (nibName:VirwController bundle:nil)
+    
     var scene: GameScene!
     
     var lives: Int = 3

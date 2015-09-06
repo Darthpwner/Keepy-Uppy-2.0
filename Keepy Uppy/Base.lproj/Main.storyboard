@@ -528,28 +528,27 @@
         <!--Gameplay Page-->
         <scene sceneID="eG8-eG-xe6">
             <objects>
+                <viewController title="Gameplay Page" id="1Bh-kf-fhP" customClass="GameViewController" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lw2-qJ-c0K"/>
+                        <viewControllerLayoutGuide type="bottom" id="DbQ-Bh-GHf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OuZ-qJ-BIN" customClass="GameScene" customModule="Keepy_Uppy" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="GameSceneOutlet" destination="OuZ-qJ-BIN" id="cXH-5p-hA0"/>
+                    </connections>
+                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnn-RG-Eg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="w23-cK-0jn">
                     <connections>
                         <action selector="tapBall:" destination="1Bh-kf-fhP" id="P7b-6K-ulR"/>
                     </connections>
                 </tapGestureRecognizer>
-                <viewController title="Gameplay Page" id="1Bh-kf-fhP" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XeW-YT-WgQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="GcZ-xE-wgw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="O77-o2-k6H" customClass="GameScene">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <connections>
-                        <outlet property="GameViewControllerOutlet" destination="O77-o2-k6H" id="qKt-e3-Zqq"/>
-                        <outlet property="view" destination="O77-o2-k6H" id="JVa-3q-ZG1"/>
-                    </connections>
-                </viewController>
             </objects>
             <point key="canvasLocation" x="325" y="2767"/>
         </scene>
