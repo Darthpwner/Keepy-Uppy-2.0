@@ -9,28 +9,26 @@
 import UIKit
 import SpriteKit
 
-class ChooseBackground: UIViewController, UIGestureRecognizerDelegate {
-    var scene: GameScene!
-    
+class ChooseBackground: ChooseBall {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //I am not sure what the code below does
-        
-        // Configure the view.
-        //        let skView = view as! SKView
-        //        skView.multipleTouchEnabled = false
-        //
-        //        // Create and configure the scene.
-        //        scene = GameScene(size: skView.bounds.size)
-        //        scene.scaleMode = .AspectFill
-        //
-        //        // Present the scene.
-        //        skView.presentScene(scene)
-        
+        song.play()
     }
     
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    @IBAction func chooseDesert(sender: UIButton) {
+        song.stop()
+    }
+    
+    @IBAction func chooseBeach(sender: UIButton) {
+        song.stop()
+    }
+    
+    @IBAction func chooseForest(sender: UIButton) {
+        song.stop()
     }
 }

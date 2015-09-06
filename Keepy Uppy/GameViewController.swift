@@ -14,6 +14,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate  {
 
     var scene: GameScene!
     var song: AVAudioPlayer = AVAudioPlayer()
+    var songStartedPlaying: Bool = false;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +33,10 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate  {
 //        skView.presentScene(scene)
 
         //Plays start song
-        prepareAudios()
-        song.play()
+        if(songStartedPlaying == false) {
+            prepareAudios()
+            song.play()
+        }
     }
 
     override func prefersStatusBarHidden() -> Bool {
@@ -50,6 +53,6 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate  {
     }
     
     @IBAction func stopMusic(sender: UIButton) {
-        song.stop()
+        song.pause()
     }
 }

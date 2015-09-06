@@ -284,6 +284,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="chooseBeachBall:" destination="r2j-HC-Fb8" eventType="touchUpInside" id="frM-Dk-AHB"/>
                                     <segue destination="wBn-0a-jPG" kind="show" id="7Ad-wY-Qj2"/>
                                 </connections>
                             </button>
@@ -299,17 +300,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="chooseBasketball:" destination="r2j-HC-Fb8" eventType="touchUpInside" id="aWx-7E-eu6"/>
                                     <segue destination="wBn-0a-jPG" kind="show" id="yhu-8F-ARz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cv-yL-g9N">
-                                <rect key="frame" x="408" y="221" width="176" height="158"/>
-                                <gestureRecognizers/>
-                                <state key="normal" image="Bowling Ball.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="wBn-0a-jPG" kind="show" id="3eZ-j1-xFl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rSS-7z-2ho">
@@ -321,6 +313,17 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cv-yL-g9N">
+                                <rect key="frame" x="408" y="221" width="176" height="158"/>
+                                <gestureRecognizers/>
+                                <state key="normal" image="Bowling Ball.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseBowlingBall:" destination="r2j-HC-Fb8" eventType="touchUpInside" id="Pmf-UP-dGT"/>
+                                    <segue destination="wBn-0a-jPG" kind="show" id="3eZ-j1-xFl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -415,6 +418,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="chooseBeach:" destination="wBn-0a-jPG" eventType="touchUpInside" id="lW9-Ci-eTm"/>
                                     <segue destination="1Bh-kf-fhP" kind="show" id="ukl-sZ-4G6"/>
                                 </connections>
                             </button>
@@ -425,6 +429,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="chooseForest:" destination="wBn-0a-jPG" eventType="touchUpInside" id="DJf-XP-ucq"/>
                                     <segue destination="1Bh-kf-fhP" kind="show" id="f5A-CJ-CWh"/>
                                 </connections>
                             </button>
@@ -454,6 +459,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="chooseDesert:" destination="wBn-0a-jPG" eventType="touchUpInside" id="0Vd-gL-ySa"/>
                                     <segue destination="1Bh-kf-fhP" kind="show" id="XiM-DH-DuR"/>
                                 </connections>
                             </button>

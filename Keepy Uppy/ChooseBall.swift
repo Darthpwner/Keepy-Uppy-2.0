@@ -8,29 +8,30 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
 
-class ChooseBall: UIViewController, UIGestureRecognizerDelegate {
-    var scene: GameScene!
+class ChooseBall: GameViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //I am not sure what the code below does
-        
-        // Configure the view.
-        //        let skView = view as! SKView
-        //        skView.multipleTouchEnabled = false
-        //
-        //        // Create and configure the scene.
-        //        scene = GameScene(size: skView.bounds.size)
-        //        scene.scaleMode = .AspectFill
-        //
-        //        // Present the scene.
-        //        skView.presentScene(scene)
 
+        prepareAudios()
+        song.play()
     }
     
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    @IBAction func chooseBeachBall(sender: UIButton) {
+        song.pause()
+    }
+    
+    @IBAction func chooseBasketball(sender: UIButton) {
+        song.pause()
+    }
+    
+    @IBAction func chooseBowlingBall(sender: UIButton) {
+        song.pause()
     }
 }
