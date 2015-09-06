@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import AVFoundation
 
-class GameViewController: UIViewController, UIGestureRecognizerDelegate  {
+class GameViewController: UIViewController {
 
     var scene: GameScene!
     var song: AVAudioPlayer = AVAudioPlayer()

@@ -9,25 +9,23 @@
 import UIKit
 import SpriteKit
 
-class ChooseBackground: ChooseBall {
+class ChooseBackground: UIViewController {
 
-    override func viewDidLoad() {
-        //super.viewDidLoad()
-    }
+    override func viewDidLoad() {}
     
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
     
     @IBAction func chooseDesert(sender: UIButton) {
-        super.stopSong()
+        //super.stopSong()
     }
     
     @IBAction func chooseBeach(sender: UIButton) {
-        super.stopSong()
+        //super.stopSong()
     }
     
     @IBAction func chooseForest(sender: UIButton) {
-        super.stopSong()
+        //super.stopSong()
     }
 }

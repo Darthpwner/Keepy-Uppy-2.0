@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import AVFoundation
 
-class ChooseBall: GameViewController {
+class ChooseBall: UIViewController {
     
     override func viewDidLoad() {}
     
