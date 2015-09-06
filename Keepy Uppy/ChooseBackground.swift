@@ -13,8 +13,6 @@ class ChooseBackground: UIViewController {
 
     let singleton = PlayStartSong.sharedInstance
     
-    override func viewDidLoad() {}
-    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }

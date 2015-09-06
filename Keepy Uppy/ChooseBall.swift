@@ -12,8 +12,6 @@ import AVFoundation
 
 class ChooseBall: UIViewController {
     
-    override func viewDidLoad() {}
-    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
