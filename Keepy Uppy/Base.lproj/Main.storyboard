@@ -125,7 +125,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rSS-7z-2ho">
-                                <rect key="frame" x="16" y="20" width="568" height="51"/>
+                                <rect key="frame" x="16" y="20" width="568" height="98.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -139,6 +139,7 @@
                             <constraint firstItem="cny-Ib-fge" firstAttribute="height" secondItem="9Cv-yL-g9N" secondAttribute="height" id="90k-xj-XZv"/>
                             <constraint firstItem="rSS-7z-2ho" firstAttribute="leading" secondItem="dLU-Cl-CIg" secondAttribute="leadingMargin" id="FSU-F5-sar"/>
                             <constraint firstItem="r3F-Na-wee" firstAttribute="top" secondItem="rSS-7z-2ho" secondAttribute="bottom" constant="150" id="GkF-3F-feb"/>
+                            <constraint firstAttribute="centerY" secondItem="r3F-Na-wee" secondAttribute="centerY" id="KeQ-cj-VMa"/>
                             <constraint firstAttribute="trailing" secondItem="U8z-BR-7Ij" secondAttribute="trailing" id="NVy-3P-C3t"/>
                             <constraint firstItem="cny-Ib-fge" firstAttribute="width" secondItem="9Cv-yL-g9N" secondAttribute="width" id="TmN-J6-YKb"/>
                             <constraint firstItem="9Cv-yL-g9N" firstAttribute="trailing" secondItem="dLU-Cl-CIg" secondAttribute="trailingMargin" id="UEo-bb-J4v"/>
@@ -157,6 +158,13 @@
                             <constraint firstItem="rSS-7z-2ho" firstAttribute="trailing" secondItem="9Cv-yL-g9N" secondAttribute="trailing" id="thN-eW-RU9"/>
                             <constraint firstItem="9Cv-yL-g9N" firstAttribute="trailing" secondItem="dLU-Cl-CIg" secondAttribute="trailingMargin" id="xD4-5Y-GZi"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GkF-3F-feb"/>
+                                <exclude reference="bvo-cH-hhY"/>
+                                <exclude reference="5r6-Ax-xOp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
