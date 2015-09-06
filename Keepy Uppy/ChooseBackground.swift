@@ -11,7 +11,11 @@ import SpriteKit
 
 class ChooseBackground: UIViewController {
 
-    override func viewDidLoad() {}
+    let singleton = PlayStartSong.sharedInstance
+    
+    override func viewDidLoad() {
+        singleton.song.stop()
+    }
     
     override func prefersStatusBarHidden() -> Bool {
         return true

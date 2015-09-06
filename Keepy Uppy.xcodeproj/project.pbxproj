@@ -37,6 +37,7 @@
 		6B6C8D091B9BAC85008678EC /* Beach Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D081B9BAC85008678EC /* Beach Ball.png */; };
 		6B6C8D0F1B9BAE94008678EC /* Bowling Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */; };
 		6B6C8D151B9BF13B008678EC /* gameplay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D141B9BF13B008678EC /* gameplay.mp3 */; };
+		6B94375C1B9C0F080049AA91 /* PlayStartSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		6B6C8D081B9BAC85008678EC /* Beach Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Beach Ball.png"; sourceTree = "<group>"; };
 		6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bowling Ball.png"; sourceTree = "<group>"; };
 		6B6C8D141B9BF13B008678EC /* gameplay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gameplay.mp3; path = ../gameplay.mp3; sourceTree = "<group>"; };
+		6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayStartSong.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				6B6897C11B9970EE00C5069E /* GamePlayView.swift */,
 				6B6897C31B9973F100C5069E /* GamePlayController.swift */,
 				6B6C8D001B9B9DF3008678EC /* KeepyUppy.swift */,
+				6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */,
 				6B6897181B98B2CA00C5069E /* Main.storyboard */,
 				6B68971B1B98B2CA00C5069E /* Images.xcassets */,
 				6B68971D1B98B2CA00C5069E /* LaunchScreen.xib */,
@@ -318,6 +321,7 @@
 				6B6897C41B9973F100C5069E /* GamePlayController.swift in Sources */,
 				6B6897111B98B2CA00C5069E /* AppDelegate.swift in Sources */,
 				6B6897BE1B9970DD00C5069E /* ChooseBall.swift in Sources */,
+				6B94375C1B9C0F080049AA91 /* PlayStartSong.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

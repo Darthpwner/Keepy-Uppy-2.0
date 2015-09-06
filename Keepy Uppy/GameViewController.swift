@@ -13,7 +13,8 @@ import AVFoundation
 class GameViewController: UIViewController {
 
     var scene: GameScene!
-    var song: AVAudioPlayer = AVAudioPlayer()
+
+    let singleton = PlayStartSong.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,26 +32,14 @@ class GameViewController: UIViewController {
 //        // Present the scene.
 //        skView.presentScene(scene)
 
+
+        
         //Plays start song
-        prepareAudios()
-        song.play()
+        singleton.prepareAudios()
+        singleton.song.play()
     }
 
     override func prefersStatusBarHidden() -> Bool {
         return true
-    }
-    
-    func prepareAudios() {
-        
-        var path = NSBundle.mainBundle().pathForResource("start", ofType: "mp3")
-        song = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path!), error: nil)
-        song.prepareToPlay()
-        
-        song.numberOfLoops = -1 //Makes the song play repeatedly
-    }
-    
-    func stopSong() {
-        //How do I stop the fucking song
-        song.stop()
     }
 }
