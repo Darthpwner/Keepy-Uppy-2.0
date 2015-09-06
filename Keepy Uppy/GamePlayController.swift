@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import AVFoundation
 
-class GamePlayController: UIViewController {
+class GamePlayController: UIViewController, UIGestureRecognizerDelegate {
     var lives: Int = 3
     
     var scene: GameScene!
@@ -20,15 +20,19 @@ class GamePlayController: UIViewController {
         super.viewDidLoad()
         
         // Configure the view.
-        let skView = view as! SKView
-        skView.multipleTouchEnabled = false
+//        let skView = view as! SKView
+//        skView.multipleTouchEnabled = false
+//        
+//        // Create and configure the scene.
+//        scene = GameScene(size: skView.bounds.size)
+//        scene.scaleMode = .AspectFill
+//        
+//        // Present the scene.
+//        skView.presentScene(scene)
         
-        // Create and configure the scene.
-        scene = GameScene(size: skView.bounds.size)
-        scene.scaleMode = .AspectFill
-        
-        // Present the scene.
-        skView.presentScene(scene)
+        //Plays gameplay song
+        prepareAudios()
+        song.play()
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -54,9 +58,11 @@ class GamePlayController: UIViewController {
         
     }
     
+    //If game ends, stop player interaction and the gameplay song
     func gameDidEnd() -> Bool {
         if(lives == 0) {
             view.userInteractionEnabled = false
+            song.stop()
             scene.playSound("gameover.mp3")
             return true
         }

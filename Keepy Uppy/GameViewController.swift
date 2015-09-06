@@ -28,7 +28,8 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate  {
         
         // Present the scene.
         skView.presentScene(scene)
-        
+
+        //Plays start song
         prepareAudios()
         song.play()
     }
@@ -39,16 +40,10 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate  {
     
     func prepareAudios() {
         
-        var path = NSBundle.mainBundle().pathForResource("theme", ofType: "mp3")
+        var path = NSBundle.mainBundle().pathForResource("start", ofType: "mp3")
         song = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path!), error: nil)
         song.prepareToPlay()
         
         song.numberOfLoops = -1 //Makes the song play repeatedly
     }
-    
-    @IBAction func stopPlayingSong(sender: UITapGestureRecognizer) {
-        song.stop()
-    }
-    
-    
 }

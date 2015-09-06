@@ -18,7 +18,7 @@
 		6B6897411B98B62800C5069E /* drop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B68973C1B98B62800C5069E /* drop.mp3 */; };
 		6B6897421B98B62800C5069E /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B68973D1B98B62800C5069E /* gameover.mp3 */; };
 		6B6897461B98B6D100C5069E /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897451B98B6D100C5069E /* hit.mp3 */; };
-		6B6897481B98B96000C5069E /* theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897471B98B96000C5069E /* theme.mp3 */; };
+		6B6897481B98B96000C5069E /* start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897471B98B96000C5069E /* start.mp3 */; };
 		6B6897501B98BEAB00C5069E /* Forest Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B68974F1B98BEAB00C5069E /* Forest Background.png */; };
 		6B6897541B98BF5A00C5069E /* Desert Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897531B98BF5A00C5069E /* Desert Background.jpg */; };
 		6B6897561B98C41C00C5069E /* Load Screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897551B98C41C00C5069E /* Load Screen.jpg */; };
@@ -65,7 +65,7 @@
 		6B68973C1B98B62800C5069E /* drop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drop.mp3; sourceTree = "<group>"; };
 		6B68973D1B98B62800C5069E /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameover.mp3; sourceTree = "<group>"; };
 		6B6897451B98B6D100C5069E /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
-		6B6897471B98B96000C5069E /* theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = theme.mp3; sourceTree = "<group>"; };
+		6B6897471B98B96000C5069E /* start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start.mp3; sourceTree = "<group>"; };
 		6B68974F1B98BEAB00C5069E /* Forest Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Forest Background.png"; sourceTree = "<group>"; };
 		6B6897531B98BF5A00C5069E /* Desert Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Desert Background.jpg"; sourceTree = "<group>"; };
 		6B6897551B98C41C00C5069E /* Load Screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Load Screen.jpg"; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 				6B68973D1B98B62800C5069E /* gameover.mp3 */,
 				6B6C8D121B9BB962008678EC /* gameplay.mp3 */,
 				6B6897451B98B6D100C5069E /* hit.mp3 */,
-				6B6897471B98B96000C5069E /* theme.mp3 */,
+				6B6897471B98B96000C5069E /* start.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 				6B6897541B98BF5A00C5069E /* Desert Background.jpg in Resources */,
 				6B6897501B98BEAB00C5069E /* Forest Background.png in Resources */,
 				6B68971C1B98B2CA00C5069E /* Images.xcassets in Resources */,
-				6B6897481B98B96000C5069E /* theme.mp3 in Resources */,
+				6B6897481B98B96000C5069E /* start.mp3 in Resources */,
 				6B6897351B98B4D300C5069E /* Beach Background.jpg in Resources */,
 				6B6897B81B995F0800C5069E /* Choose Ball Screen.jpg in Resources */,
 				6B6C8D091B9BAC85008678EC /* Beach Ball.png in Resources */,

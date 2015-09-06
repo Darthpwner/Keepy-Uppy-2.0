@@ -261,7 +261,6 @@
                 <tapGestureRecognizer id="G1G-Eh-0pE">
                     <connections>
                         <action selector="stopPlayingSong:" destination="LVB-YS-i5n" id="YZs-aK-hkS"/>
-                        <outlet property="delegate" destination="LVB-YS-i5n" id="p09-qN-50n"/>
                         <segue destination="r2j-HC-Fb8" kind="show" identifier="Title to Choose Ball" id="7lL-68-6ou"/>
                     </connections>
                 </tapGestureRecognizer>
@@ -271,7 +270,7 @@
         <!--Choose Ball Page-->
         <scene sceneID="GWd-FR-LhM">
             <objects>
-                <viewController title="Choose Ball Page" id="r2j-HC-Fb8" sceneMemberID="viewController">
+                <viewController title="Choose Ball Page" id="r2j-HC-Fb8" customClass="GameViewController" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8io-fK-Mpn"/>
                         <viewControllerLayoutGuide type="bottom" id="UY2-3V-Th9"/>
@@ -397,7 +396,7 @@
         <!--Choose Background Page-->
         <scene sceneID="NFF-yY-RRn">
             <objects>
-                <viewController title="Choose Background Page" id="wBn-0a-jPG" sceneMemberID="viewController">
+                <viewController title="Choose Background Page" id="wBn-0a-jPG" customClass="GameViewController" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h3x-L6-Lxj"/>
                         <viewControllerLayoutGuide type="bottom" id="5eP-uw-gwE"/>
