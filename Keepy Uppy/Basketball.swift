@@ -7,3 +7,7 @@
 //
 
 import SpriteKit
+
+class Basketball: Ball {
+    
+}

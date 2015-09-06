@@ -16,11 +16,11 @@ enum BallType: Int, Printable {
     var description: String {
         switch self {
         case .Basketball:
-            return "Basketball.jpg"
+            return "Basketball.png"
         case .BeachBall:
-            return "Beach Ball.jpg"
+            return "Beach Ball.png"
         case .BowlingBall:
-            return "Bowling Ball.jpg"
+            return "Bowling Ball.png"
         }
     }
 }
