@@ -45,6 +45,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ecg-ok-cqe" secondAttribute="bottom" constant="50" id="2ov-lA-fqX"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" constant="50" id="3yp-3N-Jy1"/>
                                     <constraint firstAttribute="trailing" secondItem="Ecg-ok-cqe" secondAttribute="trailing" constant="10" id="6UP-Aa-0wg"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="top" secondItem="Nes-1j-TOz" secondAttribute="top" id="Dbt-d2-xic"/>
@@ -52,11 +53,18 @@
                                     <constraint firstAttribute="trailing" secondItem="dbZ-Ff-5GE" secondAttribute="trailing" constant="10" id="ZGU-FM-N1M"/>
                                     <constraint firstAttribute="trailing" secondItem="liT-0K-ib2" secondAttribute="trailing" id="aZe-Pd-2ok"/>
                                     <constraint firstItem="liT-0K-ib2" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" id="c4P-NR-PBx"/>
+                                    <constraint firstItem="dbZ-Ff-5GE" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" constant="10" id="cm5-3A-0Gd"/>
                                     <constraint firstItem="dbZ-Ff-5GE" firstAttribute="leading" secondItem="liT-0K-ib2" secondAttribute="leading" id="hZR-sn-0ZX"/>
                                     <constraint firstItem="Ecg-ok-cqe" firstAttribute="centerX" secondItem="liT-0K-ib2" secondAttribute="centerX" id="nIl-dZ-N38"/>
                                     <constraint firstAttribute="bottom" secondItem="liT-0K-ib2" secondAttribute="bottom" id="pXk-3X-tZ6"/>
                                     <constraint firstAttribute="bottom" secondItem="Ecg-ok-cqe" secondAttribute="bottom" constant="50" id="xeq-M4-wwI"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cm5-3A-0Gd"/>
+                                        <exclude reference="2ov-lA-fqX"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
