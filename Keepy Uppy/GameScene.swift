@@ -17,7 +17,6 @@ class GameScene: SKScene {
     override init(size: CGSize) {
         super.init(size: size)
                 
-        //runAction(SKAction.repeatActionForever(SKAction.playSoundFileNamed("gameplay.mp3", waitForCompletion: true)))
     }
     
     func playSound(sound: String) {
