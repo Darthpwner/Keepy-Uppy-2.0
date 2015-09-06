@@ -546,7 +546,6 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
-                        <outlet property="GamePlayViewOutlet" destination="O77-o2-k6H" id="ynQ-Gz-FCi"/>
                         <outlet property="GameViewControllerOutlet" destination="O77-o2-k6H" id="qKt-e3-Zqq"/>
                         <outlet property="view" destination="O77-o2-k6H" id="JVa-3q-ZG1"/>
                     </connections>

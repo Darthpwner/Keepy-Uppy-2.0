@@ -12,12 +12,7 @@ import AVFoundation
 
 class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
-    @IBOutlet weak var GameViewControllerOutlet: GameScene!
-    
-    var scene: GameScene! = nil
-    
-    @IBOutlet weak var GamePlayViewOutlet: UIView!
-    
+    var scene: GameScene!
     
     var lives: Int = 3
     

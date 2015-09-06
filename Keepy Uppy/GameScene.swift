@@ -9,7 +9,7 @@
 //Actual game play scene
 import SpriteKit
 
-class GamePlayView: SKScene {
+class GameScene: SKScene {
     var lives: Int = 3
     
     //Restitution == how much energy the physics body loses when it bounces
