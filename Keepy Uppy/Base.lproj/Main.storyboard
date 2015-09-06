@@ -533,9 +533,14 @@
                         <viewControllerLayoutGuide type="top" id="nNS-dI-T8c"/>
                         <viewControllerLayoutGuide type="bottom" id="Q3d-mU-syC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1af-vJ-B3L">
+                    <view key="view" contentMode="scaleToFill" id="1af-vJ-B3L" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i9W-Iw-YUP" customClass="SKView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>

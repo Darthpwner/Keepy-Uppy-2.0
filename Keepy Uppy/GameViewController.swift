@@ -12,8 +12,6 @@ import AVFoundation
 
 class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
-    
-    
     var scene: GameScene!
     
     var lives: Int = 3
@@ -29,16 +27,16 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         //I am not sure what the code below does
         
         //Configure the view.
-//        let skView = view as! SKView
-//        skView.multipleTouchEnabled = false
-//        
-//        // Create and configure the scene.
-//        scene = GameScene(size: skView.bounds.size)
-//        scene.scaleMode = .AspectFill
-//        
-//        // Present the scene.
-//        skView.presentScene(scene)
-//        
+        let skView = view as! SKView
+        skView.multipleTouchEnabled = false
+        
+        // Create and configure the scene.
+        scene = GameScene(size: skView.bounds.size)
+        scene.scaleMode = .AspectFill
+        
+        // Present the scene.
+        skView.presentScene(scene)
+        
         //Plays gameplay song
         prepareAudios()
         song.play()
