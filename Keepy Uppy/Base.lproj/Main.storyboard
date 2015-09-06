@@ -270,7 +270,7 @@
         <!--Choose Ball Page-->
         <scene sceneID="GWd-FR-LhM">
             <objects>
-                <viewController title="Choose Ball Page" id="r2j-HC-Fb8" sceneMemberID="viewController">
+                <viewController title="Choose Ball Page" id="r2j-HC-Fb8" customClass="ChooseBall" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8io-fK-Mpn"/>
                         <viewControllerLayoutGuide type="bottom" id="UY2-3V-Th9"/>
@@ -396,7 +396,7 @@
         <!--Choose Background Page-->
         <scene sceneID="NFF-yY-RRn">
             <objects>
-                <viewController title="Choose Background Page" id="wBn-0a-jPG" sceneMemberID="viewController">
+                <viewController title="Choose Background Page" id="wBn-0a-jPG" customClass="ChooseBackground" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h3x-L6-Lxj"/>
                         <viewControllerLayoutGuide type="bottom" id="5eP-uw-gwE"/>
@@ -558,7 +558,7 @@
         <!--Gameplay Page-->
         <scene sceneID="eG8-eG-xe6">
             <objects>
-                <viewController title="Gameplay Page" id="1Bh-kf-fhP" customClass="GameViewController" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Gameplay Page" id="1Bh-kf-fhP" customClass="GamePlayController" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XeW-YT-WgQ"/>
                         <viewControllerLayoutGuide type="bottom" id="GcZ-xE-wgw"/>

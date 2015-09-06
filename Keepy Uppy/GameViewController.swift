@@ -17,17 +17,19 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //I am not sure what the code below does 
         
-        // Configure the view.
-        let skView = view as! SKView
-        skView.multipleTouchEnabled = false
-        
-        // Create and configure the scene.
-        scene = GameScene(size: skView.bounds.size)
-        scene.scaleMode = .AspectFill
-        
-        // Present the scene.
-        skView.presentScene(scene)
+//        // Configure the view.
+//        let skView = view as! SKView
+//        skView.multipleTouchEnabled = false
+//        
+//        // Create and configure the scene.
+//        scene = GameScene(size: skView.bounds.size)
+//        scene.scaleMode = .AspectFill
+//        
+//        // Present the scene.
+//        skView.presentScene(scene)
 
         //Plays start song
         prepareAudios()

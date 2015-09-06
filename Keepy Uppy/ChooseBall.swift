@@ -6,9 +6,31 @@
 //  Copyright (c) 2015 Matthew Allen Lin. All rights reserved.
 //
 
+import UIKit
 import SpriteKit
 
-//Choose ball screen
-class ChooseBall: UIViewController {
+class ChooseBall: UIViewController, UIGestureRecognizerDelegate {
+    var scene: GameScene!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //I am not sure what the code below does
+        
+        // Configure the view.
+        //        let skView = view as! SKView
+        //        skView.multipleTouchEnabled = false
+        //
+        //        // Create and configure the scene.
+        //        scene = GameScene(size: skView.bounds.size)
+        //        scene.scaleMode = .AspectFill
+        //
+        //        // Present the scene.
+        //        skView.presentScene(scene)
+
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }

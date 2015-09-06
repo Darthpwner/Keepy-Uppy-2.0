@@ -19,6 +19,8 @@ class GamePlayController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //I am not sure what the code below does
+        
         // Configure the view.
 //        let skView = view as! SKView
 //        skView.multipleTouchEnabled = false
