@@ -16,14 +16,16 @@ class ChooseBackground: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-    
+
     @IBAction func chooseDesert(sender: UIButton) {
         singleton.song.stop()
     }
+
     
     @IBAction func chooseBeach(sender: UIButton) {
         singleton.song.stop()
     }
+    
     
     @IBAction func chooseForest(sender: UIButton) {
         singleton.song.stop()

@@ -303,15 +303,6 @@
                                     <segue destination="wBn-0a-jPG" kind="show" id="yhu-8F-ARz"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rSS-7z-2ho">
-                                <rect key="frame" x="16" y="20" width="568" height="78"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="78" id="owh-UW-aKS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cv-yL-g9N">
                                 <rect key="frame" x="408" y="221" width="176" height="158"/>
                                 <gestureRecognizers/>
@@ -323,6 +314,15 @@
                                     <segue destination="wBn-0a-jPG" kind="show" id="3eZ-j1-xFl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rSS-7z-2ho">
+                                <rect key="frame" x="16" y="20" width="568" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="owh-UW-aKS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -398,49 +398,6 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpy-yz-FYA">
-                                <rect key="frame" x="212" y="221" width="176" height="192"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="158" id="3eb-NO-jrc"/>
-                                    <constraint firstAttribute="width" secondItem="Qpy-yz-FYA" secondAttribute="height" multiplier="11:12" id="6KP-mQ-snR"/>
-                                    <constraint firstAttribute="height" constant="192" id="8aU-bx-x0E"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="192" id="taV-fs-kyp"/>
-                                    <constraint firstAttribute="width" constant="176" id="xIN-LJ-HnG"/>
-                                </constraints>
-                                <state key="normal" image="Beach Background.jpg">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="3eb-NO-jrc"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="chooseBeach:" destination="wBn-0a-jPG" eventType="touchUpInside" id="lW9-Ci-eTm"/>
-                                    <segue destination="1Bh-kf-fhP" kind="show" id="ukl-sZ-4G6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atY-VD-MFA">
-                                <rect key="frame" x="408" y="221" width="176" height="192"/>
-                                <gestureRecognizers/>
-                                <state key="normal" image="Forest Background.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="chooseForest:" destination="wBn-0a-jPG" eventType="touchUpInside" id="DJf-XP-ucq"/>
-                                    <segue destination="1Bh-kf-fhP" kind="show" id="f5A-CJ-CWh"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="qS9-HL-rds">
-                                <rect key="frame" x="16" y="20" width="568" height="78"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="78" id="4EW-WE-lAa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="48"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS2-uD-Zs5">
                                 <rect key="frame" x="16" y="221" width="176" height="192"/>
                                 <gestureRecognizers/>
@@ -462,6 +419,49 @@
                                     <segue destination="1Bh-kf-fhP" kind="show" id="XiM-DH-DuR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpy-yz-FYA">
+                                <rect key="frame" x="212" y="221" width="176" height="192"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="3eb-NO-jrc"/>
+                                    <constraint firstAttribute="width" secondItem="Qpy-yz-FYA" secondAttribute="height" multiplier="11:12" id="6KP-mQ-snR"/>
+                                    <constraint firstAttribute="height" constant="192" id="8aU-bx-x0E"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="192" id="taV-fs-kyp"/>
+                                    <constraint firstAttribute="width" constant="176" id="xIN-LJ-HnG"/>
+                                </constraints>
+                                <state key="normal" image="Beach Background.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3eb-NO-jrc"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="chooseBeach:" destination="wBn-0a-jPG" eventType="touchUpInside" id="wg5-t0-VcI"/>
+                                    <segue destination="1Bh-kf-fhP" kind="show" id="ukl-sZ-4G6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atY-VD-MFA">
+                                <rect key="frame" x="408" y="221" width="176" height="192"/>
+                                <gestureRecognizers/>
+                                <state key="normal" image="Forest Background.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseForest:" destination="wBn-0a-jPG" eventType="touchUpInside" id="RBz-z2-W6a"/>
+                                    <segue destination="1Bh-kf-fhP" kind="show" id="f5A-CJ-CWh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="qS9-HL-rds">
+                                <rect key="frame" x="16" y="20" width="568" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="4EW-WE-lAa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="48"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -534,7 +534,7 @@
                         <action selector="tapBall:" destination="1Bh-kf-fhP" id="P7b-6K-ulR"/>
                     </connections>
                 </tapGestureRecognizer>
-                <viewController title="Gameplay Page" id="1Bh-kf-fhP" customClass="GameViewController" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Gameplay Page" id="1Bh-kf-fhP" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XeW-YT-WgQ"/>
                         <viewControllerLayoutGuide type="bottom" id="GcZ-xE-wgw"/>
@@ -567,6 +567,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yhu-8F-ARz"/>
-        <segue reference="ukl-sZ-4G6"/>
+        <segue reference="f5A-CJ-CWh"/>
     </inferredMetricsTieBreakers>
 </document>
