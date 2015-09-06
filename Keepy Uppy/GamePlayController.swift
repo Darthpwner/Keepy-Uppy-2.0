@@ -45,6 +45,9 @@ class GamePlayController: UIViewController {
     }
     
     //UITouchGesture Functions
+    @IBAction func tapBall(sender: AnyObject) {
+        //If the user taps ball, make the ball bounce up
+    }
     
     //Gameplay Functions
     func gameDidBegin() {

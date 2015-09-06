@@ -559,7 +559,7 @@
         <!--Gameplay Page-->
         <scene sceneID="eG8-eG-xe6">
             <objects>
-                <viewController title="Gameplay Page" id="1Bh-kf-fhP" customClass="GamePlayControler" sceneMemberID="viewController">
+                <viewController title="Gameplay Page" id="1Bh-kf-fhP" customClass="GamePlayController" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XeW-YT-WgQ"/>
                         <viewControllerLayoutGuide type="bottom" id="GcZ-xE-wgw"/>
@@ -581,7 +581,11 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnn-RG-Eg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="w23-cK-0jn"/>
+                <tapGestureRecognizer id="w23-cK-0jn">
+                    <connections>
+                        <action selector="tapBall:" destination="1Bh-kf-fhP" id="P7b-6K-ulR"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="325" y="2767"/>
         </scene>

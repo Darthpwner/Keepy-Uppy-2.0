@@ -49,4 +49,6 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate  {
     @IBAction func stopPlayingSong(sender: UITapGestureRecognizer) {
         song.stop()
     }
+    
+    
 }
