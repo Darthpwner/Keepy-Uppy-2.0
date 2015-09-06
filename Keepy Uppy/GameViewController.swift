@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import AVFoundation
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, UIGestureRecognizerDelegate  {
 
     var scene: GameScene!
     var song: AVAudioPlayer = AVAudioPlayer()
@@ -44,5 +44,9 @@ class GameViewController: UIViewController {
         song.prepareToPlay()
         
         song.numberOfLoops = -1 //Makes the song play repeatedly
+    }
+    
+    @IBAction func stopPlayingSong(sender: UITapGestureRecognizer) {
+        song.stop()
     }
 }

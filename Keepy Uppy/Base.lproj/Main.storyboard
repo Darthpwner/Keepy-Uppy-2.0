@@ -260,6 +260,8 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="G1G-Eh-0pE">
                     <connections>
+                        <action selector="stopPlayingSong:" destination="LVB-YS-i5n" id="YZs-aK-hkS"/>
+                        <outlet property="delegate" destination="LVB-YS-i5n" id="p09-qN-50n"/>
                         <segue destination="r2j-HC-Fb8" kind="show" identifier="Title to Choose Ball" id="7lL-68-6ou"/>
                     </connections>
                 </tapGestureRecognizer>
