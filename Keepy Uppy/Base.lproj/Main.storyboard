@@ -136,6 +136,7 @@
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="2Zq-ME-JPp"/>
                                         <exclude reference="kyF-Ml-zoW"/>
                                     </mask>
                                 </variation>
