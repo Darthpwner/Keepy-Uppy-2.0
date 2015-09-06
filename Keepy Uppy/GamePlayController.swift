@@ -11,6 +11,11 @@ import SpriteKit
 import AVFoundation
 
 class GamePlayController: UIViewController, UIGestureRecognizerDelegate {
+    
+    
+    @IBOutlet weak var GamePlayViewOutlet: UIView!
+    
+    
     var lives: Int = 3
     
     var scene: GameScene!
@@ -21,21 +26,23 @@ class GamePlayController: UIViewController, UIGestureRecognizerDelegate {
         
         //I am not sure what the code below does
         
-        // Configure the view.
-//        let skView = view as! SKView
-//        skView.multipleTouchEnabled = false
-//        
-//        // Create and configure the scene.
-//        scene = GameScene(size: skView.bounds.size)
-//        scene.scaleMode = .AspectFill
-//        
-//        // Present the scene.
-//        skView.presentScene(scene)
+         //Configure the view.
+        let skView = view as! SKView
+        skView.multipleTouchEnabled = false
+
+        // Create and configure the scene.
+        scene = GameScene(size: skView.bounds.size)
+        scene.scaleMode = .AspectFill
+        
+        // Present the scene.
+        skView.presentScene(scene)
         
         //Plays gameplay song
         prepareAudios()
         song.play()
     }
+    
+    
     
     override func prefersStatusBarHidden() -> Bool {
         return true

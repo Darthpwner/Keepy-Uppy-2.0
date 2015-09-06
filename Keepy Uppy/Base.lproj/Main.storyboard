@@ -528,6 +528,12 @@
         <!--Gameplay Page-->
         <scene sceneID="eG8-eG-xe6">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lnn-RG-Eg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="w23-cK-0jn">
+                    <connections>
+                        <action selector="tapBall:" destination="1Bh-kf-fhP" id="P7b-6K-ulR"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <viewController title="Gameplay Page" id="1Bh-kf-fhP" customClass="GamePlayController" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XeW-YT-WgQ"/>
@@ -536,25 +542,14 @@
                     <view key="view" contentMode="scaleToFill" id="O77-o2-k6H">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Beach Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ecP-gB-TMS">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="w23-cK-0jn" appends="YES" id="S1t-n9-auH"/>
-                                </connections>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lnn-RG-Eg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="w23-cK-0jn">
                     <connections>
-                        <action selector="tapBall:" destination="1Bh-kf-fhP" id="P7b-6K-ulR"/>
+                        <outlet property="GamePlayViewOutlet" destination="O77-o2-k6H" id="ynQ-Gz-FCi"/>
+                        <outlet property="view" destination="O77-o2-k6H" id="JVa-3q-ZG1"/>
                     </connections>
-                </tapGestureRecognizer>
+                </viewController>
             </objects>
             <point key="canvasLocation" x="325" y="2767"/>
         </scene>

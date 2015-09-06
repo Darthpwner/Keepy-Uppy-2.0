@@ -18,8 +18,13 @@ class GamePlayView: SKScene {
     let bowlingBallRestiution: CGFloat = 0.2
     
     //Add feature to have more balls later
+    //if(basketball chosen)
     let ball = SKSpriteNode(imageNamed: "Basketball.jpg");
+   
+    //else if(beach ball chosen)
     //let ball = SKSpriteNode(imageNamed: "Beach Ball.jpg");
+    
+    //else
     //let ball = SKSpriteNode(imageNamed: "Bowling Ball.jpg");
     
     required init(coder aDecoder: NSCoder) {
@@ -31,7 +36,12 @@ class GamePlayView: SKScene {
         
         anchorPoint = CGPoint(x: 0, y: 1.0)
         
+        //if forest background chosen
         let background = SKSpriteNode(imageNamed: "Forest Background.png")
+        //else if beach background chosen
+//        let background = SKSpriteNode(imageNamed: "Beach Background.jpg")
+        //else
+  //      let background = SKSpriteNode(imageNamed: "Desert Background.jpg")
         background.position = CGPoint(x: 0, y: 0)
         background.anchorPoint = CGPoint(x: 0, y: 1.0)
         addChild(background)
