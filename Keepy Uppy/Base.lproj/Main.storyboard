@@ -416,7 +416,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="chooseDesert:" destination="wBn-0a-jPG" eventType="touchUpInside" id="0Vd-gL-ySa"/>
-                                    <segue destination="1Bh-kf-fhP" kind="show" id="XiM-DH-DuR"/>
+                                    <segue destination="HZj-Dy-ZAq" kind="show" id="agb-z5-gzf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpy-yz-FYA">
@@ -439,7 +439,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="chooseBeach:" destination="wBn-0a-jPG" eventType="touchUpInside" id="wg5-t0-VcI"/>
-                                    <segue destination="1Bh-kf-fhP" kind="show" id="ukl-sZ-4G6"/>
+                                    <segue destination="HZj-Dy-ZAq" kind="show" id="oX6-TG-0GF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atY-VD-MFA">
@@ -450,7 +450,7 @@
                                 </state>
                                 <connections>
                                     <action selector="chooseForest:" destination="wBn-0a-jPG" eventType="touchUpInside" id="RBz-z2-W6a"/>
-                                    <segue destination="1Bh-kf-fhP" kind="show" id="f5A-CJ-CWh"/>
+                                    <segue destination="HZj-Dy-ZAq" kind="show" id="hAo-KS-RG6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="qS9-HL-rds">
@@ -525,32 +525,23 @@
             </objects>
             <point key="canvasLocation" x="325" y="1937"/>
         </scene>
-        <!--Gameplay Page-->
-        <scene sceneID="eG8-eG-xe6">
+        <!--Game View Controller-->
+        <scene sceneID="V0A-fJ-wCO">
             <objects>
-                <viewController title="Gameplay Page" id="1Bh-kf-fhP" customClass="GameViewController" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HZj-Dy-ZAq" customClass="GameViewController" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Lw2-qJ-c0K"/>
-                        <viewControllerLayoutGuide type="bottom" id="DbQ-Bh-GHf"/>
+                        <viewControllerLayoutGuide type="top" id="nNS-dI-T8c"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q3d-mU-syC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OuZ-qJ-BIN" customClass="GameScene" customModule="Keepy_Uppy" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="1af-vJ-B3L">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <connections>
-                        <outlet property="GameSceneOutlet" destination="OuZ-qJ-BIN" id="cXH-5p-hA0"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lnn-RG-Eg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="w23-cK-0jn">
-                    <connections>
-                        <action selector="tapBall:" destination="1Bh-kf-fhP" id="P7b-6K-ulR"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7e-fV-kAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="2767"/>
+            <point key="canvasLocation" x="328" y="2731"/>
         </scene>
     </scenes>
     <resources>
@@ -566,6 +557,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yhu-8F-ARz"/>
-        <segue reference="f5A-CJ-CWh"/>
+        <segue reference="oX6-TG-0GF"/>
     </inferredMetricsTieBreakers>
 </document>
