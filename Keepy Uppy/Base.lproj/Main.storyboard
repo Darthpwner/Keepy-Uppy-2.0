@@ -180,7 +180,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS2-uD-Zs5">
-                                <rect key="frame" x="16" y="248" width="176" height="192"/>
+                                <rect key="frame" x="16" y="204" width="176" height="192"/>
                                 <gestureRecognizers/>
                                 <state key="normal" image="Desert Background.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -191,13 +191,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpy-yz-FYA">
-                                <rect key="frame" x="212" y="248" width="176" height="192"/>
+                                <rect key="frame" x="212" y="204" width="176" height="192"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Qpy-yz-FYA" secondAttribute="height" multiplier="11:12" id="6KP-mQ-snR"/>
-                                    <constraint firstAttribute="height" constant="192" id="8aU-bx-x0E"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="192" id="taV-fs-kyp"/>
-                                    <constraint firstAttribute="width" constant="176" id="xIN-LJ-HnG"/>
                                 </constraints>
                                 <state key="normal" image="Beach Background.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -208,7 +205,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atY-VD-MFA">
-                                <rect key="frame" x="408" y="248" width="176" height="192"/>
+                                <rect key="frame" x="408" y="204" width="176" height="192"/>
                                 <gestureRecognizers/>
                                 <state key="normal" image="Forest Background.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -219,10 +216,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="qS9-HL-rds">
-                                <rect key="frame" x="16" y="20" width="568" height="78"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="78" id="4EW-WE-lAa"/>
-                                </constraints>
+                                <rect key="frame" x="16" y="20" width="568" height="66"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="48"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -231,12 +225,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="atY-VD-MFA" firstAttribute="bottom" secondItem="Qpy-yz-FYA" secondAttribute="bottom" id="2oU-Sk-bLB"/>
-                            <constraint firstItem="Qpy-yz-FYA" firstAttribute="top" secondItem="qS9-HL-rds" secondAttribute="bottom" constant="150" id="3C5-0X-veC"/>
-                            <constraint firstItem="eS2-uD-Zs5" firstAttribute="top" secondItem="qS9-HL-rds" secondAttribute="bottom" constant="150" id="3MN-i6-Nsr"/>
+                            <constraint firstItem="Qpy-yz-FYA" firstAttribute="top" secondItem="qS9-HL-rds" secondAttribute="bottom" constant="170" id="3C5-0X-veC"/>
+                            <constraint firstItem="eS2-uD-Zs5" firstAttribute="top" secondItem="qS9-HL-rds" secondAttribute="bottom" constant="170" id="3MN-i6-Nsr"/>
                             <constraint firstItem="Qpy-yz-FYA" firstAttribute="centerX" secondItem="qS9-HL-rds" secondAttribute="centerX" id="B7i-H5-5tR"/>
-                            <constraint firstItem="atY-VD-MFA" firstAttribute="top" secondItem="qS9-HL-rds" secondAttribute="bottom" constant="150" id="D93-a4-irb"/>
+                            <constraint firstItem="atY-VD-MFA" firstAttribute="top" secondItem="qS9-HL-rds" secondAttribute="bottom" constant="170" id="D93-a4-irb"/>
                             <constraint firstItem="atY-VD-MFA" firstAttribute="trailing" secondItem="sN3-8J-zNh" secondAttribute="trailingMargin" id="DY0-dv-Ba0"/>
                             <constraint firstItem="Ro6-gK-RRm" firstAttribute="bottom" secondItem="5eP-uw-gwE" secondAttribute="top" id="GLu-nH-SQP"/>
+                            <constraint firstAttribute="centerY" secondItem="eS2-uD-Zs5" secondAttribute="centerY" id="HSI-0p-jdt"/>
                             <constraint firstItem="Qpy-yz-FYA" firstAttribute="height" secondItem="atY-VD-MFA" secondAttribute="height" id="NkO-3k-3yk"/>
                             <constraint firstItem="Qpy-yz-FYA" firstAttribute="height" secondItem="eS2-uD-Zs5" secondAttribute="height" id="OuH-kk-j7K"/>
                             <constraint firstItem="Qpy-yz-FYA" firstAttribute="centerX" secondItem="Ro6-gK-RRm" secondAttribute="centerX" id="Vau-QM-Nul"/>
@@ -253,6 +248,13 @@
                             <constraint firstItem="eS2-uD-Zs5" firstAttribute="bottom" secondItem="Qpy-yz-FYA" secondAttribute="bottom" id="xSv-if-edt"/>
                             <constraint firstItem="Qpy-yz-FYA" firstAttribute="width" secondItem="eS2-uD-Zs5" secondAttribute="width" id="zVd-pE-W3X"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3MN-i6-Nsr"/>
+                                <exclude reference="3C5-0X-veC"/>
+                                <exclude reference="D93-a4-irb"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
