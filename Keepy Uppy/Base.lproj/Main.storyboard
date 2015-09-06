@@ -9,7 +9,7 @@
         <!--Title Page-->
         <scene sceneID="CtS-rA-C9T">
             <objects>
-                <viewController title="Title Page" id="LVB-YS-i5n" customClass="GameViewController" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Title Page" id="LVB-YS-i5n" customClass="TitlePage" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PCf-gQ-wO7"/>
                         <viewControllerLayoutGuide type="bottom" id="b3d-qh-BLL"/>
@@ -534,12 +534,12 @@
                         <action selector="tapBall:" destination="1Bh-kf-fhP" id="P7b-6K-ulR"/>
                     </connections>
                 </tapGestureRecognizer>
-                <viewController title="Gameplay Page" id="1Bh-kf-fhP" customClass="GamePlayController" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Gameplay Page" id="1Bh-kf-fhP" customClass="GameViewController" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XeW-YT-WgQ"/>
                         <viewControllerLayoutGuide type="bottom" id="GcZ-xE-wgw"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="O77-o2-k6H">
+                    <view key="view" contentMode="scaleToFill" id="O77-o2-k6H" customClass="GameScene">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -547,6 +547,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="GamePlayViewOutlet" destination="O77-o2-k6H" id="ynQ-Gz-FCi"/>
+                        <outlet property="GameViewControllerOutlet" destination="O77-o2-k6H" id="qKt-e3-Zqq"/>
                         <outlet property="view" destination="O77-o2-k6H" id="JVa-3q-ZG1"/>
                     </connections>
                 </viewController>
