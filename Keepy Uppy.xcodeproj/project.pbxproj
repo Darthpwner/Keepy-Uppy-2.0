@@ -36,7 +36,7 @@
 		6B6C8D071B9BAC7B008678EC /* Basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D061B9BAC7B008678EC /* Basketball.png */; };
 		6B6C8D091B9BAC85008678EC /* Beach Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D081B9BAC85008678EC /* Beach Ball.png */; };
 		6B6C8D0F1B9BAE94008678EC /* Bowling Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */; };
-		6B6C8D131B9BB962008678EC /* gameplay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D121B9BB962008678EC /* gameplay.mp3 */; };
+		6B6C8D151B9BF13B008678EC /* gameplay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D141B9BF13B008678EC /* gameplay.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +83,7 @@
 		6B6C8D061B9BAC7B008678EC /* Basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Basketball.png; sourceTree = "<group>"; };
 		6B6C8D081B9BAC85008678EC /* Beach Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Beach Ball.png"; sourceTree = "<group>"; };
 		6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bowling Ball.png"; sourceTree = "<group>"; };
-		6B6C8D121B9BB962008678EC /* gameplay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameplay.mp3; sourceTree = "<group>"; };
+		6B6C8D141B9BF13B008678EC /* gameplay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gameplay.mp3; path = ../gameplay.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +185,7 @@
 			children = (
 				6B68973C1B98B62800C5069E /* drop.mp3 */,
 				6B68973D1B98B62800C5069E /* gameover.mp3 */,
-				6B6C8D121B9BB962008678EC /* gameplay.mp3 */,
+				6B6C8D141B9BF13B008678EC /* gameplay.mp3 */,
 				6B6897451B98B6D100C5069E /* hit.mp3 */,
 				6B6897471B98B96000C5069E /* start.mp3 */,
 			);
@@ -280,12 +280,12 @@
 				6B6897501B98BEAB00C5069E /* Forest Background.png in Resources */,
 				6B68971C1B98B2CA00C5069E /* Images.xcassets in Resources */,
 				6B6897481B98B96000C5069E /* start.mp3 in Resources */,
+				6B6C8D151B9BF13B008678EC /* gameplay.mp3 in Resources */,
 				6B6897351B98B4D300C5069E /* Beach Background.jpg in Resources */,
 				6B6897B81B995F0800C5069E /* Choose Ball Screen.jpg in Resources */,
 				6B6C8D091B9BAC85008678EC /* Beach Ball.png in Resources */,
 				6B6897411B98B62800C5069E /* drop.mp3 in Resources */,
 				6B6897BC1B99687C00C5069E /* Choose Background Screen.jpg in Resources */,
-				6B6C8D131B9BB962008678EC /* gameplay.mp3 in Resources */,
 				6B68971A1B98B2CA00C5069E /* Main.storyboard in Resources */,
 				6B6897561B98C41C00C5069E /* Load Screen.jpg in Resources */,
 				6B6897421B98B62800C5069E /* gameover.mp3 in Resources */,
