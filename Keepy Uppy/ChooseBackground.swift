@@ -13,23 +13,21 @@ class ChooseBackground: UIViewController {
 
     let singleton = PlayStartSong.sharedInstance
     
-    override func viewDidLoad() {
-        singleton.song.stop()
-    }
+    override func viewDidLoad() {}
     
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
     
     @IBAction func chooseDesert(sender: UIButton) {
-        //super.stopSong()
+        singleton.song.stop()
     }
     
     @IBAction func chooseBeach(sender: UIButton) {
-        //super.stopSong()
+        singleton.song.stop()
     }
     
     @IBAction func chooseForest(sender: UIButton) {
-        //super.stopSong()
+        singleton.song.stop()
     }
 }
