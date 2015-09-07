@@ -18,25 +18,6 @@ class TitlePage: UIViewController {
     
     let singleton = PlayStartSong.sharedInstance
     
-    //
-//    @IBOutlet weak var ImageGIF: UIImageView!
-//    
-//    override func viewDidLoad() {
-//        
-//        //  http://www.kyst.no/ep_bilder/164/16863-ceabe11810360ac49045863747d2ca85-67b5126fe38caa1839cb3b35b903ef53storvikbanner.gif
-//        
-//        var strImg : String = "http://www.kyst.no/ep_bilder/164/16863-ceabe11810360ac49045863747d2ca85-67b5126fe38caa1839cb3b35b903ef53storvikbanner.gif"
-//        
-//        
-//        var url: NSURL = NSURL(string: strImg)!
-//        
-//        ImageGIF.image = UIImage.animatedImageWithAnimatedGIFURL(url)
-//        
-//        super.viewDidLoad()
-//        // Do any additional setup after loading the view, typically from a nib.
-//    }
-    //
-    
     override func viewDidLoad() {
         //I am not sure what the code below does
         
@@ -53,10 +34,7 @@ class TitlePage: UIViewController {
         
         //Add the bouncing ball GIF
         var strImg: String = "http://www.platformtennis.org/Assets/Assets/images/Bouncing+Ball+Yellow.gif"
-        
-        var url: NSURL = NSURL(string: strImg)!
-        
-        animation.image = UIImage.animatedImageWithAnimatedGIFURL(url)
+        animateGif(strImg)
         
         super.viewDidLoad()
         
@@ -69,5 +47,11 @@ class TitlePage: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    func animateGif(strImg: String) -> Void {
+        var url: NSURL = NSURL(string: strImg)!
+        
+        animation.image = UIImage.animatedImageWithAnimatedGIFURL(url)
     }
 }
