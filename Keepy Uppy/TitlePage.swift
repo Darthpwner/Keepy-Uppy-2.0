@@ -36,6 +36,15 @@ class TitlePage: UIViewController {
         // Present the scene.
         skView.presentScene(scene)
         
+        
+        var imageData = NSData(contentsOfURL: NSBundle.mainBundle()
+            .URLForResource("Bouncing Ball", withExtension: "gif")!)
+        let bouncingBall = UIImage.animatedImageWithData(imageData!)
+        var imageView = UIImageView(image: bouncingBall)
+        imageView.frame = CGRect(x: 0.0, y: 20.0, width: 350.0, height: 202.0)
+        
+        view.addSubview(imageView)
+        
         //Plays start song
         singleton.prepareAudios()
         singleton.song.play()
