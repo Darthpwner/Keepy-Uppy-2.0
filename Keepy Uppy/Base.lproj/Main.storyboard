@@ -21,7 +21,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-1j-TOz">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
                                         <rect key="frame" x="10" y="500" width="580" height="50"/>
                                         <gestureRecognizers/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
@@ -33,13 +33,13 @@
                                             <segue destination="r2j-HC-Fb8" kind="show" id="HFi-7Q-Rq1"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
                                         <rect key="frame" x="10" y="50" width="580" height="50"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bouncing Ball.gif" translatesAutoresizingMaskIntoConstraints="NO" id="SjE-2F-ikP">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SjE-2F-ikP">
                                         <rect key="frame" x="50" y="150" width="500" height="300"/>
                                     </imageView>
                                 </subviews>
@@ -51,10 +51,10 @@
                                     <constraint firstItem="Ecg-ok-cqe" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" constant="10" id="Fdy-MO-ubm"/>
                                     <constraint firstItem="SjE-2F-ikP" firstAttribute="leading" secondItem="Nes-1j-TOz" secondAttribute="leading" constant="50" id="QwF-A8-oNA"/>
                                     <constraint firstAttribute="trailing" secondItem="dbZ-Ff-5GE" secondAttribute="trailing" constant="10" id="ZGU-FM-N1M"/>
-                                    <constraint firstItem="SjE-2F-ikP" firstAttribute="top" secondItem="dbZ-Ff-5GE" secondAttribute="bottom" constant="50" id="a2h-re-f0i"/>
+                                    <constraint firstItem="SjE-2F-ikP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dbZ-Ff-5GE" secondAttribute="bottom" constant="50" id="a2h-re-f0i"/>
                                     <constraint firstAttribute="centerY" secondItem="SjE-2F-ikP" secondAttribute="centerY" id="bUr-0g-WZ9"/>
                                     <constraint firstAttribute="centerX" secondItem="SjE-2F-ikP" secondAttribute="centerX" id="csD-FY-q6j"/>
-                                    <constraint firstItem="Ecg-ok-cqe" firstAttribute="top" secondItem="SjE-2F-ikP" secondAttribute="bottom" constant="50" id="huu-Jj-c5D"/>
+                                    <constraint firstItem="Ecg-ok-cqe" firstAttribute="top" relation="greaterThanOrEqual" secondItem="SjE-2F-ikP" secondAttribute="bottom" constant="50" id="huu-Jj-c5D"/>
                                     <constraint firstAttribute="trailing" secondItem="SjE-2F-ikP" secondAttribute="trailing" constant="50" id="rG5-f1-Kre"/>
                                     <constraint firstAttribute="bottom" secondItem="Ecg-ok-cqe" secondAttribute="bottom" constant="50" id="xeq-M4-wwI"/>
                                 </constraints>
@@ -70,7 +70,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
-                        <outlet property="animation" destination="SjE-2F-ikP" id="FA6-fZ-qVW"/>
+                        <outlet property="animation" destination="SjE-2F-ikP" id="nuR-tR-nxJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
@@ -277,7 +277,6 @@
         <image name="Basketball.png" width="340" height="340"/>
         <image name="Beach Background.jpg" width="700" height="438"/>
         <image name="Beach Ball.png" width="1123" height="1126"/>
-        <image name="Bouncing Ball.gif" width="250" height="300"/>
         <image name="Bowling Ball.png" width="220" height="223"/>
         <image name="Choose Background Screen.jpg" width="265" height="190"/>
         <image name="Choose Ball Screen.jpg" width="3264" height="2448"/>

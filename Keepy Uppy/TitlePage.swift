@@ -12,9 +12,7 @@ import AVFoundation
 
 class TitlePage: UIViewController {
     
-
     @IBOutlet weak var animation: UIImageView!
-    
     
     var scene: GameScene!
     
@@ -41,7 +39,7 @@ class TitlePage: UIViewController {
             .URLForResource("Bouncing Ball", withExtension: "gif")!)
         let bouncingBall = UIImage.animatedImageWithData(imageData!)
         var imageView = UIImageView(image: bouncingBall)
-        imageView.frame = CGRect(x: 0.0, y: 20.0, width: 350.0, height: 202.0)
+        imageView.frame = CGRect(x: 0.0, y: self.view.frame.size.height/2, width: 400.0, height: 200.0)
         
         view.addSubview(imageView)
         
