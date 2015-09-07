@@ -39,9 +39,8 @@ class TitlePage: UIViewController {
             .URLForResource("Bouncing Ball", withExtension: "gif")!)
         let bouncingBall = UIImage.animatedImageWithData(imageData!)
         var imageView = UIImageView(image: bouncingBall)
-        imageView.frame = CGRect(x: 0.0, y: self.view.frame.size.height/2, width: 400.0, height: 200.0)
         
-        view.addSubview(imageView)
+        //view.addSubview(imageView)
         
         //Plays start song
         singleton.prepareAudios()
