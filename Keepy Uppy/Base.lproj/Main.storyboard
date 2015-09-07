@@ -21,7 +21,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-1j-TOz">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEy-Ec-54G">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEy-Ec-54G" userLabel="Bouncing Ball View">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-nN-Twa">
@@ -44,7 +44,7 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yid-iL-fny">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yid-iL-fny" userLabel="Start View">
                                         <rect key="frame" x="0.0" y="401" width="600" height="199"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
@@ -73,7 +73,7 @@
                                             <constraint firstAttribute="bottom" secondItem="Ecg-ok-cqe" secondAttribute="bottom" constant="44" id="yCc-UX-WYE"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7tb-9Z-Fxe">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7tb-9Z-Fxe" userLabel="Keepy Uppy View">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
@@ -143,7 +143,7 @@
                         <viewControllerLayoutGuide type="top" id="8io-fK-Mpn"/>
                         <viewControllerLayoutGuide type="bottom" id="UY2-3V-Th9"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dLU-Cl-CIg">
+                    <view key="view" contentMode="scaleToFill" id="dLU-Cl-CIg" userLabel="Choose Ball View">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -224,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="325" y="1138"/>
         </scene>
-        <!--Choose Background Page-->
+        <!--Choose Background View-->
         <scene sceneID="NFF-yY-RRn">
             <objects>
-                <viewController title="Choose Background Page" id="wBn-0a-jPG" customClass="ChooseBackground" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Choose Background Page" id="wBn-0a-jPG" userLabel="Choose Background View" customClass="ChooseBackground" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h3x-L6-Lxj"/>
                         <viewControllerLayoutGuide type="bottom" id="5eP-uw-gwE"/>
@@ -320,7 +320,7 @@
                         <viewControllerLayoutGuide type="top" id="nNS-dI-T8c"/>
                         <viewControllerLayoutGuide type="bottom" id="Q3d-mU-syC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1af-vJ-B3L" customClass="SKView">
+                    <view key="view" contentMode="scaleToFill" id="1af-vJ-B3L" userLabel="Game View" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
