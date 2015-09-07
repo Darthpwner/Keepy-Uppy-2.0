@@ -49,10 +49,10 @@
                                             <constraint firstAttribute="trailing" secondItem="dbZ-Ff-5GE" secondAttribute="trailing" constant="10" id="vMu-4n-7Ue"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEy-Ec-54G" userLabel="Bouncing Ball View">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wEy-Ec-54G" userLabel="Bouncing Ball View">
                                         <rect key="frame" x="0.0" y="128.5" width="632" height="350.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-nN-Twa">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Bouncing Ball.gif" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-nN-Twa">
                                                 <rect key="frame" x="0.0" y="0.0" width="632" height="350.5"/>
                                             </imageView>
                                         </subviews>
@@ -72,10 +72,10 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yid-iL-fny" userLabel="Start View">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yid-iL-fny" userLabel="Start View">
                                         <rect key="frame" x="10" y="479" width="612" height="121"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
                                                 <rect key="frame" x="10" y="0.0" width="592" height="111"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
@@ -330,6 +330,7 @@
         <image name="Basketball.png" width="340" height="340"/>
         <image name="Beach Background.jpg" width="700" height="438"/>
         <image name="Beach Ball.png" width="1123" height="1126"/>
+        <image name="Bouncing Ball.gif" width="250" height="300"/>
         <image name="Bowling Ball.png" width="220" height="223"/>
         <image name="Choose Background Screen.jpg" width="265" height="190"/>
         <image name="Choose Ball Screen.jpg" width="3264" height="2448"/>
