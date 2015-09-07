@@ -34,13 +34,12 @@ class TitlePage: UIViewController {
         // Present the scene.
         skView.presentScene(scene)
         
-        
+        //Add the bouncing ball GIF
         var imageData = NSData(contentsOfURL: NSBundle.mainBundle()
             .URLForResource("Bouncing Ball", withExtension: "gif")!)
         let bouncingBall = UIImage.animatedImageWithData(imageData!)
-        var imageView = UIImageView(image: bouncingBall)
-        
-        //view.addSubview(imageView)
+        var animation = UIImageView(image: bouncingBall)
+        view.addSubview(animation)
         
         //Plays start song
         singleton.prepareAudios()
