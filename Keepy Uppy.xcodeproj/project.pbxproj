@@ -38,7 +38,7 @@
 		6B94375C1B9C0F080049AA91 /* PlayStartSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */; };
 		6B94375E1B9C1A090049AA91 /* TitlePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94375D1B9C1A090049AA91 /* TitlePage.swift */; };
 		6BD2D38B1B9D05EE0052FBA7 /* Bouncing Ball.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6BD2D38A1B9D05EE0052FBA7 /* Bouncing Ball.gif */; };
-		6BD2D38F1B9D0BA30052FBA7 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD2D38E1B9D0BA30052FBA7 /* UIImage+Gif.swift */; };
+		6BD2D3971B9D5BF20052FBA7 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD2D3961B9D5BF20052FBA7 /* UIImage+animatedGIF.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +87,9 @@
 		6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayStartSong.swift; sourceTree = "<group>"; };
 		6B94375D1B9C1A090049AA91 /* TitlePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlePage.swift; sourceTree = "<group>"; };
 		6BD2D38A1B9D05EE0052FBA7 /* Bouncing Ball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Bouncing Ball.gif"; sourceTree = "<group>"; };
-		6BD2D38E1B9D0BA30052FBA7 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		6BD2D3941B9D5BF10052FBA7 /* Keepy Uppy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Keepy Uppy-Bridging-Header.h"; sourceTree = "<group>"; };
+		6BD2D3951B9D5BF20052FBA7 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		6BD2D3961B9D5BF20052FBA7 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,12 +143,14 @@
 				6B94375D1B9C1A090049AA91 /* TitlePage.swift */,
 				6B6C8D001B9B9DF3008678EC /* KeepyUppy.swift */,
 				6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */,
-				6BD2D38E1B9D0BA30052FBA7 /* UIImage+Gif.swift */,
+				6BD2D3961B9D5BF20052FBA7 /* UIImage+animatedGIF.m */,
+				6BD2D3951B9D5BF20052FBA7 /* UIImage+animatedGIF.h */,
 				6B6897181B98B2CA00C5069E /* Main.storyboard */,
 				6B68971B1B98B2CA00C5069E /* Images.xcassets */,
 				6B68971D1B98B2CA00C5069E /* LaunchScreen.xib */,
 				6B68970E1B98B2CA00C5069E /* Supporting Files */,
 				6B68973A1B98B62800C5069E /* Sounds */,
+				6BD2D3941B9D5BF10052FBA7 /* Keepy Uppy-Bridging-Header.h */,
 			);
 			path = "Keepy Uppy";
 			sourceTree = "<group>";
@@ -317,7 +321,6 @@
 				6B6897B01B994BAD00C5069E /* Basketball.swift in Sources */,
 				6B6897151B98B2CA00C5069E /* GameScene.swift in Sources */,
 				6B6897C01B9970E500C5069E /* ChooseBackground.swift in Sources */,
-				6BD2D38F1B9D0BA30052FBA7 /* UIImage+Gif.swift in Sources */,
 				6B6897171B98B2CA00C5069E /* GameViewController.swift in Sources */,
 				6B6C8D011B9B9DF3008678EC /* KeepyUppy.swift in Sources */,
 				6B6897B41B994BCF00C5069E /* BowlingBall.swift in Sources */,
@@ -326,6 +329,7 @@
 				6B6897BE1B9970DD00C5069E /* ChooseBall.swift in Sources */,
 				6B94375C1B9C0F080049AA91 /* PlayStartSong.swift in Sources */,
 				6B94375E1B9C1A090049AA91 /* TitlePage.swift in Sources */,
+				6BD2D3971B9D5BF20052FBA7 /* UIImage+animatedGIF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,9 +456,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Keepy Uppy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Keepy Uppy/Keepy Uppy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -463,9 +470,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Keepy Uppy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Keepy Uppy/Keepy Uppy-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

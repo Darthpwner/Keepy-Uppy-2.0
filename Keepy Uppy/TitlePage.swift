@@ -18,9 +18,26 @@ class TitlePage: UIViewController {
     
     let singleton = PlayStartSong.sharedInstance
     
+    //
+//    @IBOutlet weak var ImageGIF: UIImageView!
+//    
+//    override func viewDidLoad() {
+//        
+//        //  http://www.kyst.no/ep_bilder/164/16863-ceabe11810360ac49045863747d2ca85-67b5126fe38caa1839cb3b35b903ef53storvikbanner.gif
+//        
+//        var strImg : String = "http://www.kyst.no/ep_bilder/164/16863-ceabe11810360ac49045863747d2ca85-67b5126fe38caa1839cb3b35b903ef53storvikbanner.gif"
+//        
+//        
+//        var url: NSURL = NSURL(string: strImg)!
+//        
+//        ImageGIF.image = UIImage.animatedImageWithAnimatedGIFURL(url)
+//        
+//        super.viewDidLoad()
+//        // Do any additional setup after loading the view, typically from a nib.
+//    }
+    //
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
         //I am not sure what the code below does
         
         // Configure the view.
@@ -35,13 +52,13 @@ class TitlePage: UIViewController {
         skView.presentScene(scene)
         
         //Add the bouncing ball GIF
-        var imageData = NSData(contentsOfURL: NSBundle.mainBundle()
-            .URLForResource("Bouncing Ball", withExtension: "gif")!)
-        let bouncingBall = UIImage.animatedImageWithData(imageData!)
-        var animation = UIImageView(image: bouncingBall)
-        animation.frame = CGRect(x: 0.0, y: 200.0, width: 400.0, height: 200.0)
+        var strImg: String = "http://www.platformtennis.org/Assets/Assets/images/Bouncing+Ball+Yellow.gif"
         
-        view.addSubview(animation)
+        var url: NSURL = NSURL(string: strImg)!
+        
+        animation.image = UIImage.animatedImageWithAnimatedGIFURL(url)
+        
+        super.viewDidLoad()
         
         //Plays start song
         singleton.prepareAudios()
