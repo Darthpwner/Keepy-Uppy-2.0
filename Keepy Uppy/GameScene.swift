@@ -18,6 +18,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var canRestart = Bool()
     var scoreLabelNode:SKLabelNode!
     var score = NSInteger()
+    var background: SKSpriteNode!
     //
     
     //Restitution == how much energy the physics body loses when it bounces
@@ -47,7 +48,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         anchorPoint = CGPoint(x: 0, y: 1.0)
         
         //if forest background chosen
-        let background = SKSpriteNode(imageNamed: "Beach Background.jpg")
+        background = SKSpriteNode(imageNamed: "Beach Background.jpg")
         //else if beach background chosen
         //        let background = SKSpriteNode(imageNamed: "Beach Background.jpg")
         //else
