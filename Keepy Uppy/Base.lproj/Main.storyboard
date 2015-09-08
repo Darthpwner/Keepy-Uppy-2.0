@@ -109,6 +109,7 @@
                                             <constraint firstAttribute="centerY" secondItem="4Mc-I4-IRT" secondAttribute="centerY" id="Zem-SZ-OTs"/>
                                             <constraint firstAttribute="centerX" secondItem="4Mc-I4-IRT" secondAttribute="centerX" id="bqX-3a-Z56"/>
                                             <constraint firstAttribute="trailing" secondItem="4Mc-I4-IRT" secondAttribute="trailing" constant="153" id="geX-ul-7C0"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4Mc-I4-IRT" secondAttribute="bottom" constant="5" id="l6D-Z8-Bsp"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
