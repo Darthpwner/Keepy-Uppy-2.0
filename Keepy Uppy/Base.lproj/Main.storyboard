@@ -49,11 +49,11 @@
                                             <constraint firstAttribute="trailing" secondItem="dbZ-Ff-5GE" secondAttribute="trailing" constant="10" id="vMu-4n-7Ue"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEy-Ec-54G" userLabel="Bouncing Ball View">
-                                        <rect key="frame" x="0.0" y="128" width="632" height="300"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wEy-Ec-54G" userLabel="Bouncing Ball View">
+                                        <rect key="frame" x="0.0" y="128" width="632" height="275"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Bouncing Ball.gif" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-nN-Twa">
-                                                <rect key="frame" x="0.0" y="0.0" width="632" height="300"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" image="Bouncing Ball.gif" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-nN-Twa">
+                                                <rect key="frame" x="0.0" y="0.0" width="632" height="275"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -72,14 +72,14 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yid-iL-fny" userLabel="Start Main View">
-                                        <rect key="frame" x="10" y="428" width="612" height="172"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yid-iL-fny" userLabel="Start Main View">
+                                        <rect key="frame" x="10" y="403" width="612" height="197"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Mc-I4-IRT" userLabel="Start Subview">
-                                                <rect key="frame" x="153" y="43" width="306" height="86"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Mc-I4-IRT" userLabel="Start Subview">
+                                                <rect key="frame" x="153" y="43" width="306" height="111"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
-                                                        <rect key="frame" x="-143" y="-38" width="592" height="162"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="306" height="111"/>
                                                         <gestureRecognizers/>
                                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
                                                         <state key="normal" title="START">
@@ -92,9 +92,32 @@
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="Ecg-ok-cqe" firstAttribute="leading" secondItem="4Mc-I4-IRT" secondAttribute="leading" constant="20" id="0iT-mc-MQ0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Ecg-ok-cqe" secondAttribute="bottom" constant="10" id="B6g-Fh-4gm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Ecg-ok-cqe" secondAttribute="trailing" constant="20" id="eaf-7Y-gve"/>
+                                                    <constraint firstItem="Ecg-ok-cqe" firstAttribute="top" secondItem="4Mc-I4-IRT" secondAttribute="top" constant="10" id="pLW-fD-Hne"/>
+                                                    <constraint firstAttribute="centerX" secondItem="Ecg-ok-cqe" secondAttribute="centerX" id="uEO-6a-mOV"/>
+                                                    <constraint firstAttribute="centerY" secondItem="Ecg-ok-cqe" secondAttribute="centerY" id="xJY-UL-OIk"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="4Mc-I4-IRT" secondAttribute="bottom" constant="43" id="FMd-qK-Em0"/>
+                                            <constraint firstItem="4Mc-I4-IRT" firstAttribute="top" secondItem="yid-iL-fny" secondAttribute="top" constant="43" id="LMc-Qi-t1B"/>
+                                            <constraint firstItem="4Mc-I4-IRT" firstAttribute="leading" secondItem="yid-iL-fny" secondAttribute="leading" constant="153" id="UTu-Po-bgB"/>
+                                            <constraint firstAttribute="centerY" secondItem="4Mc-I4-IRT" secondAttribute="centerY" id="Zem-SZ-OTs"/>
+                                            <constraint firstAttribute="centerX" secondItem="4Mc-I4-IRT" secondAttribute="centerX" id="bqX-3a-Z56"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Mc-I4-IRT" secondAttribute="trailing" constant="153" id="geX-ul-7C0"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="FMd-qK-Em0"/>
+                                                <exclude reference="LMc-Qi-t1B"/>
+                                                <exclude reference="UTu-Po-bgB"/>
+                                                <exclude reference="geX-ul-7C0"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
