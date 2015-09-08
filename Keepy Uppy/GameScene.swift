@@ -54,7 +54,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //      let background = SKSpriteNode(imageNamed: "Desert Background.jpg")
         background.position = CGPoint(x: 0, y: 0)
         background.anchorPoint = CGPoint(x: 0, y: 1.0)
-        addChild(background)
+        //addChild(background)
         
         addChild(gameLayer)
         
@@ -104,7 +104,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         shape.strokeColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.5)
         shape.lineWidth = 4
         
-        ball.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)  //Set the ball's position
+        ball.position = CGPoint(x: size.width/2, y: size.height/2)  //Set the ball's position
         addChild(ball)  //Add ball to the display list
         
         // this is the most important line, we define the body
