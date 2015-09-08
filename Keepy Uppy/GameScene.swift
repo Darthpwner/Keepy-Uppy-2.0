@@ -66,15 +66,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Add background
         setUpBackground(background)
         
-        self.addChild(background)
-        
-        
-        addChild(gameLayer)
+        //addChild(gameLayer)
         
         //let gameBoardTexture = SKTexture(imageNamed: "Beach Background.jpg")
         
-        shapeLayer.position = LayerPosition
-        gameLayer.addChild(shapeLayer)
+        //shapeLayer.position = LayerPosition
+        //gameLayer.addChild(shapeLayer)
     }
 
     required init(coder decoder: NSCoder) {
@@ -145,6 +142,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         background.anchorPoint = CGPointMake(0.5, 0.5)
         background.size.height = self.size.height
         background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+        self.addChild(background)
     }
     
     //3
