@@ -57,9 +57,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        background.anchorPoint = CGPoint(x: 0, y: 2.0)
 
         //Add background
-        background.anchorPoint = CGPointMake(0.5, 0.5)
-        background.size.height = self.size.height
-        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+        setUpBackground()
         
         self.addChild(background)
         
@@ -137,7 +135,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //2
     func setUpBackground() -> Void {
-
+        background.anchorPoint = CGPointMake(0.5, 0.5)
+        background.size.height = self.size.height
+        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
     }
     
     //3
