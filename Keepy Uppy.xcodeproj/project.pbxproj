@@ -32,11 +32,11 @@
 		6B6C8D071B9BAC7B008678EC /* Basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D061B9BAC7B008678EC /* Basketball.png */; };
 		6B6C8D091B9BAC85008678EC /* Beach Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D081B9BAC85008678EC /* Beach Ball.png */; };
 		6B6C8D0F1B9BAE94008678EC /* Bowling Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */; };
-		6B6C8D151B9BF13B008678EC /* gameplay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D141B9BF13B008678EC /* gameplay.mp3 */; };
 		6B94375C1B9C0F080049AA91 /* PlayStartSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */; };
 		6B94375E1B9C1A090049AA91 /* TitlePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94375D1B9C1A090049AA91 /* TitlePage.swift */; };
 		6BD2D38B1B9D05EE0052FBA7 /* Bouncing Ball.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6BD2D38A1B9D05EE0052FBA7 /* Bouncing Ball.gif */; };
 		6BD2D3971B9D5BF20052FBA7 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD2D3961B9D5BF20052FBA7 /* UIImage+animatedGIF.m */; };
+		6BD8E0651B9EB5710010E257 /* gameplay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6BD8E0641B9EB5710010E257 /* gameplay.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,13 +79,13 @@
 		6B6C8D061B9BAC7B008678EC /* Basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Basketball.png; sourceTree = "<group>"; };
 		6B6C8D081B9BAC85008678EC /* Beach Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Beach Ball.png"; sourceTree = "<group>"; };
 		6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bowling Ball.png"; sourceTree = "<group>"; };
-		6B6C8D141B9BF13B008678EC /* gameplay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gameplay.mp3; path = ../gameplay.mp3; sourceTree = "<group>"; };
 		6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayStartSong.swift; sourceTree = "<group>"; };
 		6B94375D1B9C1A090049AA91 /* TitlePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlePage.swift; sourceTree = "<group>"; };
 		6BD2D38A1B9D05EE0052FBA7 /* Bouncing Ball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Bouncing Ball.gif"; sourceTree = "<group>"; };
 		6BD2D3941B9D5BF10052FBA7 /* Keepy Uppy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Keepy Uppy-Bridging-Header.h"; sourceTree = "<group>"; };
 		6BD2D3951B9D5BF20052FBA7 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		6BD2D3961B9D5BF20052FBA7 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		6BD8E0641B9EB5710010E257 /* gameplay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameplay.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +189,7 @@
 			children = (
 				6B68973C1B98B62800C5069E /* drop.mp3 */,
 				6B68973D1B98B62800C5069E /* gameover.mp3 */,
-				6B6C8D141B9BF13B008678EC /* gameplay.mp3 */,
+				6BD8E0641B9EB5710010E257 /* gameplay.mp3 */,
 				6B6897451B98B6D100C5069E /* hit.mp3 */,
 				6B6897471B98B96000C5069E /* start.mp3 */,
 			);
@@ -285,9 +285,9 @@
 				6B6897501B98BEAB00C5069E /* Forest Background.png in Resources */,
 				6B68971C1B98B2CA00C5069E /* Images.xcassets in Resources */,
 				6B6897481B98B96000C5069E /* start.mp3 in Resources */,
-				6B6C8D151B9BF13B008678EC /* gameplay.mp3 in Resources */,
 				6B6897351B98B4D300C5069E /* Beach Background.jpg in Resources */,
 				6B6897B81B995F0800C5069E /* Choose Ball Screen.jpg in Resources */,
+				6BD8E0651B9EB5710010E257 /* gameplay.mp3 in Resources */,
 				6B6C8D091B9BAC85008678EC /* Beach Ball.png in Resources */,
 				6B6897411B98B62800C5069E /* drop.mp3 in Resources */,
 				6B6897BC1B99687C00C5069E /* Choose Background Screen.jpg in Resources */,
