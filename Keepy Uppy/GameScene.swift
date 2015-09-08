@@ -52,9 +52,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //        let background = SKSpriteNode(imageNamed: "Beach Background.jpg")
         //else
         //      let background = SKSpriteNode(imageNamed: "Desert Background.jpg")
-        background.position = CGPoint(x: 0, y: 0)
-        background.anchorPoint = CGPoint(x: 0, y: 1.0)
-        addChild(background)
+//        background.position = CGPoint(x: 0, y: 2.0)
+//        background.anchorPoint = CGPoint(x: 0, y: 2.0)
+
+        //Add background
+        background.anchorPoint = CGPointMake(0.5, 0.5)
+        background.size.height = self.size.height
+        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+        
+        self.addChild(background)
+        
         
         addChild(gameLayer)
         
@@ -129,8 +136,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //2
     func setUpBackground() -> Void {
-        
+
     }
+    
     //3
     func setUpGround() -> Void {
         
