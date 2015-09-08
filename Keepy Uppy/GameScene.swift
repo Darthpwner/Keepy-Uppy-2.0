@@ -22,6 +22,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var ball: SKSpriteNode!
     //
     
+    var chosenBall: BallType!
+    
     //Restitution == how much energy the physics body loses when it bounces
     let basketballRestitution: CGFloat = 0.5
     let beachBallRestitution: CGFloat = 0.8
@@ -48,8 +50,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         anchorPoint = CGPoint(x: 0, y: 1.0)
         
         //if basketball chosen
-        ball = SKSpriteNode(imageNamed: "Basketball.png")
-
+        //if chosenBall == BallType.Basketball {
+            ball = SKSpriteNode(imageNamed: "Basketball.png")
+        //}
+            
         //if forest background chosen
         background = SKSpriteNode(imageNamed: "Beach Background.jpg")
         //else if beach background chosen

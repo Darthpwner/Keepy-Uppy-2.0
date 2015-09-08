@@ -16,9 +16,15 @@ class ChooseBall: UIViewController {
         return true
     }
     
-    @IBAction func chooseBeachBall(sender: UIButton) {}
+    @IBAction func chooseBeachBall(sender: UIButton) {
+        BallType.BeachBall
+    }
     
-    @IBAction func chooseBasketball(sender: UIButton) {}
+    @IBAction func chooseBasketball(sender: UIButton) {
+        BallType.Basketball
+    }
     
-    @IBAction func chooseBowlingBall(sender: UIButton) {}
+    @IBAction func chooseBowlingBall(sender: UIButton) {
+        BallType.BowlingBall
+    }
 }
