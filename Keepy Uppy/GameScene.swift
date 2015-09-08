@@ -53,7 +53,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //if chosenBall == BallType.Basketball {
             ball = SKSpriteNode(imageNamed: "Basketball.png")
         //}
-            
+        
+        //Basketball size is good
+        
+        //ball = SKSpriteNode(imageNamed: "Beach Ball.png")
+        
+        //ball = SKSpriteNode(imageNamed: "Bowling Ball.png")
+        //Bowling ball size is good
+        
         //if forest background chosen
         background = SKSpriteNode(imageNamed: "Beach Background.jpg")
         //else if beach background chosen
@@ -66,12 +73,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Add background
         setUpBackground(background)
         
-        //addChild(gameLayer)
+        //Unknown
+        addChild(gameLayer)
         
-        //let gameBoardTexture = SKTexture(imageNamed: "Beach Background.jpg")
+        let gameBoardTexture = SKTexture(imageNamed: "Beach Background.jpg")
         
-        //shapeLayer.position = LayerPosition
-        //gameLayer.addChild(shapeLayer)
+        shapeLayer.position = LayerPosition
+        gameLayer.addChild(shapeLayer)
     }
 
     required init(coder decoder: NSCoder) {
@@ -103,7 +111,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /////////////////////////////////////////
         
         // we put contraints on the top, left, right, bottom so that our balls can bounce off them
-        let physicsBody = SKPhysicsBody (edgeLoopFromRect: self.frame)
+        let physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
         // we set the body defining the physics to our scene
         self.physicsBody = physicsBody
         
@@ -113,6 +121,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // we set the color and line style
         shape.strokeColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.5)
         shape.lineWidth = 4
+
+        ball.setScale(0.5)
+        ball.position = CGPoint(x: self.frame.size.width * 0.35, y:self.frame.size.height * 0.6)
         
         ball.position = CGPoint(x: size.width/2, y: size.height/2)  //Set the ball's position
         addChild(ball)  //Add ball to the display list
@@ -129,6 +140,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // this will allow the balls to rotate when bouncing off each other
         ball.physicsBody!.allowsRotation = true
+        
+        // create the ground
+        var ground = SKNode()
+        ground.position = CGPointMake(0, background.size.height)
+        ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, background.size.height * 2.0))
+        ground.physicsBody?.dynamic = false
+        self.addChild(ground)
+
     }
     
     //1
