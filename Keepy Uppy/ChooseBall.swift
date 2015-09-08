@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SpriteKit
-import AVFoundation
 
 class ChooseBall: UIViewController {
     

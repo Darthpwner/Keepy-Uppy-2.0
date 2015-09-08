@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SpriteKit
-import AVFoundation
 
 class TitlePage: UIViewController {
     
@@ -19,19 +17,7 @@ class TitlePage: UIViewController {
     let singleton = PlayStartSong.sharedInstance
     
     override func viewDidLoad() {
-        //I am not sure what the code below does
-        
-        // Configure the view.
-        let skView = view as! SKView
-        skView.multipleTouchEnabled = false
-        
-        // Create and configure the scene.
-        scene = GameScene(size: skView.bounds.size)
-        scene.scaleMode = .AspectFill
-        
-        // Present the scene.
-        skView.presentScene(scene)
-        
+  
         //Add the bouncing ball GIF
         var strImg: String = "http://www.platformtennis.org/Assets/Assets/images/Bouncing+Ball+Yellow.gif"
         animateGif(strImg)
