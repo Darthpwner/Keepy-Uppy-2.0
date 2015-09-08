@@ -54,7 +54,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //      let background = SKSpriteNode(imageNamed: "Desert Background.jpg")
         background.position = CGPoint(x: 0, y: 0)
         background.anchorPoint = CGPoint(x: 0, y: 1.0)
-        //addChild(background)
+        addChild(background)
         
         addChild(gameLayer)
         
