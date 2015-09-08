@@ -19,6 +19,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var scoreLabelNode:SKLabelNode!
     var score = NSInteger()
     var background: SKSpriteNode!
+    var ball: SKSpriteNode!
     //
     
     //Restitution == how much energy the physics body loses when it bounces
@@ -32,10 +33,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Add feature to have more balls later
     //if(basketball chosen)
-    let ball = SKSpriteNode(imageNamed: "Basketball.png");
     
     //else if(beach ball chosen)
-    //let ball = SKSpriteNode(imageNamed: "Beach Ball.pngg");
+    //let ball = SKSpriteNode(imageNamed: "Beach Ball.png");
     
     //else
     //let ball = SKSpriteNode(imageNamed: "Bowling Ball.png");
@@ -47,6 +47,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         anchorPoint = CGPoint(x: 0, y: 1.0)
         
+        //if basketball chosen
+        ball = SKSpriteNode(imageNamed: "Basketball.png")
+
         //if forest background chosen
         background = SKSpriteNode(imageNamed: "Beach Background.jpg")
         //else if beach background chosen
