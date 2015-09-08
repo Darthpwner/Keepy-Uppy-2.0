@@ -39,7 +39,7 @@
                                                 </variation>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="centerY" secondItem="dbZ-Ff-5GE" secondAttribute="centerY" id="Dgf-LE-KFT"/>
                                             <constraint firstItem="dbZ-Ff-5GE" firstAttribute="top" secondItem="7tb-9Z-Fxe" secondAttribute="top" constant="10" id="Du1-V5-ebi"/>
@@ -72,30 +72,29 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yid-iL-fny" userLabel="Start View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yid-iL-fny" userLabel="Start Main View">
                                         <rect key="frame" x="10" y="428" width="612" height="172"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
-                                                <rect key="frame" x="10" y="0.0" width="592" height="162"/>
-                                                <gestureRecognizers/>
-                                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
-                                                <state key="normal" title="START">
-                                                    <color key="titleColor" red="1" green="0.3792681604" blue="0.3750667493" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="r2j-HC-Fb8" kind="show" id="HFi-7Q-Rq1"/>
-                                                </connections>
-                                            </button>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Mc-I4-IRT" userLabel="Start Subview">
+                                                <rect key="frame" x="153" y="43" width="306" height="86"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
+                                                        <rect key="frame" x="-143" y="-38" width="592" height="162"/>
+                                                        <gestureRecognizers/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
+                                                        <state key="normal" title="START">
+                                                            <color key="titleColor" red="1" green="0.3792681604" blue="0.3750667493" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="r2j-HC-Fb8" kind="show" id="HFi-7Q-Rq1"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Ecg-ok-cqe" secondAttribute="bottom" constant="10" id="2Wa-zv-fD2"/>
-                                            <constraint firstItem="Ecg-ok-cqe" firstAttribute="leading" secondItem="yid-iL-fny" secondAttribute="leading" constant="10" id="3ie-WK-rwY"/>
-                                            <constraint firstItem="Ecg-ok-cqe" firstAttribute="top" secondItem="yid-iL-fny" secondAttribute="top" id="TZf-0y-iKH"/>
-                                            <constraint firstAttribute="centerX" secondItem="Ecg-ok-cqe" secondAttribute="centerX" id="V1p-An-wT8"/>
-                                            <constraint firstAttribute="trailing" secondItem="Ecg-ok-cqe" secondAttribute="trailing" constant="10" id="f4y-US-8s5"/>
-                                        </constraints>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
