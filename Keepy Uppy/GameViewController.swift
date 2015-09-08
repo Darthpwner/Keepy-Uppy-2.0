@@ -42,8 +42,6 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         song.play()
     }
     
-    
-    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }

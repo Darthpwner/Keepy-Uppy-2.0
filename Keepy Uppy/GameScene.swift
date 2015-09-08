@@ -9,8 +9,16 @@
 //Actual game play scene
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     var lives: Int = 3
+    
+    //From Flappy Bird example
+    var temporaryBall: SKSpriteNode!
+    var moving:SKNode!
+    var canRestart = Bool()
+    var scoreLabelNode:SKLabelNode!
+    var score = NSInteger()
+    //
     
     //Restitution == how much energy the physics body loses when it bounces
     let basketballRestitution: CGFloat = 0.5
@@ -65,10 +73,25 @@ class GameScene: SKScene {
     }
     
     override func didMoveToView(view: SKView) {
-        println("LOL DIDMOVETOVIEW")
         
-        // we live in a world with gravity on the y axis
-        self.physicsWorld.gravity = CGVectorMake(0, -6)
+        canRestart = false  //Prevent restarts
+        
+        // Creates the Physics of the game
+        setUpPhysics()  //1
+        
+        setUpBackground()   //2
+        
+        setUpGround()   //3
+        
+        setUpWalls()    //4
+        
+        setUpBall() //5
+        
+        createGround()  //6
+        
+        createRecords() //7
+        /////////////////////////////////////////
+        
         // we put contraints on the top, left, right, bottom so that our balls can bounce off them
         let physicsBody = SKPhysicsBody (edgeLoopFromRect: self.frame)
         // we set the body defining the physics to our scene
@@ -98,10 +121,43 @@ class GameScene: SKScene {
         ball.physicsBody!.allowsRotation = true
     }
     
+    //1
+    func setUpPhysics() -> Void {
+        self.physicsWorld.gravity = CGVectorMake( 0.0, -5.0 )
+        self.physicsWorld.contactDelegate = self
+    }
     
+    //2
+    func setUpBackground() -> Void {
+        
+    }
+    //3
+    func setUpGround() -> Void {
+        
+    }
+    
+    //4
+    func setUpWalls() -> Void {
+        
+    }
+    
+    //5
+    func setUpBall() -> Void {
+        
+    }
+    
+    //6
+    func createGround() -> Void {
+        
+    }
+    
+    //7
+    func createRecords() -> Void {
+        
+    }
     
     // this defines the mass, roughness and bounciness
-    func setPhysicsAttributes(friction: CGFloat, restitution: CGFloat, mass: CGFloat) {
+    func setPhysicsAttributes(friction: CGFloat, restitution: CGFloat, mass: CGFloat) -> Void {
         ball.physicsBody!.friction = friction
         ball.physicsBody!.restitution = restitution
         ball.physicsBody!.mass = mass
