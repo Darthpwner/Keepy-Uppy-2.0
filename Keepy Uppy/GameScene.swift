@@ -129,17 +129,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.physicsBody!.allowsRotation = true
     }
     
+    /*
+        Directions in which the ball can move
+                    ^
+                    |
+                <-  O ->
+    */
+    //Use to move the ball
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         
-        let moveBall = SKAction.moveToY(380, duration: 0.4)
-        let moveBalldown = SKAction.moveToY(293, duration: 0.4)
+        //let moveBallUp = SKAction.moveToY(self.ball.size.height += 1.0, duration: 0.4)
         
-        // If the position of the ball is not 293 it will move to 293, otherwise it will move to 380
-        if ball.position.y == 293 {
-            self.ball.runAction(moveBall)
-        } else {
-            self.ball.runAction(moveBalldown)
-        }
+        //let moveBallLeft = SKAction.moveToX(self.ball.size.width += -1.0, duration: 0.4)
+        
+        //let moveBallRight = SKAction.moveToX(self.ball.position += 1.0, duration: 0.4)
+    
+        //if directly underneath
+            //moveBallUp
+        //else if off to the side
+            //if mouse is to the right
+                //moveBallLeft
+            //else if mouse is to the left
+                //moveBallRight
+        //else (combination of both)
+            //move combined vector
     }
     
     func assignBall() -> Void {
