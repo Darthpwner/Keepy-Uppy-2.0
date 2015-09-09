@@ -97,6 +97,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // we set the body defining the physics to our scene
         self.physicsBody = physicsBody
         
+        //WHY IS THIS NEEDED??????
         // SkShapeNode is a primitive for drawing like with the AS3 Drawing API
         // it has built in support for primitives like a circle, so we pass a radius
         let shape = SKShapeNode(circleOfRadius: 20)
@@ -108,7 +109,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         // this is the most important line, we define the body
-        ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width/2)  //Not sure why this needs to be shape???
+        ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width/2.0)
         
         assignPhysicsAttributes(chooseBall.ballType!)
         
