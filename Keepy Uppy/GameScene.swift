@@ -54,7 +54,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setUpPhysics()  //1
         
         //Add background
-        setUpBackground(background) //2
+        setUpBackground() //2
         
         setUpGround()   //3
         
@@ -91,7 +91,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // we put contraints on the top, left, right, bottom so that our balls can bounce off them
         
         //FIX THIS LINE! THIS CAUSES THE CONSTRAINT PROBLEM!
-        let physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
+        let physicsBody = SKPhysicsBody(edgeLoopFromRect: background.frame)
         //FIX THIS LINE!
         
         // we set the body defining the physics to our scene
@@ -160,10 +160,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //2
-    func setUpBackground(background: SKSpriteNode!) -> Void {
-        background.anchorPoint = CGPointMake(0.5, 0.5)
-        background.size.height = self.size.height
-        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+    func setUpBackground() -> Void {
+        self.background.anchorPoint = CGPointMake(0.5, 0.5)
+        self.background.size.height = self.size.height
+        self.background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
         self.addChild(background)
     }
     
@@ -183,6 +183,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //5
     func setUpBall() -> Void {
         self.ball.setScale(0.5)
+        
+        ball.anchorPoint = background.anchorPoint
         
         self.ball.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
         
