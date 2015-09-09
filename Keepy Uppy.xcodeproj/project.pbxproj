@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B0E5DD71B9FF31000866FE8 /* GetBallType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0E5DD61B9FF31000866FE8 /* GetBallType.swift */; };
 		6B0E5DDB1B9FF5D000866FE8 /* GetBackgroundType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0E5DDA1B9FF5D000866FE8 /* GetBackgroundType.swift */; };
+		6B0E5DDD1B9FFEA000866FE8 /* whitebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0E5DDC1B9FFEA000866FE8 /* whitebg.png */; };
 		6B6897111B98B2CA00C5069E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6897101B98B2CA00C5069E /* AppDelegate.swift */; };
 		6B6897151B98B2CA00C5069E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6897141B98B2CA00C5069E /* GameScene.swift */; };
 		6B6897171B98B2CA00C5069E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6897161B98B2CA00C5069E /* GameViewController.swift */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		6B0E5DD61B9FF31000866FE8 /* GetBallType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBallType.swift; sourceTree = "<group>"; };
 		6B0E5DDA1B9FF5D000866FE8 /* GetBackgroundType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBackgroundType.swift; sourceTree = "<group>"; };
+		6B0E5DDC1B9FFEA000866FE8 /* whitebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitebg.png; sourceTree = "<group>"; };
 		6B68970B1B98B2CA00C5069E /* Keepy Uppy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keepy Uppy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B68970F1B98B2CA00C5069E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B6897101B98B2CA00C5069E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				6B6897B71B995F0800C5069E /* Choose Ball Screen.jpg */,
 				6B6897531B98BF5A00C5069E /* Desert.jpg */,
 				6B68974F1B98BEAB00C5069E /* Forest.png */,
+				6B0E5DDC1B9FFEA000866FE8 /* whitebg.png */,
 				6B68970F1B98B2CA00C5069E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -308,6 +311,7 @@
 				6BD8E0651B9EB5710010E257 /* gameplay.mp3 in Resources */,
 				6B6C8D091B9BAC85008678EC /* Beach Ball.png in Resources */,
 				6B6897411B98B62800C5069E /* drop.mp3 in Resources */,
+				6B0E5DDD1B9FFEA000866FE8 /* whitebg.png in Resources */,
 				6B6897BC1B99687C00C5069E /* Choose Background Screen.jpg in Resources */,
 				6B68971A1B98B2CA00C5069E /* Main.storyboard in Resources */,
 				6B6897421B98B62800C5069E /* gameover.mp3 in Resources */,
