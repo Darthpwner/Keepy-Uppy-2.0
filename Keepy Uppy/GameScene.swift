@@ -26,6 +26,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var score = NSInteger()
     var background: SKSpriteNode!
     var ball: SKSpriteNode!
+    var ground = SKNode()
     //
     
     //Restitution == how much energy the physics body loses when it bounces
@@ -40,8 +41,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override init(size: CGSize) {
         super.init(size: size)
         
-        println("LOL INIT")
-        
         anchorPoint = CGPoint(x: 0, y: 1.0)
         
         //Basketball and Bowling ball size is good
@@ -51,14 +50,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         assignBackground()
         
+        //Create the Phyiscs of the game
+        setUpPhysics()  //1
+        
         //Add background
-        setUpBackground(background)
+        setUpBackground(background) //2
+        
+        setUpGround()   //3
+        
+        setUpWalls()    //4 TODO
+        
+        setUpBall() //5
+        
+        setUpRecords() //6 TODO
         
         //Unknown
-        addChild(gameLayer)
-       
-        shapeLayer.position = LayerPosition
-        gameLayer.addChild(shapeLayer)
+//        addChild(gameLayer)
+//       
+//        shapeLayer.position = LayerPosition
+//        gameLayer.addChild(shapeLayer)
         //
     }
 
@@ -75,20 +85,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         canRestart = false  //Prevent restarts
         
-        // Creates the Physics of the game
-        setUpPhysics()  //1
-        
-        //setUpBackground()   //2
-        
-        setUpGround()   //3
-        
-        setUpWalls()    //4
-        
-        setUpBall() //5
-        
-        createGround()  //6
-        
-        createRecords() //7
+
         /////////////////////////////////////////
         
         // we put contraints on the top, left, right, bottom so that our balls can bounce off them
@@ -103,11 +100,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         shape.strokeColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.5)
         shape.lineWidth = 4
 
-        ball.setScale(0.5)
-        ball.position = CGPoint(x: self.frame.size.width * 0.5, y: self.frame.size.height * 0.5)
+        //ball.position = CGPoint(x: size.width/2, y: size.height/2)  //Set the ball's position
         
-        ball.position = CGPoint(x: size.width/2, y: size.height/2)  //Set the ball's position
-        addChild(ball)  //Add ball to the display list
         
         // this is the most important line, we define the body
         ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width/2)  //Not sure why this needs to be shape???
@@ -117,12 +111,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // this will allow the balls to rotate when bouncing off each other
         ball.physicsBody!.allowsRotation = true
         
-        // create the ground
-        var ground = SKNode()
-        ground.position = CGPointMake(0, background.size.height)
-        ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, background.size.height * 2.0))
-        ground.physicsBody?.dynamic = false
-        self.addChild(ground)
+
 
     }
     
@@ -163,6 +152,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.physicsBody!.mass = mass
     }
     
+    /*Setup functions********************************************************/
     //1
     func setUpPhysics() -> Void {
         self.physicsWorld.gravity = CGVectorMake( 0.0, -5.0 )
@@ -179,7 +169,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //3
     func setUpGround() -> Void {
-        
+        self.ground.position = CGPointMake(0, background.size.height)
+        self.ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, background.size.height * 2.0))
+        self.ground.physicsBody?.dynamic = false
+        self.addChild(self.ground)
     }
     
     //4
@@ -189,18 +182,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //5
     func setUpBall() -> Void {
+        self.ball.setScale(0.5)
+        
         self.ball.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
+        
+        addChild(ball)  //Add ball to the display list
     }
     
     //6
-    func createGround() -> Void {
+    func setUpRecords() -> Void {
         
     }
-    
-    //7
-    func createRecords() -> Void {
-        
-    }
+    /************************************************************************/
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */

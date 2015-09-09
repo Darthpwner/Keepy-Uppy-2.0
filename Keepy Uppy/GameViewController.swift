@@ -38,6 +38,11 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         let skView = view as! SKView
         skView.multipleTouchEnabled = false
         
+        //TEMPORARY
+        skView.showsFPS = true
+        skView.showsNodeCount = true
+        ////////////////////////////
+        
         // Create and configure the scene.
         scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .AspectFill
