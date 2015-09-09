@@ -14,7 +14,7 @@ class TitlePage: UIViewController {
     
     var scene: GameScene!
     
-    let singleton = PlayStartSong.sharedInstance
+    let playStartSong = PlayStartSong.sharedInstance
     
     override func viewDidLoad() {
   
@@ -25,8 +25,8 @@ class TitlePage: UIViewController {
         super.viewDidLoad()
         
         //Plays start song
-        singleton.prepareAudios()
-        singleton.song.play()
+        playStartSong.prepareAudios()
+        playStartSong.song.play()
         
         println("FIRST")
     }
