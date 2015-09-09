@@ -25,7 +25,11 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var currentClicksLabel: UILabel!
     
-
+    //Tap Gesture Recognizer
+    @IBAction func didTap(sender: UITapGestureRecognizer) {
+        
+    }
+    
     
     override func viewDidLoad() {
         println("SECOND")
@@ -68,10 +72,8 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         song.numberOfLoops = -1 //Makes the song play repeatedly
     }
     
-    //UITouchGesture Functions
-    @IBAction func tapBall(sender: AnyObject) {
-        //If the user taps ball, make the ball bounce up
-    }
+
+    
     
     //Gameplay Functions
     func gameDidBegin() {
