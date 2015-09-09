@@ -55,17 +55,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         anchorPoint = CGPoint(x: 0, y: 1.0)
         
-        //if basketball chosen
-        //if chosenBall == BallType.Basketball {
-            ball = SKSpriteNode(imageNamed: "Basketball.png")
-        //}
-        
-        //Basketball size is good
-        
-        //ball = SKSpriteNode(imageNamed: "Beach Ball.png")
-        
-        //ball = SKSpriteNode(imageNamed: "Bowling Ball.png")
-        //Bowling ball size is good
+        //Basketball and Bowling ball size is good
+        //Beach ball is BAD!
+        assignBall()
         
         //if forest background chosen
         background = SKSpriteNode(imageNamed: "Beach Background.jpg")
@@ -156,6 +148,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     }
     
+    func assignBall() -> Void {
+        if chooseBall.ballType == BallType.BeachBall {
+            ball = SKSpriteNode(imageNamed: "Beach Ball.png")
+        } else if chooseBall.ballType == BallType.Basketball {
+            ball = SKSpriteNode(imageNamed: "Basketball.png")
+        } else {
+            ball = SKSpriteNode(imageNamed: "Bowling Ball.png")
+        }
+    }
+
     //1
     func setUpPhysics() -> Void {
         self.physicsWorld.gravity = CGVectorMake( 0.0, -5.0 )
