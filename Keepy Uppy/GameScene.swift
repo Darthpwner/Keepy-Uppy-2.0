@@ -104,9 +104,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // we put contraints on the top, left, right, bottom so that our balls can bounce off them
         
-        //FIX THIS LINE! THIS CAUSES THE CONSTRAINT PROBLEM!
         let physicsBody = SKPhysicsBody(edgeLoopFromRect: background.frame)
-        //FIX THIS LINE!
         
         // we set the body defining the physics to our scene
         self.physicsBody = physicsBody
@@ -137,13 +135,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     */
     //Use to move the ball
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        
-        //let moveBallUp = SKAction.moveToY(self.ball.size.height += 1.0, duration: 0.4)
-        
-        //let moveBallLeft = SKAction.moveToX(self.ball.size.width += -1.0, duration: 0.4)
-        
-        //let moveBallRight = SKAction.moveToX(self.ball.position += 1.0, duration: 0.4)
-    
+
+        let moveBallUp: Void? = ball.physicsBody?.applyImpulse(CGVectorMake(0, 100))
+        let moveBallLeft: Void? = ball.physicsBody?.applyImpulse(CGVectorMake(-10, 0))
+        let moveBallRight: Void? = ball.physicsBody?.applyImpulse(CGVectorMake(10, 0))
         //if directly underneath
             //moveBallUp
         //else if off to the side
