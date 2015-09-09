@@ -31,7 +31,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Restitution == how much energy the physics body loses when it bounces
     let basketballRestitution: CGFloat = 0.5
     let beachBallRestitution: CGFloat = 0.8
-    let bowlingBallRestiution: CGFloat = 0.2
+    let bowlingBallRestitution: CGFloat = 0.2
     
     let gameLayer = SKNode()
     let shapeLayer = SKNode()
@@ -112,12 +112,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // this is the most important line, we define the body
         ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width/2)  //Not sure why this needs to be shape???
         
-        //if basketball
-        setPhysicsAttributes(0.3, restitution: basketballRestitution, mass: 0.5)
-        //else if beach ball
-        //setPhysicsAttributes(0.3, restitution: beachBallRestitution, mass: 0.5)
-        //else (bowling ball)
-        //setPhysicsAttributes(0.3, restitution: bowlingBallRestiution, mass: 0.5)
+        assignPhysicsAttributes(chooseBall.ballType!)
         
         // this will allow the balls to rotate when bouncing off each other
         ball.physicsBody!.allowsRotation = true
@@ -148,6 +143,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             background = SKSpriteNode(imageNamed: "Beach.jpg")
         } else {
             background = SKSpriteNode(imageNamed: "Forest.png")
+        }
+    }
+    
+    func assignPhysicsAttributes(typeOfBall: BallType) -> Void {
+        if typeOfBall == BallType.BeachBall {
+            setPhysicsAttributes(0.3, restitution: beachBallRestitution, mass: 0.5)
+        } else if typeOfBall == BallType.Basketball {
+            setPhysicsAttributes(0.3, restitution: basketballRestitution, mass: 0.5)
+        } else {
+            setPhysicsAttributes(0.3, restitution: bowlingBallRestitution, mass: 0.5)
         }
     }
 
