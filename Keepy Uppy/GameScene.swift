@@ -16,7 +16,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Determine ball type
     let chooseBall = GetBallType.sharedInstance
     //Determine background type
-    internal var chosenBackground: BackgroundType!
+    let chooseBackground = GetBackgroundType.sharedInstance
     
     //From Flappy Bird example
     var temporaryBall: SKSpriteNode!
@@ -28,8 +28,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var ball: SKSpriteNode!
     //
     
-    
-    
     //Restitution == how much energy the physics body loses when it bounces
     let basketballRestitution: CGFloat = 0.5
     let beachBallRestitution: CGFloat = 0.8
@@ -38,15 +36,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let gameLayer = SKNode()
     let shapeLayer = SKNode()
     let LayerPosition = CGPoint(x: 6, y: -6)
-    
-    //Add feature to have more balls later
-    //if(basketball chosen)
-    
-    //else if(beach ball chosen)
-    //let ball = SKSpriteNode(imageNamed: "Beach Ball.png");
-    
-    //else
-    //let ball = SKSpriteNode(imageNamed: "Bowling Ball.png");
     
     override init(size: CGSize) {
         super.init(size: size)
@@ -59,24 +48,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Beach ball is BAD!
         assignBall()
         println(chooseBall.ballType)
-        
-        //if forest background chosen
-        background = SKSpriteNode(imageNamed: "Beach Background.jpg")
-        //else if beach background chosen
-        //        let background = SKSpriteNode(imageNamed: "Beach Background.jpg")
-        //else
-        //      let background = SKSpriteNode(imageNamed: "Desert Background.jpg")
-//        background.position = CGPoint(x: 0, y: 2.0)
-//        background.anchorPoint = CGPoint(x: 0, y: 2.0)
 
+        assignBackground()
+        
         //Add background
         setUpBackground(background)
         
         //Unknown
         addChild(gameLayer)
         
-        let gameBoardTexture = SKTexture(imageNamed: "Beach Background.jpg")
-        
+//        let gameBoardTexture = SKTexture(imageNamed: "Beach Background.jpg")
+//        
         shapeLayer.position = LayerPosition
         gameLayer.addChild(shapeLayer)
     }
@@ -156,6 +138,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             ball = SKSpriteNode(imageNamed: "Basketball.png")
         } else {
             ball = SKSpriteNode(imageNamed: "Bowling Ball.png")
+        }
+    }
+    
+    func assignBackground() -> Void {
+        if chooseBackground.backgroundType == BackgroundType.Desert {
+            background = SKSpriteNode(imageNamed: "Desert Background.jpg")
+        } else if chooseBackground.backgroundType == BackgroundType.Beach {
+            background = SKSpriteNode(imageNamed: "Beach Background.jpg")
+        } else {
+            background = SKSpriteNode(imageNamed: "Forest Background.png")
         }
     }
 
