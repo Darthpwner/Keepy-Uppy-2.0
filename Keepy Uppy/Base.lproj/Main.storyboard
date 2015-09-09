@@ -393,9 +393,9 @@
                                     <constraint firstAttribute="bottom" secondItem="GXy-8Y-9Kj" secondAttribute="bottom" constant="10" id="7Cs-Dl-ApB"/>
                                     <constraint firstItem="GXy-8Y-9Kj" firstAttribute="leading" secondItem="w2h-WZ-mfe" secondAttribute="leading" id="H5J-6J-QIs"/>
                                     <constraint firstItem="NZF-HX-5t3" firstAttribute="top" secondItem="noN-sd-Dyt" secondAttribute="bottom" constant="-25" id="I3T-eR-tqz"/>
-                                    <constraint firstItem="8Ex-2l-8Qb" firstAttribute="centerX" secondItem="WZZ-0q-SJu" secondAttribute="centerX" constant="-2.5" id="INx-q2-kHB"/>
+                                    <constraint firstItem="8Ex-2l-8Qb" firstAttribute="centerX" secondItem="WZZ-0q-SJu" secondAttribute="centerX" id="INx-q2-kHB"/>
                                     <constraint firstItem="eoQ-Ed-2xJ" firstAttribute="leading" secondItem="w2h-WZ-mfe" secondAttribute="leading" id="Iic-Ad-d1L"/>
-                                    <constraint firstItem="8Ex-2l-8Qb" firstAttribute="centerY" secondItem="WZZ-0q-SJu" secondAttribute="centerY" constant="0.5" id="LLw-9x-oIh"/>
+                                    <constraint firstItem="8Ex-2l-8Qb" firstAttribute="centerY" secondItem="WZZ-0q-SJu" secondAttribute="centerY" id="LLw-9x-oIh"/>
                                     <constraint firstItem="GXy-8Y-9Kj" firstAttribute="leading" secondItem="096-dX-vYc" secondAttribute="trailing" constant="-58" id="RJu-Nx-ivY"/>
                                     <constraint firstItem="NZF-HX-5t3" firstAttribute="leading" secondItem="noN-sd-Dyt" secondAttribute="trailing" constant="-33" id="Uzc-XA-NG6"/>
                                     <constraint firstItem="eoQ-Ed-2xJ" firstAttribute="top" secondItem="d0L-JP-6ew" secondAttribute="bottom" constant="-25" id="X6P-At-AdX"/>
@@ -405,7 +405,7 @@
                                     <constraint firstItem="NZF-HX-5t3" firstAttribute="leading" secondItem="w2h-WZ-mfe" secondAttribute="leading" id="cXa-Ob-BQr"/>
                                     <constraint firstItem="8Ex-2l-8Qb" firstAttribute="leading" secondItem="w2h-WZ-mfe" secondAttribute="leading" id="feB-zn-EBc"/>
                                     <constraint firstItem="NZF-HX-5t3" firstAttribute="top" secondItem="eoQ-Ed-2xJ" secondAttribute="bottom" id="lxH-y9-qDl"/>
-                                    <constraint firstAttribute="trailing" secondItem="8Ex-2l-8Qb" secondAttribute="trailing" constant="8" id="qEz-3A-hTd"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Ex-2l-8Qb" secondAttribute="trailing" id="qEz-3A-hTd"/>
                                     <constraint firstItem="eoQ-Ed-2xJ" firstAttribute="top" secondItem="8Ex-2l-8Qb" secondAttribute="bottom" id="qUR-v5-CFE"/>
                                     <constraint firstItem="eoQ-Ed-2xJ" firstAttribute="leading" secondItem="d0L-JP-6ew" secondAttribute="trailing" constant="-35" id="rCt-AX-oxp"/>
                                     <constraint firstItem="eoQ-Ed-2xJ" firstAttribute="top" secondItem="8Ex-2l-8Qb" secondAttribute="top" constant="30" id="rPK-WQ-s7P"/>
@@ -420,8 +420,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="w2h-WZ-mfe" firstAttribute="trailing" secondItem="1af-vJ-B3L" secondAttribute="trailingMargin" id="DxG-zz-9IZ"/>
-                            <constraint firstItem="w2h-WZ-mfe" firstAttribute="top" secondItem="nNS-dI-T8c" secondAttribute="bottom" id="Fiw-fs-Asa"/>
+                            <constraint firstItem="w2h-WZ-mfe" firstAttribute="trailing" secondItem="1af-vJ-B3L" secondAttribute="trailingMargin" constant="10" id="DxG-zz-9IZ"/>
+                            <constraint firstItem="w2h-WZ-mfe" firstAttribute="top" secondItem="nNS-dI-T8c" secondAttribute="bottom" constant="10" id="Fiw-fs-Asa"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
