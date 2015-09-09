@@ -143,11 +143,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func assignBackground() -> Void {
         if chooseBackground.backgroundType == BackgroundType.Desert {
-            background = SKSpriteNode(imageNamed: "Desert Background.jpg")
+            background = SKSpriteNode(imageNamed: "Desert.jpg")
         } else if chooseBackground.backgroundType == BackgroundType.Beach {
-            background = SKSpriteNode(imageNamed: "Beach Background.jpg")
+            background = SKSpriteNode(imageNamed: "Beach.jpg")
         } else {
-            background = SKSpriteNode(imageNamed: "Forest Background.png")
+            background = SKSpriteNode(imageNamed: "Forest.png")
         }
     }
 

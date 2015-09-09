@@ -16,7 +16,6 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var lives: Int = 3
     
-    
     var song: AVAudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {

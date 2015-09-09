@@ -168,7 +168,7 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Choose Ball Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="U8z-BR-7Ij">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3F-Na-wee">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3F-Na-wee" userLabel="Beach Ball">
                                 <rect key="frame" x="16" y="221" width="176" height="158"/>
                                 <gestureRecognizers/>
                                 <state key="normal" image="Beach Ball.png">
@@ -179,7 +179,7 @@
                                     <segue destination="wBn-0a-jPG" kind="show" id="7Ad-wY-Qj2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cny-Ib-fge">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cny-Ib-fge" userLabel="Basketball">
                                 <rect key="frame" x="212" y="221" width="176" height="158"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -193,7 +193,7 @@
                                     <segue destination="wBn-0a-jPG" kind="show" id="yhu-8F-ARz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cv-yL-g9N">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cv-yL-g9N" userLabel="Bowling Ball">
                                 <rect key="frame" x="408" y="221" width="176" height="158"/>
                                 <gestureRecognizers/>
                                 <state key="normal" image="Bowling Ball.png">
@@ -257,10 +257,10 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Choose Background Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ro6-gK-RRm">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS2-uD-Zs5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS2-uD-Zs5" userLabel="Desert">
                                 <rect key="frame" x="16" y="204" width="176" height="192"/>
                                 <gestureRecognizers/>
-                                <state key="normal" image="Desert Background.jpg">
+                                <state key="normal" image="Desert.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -268,13 +268,13 @@
                                     <segue destination="HZj-Dy-ZAq" kind="show" id="agb-z5-gzf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpy-yz-FYA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpy-yz-FYA" userLabel="Beach">
                                 <rect key="frame" x="212" y="204" width="176" height="192"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Qpy-yz-FYA" secondAttribute="height" multiplier="11:12" id="6KP-mQ-snR"/>
                                 </constraints>
-                                <state key="normal" image="Beach Background.jpg">
+                                <state key="normal" image="Beach.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -282,10 +282,10 @@
                                     <segue destination="HZj-Dy-ZAq" kind="show" id="oX6-TG-0GF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atY-VD-MFA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atY-VD-MFA" userLabel="Forest">
                                 <rect key="frame" x="408" y="204" width="176" height="192"/>
                                 <gestureRecognizers/>
-                                <state key="normal" image="Forest Background.png">
+                                <state key="normal" image="Forest.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -351,14 +351,14 @@
     </scenes>
     <resources>
         <image name="Basketball.png" width="340" height="340"/>
-        <image name="Beach Background.jpg" width="700" height="438"/>
         <image name="Beach Ball.png" width="1123" height="1126"/>
+        <image name="Beach.jpg" width="700" height="438"/>
         <image name="Bouncing Ball.gif" width="250" height="300"/>
         <image name="Bowling Ball.png" width="220" height="223"/>
         <image name="Choose Background Screen.jpg" width="265" height="190"/>
         <image name="Choose Ball Screen.jpg" width="3264" height="2448"/>
-        <image name="Desert Background.jpg" width="600" height="338"/>
-        <image name="Forest Background.png" width="900" height="473"/>
+        <image name="Desert.jpg" width="600" height="338"/>
+        <image name="Forest.png" width="900" height="473"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yhu-8F-ARz"/>
