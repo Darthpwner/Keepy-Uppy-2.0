@@ -129,6 +129,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.physicsBody!.allowsRotation = true
     }
     
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
+        let moveBall = SKAction.moveToY(380, duration: 0.4)
+        let moveBalldown = SKAction.moveToY(293, duration: 0.4)
+        
+        // If the position of the ball is not 293 it will move to 293, otherwise it will move to 380
+        if ball.position.y == 293 {
+            self.ball.runAction(moveBall)
+        } else {
+            self.ball.runAction(moveBalldown)
+        }
+    }
+    
     func assignBall() -> Void {
         if chooseBall.ballType == BallType.BeachBall {
             ball = SKSpriteNode(imageNamed: "Beach Ball.png")

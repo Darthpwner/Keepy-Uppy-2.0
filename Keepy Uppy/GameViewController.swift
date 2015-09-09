@@ -24,13 +24,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var lastClicksLabel: UILabel!
     
     @IBOutlet weak var currentClicksLabel: UILabel!
-    
-    //Tap Gesture Recognizer
-    @IBAction func didTap(sender: UITapGestureRecognizer) {
         
-    }
-    
-    
     override func viewDidLoad() {
         println("SECOND")
         

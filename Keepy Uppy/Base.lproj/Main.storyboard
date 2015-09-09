@@ -469,9 +469,6 @@
                             <constraint firstItem="w2h-WZ-mfe" firstAttribute="trailing" secondItem="1af-vJ-B3L" secondAttribute="trailingMargin" constant="10" id="DxG-zz-9IZ"/>
                             <constraint firstItem="w2h-WZ-mfe" firstAttribute="top" secondItem="nNS-dI-T8c" secondAttribute="bottom" constant="10" id="Fiw-fs-Asa"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="87i-M7-DEj" appends="YES" id="BQB-kU-Hsj"/>
-                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
@@ -481,11 +478,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7e-fV-kAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="87i-M7-DEj">
-                    <connections>
-                        <action selector="didTap:" destination="HZj-Dy-ZAq" id="dSJ-H2-Gad"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="328" y="2731"/>
         </scene>
