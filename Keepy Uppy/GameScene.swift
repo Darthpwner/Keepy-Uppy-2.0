@@ -34,10 +34,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let beachBallRestitution: CGFloat = 0.8
     let bowlingBallRestitution: CGFloat = 0.2
     
-    let gameLayer = SKNode()
-    let shapeLayer = SKNode()
-    let LayerPosition = CGPoint(x: 6, y: -6)
-    
+//    let gameLayer = SKNode()
+//    let shapeLayer = SKNode()
+//    let LayerPosition = CGPoint(x: 6, y: -6)
+//    
     override init(size: CGSize) {
         super.init(size: size)
         
@@ -89,7 +89,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /////////////////////////////////////////
         
         // we put contraints on the top, left, right, bottom so that our balls can bounce off them
+        
+        //FIX THIS LINE! THIS CAUSES THE CONSTRAINT PROBLEM!
         let physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
+        //FIX THIS LINE!
+        
         // we set the body defining the physics to our scene
         self.physicsBody = physicsBody
         
