@@ -104,7 +104,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         shape.lineWidth = 4
 
         ball.setScale(0.5)
-        ball.position = CGPoint(x: self.frame.size.width * 0.35, y:self.frame.size.height * 0.6)
+        ball.position = CGPoint(x: self.frame.size.width * 0.5, y: self.frame.size.height * 0.5)
         
         ball.position = CGPoint(x: size.width/2, y: size.height/2)  //Set the ball's position
         addChild(ball)  //Add ball to the display list
@@ -189,7 +189,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //5
     func setUpBall() -> Void {
-        
+        self.ball.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
     }
     
     //6
