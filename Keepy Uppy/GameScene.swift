@@ -57,7 +57,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override init(size: CGSize) {
         super.init(size: size)
         
-        setUpGameAnchor()
+        setUpGameAnchor()   //1
         
         assignBall()
         println(chooseBall.ballType)
@@ -65,18 +65,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         assignBackground()
         
         //Create the Phyiscs of the game
-        setUpPhysics()  //1
+        setUpPhysics()  //2
         
         //Add background
-        setUpBackground() //2
+        setUpBackground() //3
         
-        setUpGround()   //3
+        setUpGround()   //4
         
-        setUpWalls()    //4 TODO
+        setUpWalls()    //5 TODO
         
-        setUpBall() //5
+        setUpBall() //6
         
-        setUpRecords() //6 TODO
+        setUpRecords() //7 TODO
         
         //Unknown
 //        addChild(gameLayer)
@@ -119,9 +119,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         shape.strokeColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.5)
         shape.lineWidth = 4
 
-        
         // this is the most important line, we define the body
         ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width/2.0)
+        ball.physicsBody?.dynamic = true
         
         assignPhysicsAttributes(chooseBall.ballType!)
         
@@ -172,12 +172,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         anchorPoint = CGPoint(x: anchorX, y: anchorY)
     }
 
+    //2
     func setUpPhysics() -> Void {
         self.physicsWorld.gravity = CGVectorMake( 0.0, -5.0 )
         self.physicsWorld.contactDelegate = self
     }
     
-    //2
+    //3
     func setUpBackground() -> Void {
         self.background.anchorPoint = CGPointMake(0.5, 0.5)
         self.background.size.height = self.size.height
@@ -185,7 +186,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(background)
     }
     
-    //3
+    //4
     func setUpGround() -> Void {
         self.ground.position = CGPointMake(0, background.size.height)
         self.ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, background.size.height * 2.0))
@@ -193,12 +194,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(self.ground)
     }
     
-    //4
+    //5
     func setUpWalls() -> Void {
         
     }
     
-    //5
+    //6
     func setUpBall() -> Void {
         if chooseBall.ballType == BallType.BeachBall {
             self.ball.setScale(beachBallScalingFactor)
@@ -215,7 +216,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(ball)  //Add ball to the display list
     }
     
-    //6
+    //7
     func setUpRecords() -> Void {
         
     }
