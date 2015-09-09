@@ -56,11 +56,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //Unknown
         addChild(gameLayer)
-        
-//        let gameBoardTexture = SKTexture(imageNamed: "Beach Background.jpg")
-//        
+       
         shapeLayer.position = LayerPosition
         gameLayer.addChild(shapeLayer)
+        //
     }
 
     required init(coder decoder: NSCoder) {
@@ -71,6 +70,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         runAction(SKAction.playSoundFileNamed(sound, waitForCompletion: false))
     }
     
+    //Use this for gameplay
     override func didMoveToView(view: SKView) {
         
         canRestart = false  //Prevent restarts
@@ -156,6 +156,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
 
+    // this defines the mass, roughness and bounciness
+    func setPhysicsAttributes(friction: CGFloat, restitution: CGFloat, mass: CGFloat) -> Void {
+        ball.physicsBody!.friction = friction
+        ball.physicsBody!.restitution = restitution
+        ball.physicsBody!.mass = mass
+    }
+    
     //1
     func setUpPhysics() -> Void {
         self.physicsWorld.gravity = CGVectorMake( 0.0, -5.0 )
@@ -193,13 +200,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //7
     func createRecords() -> Void {
         
-    }
-    
-    // this defines the mass, roughness and bounciness
-    func setPhysicsAttributes(friction: CGFloat, restitution: CGFloat, mass: CGFloat) -> Void {
-        ball.physicsBody!.friction = friction
-        ball.physicsBody!.restitution = restitution
-        ball.physicsBody!.mass = mass
     }
     
     override func update(currentTime: CFTimeInterval) {
