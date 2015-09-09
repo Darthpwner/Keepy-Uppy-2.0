@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Matthew Allen Lin. All rights reserved.
 //
 
-import Foundation
+import Foundation   //
 
 class GetBallType {
 

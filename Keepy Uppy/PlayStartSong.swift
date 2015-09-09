@@ -7,7 +7,7 @@
 //
 
 import Foundation   //Needed for dispatch_once_t
-import AVFoundation
+import AVFoundation //Needed to play sounds
 
 //Singleton
 class PlayStartSong {
