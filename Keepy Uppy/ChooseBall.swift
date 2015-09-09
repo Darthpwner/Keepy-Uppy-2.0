@@ -10,33 +10,24 @@ import UIKit
 
 class ChooseBall: UIViewController {
     
-    var ballType: BallType?
-    
-    class var sharedInstance: ChooseBall {
-        struct Static {
-            static var onceToken: dispatch_once_t = 0
-            static var instance: ChooseBall? = nil
-        }
-        dispatch_once(&Static.onceToken) {
-            Static.instance = ChooseBall()
-        }
-        return Static.instance!
-    }
+    let getBallType = GetBallType.sharedInstance
     
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
     
     @IBAction func chooseBeachBall(sender: UIButton) {
-        ballType = BallType.BeachBall
+        getBallType.ballType = BallType.BeachBall
+        println(getBallType.ballType)
     }
     
     @IBAction func chooseBasketball(sender: UIButton) {
-         ballType = BallType.Basketball
+         getBallType.ballType = BallType.Basketball
+        println(getBallType.ballType)
     }
     
     @IBAction func chooseBowlingBall(sender: UIButton) {
-        ballType = BallType.BowlingBall
-        println(ballType)
+        getBallType.ballType = BallType.BowlingBall
+        println(getBallType.ballType)
     }
 }

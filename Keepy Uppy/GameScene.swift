@@ -14,7 +14,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Note: internal lets you use it in any other source file!
     //Determine ball type
-    let chooseBall = ChooseBall.sharedInstance
+    let chooseBall = GetBallType.sharedInstance
     //Determine background type
     internal var chosenBackground: BackgroundType!
     
