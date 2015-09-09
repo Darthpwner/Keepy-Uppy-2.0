@@ -10,6 +10,7 @@
 		6B0E5DD71B9FF31000866FE8 /* GetBallType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0E5DD61B9FF31000866FE8 /* GetBallType.swift */; };
 		6B0E5DDB1B9FF5D000866FE8 /* GetBackgroundType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0E5DDA1B9FF5D000866FE8 /* GetBackgroundType.swift */; };
 		6B0E5DDD1B9FFEA000866FE8 /* whitebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B0E5DDC1B9FFEA000866FE8 /* whitebg.png */; };
+		6B5D0E061BA0A4810052AC3C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6B5D0E051BA0A4810052AC3C /* GameScene.sks */; };
 		6B6897111B98B2CA00C5069E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6897101B98B2CA00C5069E /* AppDelegate.swift */; };
 		6B6897151B98B2CA00C5069E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6897141B98B2CA00C5069E /* GameScene.swift */; };
 		6B6897171B98B2CA00C5069E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6897161B98B2CA00C5069E /* GameViewController.swift */; };
@@ -60,6 +61,7 @@
 		6B0E5DD61B9FF31000866FE8 /* GetBallType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBallType.swift; sourceTree = "<group>"; };
 		6B0E5DDA1B9FF5D000866FE8 /* GetBackgroundType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBackgroundType.swift; sourceTree = "<group>"; };
 		6B0E5DDC1B9FFEA000866FE8 /* whitebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitebg.png; sourceTree = "<group>"; };
+		6B5D0E051BA0A4810052AC3C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		6B68970B1B98B2CA00C5069E /* Keepy Uppy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keepy Uppy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B68970F1B98B2CA00C5069E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B6897101B98B2CA00C5069E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				6BD797EF1B9FC2420055D558 /* Forest.swift */,
 				6B6897BF1B9970E500C5069E /* ChooseBackground.swift */,
 				6B6897BD1B9970DD00C5069E /* ChooseBall.swift */,
+				6B5D0E051BA0A4810052AC3C /* GameScene.sks */,
 				6B6897141B98B2CA00C5069E /* GameScene.swift */,
 				6B6897161B98B2CA00C5069E /* GameViewController.swift */,
 				6B94375D1B9C1A090049AA91 /* TitlePage.swift */,
@@ -302,6 +305,7 @@
 				6BD2D38B1B9D05EE0052FBA7 /* Bouncing Ball.gif in Resources */,
 				6B6C8D071B9BAC7B008678EC /* Basketball.png in Resources */,
 				6B6897461B98B6D100C5069E /* hit.mp3 in Resources */,
+				6B5D0E061BA0A4810052AC3C /* GameScene.sks in Resources */,
 				6B6897541B98BF5A00C5069E /* Desert.jpg in Resources */,
 				6B6897501B98BEAB00C5069E /* Forest.png in Resources */,
 				6B68971C1B98B2CA00C5069E /* Images.xcassets in Resources */,
