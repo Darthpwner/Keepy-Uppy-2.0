@@ -23,6 +23,6 @@ enum BackgroundType: Int, Printable {
     }
 }
 
-class Background {
+public class Background {
     init() {}   //TODO
 }

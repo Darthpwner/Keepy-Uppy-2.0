@@ -12,6 +12,12 @@ import SpriteKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     var lives: Int = 3
     
+    //Note: internal lets you use it in any other source file!
+    //Determine ball type
+    internal var chosenBall: BallType!
+    //Determine background type
+    internal var chosenBackground: BackgroundType!
+    
     //From Flappy Bird example
     var temporaryBall: SKSpriteNode!
     var moving:SKNode!
@@ -22,7 +28,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var ball: SKSpriteNode!
     //
     
-    var chosenBall: BallType!
+    
     
     //Restitution == how much energy the physics body loses when it bounces
     let basketballRestitution: CGFloat = 0.5

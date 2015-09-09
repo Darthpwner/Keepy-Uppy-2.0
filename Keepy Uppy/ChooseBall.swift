@@ -19,7 +19,7 @@ class ChooseBall: UIViewController {
     }
     
     @IBAction func chooseBasketball(sender: UIButton) {
-        BallType.Basketball
+         BallType.Basketball
     }
     
     @IBAction func chooseBowlingBall(sender: UIButton) {

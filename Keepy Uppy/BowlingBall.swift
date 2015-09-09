@@ -8,6 +8,6 @@
 
 import SpriteKit
 
-class BowlingBall: Ball {
+public class BowlingBall: Ball {
     
 }

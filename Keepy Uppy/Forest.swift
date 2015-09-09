@@ -6,6 +6,6 @@
 //  Copyright (c) 2015 Matthew Allen Lin. All rights reserved.
 //
 
-class Forest: Background {
+public class Forest: Background {
     
 }

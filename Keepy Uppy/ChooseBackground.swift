@@ -18,15 +18,19 @@ class ChooseBackground: UIViewController {
 
     @IBAction func chooseDesert(sender: UIButton) {
         singleton.song.stop()
+        BackgroundType.Desert
     }
 
     
     @IBAction func chooseBeach(sender: UIButton) {
         singleton.song.stop()
+        BackgroundType.Beach
     }
     
     
     @IBAction func chooseForest(sender: UIButton) {
         singleton.song.stop()
+        BackgroundType.Forest
+        
     }
 }

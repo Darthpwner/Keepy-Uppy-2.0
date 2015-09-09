@@ -25,7 +25,7 @@ enum BallType: Int, Printable {
     }
 }
 
-class Ball {
+public class Ball {
     var mass: CGFloat
     var friction: CGFloat
     var restitution: CGFloat
