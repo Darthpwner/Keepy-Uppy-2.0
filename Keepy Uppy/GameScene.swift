@@ -10,14 +10,27 @@
 import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-    var lives: Int = 3
     
-    //Note: internal lets you use it in any other source file!
+    /*Constants*/
     //Determine ball type
     let chooseBall = GetBallType.sharedInstance
     //Determine background type
     let chooseBackground = GetBackgroundType.sharedInstance
     
+    //Restitution == how much energy the physics body loses when it bounces
+    let basketballRestitution: CGFloat = 0.5
+    let beachBallRestitution: CGFloat = 0.8
+    let bowlingBallRestitution: CGFloat = 0.2
+    
+    //Beach ball scaling factor
+    let beachBallScalingFactor: CGFloat = 0.1
+    //Basketball scaling factor
+    let basketBallScalingFactor: CGFloat = 0.3
+    //Bowling ball scaling factor
+    let bowlingBallScalingFactor: CGFloat = 0.5
+    /*End of Constants*/
+    
+    /*Variables*/
     //From Flappy Bird example
     var temporaryBall: SKSpriteNode!
     var moving:SKNode!
@@ -29,11 +42,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var ground = SKNode()
     //
     
-    //Restitution == how much energy the physics body loses when it bounces
-    let basketballRestitution: CGFloat = 0.5
-    let beachBallRestitution: CGFloat = 0.8
-    let bowlingBallRestitution: CGFloat = 0.2
+    var lives: Int = 3
+    /*End of variables*/
     
+
 //    let gameLayer = SKNode()
 //    let shapeLayer = SKNode()
 //    let LayerPosition = CGPoint(x: 6, y: -6)
@@ -41,10 +53,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override init(size: CGSize) {
         super.init(size: size)
         
-        anchorPoint = CGPoint(x: 0, y: 0.5)
+        anchorPoint = CGPoint(x: 0, y: 0.5) //Changing y to 0.5 let's the ball drop
         
-        //Basketball and Bowling ball size is good
-        //Beach ball is BAD!
         assignBall()
         println(chooseBall.ballType)
 
@@ -152,7 +162,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.physicsBody!.mass = mass
     }
     
-    /*Setup functions********************************************************/
+    /*Setup functions*/
     //1
     func setUpPhysics() -> Void {
         self.physicsWorld.gravity = CGVectorMake( 0.0, -5.0 )
@@ -183,9 +193,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //5
     func setUpBall() -> Void {
         if chooseBall.ballType == BallType.BeachBall {
-            self.ball.setScale(0.1)
+            self.ball.setScale(beachBallScalingFactor)
+        } else if chooseBall.ballType == BallType.Basketball {
+            self.ball.setScale(basketBallScalingFactor)
         } else {
-            self.ball.setScale(0.5)
+            self.ball.setScale(bowlingBallScalingFactor)
         }
         
         ball.anchorPoint = background.anchorPoint
@@ -199,7 +211,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setUpRecords() -> Void {
         
     }
-    /************************************************************************/
+    /*End of setup functions*/
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
