@@ -41,7 +41,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override init(size: CGSize) {
         super.init(size: size)
         
-        anchorPoint = CGPoint(x: 0, y: 1.0)
+        anchorPoint = CGPoint(x: 0, y: 0.5)
         
         //Basketball and Bowling ball size is good
         //Beach ball is BAD!
