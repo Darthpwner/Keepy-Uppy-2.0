@@ -105,8 +105,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         shape.strokeColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.5)
         shape.lineWidth = 4
 
-        //ball.position = CGPoint(x: size.width/2, y: size.height/2)  //Set the ball's position
-        
         
         // this is the most important line, we define the body
         ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width/2.0)
@@ -115,9 +113,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // this will allow the balls to rotate when bouncing off each other
         ball.physicsBody!.allowsRotation = true
-        
-
-
     }
     
     func assignBall() -> Void {
