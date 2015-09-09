@@ -37,5 +37,6 @@ class ChooseBall: UIViewController {
     
     @IBAction func chooseBowlingBall(sender: UIButton) {
         ballType = BallType.BowlingBall
+        println(ballType)
     }
 }

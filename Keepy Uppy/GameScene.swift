@@ -58,6 +58,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Basketball and Bowling ball size is good
         //Beach ball is BAD!
         assignBall()
+        println(chooseBall.ballType)
         
         //if forest background chosen
         background = SKSpriteNode(imageNamed: "Beach Background.jpg")
