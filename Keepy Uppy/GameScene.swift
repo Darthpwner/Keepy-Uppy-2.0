@@ -28,6 +28,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let basketBallScalingFactor: CGFloat = 0.3
     //Bowling ball scaling factor
     let bowlingBallScalingFactor: CGFloat = 0.5
+    
+    //Game Anchor coordinate points
+    let anchorX: Double = 0
+    let anchorY: Double = 0.5   //y = 0.5 let's the ball drop to the bottom
     /*End of Constants*/
     
     /*Variables*/
@@ -53,7 +57,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override init(size: CGSize) {
         super.init(size: size)
         
-        anchorPoint = CGPoint(x: 0, y: 0.5) //Changing y to 0.5 let's the ball drop
+        setUpGameAnchor()
         
         assignBall()
         println(chooseBall.ballType)
@@ -164,6 +168,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     /*Setup functions*/
     //1
+    func setUpGameAnchor() -> Void {
+        anchorPoint = CGPoint(x: anchorX, y: anchorY)
+    }
+
     func setUpPhysics() -> Void {
         self.physicsWorld.gravity = CGVectorMake( 0.0, -5.0 )
         self.physicsWorld.contactDelegate = self
