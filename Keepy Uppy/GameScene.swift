@@ -182,7 +182,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //5
     func setUpBall() -> Void {
-        self.ball.setScale(0.5)
+        if chooseBall.ballType == BallType.BeachBall {
+            self.ball.setScale(0.1)
+        } else {
+            self.ball.setScale(0.5)
+        }
         
         ball.anchorPoint = background.anchorPoint
         
