@@ -36,6 +36,10 @@
 		6B94375E1B9C1A090049AA91 /* TitlePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94375D1B9C1A090049AA91 /* TitlePage.swift */; };
 		6BD2D38B1B9D05EE0052FBA7 /* Bouncing Ball.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6BD2D38A1B9D05EE0052FBA7 /* Bouncing Ball.gif */; };
 		6BD2D3971B9D5BF20052FBA7 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD2D3961B9D5BF20052FBA7 /* UIImage+animatedGIF.m */; };
+		6BD797EA1B9FC2280055D558 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD797E91B9FC2280055D558 /* Background.swift */; };
+		6BD797EC1B9FC2350055D558 /* Desert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD797EB1B9FC2350055D558 /* Desert.swift */; };
+		6BD797EE1B9FC23C0055D558 /* Beach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD797ED1B9FC23C0055D558 /* Beach.swift */; };
+		6BD797F01B9FC2420055D558 /* Forest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD797EF1B9FC2420055D558 /* Forest.swift */; };
 		6BD8E0651B9EB5710010E257 /* gameplay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6BD8E0641B9EB5710010E257 /* gameplay.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +89,10 @@
 		6BD2D3941B9D5BF10052FBA7 /* Keepy Uppy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Keepy Uppy-Bridging-Header.h"; sourceTree = "<group>"; };
 		6BD2D3951B9D5BF20052FBA7 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		6BD2D3961B9D5BF20052FBA7 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		6BD797E91B9FC2280055D558 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		6BD797EB1B9FC2350055D558 /* Desert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Desert.swift; sourceTree = "<group>"; };
+		6BD797ED1B9FC23C0055D558 /* Beach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beach.swift; sourceTree = "<group>"; };
+		6BD797EF1B9FC2420055D558 /* Forest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forest.swift; sourceTree = "<group>"; };
 		6BD8E0641B9EB5710010E257 /* gameplay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameplay.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +140,10 @@
 				6B6897AF1B994BAD00C5069E /* Basketball.swift */,
 				6B6897B11B994BC200C5069E /* BeachBall.swift */,
 				6B6897B31B994BCF00C5069E /* BowlingBall.swift */,
+				6BD797E91B9FC2280055D558 /* Background.swift */,
+				6BD797EB1B9FC2350055D558 /* Desert.swift */,
+				6BD797ED1B9FC23C0055D558 /* Beach.swift */,
+				6BD797EF1B9FC2420055D558 /* Forest.swift */,
 				6B6897BF1B9970E500C5069E /* ChooseBackground.swift */,
 				6B6897BD1B9970DD00C5069E /* ChooseBall.swift */,
 				6B6897141B98B2CA00C5069E /* GameScene.swift */,
@@ -310,8 +322,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD797EC1B9FC2350055D558 /* Desert.swift in Sources */,
 				6B6897B21B994BC200C5069E /* BeachBall.swift in Sources */,
+				6BD797EE1B9FC23C0055D558 /* Beach.swift in Sources */,
 				6B6897B01B994BAD00C5069E /* Basketball.swift in Sources */,
+				6BD797F01B9FC2420055D558 /* Forest.swift in Sources */,
 				6B6897151B98B2CA00C5069E /* GameScene.swift in Sources */,
 				6B6897C01B9970E500C5069E /* ChooseBackground.swift in Sources */,
 				6B6897171B98B2CA00C5069E /* GameViewController.swift in Sources */,
@@ -321,6 +336,7 @@
 				6B6897BE1B9970DD00C5069E /* ChooseBall.swift in Sources */,
 				6B94375C1B9C0F080049AA91 /* PlayStartSong.swift in Sources */,
 				6B94375E1B9C1A090049AA91 /* TitlePage.swift in Sources */,
+				6BD797EA1B9FC2280055D558 /* Background.swift in Sources */,
 				6BD2D3971B9D5BF20052FBA7 /* UIImage+animatedGIF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
