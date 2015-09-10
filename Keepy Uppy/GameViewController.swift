@@ -16,9 +16,10 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var song: AVAudioPlayer = AVAudioPlayer()
 
+    var score: Int = 0
+    
     //Clicks labels
     @IBOutlet weak var scoreLabel: UILabel!
-    
     
     override func viewDidLoad() {
         println("SECOND")
@@ -39,6 +40,9 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         // Create and configure the scene.
         scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .AspectFill
+        
+        scoreLabel.text = "\(score)"
+
         
         // Present the scene.
         skView.presentScene(scene)
