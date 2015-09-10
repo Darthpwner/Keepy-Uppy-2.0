@@ -37,6 +37,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let beachBallRestitution: CGFloat = 0.8
     let bowlingBallRestitution: CGFloat = 0.2
     
+    //Linear damping == simulates fluid or air friction forces on the body
+    let desertLinearDamping: CGFloat = 0.2
+    let beachLinearDamping: CGFloat = 0.5
+    let forestLinearDamping: CGFloat = 0.8
+    
+    //Angular damping == reduces the body’s rotational velocity
+    let desertAngularDamping: CGFloat = 0.2
+    let beachAngularDamping: CGFloat = 0.5
+    let forestAngularDamping: CGFloat = 0.8
+    
     //Beach ball scaling factor
     let beachBallScalingFactor: CGFloat = 0.1
     //Basketball scaling factor
@@ -129,7 +139,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width/2.0)
         ball.physicsBody?.dynamic = true
         
-        assignPhysicsAttributes(chooseBall.ballType!)
+        assignPhysicsAttributes(chooseBall.ballType!, typeOfBackground: chooseBackground.backgroundType!)
         
         // this will allow the balls to rotate when bouncing off each other
         ball.physicsBody!.allowsRotation = true
@@ -189,21 +199,35 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func assignPhysicsAttributes(typeOfBall: BallType) -> Void {
+    func assignPhysicsAttributes(typeOfBall: BallType, typeOfBackground: BackgroundType) -> Void {
         if typeOfBall == BallType.BeachBall {
-            setPhysicsAttributes(0.3, restitution: beachBallRestitution, mass: 0.5)
+            setPhysicsAttributesBasedOnBall(0.3, restitution: beachBallRestitution, mass: 0.5)
         } else if typeOfBall == BallType.Basketball {
-            setPhysicsAttributes(0.3, restitution: basketballRestitution, mass: 0.5)
+            setPhysicsAttributesBasedOnBall(0.3, restitution: basketballRestitution, mass: 0.5)
         } else {
-            setPhysicsAttributes(0.3, restitution: bowlingBallRestitution, mass: 0.5)
+            setPhysicsAttributesBasedOnBall(0.3, restitution: bowlingBallRestitution, mass: 0.5)
+        }
+        
+        if typeOfBackground == BackgroundType.Desert {
+            setPhysicsAttributesBasedOnBackground(desertLinearDamping, angularDamping: desertAngularDamping)
+        } else if typeOfBackground == BackgroundType.Beach {
+            setPhysicsAttributesBasedOnBackground(beachLinearDamping, angularDamping: beachAngularDamping)
+        } else {
+            setPhysicsAttributesBasedOnBackground(forestLinearDamping, angularDamping: forestAngularDamping)
         }
     }
 
     // this defines the mass, roughness and bounciness
-    func setPhysicsAttributes(friction: CGFloat, restitution: CGFloat, mass: CGFloat) -> Void {
+    func setPhysicsAttributesBasedOnBall(friction: CGFloat, restitution: CGFloat, mass: CGFloat) -> Void {
         ball.physicsBody!.friction = friction
         ball.physicsBody!.restitution = restitution
         ball.physicsBody!.mass = mass
+    }
+    
+    // this defines the linear and angular damping based on the background
+    func setPhysicsAttributesBasedOnBackground(linearDamping: CGFloat, angularDamping: CGFloat) -> Void {
+        ball.physicsBody!.linearDamping = linearDamping
+        ball.physicsBody!.angularDamping = angularDamping
     }
     
     /*Setup functions*/
