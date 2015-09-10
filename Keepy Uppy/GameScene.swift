@@ -153,6 +153,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     */
     //Use to move the ball
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        playSound("hit.mp3")
         
         //if directly underneath
             moveBallUp()

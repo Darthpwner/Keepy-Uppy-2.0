@@ -66,9 +66,6 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         song.numberOfLoops = -1 //Makes the song play repeatedly
     }
     
-
-    
-    
     //Gameplay Functions
     func gameDidBegin() {
         
