@@ -99,13 +99,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         canRestart = false  //Prevent restarts
         
-
+        
         /////////////////////////////////////////
         
         // we put contraints on the top, left, right, bottom so that our balls can bounce off them
         
         //self.frame confines the ball to the iOS screen
         let physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
+        //Set the friction of that physicsBody to prevent the ball from slowing down when colliding with a border barrier
+        physicsBody.friction = 0
         // we set the body defining the physics to our scene
         self.physicsBody = physicsBody
         
@@ -137,7 +139,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
 
         let moveBallUp: Void? = ball.physicsBody?.applyImpulse(CGVectorMake(0, 100))
-        let moveBallLeft: Void? = ball.physicsBody?.applyImpulse(CGVectorMake(100, 0))
+        let moveBallLeft: Void? = ball.physicsBody?.applyImpulse(CGVectorMake(-100, 0))
         //let moveBallRight: Void? = ball.physicsBody?.applyImpulse(CGVectorMake(100, 0))
         //if directly underneath
             //moveBallUp
