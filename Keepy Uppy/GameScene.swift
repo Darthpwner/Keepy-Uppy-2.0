@@ -11,6 +11,21 @@ import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    /*Variables*/
+    //From Flappy Bird example
+    var temporaryBall: SKSpriteNode!
+    var moving:SKNode!
+    var canRestart = Bool()
+    var scoreLabelNode:SKLabelNode!
+    var score = NSInteger()
+    var background: SKSpriteNode!
+    var ball: SKSpriteNode!
+    var ground = SKNode()
+    //
+    
+    var lives: Int = 3
+    /*End of variables*/
+    
     /*Constants*/
     //Determine ball type
     let chooseBall = GetBallType.sharedInstance
@@ -30,25 +45,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let bowlingBallScalingFactor: CGFloat = 0.5
     
     //Game Anchor coordinate points
-    let anchorX: Double = 0
-    let anchorY: Double = 0.5   //y = 0.5 let's the ball drop to the bottom
+    let anchorX: CGFloat = 0
+    let anchorY: CGFloat = 0.5
+    //Setting both x and y coordinates to 0 sets the origin to the bottom left corner of the screen
+    
+    //Background Anchor coordinate points
+    let backgroundAnchorX: CGFloat = 0.5
+    let backgroundAnchorY: CGFloat = 0.5
+    //Setting both x and y coordinates to 0.5 causes the background to fill the whole screen
+    
+    //Ball Anchor coordinate points
+    let ballAnchorX: CGFloat = 0.5
+    let ballAnchorY: CGFloat = 0.5
+    
+
     /*End of Constants*/
-    
-    /*Variables*/
-    //From Flappy Bird example
-    var temporaryBall: SKSpriteNode!
-    var moving:SKNode!
-    var canRestart = Bool()
-    var scoreLabelNode:SKLabelNode!
-    var score = NSInteger()
-    var background: SKSpriteNode!
-    var ball: SKSpriteNode!
-    var ground = SKNode()
-    //
-    
-    var lives: Int = 3
-    /*End of variables*/
-    
 
 //    let gameLayer = SKNode()
 //    let shapeLayer = SKNode()
@@ -70,7 +81,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Add background
         setUpBackground() //3
         
-        setUpGround()   //4
+       // setUpGround()   //4
         
         setUpWalls()    //5 TODO
         
@@ -99,7 +110,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         canRestart = false  //Prevent restarts
         
-        
+        anchorPoint = CGPoint(x: anchorX, y: anchorY)
         /////////////////////////////////////////
         
         // we put contraints on the top, left, right, bottom so that our balls can bounce off them
@@ -137,20 +148,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     */
     //Use to move the ball
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-
-        let moveBallUp: Void? = ball.physicsBody?.applyImpulse(CGVectorMake(0, 100))
-        let moveBallLeft: Void? = ball.physicsBody?.applyImpulse(CGVectorMake(-100, 0))
-        //let moveBallRight: Void? = ball.physicsBody?.applyImpulse(CGVectorMake(100, 0))
+        
         //if directly underneath
-            //moveBallUp
+            moveBallUp()
         //else if off to the side
             //if mouse is to the right
-                //moveBallLeft
+                moveBallLeft()
             //else if mouse is to the left
-                //moveBallRight
+                //moveBallRight()
         //else (combination of both)
             //move combined vector
     }
+    
+    /*Moving the ball*/
+    func moveBallUp() -> Void {
+        ball.physicsBody?.applyImpulse(CGVectorMake(0, 100))
+    }
+    
+    func moveBallLeft() -> Void {
+        ball.physicsBody?.applyImpulse(CGVectorMake(-100, 0))
+    }
+    
+    func moveBallRight() -> Void {
+        ball.physicsBody?.applyImpulse(CGVectorMake(100, 0))
+    }
+    /*End of Moving the ball*/
     
     func assignBall() -> Void {
         if chooseBall.ballType == BallType.BeachBall {
@@ -192,7 +214,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     /*Setup functions*/
     //1
     func setUpGameAnchor() -> Void {
-        anchorPoint = CGPoint(x: anchorX, y: anchorY)
+        anchorPoint = CGPointMake(anchorX, anchorY)
     }
 
     //2
@@ -203,7 +225,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //3
     func setUpBackground() -> Void {
-        self.background.anchorPoint = CGPointMake(0.5, 0.5)
+        self.background.anchorPoint = CGPointMake(backgroundAnchorX, backgroundAnchorY)
         self.background.size.height = self.size.height
         self.background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
         self.addChild(background)
@@ -232,9 +254,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.ball.setScale(bowlingBallScalingFactor)
         }
         
-        ball.anchorPoint = background.anchorPoint
+//        ball.anchorPoint = background.anchorPoint
+
+        ball.anchorPoint = CGPointMake(ballAnchorX, ballAnchorY)
         
+        //These two lines are interchangeable
         self.ball.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
+        //self.ball.position = CGPoint(x: size.width * 0.5, y: size.height * 0.5)
+        /**/
         
         addChild(ball)  //Add ball to the display list
     }
