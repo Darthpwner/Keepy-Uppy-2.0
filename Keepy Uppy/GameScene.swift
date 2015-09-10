@@ -104,8 +104,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // we put contraints on the top, left, right, bottom so that our balls can bounce off them
         
-        let physicsBody = SKPhysicsBody(edgeLoopFromRect: background.frame)
-        
+        //self.frame confines the ball to the iOS screen
+        let physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)           
         // we set the body defining the physics to our scene
         self.physicsBody = physicsBody
         
