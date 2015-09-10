@@ -45,19 +45,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let bowlingBallScalingFactor: CGFloat = 0.5
     
     //Game Anchor coordinate points
-    let anchorX: CGFloat = 0
+    let gameAnchorX: CGFloat = 0
+    let gameAnchorY: CGFloat = 0.5
+    /*Sets the gameplay to be in the correct dimensions*/
+
+    //Generic Anchor coordinate points
+    let anchorX: CGFloat = 0.5
     let anchorY: CGFloat = 0.5
-    //Setting both x and y coordinates to 0 sets the origin to the bottom left corner of the screen
-    
-    //Background Anchor coordinate points
-    let backgroundAnchorX: CGFloat = 0.5
-    let backgroundAnchorY: CGFloat = 0.5
-    //Setting both x and y coordinates to 0.5 causes the background to fill the whole screen
-    
-    //Ball Anchor coordinate points
-    let ballAnchorX: CGFloat = 0.5
-    let ballAnchorY: CGFloat = 0.5
-    
+    /*Sets the background and ball to be in the correct dimensions*/
 
     /*End of Constants*/
 
@@ -110,7 +105,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         canRestart = false  //Prevent restarts
         
-        anchorPoint = CGPoint(x: anchorX, y: anchorY)
+        setUpGameAnchor()
         /////////////////////////////////////////
         
         // we put contraints on the top, left, right, bottom so that our balls can bounce off them
@@ -214,7 +209,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     /*Setup functions*/
     //1
     func setUpGameAnchor() -> Void {
-        anchorPoint = CGPointMake(anchorX, anchorY)
+        anchorPoint = CGPointMake(gameAnchorX, gameAnchorY)
     }
 
     //2
@@ -225,7 +220,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //3
     func setUpBackground() -> Void {
-        self.background.anchorPoint = CGPointMake(backgroundAnchorX, backgroundAnchorY)
+        self.background.anchorPoint = CGPointMake(anchorX, anchorY)
         self.background.size.height = self.size.height
         self.background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
         self.addChild(background)
@@ -256,7 +251,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
 //        ball.anchorPoint = background.anchorPoint
 
-        ball.anchorPoint = CGPointMake(ballAnchorX, ballAnchorY)
+        ball.anchorPoint = CGPointMake(anchorX, anchorY)
         
         //These two lines are interchangeable
         self.ball.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
