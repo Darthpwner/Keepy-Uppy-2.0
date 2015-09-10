@@ -52,6 +52,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Bowling ball scaling factor
     let bowlingBallScalingFactor: CGFloat = 0.5
     
+    //Impulse factor
+    let impulseFactor: CGFloat = 100.0
+    let beachBallMultiplier: CGFloat = 4.0
+    let basketBallMultiplier: CGFloat = 3.0
+    let bowlingBallMultiplier: CGFloat = 2.0
+    
     //Game Anchor coordinate points
     let gameAnchorX: CGFloat = 0
     let gameAnchorY: CGFloat = 0.5
@@ -62,6 +68,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let anchorY: CGFloat = 0.5
     /*Sets the background and ball to be in the correct dimensions*/
 
+    //Category bit masks
+    let groundCategory: UInt32 = 1 << 0
+    let ballCategory: UInt32 = 1 << 1
+    let wallCategory: UInt32 = 1 << 2
+    let ceilingCategory: UInt32 = 1 << 3
+    /*End of Category bit masks*/
+    
     /*End of Constants*/
 
 //    let gameLayer = SKNode()
@@ -141,32 +154,54 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     */
     //Use to move the ball
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        playSound("hit.mp3")
+        let touch = touches.first as? UITouch
+        super.touchesBegan(touches , withEvent:event)
         
-        //if directly underneath
-            moveBallUp()
-        //else if off to the side
-            //if mouse is to the right
+        let positionInScene = touch!.locationInNode(self)
+        let touchedNode = self.nodeAtPoint(positionInScene)
+        
+        if let name = touchedNode.name {
+            if name == "ball" {
+                playSound("hit.mp3")
+                
+                //if directly underneath
+                moveBallUp()
+                //else if off to the side
+                //if mouse is to the right
                 moveBallLeft()
-            //else if mouse is to the left
+                //else if mouse is to the left
                 moveBallRight()
-        //else (combination of both)
-            //move combined vector
+                //else (combination of both)
+                //move combined vector
+            }
+        }
+//        
+//        playSound("hit.mp3")
+//        
+//        //if directly underneath
+//            moveBallUp()
+//        //else if off to the side
+//            //if mouse is to the right
+//                moveBallLeft()
+//            //else if mouse is to the left
+//                moveBallRight()
+//        //else (combination of both)
+//            //move combined vector
     }
     
     /*Moving the ball*/
     func moveBallUp() -> Void {
-        ball.physicsBody?.applyImpulse(CGVectorMake(0, 100))
+        ball.physicsBody?.applyImpulse(CGVectorMake(0, impulseFactor))
     }
     
     func moveBallLeft() -> Void {
         var random = -1 * CGFloat(Float(arc4random()))
-        ball.physicsBody?.applyImpulse(CGVectorMake(random % 100, 0))
+        ball.physicsBody?.applyImpulse(CGVectorMake(random % impulseFactor, 0))
     }
     
     func moveBallRight() -> Void {
         var random = CGFloat(Float(arc4random()))
-        ball.physicsBody?.applyImpulse(CGVectorMake(random % 100, 0))
+        ball.physicsBody?.applyImpulse(CGVectorMake(random % impulseFactor, 0))
     }
     /*End of Moving the ball*/
     
@@ -268,7 +303,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /**/
         
         ball.name = "ball"
-//        ball.userInteractionEnabled = false //what does this do?
+        ball.userInteractionEnabled = false
         
         addChild(ball)  //Add ball to the display list
     }
