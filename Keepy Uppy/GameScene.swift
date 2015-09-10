@@ -20,10 +20,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var score = NSInteger()
     var background: SKSpriteNode!
     var ball: SKSpriteNode!
-    var ground = SKNode()
-    //
-    
-    var lives: Int = 3
+    var ground = SKNode()    
+    var lives: Int = 1
     /*End of variables*/
     
     /*Constants*/
@@ -76,7 +74,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setUpGameAnchor()   //1
         
         assignBall()
-        println(chooseBall.ballType)
 
         assignBackground()
         
@@ -88,18 +85,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
        // setUpGround()   //4
         
-        setUpWalls()    //5 TODO
+        setUpBall() //5
         
-        setUpBall() //6
-        
-        setUpRecords() //7 TODO
-        
-        //Unknown
-//        addChild(gameLayer)
-//       
-//        shapeLayer.position = LayerPosition
-//        gameLayer.addChild(shapeLayer)
-        //
+        setUpRecords() //6 TODO
     }
 
     required init(coder decoder: NSCoder) {
@@ -152,19 +140,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 <-  O ->
     */
     //Use to move the ball
-//    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-//        playSound("hit.mp3")
-//        
-//        //if directly underneath
-//            moveBallUp()
-//        //else if off to the side
-//            //if mouse is to the right
-//                moveBallLeft()
-//            //else if mouse is to the left
-//                //moveBallRight()
-//        //else (combination of both)
-//            //move combined vector
-//    }
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        playSound("hit.mp3")
+        
+        //if directly underneath
+            moveBallUp()
+        //else if off to the side
+            //if mouse is to the right
+                moveBallLeft()
+            //else if mouse is to the left
+                moveBallRight()
+        //else (combination of both)
+            //move combined vector
+    }
     
     /*Moving the ball*/
     func moveBallUp() -> Void {
@@ -172,11 +160,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func moveBallLeft() -> Void {
-        ball.physicsBody?.applyImpulse(CGVectorMake(-100, 0))
+        var random = -1 * CGFloat(Float(arc4random()))
+        ball.physicsBody?.applyImpulse(CGVectorMake(random % 100, 0))
     }
     
     func moveBallRight() -> Void {
-        ball.physicsBody?.applyImpulse(CGVectorMake(100, 0))
+        var random = CGFloat(Float(arc4random()))
+        ball.physicsBody?.applyImpulse(CGVectorMake(random % 100, 0))
     }
     /*End of Moving the ball*/
     
@@ -258,13 +248,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.ground.physicsBody?.dynamic = false
         self.addChild(self.ground)
     }
+
     
     //5
-    func setUpWalls() -> Void {
-        
-    }
-    
-    //6
     func setUpBall() -> Void {
         if chooseBall.ballType == BallType.BeachBall {
             self.ball.setScale(beachBallScalingFactor)
@@ -282,12 +268,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /**/
         
         ball.name = "ball"
-        ball.userInteractionEnabled = false //what does this do?
+//        ball.userInteractionEnabled = false //what does this do?
         
         addChild(ball)  //Add ball to the display list
     }
     
-    //7
+    //6
     func setUpRecords() -> Void {
         
     }
@@ -297,4 +283,36 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Called before each frame is rendered */
     }
     
+//    //////
+//    func didBeginContact(contact: SKPhysicsContact) {
+//        if moving.speed > 0 {
+//            if ( contact.bodyA.categoryBitMask & scoreCategory ) == scoreCategory || ( contact.bodyB.categoryBitMask & scoreCategory ) == scoreCategory {
+//                // Bird has contact with score entity
+//                score++
+//                scoreLabelNode.text = String(score)
+//                
+//                // Add a little visual feedback for the score increment
+//                scoreLabelNode.runAction(SKAction.sequence([SKAction.scaleTo(1.5, duration:NSTimeInterval(0.1)), SKAction.scaleTo(1.0, duration:NSTimeInterval(0.1))]))
+//            } else {
+//                
+//                moving.speed = 0
+//                
+//                bird.physicsBody?.collisionBitMask = worldCategory
+//                bird.runAction(  SKAction.rotateByAngle(CGFloat(M_PI) * CGFloat(bird.position.y) * 0.01, duration:1), completion:{self.bird.speed = 0 })
+//                
+//                
+//                //Used to flash and restart the game
+//                // Flash background if contact is detected
+//                self.removeActionForKey("flash")
+//                self.runAction(SKAction.sequence([SKAction.repeatAction(SKAction.sequence([SKAction.runBlock({
+//                    self.backgroundColor = SKColor(red: 1, green: 0, blue: 0, alpha: 1.0)
+//                }),SKAction.waitForDuration(NSTimeInterval(0.05)), SKAction.runBlock({
+//                    self.backgroundColor = self.skyColor
+//                }), SKAction.waitForDuration(NSTimeInterval(0.05))]), count:4), SKAction.runBlock({
+//                    self.canRestart = true
+//                })]), withKey: "flash")
+//            }
+//        }
+//    }
+    //////
 }
