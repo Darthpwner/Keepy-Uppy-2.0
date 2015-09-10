@@ -8,3 +8,7 @@ engine is derived from SpriteKit. Each of the three possible backgrounds
 
 The game consists of four UIViewControllers: 1) Title Page, 2) Choose Ball
 Page, 3) Choose Background Page, 4) GamePlay Page
+
+Scoring: The scoring system is pretty simple. A single tap earns you 1 point,
+colliding against either the left wall or the right wall will earn you 2 points
+, and colliding against the ceiling earns you 3 points
