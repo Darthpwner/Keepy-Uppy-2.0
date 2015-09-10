@@ -154,6 +154,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     */
     //Use to move the ball
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        //Recognizes only a tap on the ball
         let touch = touches.first as? UITouch
         super.touchesBegan(touches , withEvent:event)
         
@@ -175,23 +176,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //move combined vector
             }
         }
-//        
-//        playSound("hit.mp3")
-//        
-//        //if directly underneath
-//            moveBallUp()
-//        //else if off to the side
-//            //if mouse is to the right
-//                moveBallLeft()
-//            //else if mouse is to the left
-//                moveBallRight()
-//        //else (combination of both)
-//            //move combined vector
     }
     
     /*Moving the ball*/
     func moveBallUp() -> Void {
-        ball.physicsBody?.applyImpulse(CGVectorMake(0, impulseFactor))
+        if chooseBall.ballType == BallType.BeachBall {
+            ball.physicsBody?.applyImpulse(CGVectorMake(0, impulseFactor * beachBallMultiplier))
+        } else if chooseBall.ballType == BallType.Basketball {
+            ball.physicsBody?.applyImpulse(CGVectorMake(0, impulseFactor * basketBallMultiplier))
+        } else {
+            ball.physicsBody?.applyImpulse(CGVectorMake(0, impulseFactor * bowlingBallMultiplier))
+        }
+        
     }
     
     func moveBallLeft() -> Void {
