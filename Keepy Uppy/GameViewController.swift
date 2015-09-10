@@ -17,15 +17,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     var song: AVAudioPlayer = AVAudioPlayer()
 
     //Clicks labels
-    @IBOutlet weak var bestClicksLabel: UILabel!
-    
-    @IBOutlet weak var lastClicksLabel: UILabel!
-    
-    @IBOutlet weak var currentClicksLabel: UILabel!
-    
-    @IBAction func didTapBall(sender: UITapGestureRecognizer) {
-        
-    }
+    //TODO
     
     override func viewDidLoad() {
         println("SECOND")

@@ -355,18 +355,10 @@
                             <constraint firstAttribute="centerX" secondItem="rGP-3i-fWq" secondAttribute="centerX" constant="-0.5" id="1GH-8G-v9o"/>
                             <constraint firstItem="rGP-3i-fWq" firstAttribute="top" secondItem="nNS-dI-T8c" secondAttribute="bottom" id="QQb-jL-jG2"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="zTN-Qk-eIs" appends="YES" id="cMw-o7-Nlg"/>
-                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7e-fV-kAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="zTN-Qk-eIs">
-                    <connections>
-                        <action selector="didTapBall:" destination="HZj-Dy-ZAq" id="Cm7-aZ-IoD"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="328" y="2731"/>
         </scene>
