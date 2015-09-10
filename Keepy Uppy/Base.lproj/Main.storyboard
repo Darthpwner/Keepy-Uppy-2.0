@@ -342,28 +342,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAH-tf-SvC">
-                                <rect key="frame" x="275" y="28" width="50" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="99999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3f-2U-82a">
-                                        <rect key="frame" x="4" y="14" width="48" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="UGU-Lu-cuI"/>
-                                    <constraint firstAttribute="height" constant="50" id="ol4-AN-DvS"/>
-                                </constraints>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGP-3i-fWq">
+                                <rect key="frame" x="267" y="20" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="BAH-tf-SvC" firstAttribute="top" secondItem="nNS-dI-T8c" secondAttribute="bottom" constant="8" id="Qrs-g4-ZCr"/>
-                            <constraint firstAttribute="centerX" secondItem="BAH-tf-SvC" secondAttribute="centerX" id="tE8-vb-ZUj"/>
+                            <constraint firstAttribute="centerX" secondItem="rGP-3i-fWq" secondAttribute="centerX" constant="-0.5" id="1GH-8G-v9o"/>
+                            <constraint firstItem="rGP-3i-fWq" firstAttribute="top" secondItem="nNS-dI-T8c" secondAttribute="bottom" id="QQb-jL-jG2"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="zTN-Qk-eIs" appends="YES" id="cMw-o7-Nlg"/>
