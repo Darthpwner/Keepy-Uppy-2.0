@@ -14,8 +14,6 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var scene: GameScene!
     
-    var lives: Int = 3
-    
     var song: AVAudioPlayer = AVAudioPlayer()
 
     //Clicks labels
@@ -24,7 +22,11 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var lastClicksLabel: UILabel!
     
     @IBOutlet weak var currentClicksLabel: UILabel!
+    
+    @IBAction func didTapBall(sender: UITapGestureRecognizer) {
         
+    }
+    
     override func viewDidLoad() {
         println("SECOND")
         
@@ -69,16 +71,5 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     //Gameplay Functions
     func gameDidBegin() {
         
-    }
-    
-    //If game ends, stop player interaction and the gameplay song
-    func gameDidEnd() -> Bool {
-        if(lives == 0) {
-            view.userInteractionEnabled = false
-            song.stop()
-            scene.playSound("gameover.mp3")
-            return true
-        }
-        return false
     }
 }

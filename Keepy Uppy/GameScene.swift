@@ -152,19 +152,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 <-  O ->
     */
     //Use to move the ball
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        playSound("hit.mp3")
-        
-        //if directly underneath
-            moveBallUp()
-        //else if off to the side
-            //if mouse is to the right
-                moveBallLeft()
-            //else if mouse is to the left
-                //moveBallRight()
-        //else (combination of both)
-            //move combined vector
-    }
+//    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+//        playSound("hit.mp3")
+//        
+//        //if directly underneath
+//            moveBallUp()
+//        //else if off to the side
+//            //if mouse is to the right
+//                moveBallLeft()
+//            //else if mouse is to the left
+//                //moveBallRight()
+//        //else (combination of both)
+//            //move combined vector
+//    }
     
     /*Moving the ball*/
     func moveBallUp() -> Void {
@@ -273,8 +273,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else {
             self.ball.setScale(bowlingBallScalingFactor)
         }
-        
-//        ball.anchorPoint = background.anchorPoint
 
         ball.anchorPoint = CGPointMake(anchorX, anchorY)
         
@@ -282,6 +280,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.ball.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
         //self.ball.position = CGPoint(x: size.width * 0.5, y: size.height * 0.5)
         /**/
+        
+        ball.name = "ball"
+        ball.userInteractionEnabled = false //what does this do?
         
         addChild(ball)  //Add ball to the display list
     }

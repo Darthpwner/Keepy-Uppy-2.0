@@ -591,6 +591,9 @@
                             <constraint firstItem="w2h-WZ-mfe" firstAttribute="top" secondItem="nNS-dI-T8c" secondAttribute="bottom" constant="10" id="Fiw-fs-Asa"/>
                             <constraint firstItem="Op0-1l-3QF" firstAttribute="top" secondItem="w2h-WZ-mfe" secondAttribute="bottom" constant="10" id="I7Y-Bn-XiT"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zTN-Qk-eIs" appends="YES" id="cMw-o7-Nlg"/>
+                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
@@ -600,6 +603,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7e-fV-kAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zTN-Qk-eIs">
+                    <connections>
+                        <action selector="didTapBall:" destination="HZj-Dy-ZAq" id="Cm7-aZ-IoD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="328" y="2731"/>
         </scene>
