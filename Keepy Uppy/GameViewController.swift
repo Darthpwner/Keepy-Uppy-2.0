@@ -54,6 +54,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func displayScore() {
+        println("UPDATE THE SCORE FUCKER: \(scene.score)")
         scoreLabel.text = "\(scene.score)"
     }
     

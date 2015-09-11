@@ -310,10 +310,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //6
     func setUpScore() -> Void {
-        scoreLabelNode = SKLabelNode(fontNamed: "MarkerFelt-Wide")
-        scoreLabelNode.position = CGPointMake( CGRectGetMidX( self.frame ), 3 * self.frame.size.height / 4 )
-        scoreLabelNode.zPosition = 100
-        scoreLabelNode.text = String(score)
+        self.scoreLabelNode = SKLabelNode(fontNamed:"MarkerFelt-Wide")
+       
+        self.scoreLabelNode.color = UIColor.redColor()  //CHANGE COLOR YOU PIECE OF SHIT!
+        
+        self.scoreLabelNode.position = CGPointMake( CGRectGetMidX( self.frame ), 0.5)
+        self.scoreLabelNode.zPosition = 100
+        self.scoreLabelNode.text = String(score)
+        self.addChild(scoreLabelNode)
     }
     /*End of setup functions*/
     
