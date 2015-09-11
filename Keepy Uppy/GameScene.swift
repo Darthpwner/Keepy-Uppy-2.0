@@ -280,6 +280,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.ground.position = CGPointMake(0, background.size.height)
         self.ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, self.frame.size.height)) //Experiment with this
         self.ground.physicsBody?.dynamic = false
+        
+        self.ground.physicsBody?.categoryBitMask = groundCategory    //Assigns the bit mask category for ground
+        self.ball.physicsBody?.contactTestBitMask = ballCategory  //Assigns the contacts that we care about for the ground
+        
         self.addChild(self.ground)
     }
 
@@ -301,14 +305,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //self.ball.position = CGPoint(x: size.width * 0.5, y: size.height * 0.5)
         /**/
         
-        ball.name = "ball"
-        ball.userInteractionEnabled = false
+        self.ball.name = "ball"
+        self.ball.userInteractionEnabled = false
         
-        ball.physicsBody?.categoryBitMask = ballCategory    //Assigns the bit mask category for ball
-        ball.physicsBody?.collisionBitMask = wallCategory | ceilingCategory //Assigns the collisions that the ball can have
-        ball.physicsBody?.contactTestBitMask = groundCategory   //Assigns the contacts that we care about for the ball
+        self.ball.physicsBody?.categoryBitMask = ballCategory    //Assigns the bit mask category for ball
+        self.ball.physicsBody?.collisionBitMask = wallCategory | ceilingCategory //Assigns the collisions that the ball can have
+        self.ball.physicsBody?.contactTestBitMask = groundCategory   //Assigns the contacts that we care about for the ball
         
-        addChild(ball)  //Add ball to the display list
+        addChild(self.ball)  //Add ball to the display list
     }
     
     //6
@@ -324,5 +328,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+    }
+    
+    //Handle contact between ball and ground
+    func didBeginContact(contact: SKPhysicsContact) {
+        //if ( contact.bodyA.categoryBitMask & scoreCategory ) == scoreCategory || ( contact.bodyB.categoryBitMask & scoreCategory ) == scoreCategory {
+        if(contact.bodyA.categoryBitMask & ballCategory) == ballCategory && (contact.bodyB.categoryBitMask & groundCategory) == groundCategory {
+            score = 0
+        }
     }
 }
