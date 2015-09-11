@@ -310,6 +310,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.ball.name = "ball"
         self.ball.userInteractionEnabled = false
         
+        ball.physicsBody?.usesPreciseCollisionDetection = true
+        
         self.ball.physicsBody?.categoryBitMask = ballCategory    //Assigns the bit mask category for ball
         self.ball.physicsBody?.collisionBitMask = wallCategory | ceilingCategory //Assigns the collisions that the ball can have
         self.ball.physicsBody?.contactTestBitMask = groundCategory   //Assigns the contacts that we care about for the ball
@@ -334,9 +336,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Handle contact between ball and ground
     func didBeginContact(contact: SKPhysicsContact) {
-        //if ( contact.bodyA.categoryBitMask & scoreCategory ) == scoreCategory || ( contact.bodyB.categoryBitMask & scoreCategory ) == scoreCategory {
-        if(contact.bodyA.categoryBitMask & ballCategory) == ballCategory && (contact.bodyB.categoryBitMask & groundCategory) == groundCategory {
-            score = 0
+        if (contact.bodyA.categoryBitMask == groundCategory) &&
+            (contact.bodyB.categoryBitMask == ballCategory) {
+                score = 0
         }
     }
 }
