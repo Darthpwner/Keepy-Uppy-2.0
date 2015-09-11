@@ -16,9 +16,6 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var song: AVAudioPlayer = AVAudioPlayer()
 
-    //Clicks labels
-    @IBOutlet weak var scoreLabel: UILabel!
-    
     override func viewDidLoad() {
         println("SECOND")
         
@@ -38,8 +35,6 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         // Create and configure the scene.
         scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .AspectFill
-        
-        displayScore()
 
         // Present the scene.
         skView.presentScene(scene)
@@ -51,11 +46,6 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func prefersStatusBarHidden() -> Bool {
         return true
-    }
-    
-    func displayScore() {
-        println("UPDATE THE SCORE FUCKER: \(scene.score)")
-        scoreLabel.text = "\(scene.score)"
     }
     
     func prepareAudios() {
