@@ -176,6 +176,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //move combined vector
                 
                 score++
+                scoreLabelNode.text = String(score)
                 println(score)
             }
         }
