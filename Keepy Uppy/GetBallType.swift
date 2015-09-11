@@ -8,6 +8,7 @@
 
 import Foundation   ////Needed for dispatch_once_t
 
+//Singleton
 class GetBallType {
 
     var ballType: BallType?

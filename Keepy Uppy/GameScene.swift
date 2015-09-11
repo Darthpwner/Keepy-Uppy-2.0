@@ -310,9 +310,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //6
     func setUpScore() -> Void {
         self.scoreLabelNode = SKLabelNode(fontNamed:"MarkerFelt-Wide")
-       
-        self.scoreLabelNode.fontColor = UIColor.redColor()  //CHANGE COLOR YOU PIECE OF SHIT!
-        
+        self.scoreLabelNode.fontColor = UIColor.redColor()  //Set font color as red
         self.scoreLabelNode.position = CGPointMake( CGRectGetMidX( self.frame ), 0.5)
         self.scoreLabelNode.zPosition = 100
         self.scoreLabelNode.text = String(score)
@@ -323,37 +321,4 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
-    
-//    //////
-//    func didBeginContact(contact: SKPhysicsContact) {
-//        if moving.speed > 0 {
-//            if ( contact.bodyA.categoryBitMask & scoreCategory ) == scoreCategory || ( contact.bodyB.categoryBitMask & scoreCategory ) == scoreCategory {
-//                // Bird has contact with score entity
-//                score++
-//                scoreLabelNode.text = String(score)
-//                
-//                // Add a little visual feedback for the score increment
-//                scoreLabelNode.runAction(SKAction.sequence([SKAction.scaleTo(1.5, duration:NSTimeInterval(0.1)), SKAction.scaleTo(1.0, duration:NSTimeInterval(0.1))]))
-//            } else {
-//                
-//                moving.speed = 0
-//                
-//                bird.physicsBody?.collisionBitMask = worldCategory
-//                bird.runAction(  SKAction.rotateByAngle(CGFloat(M_PI) * CGFloat(bird.position.y) * 0.01, duration:1), completion:{self.bird.speed = 0 })
-//                
-//                
-//                //Used to flash and restart the game
-//                // Flash background if contact is detected
-//                self.removeActionForKey("flash")
-//                self.runAction(SKAction.sequence([SKAction.repeatAction(SKAction.sequence([SKAction.runBlock({
-//                    self.backgroundColor = SKColor(red: 1, green: 0, blue: 0, alpha: 1.0)
-//                }),SKAction.waitForDuration(NSTimeInterval(0.05)), SKAction.runBlock({
-//                    self.backgroundColor = self.skyColor
-//                }), SKAction.waitForDuration(NSTimeInterval(0.05))]), count:4), SKAction.runBlock({
-//                    self.canRestart = true
-//                })]), withKey: "flash")
-//            }
-//        }
-//    }
-    //////
 }
