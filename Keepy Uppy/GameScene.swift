@@ -17,7 +17,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var moving:SKNode!
     var canRestart = Bool()
     var scoreLabelNode:SKLabelNode!
-    var score = NSInteger()
+    var score: NSInteger = 0
     var background: SKSpriteNode!
     var ball: SKSpriteNode!
     var ground = SKNode()    
@@ -100,7 +100,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         setUpBall() //5
         
-        setUpRecords() //6 TODO
+        setUpScore() //6 TODO
     }
 
     required init(coder decoder: NSCoder) {
@@ -174,6 +174,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 moveBallRight()
                 //else (combination of both)
                 //move combined vector
+                
+                score++
+                println(score)
             }
         }
     }
@@ -305,8 +308,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //6
-    func setUpRecords() -> Void {
-        
+    func setUpScore() -> Void {
+        scoreLabelNode = SKLabelNode(fontNamed: "MarkerFelt-Wide")
+        scoreLabelNode.position = CGPointMake( CGRectGetMidX( self.frame ), 3 * self.frame.size.height / 4 )
+        scoreLabelNode.zPosition = 100
+        scoreLabelNode.text = String(score)
     }
     /*End of setup functions*/
     
