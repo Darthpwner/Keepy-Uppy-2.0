@@ -69,10 +69,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     /*Sets the background and ball to be in the correct dimensions*/
 
     //Category bit masks
-    let groundCategory: UInt32 = 1 << 0
-    let ballCategory: UInt32 = 1 << 1
-    let wallCategory: UInt32 = 1 << 2
-    let ceilingCategory: UInt32 = 1 << 3
+    let groundCategory: UInt32 = 0x1 << 0
+    let ballCategory: UInt32 = 0x1 << 1
+    let wallCategory: UInt32 = 0x1 << 2
+    let ceilingCategory: UInt32 = 0x1 << 3
     /*End of Category bit masks*/
     
     /*End of Constants*/
@@ -144,6 +144,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // this will allow the balls to rotate when bouncing off each other
         ball.physicsBody!.allowsRotation = true
+        
+        self.physicsWorld.contactDelegate = self    //EXPERIMENTAL
     }
     
     /*
