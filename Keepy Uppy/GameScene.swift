@@ -177,7 +177,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 score++
                 scoreLabelNode.text = String(score)
-                println(score)
             }
         }
     }
