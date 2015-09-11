@@ -279,7 +279,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //4
     func setUpGround() -> Void {
-        self.ground.position = CGPointMake(0, background.size.height)
+        self.ground.position = CGPointMake(0, self.frame.size.height)
         self.ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, self.frame.size.height)) //Experiment with this
         self.ground.physicsBody?.dynamic = false
         
