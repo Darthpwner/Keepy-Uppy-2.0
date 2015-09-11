@@ -96,11 +96,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Add background
         setUpBackground() //3
         
-       // setUpGround()   //4
+        setUpGround()   //4
         
         setUpBall() //5
         
-        setUpScore() //6 TODO
+        setUpScore() //6
     }
 
     required init(coder decoder: NSCoder) {
@@ -278,7 +278,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //4
     func setUpGround() -> Void {
         self.ground.position = CGPointMake(0, background.size.height)
-        self.ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, background.size.height * 2.0))
+        self.ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, self.frame.size.height)) //Experiment with this
         self.ground.physicsBody?.dynamic = false
         self.addChild(self.ground)
     }
