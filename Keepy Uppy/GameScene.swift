@@ -304,6 +304,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.name = "ball"
         ball.userInteractionEnabled = false
         
+        ball.physicsBody?.categoryBitMask = ballCategory    //Assigns the bit mask category for ball
+        ball.physicsBody?.collisionBitMask = wallCategory | ceilingCategory //Assigns the collisions that the ball can have
+        ball.physicsBody?.contactTestBitMask = groundCategory   //Assigns the contacts that we care about for the ball
+        
         addChild(ball)  //Add ball to the display list
     }
     
