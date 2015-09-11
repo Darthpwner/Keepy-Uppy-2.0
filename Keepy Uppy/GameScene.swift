@@ -285,6 +285,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.ground.physicsBody?.categoryBitMask = groundCategory    //Assigns the bit mask category for ground
         self.ball.physicsBody?.contactTestBitMask = ballCategory  //Assigns the contacts that we care about for the ground
+
+        ground.physicsBody?.dynamic = true
+        
+        ground.physicsBody?.affectedByGravity = false
+        ground.physicsBody?.allowsRotation = false
         
         self.addChild(self.ground)
     }
