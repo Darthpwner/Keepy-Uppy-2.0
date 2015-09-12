@@ -71,6 +71,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let anchorY: CGFloat = 0.5
     /*Sets the ball and background to be in the correct dimensions*/
     
+    //Ground position coordinate points
+    let groundPositionX: CGFloat = 0.0
+    let groundPositionY: CGFloat = 0.0
+    /*Sets the ground position to be at the origin*/
+    
+    //Ground height
+    let groundHeight: CGFloat = 1.0
+    /*Sets the ground to be at the bottom of the screen*/
+    
     //Category bit masks
     let groundCategory: UInt32 = 0x1 << 0
     let ballCategory: UInt32 = 0x1 << 1
@@ -296,15 +305,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //6
     func setUpGround() -> Void {
-        //let groundHeight = self.frame.size.height / 6.0
-        
-        let groundHeight = self.frame.size.height / self.frame.size.height
         
         self.ground.color = UIColor.redColor()
         self.ground.anchorPoint = CGPointZero
-        self.ground.position = CGPointMake(0.0, 0.0)
+        self.ground.position = CGPointMake(groundPositionX, groundPositionY)
         self.ground.size = CGSizeMake(self.frame.size.width, groundHeight)
-//        self.ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, self.frame.size.height)) //Experiment with this
+        
+        //Create an edge based body for the gorund
         self.ground.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, groundHeight), toPoint: CGPointMake(self.frame.size.width, groundHeight))
 //        self.ground.physicsBody?.dynamic = false
 //        
