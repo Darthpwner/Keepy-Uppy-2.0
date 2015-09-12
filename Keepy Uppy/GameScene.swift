@@ -71,6 +71,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let anchorY: CGFloat = 0.5
     /*Sets the background and ball to be in the correct dimensions*/
 
+    let ballAnchorX: CGFloat = 0
+    let ballAnchorY: CGFloat = 0
+    
     //Category bit masks
     let groundCategory: UInt32 = 0x1 << 0
     let ballCategory: UInt32 = 0x1 << 1
@@ -328,7 +331,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.ball.setScale(bowlingBallScalingFactor)
         }
 
-        ball.anchorPoint = CGPointMake(anchorX, anchorY)
+        ball.anchorPoint = CGPointMake(ballAnchorX, ballAnchorY)
         
         //These two lines are interchangeable
         self.ball.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
