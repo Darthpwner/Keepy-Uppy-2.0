@@ -9,6 +9,9 @@
 //Actual game play scene
 import SpriteKit
 
+//Scoring algorithm: Tap the ball -> +1 , Hit a wall -> +1 , Hit the ceiling -> + 2
+//Max possible points per tap: +7 -> Tap the ball, Hit a wall, Hit the ceiling, hit the other wall
+
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     /*Variables*/
@@ -20,7 +23,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var score: NSInteger = 0
     var background: SKSpriteNode!
     var ball: SKSpriteNode!
-    var ground = SKNode()    
+    var ground = SKSpriteNode()
     var lives: Int = 1
     /*End of variables*/
     
@@ -60,7 +63,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Game Anchor coordinate points
     let gameAnchorX: CGFloat = 0
-    let gameAnchorY: CGFloat = 0.5
+    let gameAnchorY: CGFloat = 0
     /*Sets the gameplay to be in the correct dimensions*/
 
     //Generic Anchor coordinate points
@@ -96,11 +99,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Add background
         setUpBackground() //3
         
-        setUpGround()   //4
+        setUpCeiling()  //4 TODO
         
-        setUpBall() //5
+        setUpWalls()    //5 TODO
         
-        setUpScore() //6
+        setUpGround()   //6
+        
+        setUpBall() //7
+        
+        setUpScore() //8
     }
 
     required init(coder decoder: NSCoder) {
@@ -137,7 +144,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         shape.lineWidth = 4
 
         // this is the most important line, we define the body
-        ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width/2.0)
+        ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width / 2.0)
         ball.physicsBody?.dynamic = true
         
         assignPhysicsAttributes(chooseBall.ballType!, typeOfBackground: chooseBackground.backgroundType!)
@@ -278,24 +285,40 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //4
+    func setUpCeiling() -> Void {
+        
+    }
+    
+    //5
+    func setUpWalls() -> Void {
+        
+    }
+    
+    //6
     func setUpGround() -> Void {
-        self.ground.position = CGPointMake(0, self.frame.size.height)
-        self.ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, self.frame.size.height)) //Experiment with this
-        self.ground.physicsBody?.dynamic = false
+        let groundHeight = self.frame.size.height / 6.0
         
-        self.ground.physicsBody?.categoryBitMask = groundCategory    //Assigns the bit mask category for ground
-        self.ball.physicsBody?.contactTestBitMask = ballCategory  //Assigns the contacts that we care about for the ground
-
-        ground.physicsBody?.dynamic = true
-        
-        ground.physicsBody?.affectedByGravity = false
-        ground.physicsBody?.allowsRotation = false
+        self.ground.color = UIColor.redColor()
+        self.ground.anchorPoint = CGPointZero
+        self.ground.position = CGPointMake(0.0, 0.0)
+        self.ground.size = CGSizeMake(self.frame.size.width, groundHeight)
+//        self.ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, self.frame.size.height)) //Experiment with this
+        self.ground.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, groundHeight), toPoint: CGPointMake(self.frame.size.width, groundHeight))
+//        self.ground.physicsBody?.dynamic = false
+//        
+//        self.ground.physicsBody?.categoryBitMask = groundCategory    //Assigns the bit mask category for ground
+//        self.ball.physicsBody?.contactTestBitMask = ballCategory  //Assigns the contacts that we care about for the ground
+//
+//        self.ground.physicsBody?.dynamic = true
+//        
+        self.ground.physicsBody?.affectedByGravity = false
+//        self.ground.physicsBody?.allowsRotation = false
         
         self.addChild(self.ground)
     }
 
     
-    //5
+    //7
     func setUpBall() -> Void {
         if chooseBall.ballType == BallType.BeachBall {
             self.ball.setScale(beachBallScalingFactor)
@@ -324,7 +347,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(self.ball)  //Add ball to the display list
     }
     
-    //6
+    //8
     func setUpScore() -> Void {
         self.scoreLabelNode = SKLabelNode(fontNamed:"MarkerFelt-Wide")
         self.scoreLabelNode.fontColor = UIColor.redColor()  //Set font color as red
@@ -341,9 +364,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Handle contact between ball and ground
     func didBeginContact(contact: SKPhysicsContact) {
-        if (contact.bodyA.categoryBitMask == groundCategory) &&
-            (contact.bodyB.categoryBitMask == ballCategory) {
-                score = 0
-        }
+        ball.physicsBody?.collisionBitMask = groundCategory
+        self.ball.speed = 0
+        score = 0
+        
+        playSound("gameover.mp3")
     }
 }

@@ -484,11 +484,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
+            timestampString = "463707285.094729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "init(size:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -500,11 +500,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
+            timestampString = "463707285.094729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "GameScene"
             landmarkType = "3">
          </BreakpointContent>
@@ -516,11 +516,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
+            timestampString = "463707285.094729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "didMoveToView(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -532,11 +532,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463676432.994754"
+            timestampString = "463786088.671726"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "375"
-            endingLineNumber = "375">
+            startingLineNumber = "399"
+            endingLineNumber = "399">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -546,11 +546,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463676432.994754"
+            timestampString = "463786088.671726"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "381"
-            endingLineNumber = "381">
+            startingLineNumber = "405"
+            endingLineNumber = "405">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -759,7 +759,7 @@
                   moduleName = "Keepy Uppy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Darthpwner/Desktop/Keepy%20Uppy/Keepy%20Uppy/Background.swift"
-                  timestampString = "463673770.395626"
+                  timestampString = "463785382.695787"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -774,7 +774,7 @@
                   moduleName = "Keepy Uppy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Darthpwner/Desktop/Keepy%20Uppy/Keepy%20Uppy/Background.swift"
-                  timestampString = "463673770.395745"
+                  timestampString = "463785382.695895"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -805,7 +805,7 @@
                   moduleName = "Keepy Uppy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Darthpwner/Desktop/Keepy%20Uppy/Keepy%20Uppy/Background.swift"
-                  timestampString = "463673770.396255"
+                  timestampString = "463785382.696679"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -820,7 +820,7 @@
                   moduleName = "Keepy Uppy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Darthpwner/Desktop/Keepy%20Uppy/Keepy%20Uppy/Background.swift"
-                  timestampString = "463673770.396358"
+                  timestampString = "463785382.696788"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -981,11 +981,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
+            timestampString = "463707285.094729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "init(size:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -997,11 +997,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
+            timestampString = "463707285.094729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "assignBackground()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1013,39 +1013,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
-            landmarkName = "assignBackground()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
-            landmarkName = "assignBackground()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
+            timestampString = "463707285.094729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "227"
@@ -1061,11 +1029,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
+            timestampString = "463707285.094729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
+            landmarkName = "assignBackground()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Keepy Uppy/GameScene.swift"
+            timestampString = "463707285.094729"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
+            landmarkName = "assignBackground()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Keepy Uppy/GameScene.swift"
+            timestampString = "463707285.094729"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
             landmarkName = "assignPhysicsAttributes(_:typeOfBackground:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1077,11 +1077,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463676432.994754"
+            timestampString = "463786088.671726"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "324"
-            endingLineNumber = "324"
+            startingLineNumber = "347"
+            endingLineNumber = "347"
             landmarkName = "setUpBall()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1093,11 +1093,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
+            timestampString = "463707285.094729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "didMoveToView(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1109,11 +1109,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
+            timestampString = "463707285.094729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "didMoveToView(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1125,11 +1125,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
+            timestampString = "463707285.094729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "didMoveToView(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1141,11 +1141,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
+            timestampString = "463707285.094729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "didMoveToView(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1157,11 +1157,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
+            timestampString = "463707285.094729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "274"
-            endingLineNumber = "274"
+            startingLineNumber = "281"
+            endingLineNumber = "281"
             landmarkName = "setUpBackground()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1173,11 +1173,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
+            timestampString = "463707285.094729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "didMoveToView(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1189,11 +1189,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
+            timestampString = "463707285.094729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "246"
-            endingLineNumber = "246"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
             landmarkName = "GameScene"
             landmarkType = "3">
          </BreakpointContent>
@@ -1251,11 +1251,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463673761.741908"
+            timestampString = "463707285.094729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "GameScene"
             landmarkType = "3">
          </BreakpointContent>
@@ -1267,11 +1267,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Keepy Uppy/GameScene.swift"
-            timestampString = "463676432.994754"
+            timestampString = "463786088.671726"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "294"
-            endingLineNumber = "294"
+            startingLineNumber = "317"
+            endingLineNumber = "317"
+            landmarkName = "setUpGround()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Keepy Uppy/GameScene.swift"
+            timestampString = "463785728.736652"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "301"
+            endingLineNumber = "301"
             landmarkName = "setUpGround()"
             landmarkType = "5">
          </BreakpointContent>
