@@ -294,7 +294,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.ceiling.color = UIColor.blueColor()
         self.ceiling.anchorPoint = CGPointMake(0, self.frame.size.height)   //?
         self.ceiling.position = CGPointMake(0.0, self.frame.size.height)   //?
-        self.ceiling.size = CGSizeMake(self.frame.size.width, self.frame.size.height)   //?
+        self.ceiling.size = CGSizeMake(self.frame.size.width, groundHeight)   //?
         
         //Create an edge based body for the ceiling
         self.ceiling.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, self.frame.size.height), toPoint: CGPointMake(self.frame.size.width, self.frame.size.height))  //?
@@ -315,7 +315,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.leftWall.color = UIColor.greenColor()
         self.leftWall.anchorPoint = CGPointZero
         self.leftWall.position = CGPointZero
-        self.leftWall.size = CGSizeMake(0.0, self.frame.size.height)   //?
+        self.leftWall.size = CGSizeMake(groundHeight, self.frame.size.height)   //?
         
         //Create an edge based body for the left wall
         self.leftWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, self.frame.size.height), toPoint: CGPointMake(0.0, groundHeight)) //?
@@ -334,7 +334,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.rightWall.color = UIColor.purpleColor()
         self.rightWall.anchorPoint = CGPointMake(self.frame.size.width, 0.0)  //?
         self.rightWall.position = CGPointMake(self.frame.size.width, 0.0) //?
-        self.rightWall.size = CGSizeMake(1.0, self.frame.size.height)   //?
+        self.rightWall.size = CGSizeMake(groundHeight, self.frame.size.height)   //?
         
         //Create an edge based body for the right wall
         self.rightWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(self.frame.size.width, self.frame.size.height), toPoint: CGPointMake(self.frame.size.width, groundHeight)) //?
@@ -346,12 +346,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
         self.rightWall.physicsBody?.allowsRotation = false
             
-        self.addChild(self.rightWall)
+        //self.addChild(self.rightWall)
         /*End of Set up right wall*/
     }
     
     //6
     func setUpGround() -> Void {
+        
+        //Change groundHeight to something else
         
         self.ground.color = UIColor.redColor()
         self.ground.anchorPoint = CGPointZero
