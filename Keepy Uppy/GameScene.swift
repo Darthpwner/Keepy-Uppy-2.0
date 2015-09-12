@@ -69,10 +69,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Generic Anchor coordinate points
     let anchorX: CGFloat = 0.5
     let anchorY: CGFloat = 0.5
-    /*Sets the background and ball to be in the correct dimensions*/
-
-    let ballAnchorX: CGFloat = 0
-    let ballAnchorY: CGFloat = 0
+    /*Sets the ball and background to be in the correct dimensions*/
     
     //Category bit masks
     let groundCategory: UInt32 = 0x1 << 0
@@ -299,7 +296,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //6
     func setUpGround() -> Void {
-        let groundHeight = self.frame.size.height / 6.0
+        //let groundHeight = self.frame.size.height / 6.0
+        
+        let groundHeight = self.frame.size.height / self.frame.size.height
         
         self.ground.color = UIColor.redColor()
         self.ground.anchorPoint = CGPointZero
@@ -331,7 +330,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.ball.setScale(bowlingBallScalingFactor)
         }
 
-        ball.anchorPoint = CGPointMake(ballAnchorX, ballAnchorY)
+        ball.anchorPoint = CGPointMake(anchorX, anchorY)
         
         //These two lines are interchangeable
         self.ball.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
