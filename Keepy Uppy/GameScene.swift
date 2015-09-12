@@ -291,13 +291,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //4
     func setUpCeiling() -> Void {
-        self.ceiling.color = UIColor.blueColor()
-        self.ceiling.anchorPoint = CGPointMake(barrierFactor, barrierFactor)
-        self.ceiling.position = CGPointMake(0, self.frame.size.height)
+        self.ceiling.color = UIColor.orangeColor()
+        self.ceiling.anchorPoint = CGPointZero
+        self.ceiling.position = CGPointMake(0, self.frame.size.height - barrierFactor)  //Subtract barrierFactor from ceiling height
         self.ceiling.size = CGSizeMake(self.frame.size.width, barrierFactor)   //?
         
         //Create an edge based body for the ceiling
-        self.ceiling.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, self.frame.size.height), toPoint: CGPointMake(self.frame.size.width, self.frame.size.height))  //?
+        self.ceiling.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0, self.frame.size.height - barrierFactor), toPoint: CGPointMake(self.frame.size.width, self.frame.size.height - barrierFactor))  
         
         self.ceiling.physicsBody?.categoryBitMask = ceilingCategory //Assigns the bit mask category for the ceiling
         self.ceiling.physicsBody?.collisionBitMask = ballCategory //Assigns the collision we care about for the ceiling
@@ -318,7 +318,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.leftWall.size = CGSizeMake(barrierFactor, self.frame.size.height)   //?
         
         //Create an edge based body for the left wall
-        self.leftWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, self.frame.size.height), toPoint: CGPointMake(0.0, barrierFactor)) //?
+        self.leftWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, barrierFactor), toPoint: CGPointMake(0.0, self.frame.size.height)) //?
         
         self.leftWall.physicsBody?.categoryBitMask = wallCategory   //Assign the bit mask category for the left wall
         self.leftWall.physicsBody?.collisionBitMask = ballCategory  //Assigns the collision we care about for the left wall
