@@ -76,9 +76,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let anchorY: CGFloat = 0.5
     /*Sets the ball and background to be in the correct dimensions*/
     
-    //Ground height
-    let groundHeight: CGFloat = 1.0
-    /*Sets the ground to be at the bottom of the screen*/
+    //Barrier factor
+    let barrierFactor: CGFloat = 1.0
+    /*Sets a barrier factor (ground, wall, ceiling)*/
     
     //Category bit masks
     let groundCategory: UInt32 = 0x1 << 0
@@ -293,8 +293,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setUpCeiling() -> Void {
         self.ceiling.color = UIColor.blueColor()
         self.ceiling.anchorPoint = CGPointMake(0, self.frame.size.height)   //?
-        self.ceiling.position = CGPointMake(0.0, self.frame.size.height)   //?
-        self.ceiling.size = CGSizeMake(self.frame.size.width, groundHeight)   //?
+        self.ceiling.position = CGPointZero
+        self.ceiling.size = CGSizeMake(self.frame.size.width, barrierFactor)   //?
         
         //Create an edge based body for the ceiling
         self.ceiling.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, self.frame.size.height), toPoint: CGPointMake(self.frame.size.width, self.frame.size.height))  //?
@@ -306,7 +306,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.ground.physicsBody?.allowsRotation = false
         
-        self.addChild(self.ceiling)
+        //self.addChild(self.ceiling)
     }
     
     //5
@@ -315,10 +315,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.leftWall.color = UIColor.greenColor()
         self.leftWall.anchorPoint = CGPointZero
         self.leftWall.position = CGPointZero
-        self.leftWall.size = CGSizeMake(groundHeight, self.frame.size.height)   //?
+        self.leftWall.size = CGSizeMake(barrierFactor, self.frame.size.height)   //?
         
         //Create an edge based body for the left wall
-        self.leftWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, self.frame.size.height), toPoint: CGPointMake(0.0, groundHeight)) //?
+        self.leftWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, self.frame.size.height), toPoint: CGPointMake(0.0, barrierFactor)) //?
         
         self.leftWall.physicsBody?.categoryBitMask = wallCategory   //Assign the bit mask category for the left wall
         self.leftWall.physicsBody?.collisionBitMask = ballCategory  //Assigns the collision we care about for the left wall
@@ -332,12 +332,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
         /*Set up right wall*/
         self.rightWall.color = UIColor.purpleColor()
-        self.rightWall.anchorPoint = CGPointMake(self.frame.size.width, 0.0)  //?
-        self.rightWall.position = CGPointMake(self.frame.size.width, 0.0) //?
-        self.rightWall.size = CGSizeMake(groundHeight, self.frame.size.height)   //?
+        //self.rightWall.anchorPoint = CGPointMake(self.frame.size.width, 0.0)  //?
+        self.rightWall.anchorPoint = CGPointMake(self.frame.size.width, 0.0)
+        //self.rightWall.position = CGPointZero
+        self.rightWall.position = CGPointMake(self.frame.size.width, 0.0)
+        self.rightWall.size = CGSizeMake(barrierFactor, self.frame.size.height)   //?
         
         //Create an edge based body for the right wall
-        self.rightWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(self.frame.size.width, self.frame.size.height), toPoint: CGPointMake(self.frame.size.width, groundHeight)) //?
+        self.rightWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(self.frame.size.width, self.frame.size.height), toPoint: CGPointMake(self.frame.size.width, barrierFactor)) //?
         
         self.rightWall.physicsBody?.categoryBitMask = wallCategory  //Assign the bit mask category for the right wall
         self.rightWall.physicsBody?.collisionBitMask = ballCategory //Assigns the collision we care about for the right wall
@@ -353,15 +355,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //6
     func setUpGround() -> Void {
         
-        //Change groundHeight to something else
+        //Change barrierFactor to something else
         
         self.ground.color = UIColor.redColor()
         self.ground.anchorPoint = CGPointZero
         self.ground.position = CGPointZero
-        self.ground.size = CGSizeMake(self.frame.size.width, groundHeight)
+        self.ground.size = CGSizeMake(self.frame.size.width, barrierFactor)
         
         //Create an edge based body for the gorund
-        self.ground.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, groundHeight), toPoint: CGPointMake(self.frame.size.width, groundHeight))
+        self.ground.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, barrierFactor), toPoint: CGPointMake(self.frame.size.width, barrierFactor))
         
         self.ground.physicsBody?.categoryBitMask = groundCategory    //Assigns the bit mask category for ground
         self.ground.physicsBody?.contactTestBitMask = ballCategory  //Assigns the contacts that we care about for the ground
@@ -431,6 +433,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.ball.speed = 0 //TODO: FIGURE OUT HOW TO STOP GAME!
             
             playSound("gameover.mp3")
+            
+            //Problem is because contactDelegate is not set!
         } else if ( contact.bodyA.categoryBitMask & wallCategory) == wallCategory || ( contact.bodyB.categoryBitMask & wallCategory) == wallCategory {
             
             score++
