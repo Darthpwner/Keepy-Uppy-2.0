@@ -427,14 +427,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Handle contact between ball and ground
     func didBeginContact(contact: SKPhysicsContact) {
         if ( contact.bodyA.categoryBitMask & groundCategory ) == groundCategory || ( contact.bodyB.categoryBitMask & groundCategory ) == groundCategory {
-            
-//            ball.physicsBody?.collisionBitMask = groundCategory
-            self.ball.speed = 0
+
             score = 0
-            
             scoreLabelNode.text = String(score)
             
+            self.ball.speed = 0 //TODO: FIGURE OUT HOW TO STOP GAME!
+            
             playSound("gameover.mp3")
+        } else if ( contact.bodyA.categoryBitMask & wallCategory) == wallCategory || ( contact.bodyB.categoryBitMask & wallCategory) == wallCategory {
+            
+            score++
+            scoreLabelNode.text = String(score)
+        } else {
+            
+            score += 2
+            scoreLabelNode.text = String(score)
         }
     }
 }
