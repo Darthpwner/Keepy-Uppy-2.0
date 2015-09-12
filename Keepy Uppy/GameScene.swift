@@ -426,10 +426,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Handle contact between ball and ground
     func didBeginContact(contact: SKPhysicsContact) {
-        ball.physicsBody?.collisionBitMask = groundCategory
-        self.ball.speed = 0
-        score = 0
-        
-        playSound("gameover.mp3")
+        if ( contact.bodyA.categoryBitMask & groundCategory ) == groundCategory || ( contact.bodyB.categoryBitMask & groundCategory ) == groundCategory {
+            
+//            ball.physicsBody?.collisionBitMask = groundCategory
+            self.ball.speed = 0
+            score = 0
+            
+            scoreLabelNode.text = String(score)
+            
+            playSound("gameover.mp3")
+        }
     }
 }
