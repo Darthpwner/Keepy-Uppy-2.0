@@ -292,8 +292,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //4
     func setUpCeiling() -> Void {
         self.ceiling.color = UIColor.blueColor()
-        self.ceiling.anchorPoint = CGPointMake(0, self.frame.size.height)   //?
-        self.ceiling.position = CGPointZero
+        self.ceiling.anchorPoint = CGPointMake(barrierFactor, barrierFactor)
+        self.ceiling.position = CGPointMake(0, self.frame.size.height)
         self.ceiling.size = CGSizeMake(self.frame.size.width, barrierFactor)   //?
         
         //Create an edge based body for the ceiling
@@ -306,7 +306,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.ground.physicsBody?.allowsRotation = false
         
-        //self.addChild(self.ceiling)
+        self.addChild(self.ceiling)
     }
     
     //5
@@ -388,9 +388,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         ball.anchorPoint = CGPointMake(anchorX, anchorY)
         
-        //These two lines are interchangeable
-        self.ball.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
-        //self.ball.position = CGPoint(x: size.width * 0.5, y: size.height * 0.5)
+        /* Experiment where the ball drops*/
+        //self.ball.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
+        self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), CGRectGetMidY( self.frame))
         /**/
         
         self.ball.name = "ball"
