@@ -23,7 +23,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var score: NSInteger = 0
     var background: SKSpriteNode!
     var ball: SKSpriteNode!
+    
     var ground = SKSpriteNode()
+    var ceiling = SKSpriteNode()
+    var leftWall = SKSpriteNode()
+    var rightWall = SKSpriteNode()
+    
     var lives: Int = 1
     /*End of variables*/
     
@@ -89,10 +94,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     /*End of Constants*/
 
-//    let gameLayer = SKNode()
-//    let shapeLayer = SKNode()
-//    let LayerPosition = CGPoint(x: 6, y: -6)
-//    
     override init(size: CGSize) {
         super.init(size: size)
         
@@ -295,12 +296,63 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //4
     func setUpCeiling() -> Void {
+        self.ceiling.color = UIColor.blueColor()
+        self.ceiling.anchorPoint = CGPointMake(0.0, 1.0)    //?
+        self.ceiling.position = CGPointMake(0.0, 1.0)   //?
+        self.ceiling.size = CGSizeMake(self.frame.size.width, self.frame.size.height)   //?
         
+        //Create an edge based body for the ceiling
+        self.ceiling.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, self.frame.size.height), toPoint: CGPointMake(self.frame.size.width, self.frame.size.height))  //?
+        
+        self.ceiling.physicsBody?.categoryBitMask = ceilingCategory //Assigns the bit mask category for the ceiling
+        self.ceiling.physicsBody?.collisionBitMask = ballCategory //Assigns the collision we care about for the ceiling
+        
+        self.ceiling.physicsBody?.affectedByGravity = false
+        
+        self.ground.physicsBody?.allowsRotation = false
+        
+        self.addChild(self.ceiling)
     }
     
     //5
     func setUpWalls() -> Void {
+        /*Set up left wall*/
+        self.leftWall.color = UIColor.greenColor()
+        self.leftWall.anchorPoint = CGPointZero //?
+        self.leftWall.position = CGPointMake(0.0, 0.0)  //?
+        self.leftWall.size = CGSizeMake(0.0, self.frame.size.height)   //?
         
+        //Create an edge based body for the left wall
+        self.leftWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, self.frame.size.height), toPoint: CGPointMake(0.0, groundHeight)) //?
+        
+        self.leftWall.physicsBody?.categoryBitMask = wallCategory   //Assign the bit mask category for the left wall
+        self.leftWall.physicsBody?.collisionBitMask = ballCategory  //Assigns the collision we care about for the left wall
+        
+        self.leftWall.physicsBody?.affectedByGravity = false
+        
+        self.leftWall.physicsBody?.allowsRotation = false
+        
+        self.addChild(self.leftWall)
+        /*End of Set up left wall*/
+            
+        /*Set up right wall*/
+        self.rightWall.color = UIColor.purpleColor()
+        self.rightWall.anchorPoint = CGPointMake(0.0, 1.0)  //?
+        self.rightWall.position = CGPointMake(1.0, 0.0) //?
+        self.rightWall.size = CGSizeMake(1.0, self.frame.size.height)   //?
+        
+        //Create an edge based body for the right wall
+        self.rightWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(self.frame.size.width, self.frame.size.height), toPoint: CGPointMake(self.frame.size.width, groundHeight)) //?
+        
+        self.rightWall.physicsBody?.categoryBitMask = wallCategory  //Assign the bit mask category for the right wall
+        self.rightWall.physicsBody?.collisionBitMask = ballCategory //Assigns the collision we care about for the right wall
+            
+        self.rightWall.physicsBody?.affectedByGravity = false
+            
+        self.rightWall.physicsBody?.allowsRotation = false
+            
+        self.addChild(self.rightWall)
+        /*End of Set up right wall*/
     }
     
     //6
@@ -313,15 +365,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //Create an edge based body for the gorund
         self.ground.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, groundHeight), toPoint: CGPointMake(self.frame.size.width, groundHeight))
-//        self.ground.physicsBody?.dynamic = false
-//        
-//        self.ground.physicsBody?.categoryBitMask = groundCategory    //Assigns the bit mask category for ground
-//        self.ball.physicsBody?.contactTestBitMask = ballCategory  //Assigns the contacts that we care about for the ground
-//
-//        self.ground.physicsBody?.dynamic = true
-//        
+        
+        self.ground.physicsBody?.categoryBitMask = groundCategory    //Assigns the bit mask category for ground
+        self.ground.physicsBody?.contactTestBitMask = ballCategory  //Assigns the contacts that we care about for the ground
+        
         self.ground.physicsBody?.affectedByGravity = false
-//        self.ground.physicsBody?.allowsRotation = false
+
+        self.ground.physicsBody?.allowsRotation = false
         
         self.addChild(self.ground)
     }
