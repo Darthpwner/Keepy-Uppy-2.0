@@ -297,7 +297,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.ceiling.size = CGSizeMake(self.frame.size.width, barrierFactor)   //?
         
         //Create an edge based body for the ceiling
-        self.ceiling.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0, self.frame.size.height - barrierFactor), toPoint: CGPointMake(self.frame.size.width, self.frame.size.height - barrierFactor))  
+        self.ceiling.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0, self.frame.size.height - barrierFactor), toPoint: CGPointMake(self.frame.size.width, self.frame.size.height - barrierFactor))
         
         self.ceiling.physicsBody?.categoryBitMask = ceilingCategory //Assigns the bit mask category for the ceiling
         self.ceiling.physicsBody?.collisionBitMask = ballCategory //Assigns the collision we care about for the ceiling
@@ -333,13 +333,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /*Set up right wall*/
         self.rightWall.color = UIColor.purpleColor()
         //self.rightWall.anchorPoint = CGPointMake(self.frame.size.width, 0.0)  //?
-        self.rightWall.anchorPoint = CGPointMake(self.frame.size.width, 0.0)
+        self.rightWall.anchorPoint = CGPointZero
         //self.rightWall.position = CGPointZero
-        self.rightWall.position = CGPointMake(self.frame.size.width, 0.0)
+        self.rightWall.position = CGPointMake(self.frame.size.width - barrierFactor, 0.0)
         self.rightWall.size = CGSizeMake(barrierFactor, self.frame.size.height)   //?
         
         //Create an edge based body for the right wall
-        self.rightWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(self.frame.size.width, self.frame.size.height), toPoint: CGPointMake(self.frame.size.width, barrierFactor)) //?
+        self.rightWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(self.frame.size.width - barrierFactor, 0.0), toPoint: CGPointMake(self.frame.size.width - barrierFactor, self.frame.size.height)) //?
         
         self.rightWall.physicsBody?.categoryBitMask = wallCategory  //Assign the bit mask category for the right wall
         self.rightWall.physicsBody?.collisionBitMask = ballCategory //Assigns the collision we care about for the right wall
