@@ -57,6 +57,7 @@
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="IQa-nN-Twa" secondAttribute="trailing" id="AVv-Le-xmr"/>
                                             <constraint firstAttribute="centerX" secondItem="IQa-nN-Twa" secondAttribute="centerX" id="Idq-TV-I58"/>
@@ -71,6 +72,10 @@
                                                 <exclude reference="rXg-zQ-SFG"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="yKy-R0-3OX" appends="YES" id="6AK-2r-2B8"/>
+                                            <outletCollection property="gestureRecognizers" destination="yKy-R0-3OX" appends="YES" id="Ubt-4Z-xqb"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yid-iL-fny" userLabel="Start Main View">
                                         <rect key="frame" x="10" y="428" width="612" height="172"/>
@@ -150,8 +155,56 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="yKy-R0-3OX">
+                    <connections>
+                        <segue destination="wRl-LG-uTJ" kind="show" id="PIL-7a-oOu"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="254" y="251"/>
+        </scene>
+        <!--Rules Page-->
+        <scene sceneID="Wii-kh-cMt">
+            <objects>
+                <viewController storyboardIdentifier="Rules Page" title="Rules Page" id="wRl-LG-uTJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jAo-AD-1Gt"/>
+                        <viewControllerLayoutGuide type="bottom" id="wwY-cz-tvO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MSJ-4p-UgN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rules.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-v3-qhG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="l1e-dm-86X">
+                                <rect key="frame" x="266" y="35" width="268" height="530"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PGR-v3-qhG" firstAttribute="top" secondItem="jAo-AD-1Gt" secondAttribute="bottom" constant="-20" id="B65-jb-6LI"/>
+                            <constraint firstItem="l1e-dm-86X" firstAttribute="leading" secondItem="PGR-v3-qhG" secondAttribute="trailing" constant="-334" id="FRl-oO-F58"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PGR-v3-qhG" secondAttribute="trailing" constant="-16" id="HKT-yU-hI3"/>
+                            <constraint firstItem="PGR-v3-qhG" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" constant="-16" id="KmB-F6-3ww"/>
+                            <constraint firstItem="wwY-cz-tvO" firstAttribute="top" secondItem="PGR-v3-qhG" secondAttribute="bottom" id="LYM-yK-y8T"/>
+                            <constraint firstItem="PGR-v3-qhG" firstAttribute="bottom" secondItem="l1e-dm-86X" secondAttribute="bottom" constant="35" id="hwx-NQ-tc6"/>
+                            <constraint firstItem="PGR-v3-qhG" firstAttribute="centerY" secondItem="l1e-dm-86X" secondAttribute="centerY" id="naT-nT-Xpi"/>
+                            <constraint firstItem="l1e-dm-86X" firstAttribute="leading" secondItem="PGR-v3-qhG" secondAttribute="trailing" constant="-334" id="o1W-3Y-njK"/>
+                            <constraint firstItem="l1e-dm-86X" firstAttribute="top" secondItem="PGR-v3-qhG" secondAttribute="bottom" constant="8" symbolic="YES" id="wWF-hA-xwH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="o1W-3Y-njK"/>
+                                <exclude reference="wWF-hA-xwH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ShN-Wr-f5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="246"/>
         </scene>
         <!--Choose Ball Page-->
         <scene sceneID="GWd-FR-LhM">
@@ -352,6 +405,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Back Arrow.png" width="268" height="186"/>
         <image name="Basketball.png" width="340" height="340"/>
         <image name="Beach Ball.png" width="1123" height="1126"/>
         <image name="Beach.jpg" width="700" height="438"/>
@@ -361,6 +415,7 @@
         <image name="Choose Ball Screen.jpg" width="3264" height="2448"/>
         <image name="Desert.jpg" width="600" height="338"/>
         <image name="Forest.png" width="900" height="473"/>
+        <image name="Rules.jpg" width="3840" height="2160"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yhu-8F-ARz"/>
