@@ -11,13 +11,12 @@ import SpriteKit
 import AVFoundation
 
 //Scoring algorithm: Tap the ball -> +1 , Hit a wall -> +1 , Hit the ceiling -> + 2
-//Max possible points per tap: +7 -> Tap the ball, Hit a wall, Hit the ceiling, hit the other wall
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     /*Variables*/
     var canRestart = Bool()
-    var score: NSInteger = 0
+    var gameStarted: Bool = false
     
     var scoreLabelNode = SKLabelNode()
     var background = SKSpriteNode()
@@ -28,6 +27,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var rightWall = SKSpriteNode()
     
     var lives: Int = 1
+    var score: NSInteger = 0
     /*End of variables*/
     
     /*Constants*/
@@ -142,6 +142,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        if !self.ball.userInteractionEnabled {  //If the ball drops, stop playing
 //            return
 //        } //FIX THIS BUG
+        
+        if !gameStarted {
+            //Keep ball in static position
+        }
         
         //Recognizes only a tap on the ball
         let touch = touches.first as? UITouch
