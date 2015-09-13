@@ -25,6 +25,7 @@ enum BallType: Int, Printable {
     }
 }
 
+//Worry about this later
 public class Ball {
     var mass: CGFloat
     var friction: CGFloat
@@ -35,6 +36,4 @@ public class Ball {
         self.friction = friction
         self.restitution = restitution
     }
-
-    //Worry about the class shit later, let's hack this!
 }
