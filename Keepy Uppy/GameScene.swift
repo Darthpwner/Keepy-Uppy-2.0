@@ -141,7 +141,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Disabled to test other features of the game
 //        if !self.ball.userInteractionEnabled {  //If the ball drops, stop playing
 //            return
-//        }
+//        } //FIX THIS BUG
         
         //Recognizes only a tap on the ball
         let touch = touches.first as? UITouch
@@ -271,7 +271,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //4
-    //BUGGY
     func setUpCeiling() -> Void {
         self.ceiling.name = "Ceiling"
         self.ceiling.color = UIColor.orangeColor()
@@ -314,7 +313,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(self.leftWall)
         /*End of Set up left wall*/
         
-        //BUGGY
         /*Set up right wall*/
         self.rightWall.name = "Right Wall"
         self.rightWall.color = UIColor.greenColor()
@@ -383,21 +381,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         ball.anchorPoint = CGPointMake(anchorX, anchorY)
         
-        self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), CGRectGetMidY( self.frame))
+        self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), (9 * size.height) / 10)
         
         self.ball.name = "ball"
         self.ball.userInteractionEnabled = true
         
         ball.physicsBody?.usesPreciseCollisionDetection = true
 
-        //2
         self.ball.physicsBody!.categoryBitMask = ballCategory    //Assigns the bit mask category for ball
         
-        //12
         self.ball.physicsBody!.collisionBitMask = wallCategory | ceilingCategory | groundCategory //Assigns the collisions that the ball can have
 
         //Assigns the contacts that we care about for the ball
-        //13
         self.ball.physicsBody!.contactTestBitMask = groundCategory | wallCategory | ceilingCategory
         addChild(self.ball)
     }
@@ -425,24 +420,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func didBeginContact(contact: SKPhysicsContact) {
         //The condition on left cause problems
         if ( contact.bodyA.categoryBitMask & groundCategory ) == groundCategory || ( contact.bodyB.categoryBitMask & groundCategory ) == groundCategory {
-
-            if contact.bodyA == leftWall.physicsBody || contact.bodyB == leftWall.physicsBody {
-                println("WALL")
-            } else {
-                println(contact.bodyA)
-                println(contact.bodyB)
-            }
-            
-            println("\n")
             
             score = 0
             scoreLabelNode.text = String(score)
             
-            //BUGGY enters this as soon as it enters the scene
             self.ball.physicsBody?.restitution = 0.0    //Prevents the ball from bouncing
-            
-            self.ball.userInteractionEnabled = false    //Not working?
-            //
+            self.ball.userInteractionEnabled = false
             
             playGameplaySong.song.stop()
             playSound("gameover.mp3")   //Sound glitchy since the ball still bounces
@@ -451,10 +434,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             score++
             scoreLabelNode.text = String(score)
-            
-            if contact.bodyA == rightWall.physicsBody || contact.bodyB == rightWall.physicsBody {
-                println("RIGHT WALL")
-            }
             
         } else {
             
