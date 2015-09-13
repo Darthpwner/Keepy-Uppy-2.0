@@ -145,14 +145,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //Recognizes only a tap on the ball
         let touch = touches.first as? UITouch
-        super.touchesBegan(touches , withEvent:event)
+        super.touchesBegan(touches, withEvent:event)
        
         let positionInScene = touch!.locationInNode(self)
         let touchedNode = self.nodeAtPoint(positionInScene)
         
+        /*Magic algorithm, thanks Charlie*/
+        //
+        let pos = touch?.locationInNode(self)
+        //
+        
         if let name = touchedNode.name {
             if name == "ball" {
                 playSound("hit.mp3")
+                
+                //Algorithm for coming up
+                println(ball.position)
+                
                 
                 //if directly underneath
                 moveBallUp()
@@ -393,7 +402,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.ball.physicsBody!.collisionBitMask = wallCategory | ceilingCategory | groundCategory //Assigns the collisions that the ball can have
 
         //Assigns the contacts that we care about for the ball
-        self.ball.physicsBody!.contactTestBitMask = groundCategory | wallCategory | ceilingCategory
+        self.ball.physicsBody!.contactTestBitMask = groundCategory
         addChild(self.ball)
     }
     
