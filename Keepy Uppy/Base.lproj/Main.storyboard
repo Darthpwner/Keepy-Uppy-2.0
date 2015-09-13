@@ -181,10 +181,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Back Arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="l1e-dm-86X">
                                 <rect key="frame" x="152" y="407" width="268" height="158"/>
                             </imageView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sui-X7-BHU" userLabel="Start Subview">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-hZ-Uj6">
+                                <rect key="frame" x="116" y="200" width="369" height="199"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Keep the ball in the air as long as possible! The balls have different levels of bounciness with the beach ball being the most bouncy, the basketball right in the middle, and the bowling ball being the least bouncy. The different background have various damping factors with the desert allowing the most air time, the beach being the happy medium, and the forest having the least air time. Each tap is worth 1 point. Each bounce off a wall is an extra point, and each bounce off the ceiling is an extra 2 points. Enjoy!</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sui-X7-BHU" userLabel="Rules Subview">
                                 <rect key="frame" x="172" y="28" width="257" height="131"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfP-eG-0k1">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfP-eG-0k1">
                                         <rect key="frame" x="4" y="10" width="249" height="111"/>
                                         <gestureRecognizers/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
@@ -207,18 +214,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PGR-v3-qhG" firstAttribute="top" secondItem="jAo-AD-1Gt" secondAttribute="bottom" constant="-20" id="B65-jb-6LI"/>
-                            <constraint firstItem="l1e-dm-86X" firstAttribute="leading" secondItem="PGR-v3-qhG" secondAttribute="trailing" constant="-334" id="FRl-oO-F58"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PGR-v3-qhG" secondAttribute="trailing" constant="-16" id="HKT-yU-hI3"/>
-                            <constraint firstItem="PGR-v3-qhG" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" constant="-16" id="KmB-F6-3ww"/>
-                            <constraint firstItem="wwY-cz-tvO" firstAttribute="top" secondItem="PGR-v3-qhG" secondAttribute="bottom" id="LYM-yK-y8T"/>
+                            <constraint firstItem="PGR-v3-qhG" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" constant="-16" id="C12-yE-BIO"/>
+                            <constraint firstItem="PGR-v3-qhG" firstAttribute="leading" secondItem="l1e-dm-86X" secondAttribute="trailing" constant="-420" id="CYp-3x-Z7c"/>
+                            <constraint firstItem="wwY-cz-tvO" firstAttribute="top" secondItem="PGR-v3-qhG" secondAttribute="bottom" id="G77-fB-vh4"/>
+                            <constraint firstItem="sui-X7-BHU" firstAttribute="leading" secondItem="PGR-v3-qhG" secondAttribute="trailing" constant="-428" id="KxQ-c3-Jze"/>
+                            <constraint firstAttribute="centerY" secondItem="PGR-v3-qhG" secondAttribute="centerY" id="Vbv-ZK-r0x"/>
+                            <constraint firstItem="PGR-v3-qhG" firstAttribute="top" secondItem="sui-X7-BHU" secondAttribute="bottom" constant="-159" id="aNn-pj-Q6H"/>
                             <constraint firstItem="PGR-v3-qhG" firstAttribute="bottom" secondItem="l1e-dm-86X" secondAttribute="bottom" constant="35" id="hwx-NQ-tc6"/>
-                            <constraint firstItem="PGR-v3-qhG" firstAttribute="centerY" secondItem="l1e-dm-86X" secondAttribute="centerY" id="naT-nT-Xpi"/>
+                            <constraint firstItem="PGR-v3-qhG" firstAttribute="top" secondItem="jAo-AD-1Gt" secondAttribute="bottom" constant="-20" id="m8w-N2-mLK"/>
                             <constraint firstItem="l1e-dm-86X" firstAttribute="leading" secondItem="PGR-v3-qhG" secondAttribute="trailing" constant="-334" id="o1W-3Y-njK"/>
+                            <constraint firstItem="lmb-hZ-Uj6" firstAttribute="centerY" secondItem="PGR-v3-qhG" secondAttribute="centerY" id="qaq-N4-pgU"/>
+                            <constraint firstItem="lmb-hZ-Uj6" firstAttribute="top" secondItem="sui-X7-BHU" secondAttribute="bottom" constant="41" id="rIX-mI-2eh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PGR-v3-qhG" secondAttribute="trailing" constant="-16" id="tug-l2-A2W"/>
+                            <constraint firstItem="lmb-hZ-Uj6" firstAttribute="centerX" secondItem="PGR-v3-qhG" secondAttribute="centerX" id="vwE-Zc-9MW"/>
                             <constraint firstItem="l1e-dm-86X" firstAttribute="top" secondItem="PGR-v3-qhG" secondAttribute="bottom" constant="8" symbolic="YES" id="wWF-hA-xwH"/>
+                            <constraint firstItem="l1e-dm-86X" firstAttribute="top" secondItem="lmb-hZ-Uj6" secondAttribute="bottom" constant="8" id="yLY-qG-nBy"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Vbv-ZK-r0x"/>
+                                <exclude reference="hwx-NQ-tc6"/>
                                 <exclude reference="o1W-3Y-njK"/>
                                 <exclude reference="wWF-hA-xwH"/>
                             </mask>
