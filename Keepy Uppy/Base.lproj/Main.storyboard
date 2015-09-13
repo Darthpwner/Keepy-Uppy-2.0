@@ -176,31 +176,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rules.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-v3-qhG">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="401" y="0.0" width="199" height="600"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-hZ-Uj6" userLabel="Description">
-                                <rect key="frame" x="116" y="161" width="369" height="199"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Keep the ball in the air as long as possible! The balls have different levels of bounciness with the beach ball being the most bouncy, the basketball right in the middle, and the bowling ball being the least bouncy. The different background have various damping factors with the desert allowing the most air time, the beach being the happy medium, and the forest having the least air time. Each tap is worth 1 point. Each bounce off a wall is an extra point, and each bounce off the ceiling is an extra 2 points. Enjoy!</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUZ-gh-v2D" userLabel="Back Arrow">
-                                <rect key="frame" x="166" y="394" width="268" height="186"/>
-                                <state key="normal" image="Back Arrow.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-vu-A2n" userLabel="Rules View">
-                                <rect key="frame" x="-6" y="0.0" width="612" height="118.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-vu-A2n" userLabel="Rules View">
+                                <rect key="frame" x="199.5" y="1" width="201.5" height="119"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="lGU-ol-kJu">
-                                        <rect key="frame" x="10" y="10" width="592" height="98.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="lGU-ol-kJu">
+                                        <rect key="frame" x="10" y="10" width="181.5" height="99"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="580" id="FLh-wP-90O"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
-                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.5450980392" green="0.4549019608" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -210,19 +197,52 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="lGU-ol-kJu" firstAttribute="top" secondItem="RsA-vu-A2n" secondAttribute="top" constant="10" id="1Sn-DN-eud"/>
+                                    <constraint firstAttribute="centerX" secondItem="lGU-ol-kJu" secondAttribute="centerX" id="Ejf-MF-Oqw"/>
+                                    <constraint firstItem="lGU-ol-kJu" firstAttribute="leading" secondItem="RsA-vu-A2n" secondAttribute="leading" constant="10" id="S9N-TC-NiU"/>
+                                    <constraint firstAttribute="centerY" secondItem="lGU-ol-kJu" secondAttribute="centerY" id="mQ2-Ke-88B"/>
+                                </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-hZ-Uj6" userLabel="Description">
+                                <rect key="frame" x="46" y="150" width="508" height="204"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Keep the ball in the air as long as possible! The balls have different levels of bounciness with the beach ball being the most bouncy, the basketball right in the middle, and the bowling ball being the least bouncy. The different background have various damping factors with the desert allowing the most air time, the beach being the happy medium, and the forest having the least air time. Each tap is worth 1 point. Each bounce off a wall is an extra point, and each bounce off the ceiling is an extra 2 points. Enjoy!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUZ-gh-v2D" userLabel="Back Arrow">
+                                <rect key="frame" x="16" y="384" width="568" height="186"/>
+                                <state key="normal" image="Back Arrow.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="lmb-hZ-Uj6" firstAttribute="top" secondItem="RsA-vu-A2n" secondAttribute="bottom" constant="30" id="9J8-k1-RIT"/>
                             <constraint firstItem="PGR-v3-qhG" firstAttribute="top" secondItem="jAo-AD-1Gt" secondAttribute="bottom" constant="-20" id="Jet-7N-ODV"/>
+                            <constraint firstItem="lmb-hZ-Uj6" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" constant="30" id="KbE-KZ-OZb"/>
+                            <constraint firstItem="iUZ-gh-v2D" firstAttribute="top" secondItem="lmb-hZ-Uj6" secondAttribute="bottom" constant="30" id="OPF-nO-7Li"/>
                             <constraint firstItem="wwY-cz-tvO" firstAttribute="top" secondItem="PGR-v3-qhG" secondAttribute="bottom" id="QJv-QD-wk6"/>
+                            <constraint firstItem="RsA-vu-A2n" firstAttribute="centerX" secondItem="lmb-hZ-Uj6" secondAttribute="centerX" id="VDe-jX-ROm"/>
                             <constraint firstAttribute="centerY" secondItem="PGR-v3-qhG" secondAttribute="centerY" id="Vbv-ZK-r0x"/>
+                            <constraint firstItem="wwY-cz-tvO" firstAttribute="top" secondItem="iUZ-gh-v2D" secondAttribute="bottom" constant="30" id="YKH-R6-57A"/>
+                            <constraint firstItem="PGR-v3-qhG" firstAttribute="top" secondItem="RsA-vu-A2n" secondAttribute="bottom" constant="-119" id="Zlc-pV-lZY"/>
                             <constraint firstItem="PGR-v3-qhG" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" constant="-16" id="a3V-ud-zC1"/>
+                            <constraint firstItem="PGR-v3-qhG" firstAttribute="leading" secondItem="RsA-vu-A2n" secondAttribute="trailing" id="ctP-OA-zwr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PGR-v3-qhG" secondAttribute="trailing" constant="-16" id="eQC-Zb-5nW"/>
+                            <constraint firstItem="RsA-vu-A2n" firstAttribute="top" secondItem="MSJ-4p-UgN" secondAttribute="topMargin" constant="1" id="gjz-pB-YLZ"/>
+                            <constraint firstAttribute="bottom" secondItem="RsA-vu-A2n" secondAttribute="bottom" constant="480" id="r3Q-DD-kRF"/>
+                            <constraint firstItem="iUZ-gh-v2D" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" id="sHj-8Z-o8T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lmb-hZ-Uj6" secondAttribute="trailing" constant="30" id="sYT-ZO-Bsr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iUZ-gh-v2D" secondAttribute="trailing" id="wEK-Fo-cLu"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Vbv-ZK-r0x"/>
+                                <exclude reference="Zlc-pV-lZY"/>
+                                <exclude reference="a3V-ud-zC1"/>
                             </mask>
                         </variation>
                     </view>
