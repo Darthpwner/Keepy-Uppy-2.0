@@ -156,12 +156,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 /*Calculation algorithm constants*/
                 let pos = touch!.locationInNode(self)
-                let posX = pos.x / size.width   //135 on left, 217 on the right
-                let posY = pos.y / size.height  //24
+                let posX = pos.x / size.width   //0 to 1
+                let posY = pos.y / size.height  //0 to 1
                 let ballCenterX = ball.anchorPoint.x    //0.5
                 let ballCenterY = ball.anchorPoint.y    //0.5
-                let differenceRatioX = (1.0 - abs(ballCenterX - posX))  //Maximum impulse at the center
-                let differenceRatioY = (1.0 - abs(ballCenterY - posY))  //Maximum impulse at the center
+                let differenceRatioX = (1.0 - abs(ballCenterX - posX))  //Maximum impulse at the center (0 to 1)
+                let differenceRatioY = (1.0 - abs(ballCenterY - posY))  //Maximum impulse at the center (0 to 1)
                 /*End of calculation algorithm constants*/
                 
                 moveBall(posX, posY: posY, ballCenterX: ballCenterX, ballCenterY: ballCenterY, differenceRatioX: differenceRatioX, differenceRatioY: differenceRatioY)
