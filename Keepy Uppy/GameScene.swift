@@ -160,7 +160,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //else if off to the side
                 //if mouse is to the right
                 
-                //moveBallLeft()
+                moveBallLeft()
                 
                 //else if mouse is to the left
                 
@@ -277,7 +277,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.ceiling.name = "Ceiling"
         self.ceiling.color = UIColor.orangeColor()
         self.ceiling.position = CGPointMake(size.width / 2, size.height - 30)
-        self.ceiling.size = CGSizeMake(self.frame.size.width, barrierFactor)
+        self.ceiling.size = CGSizeMake(size.width, barrierFactor)
         
         //Create an edge based body for the ceiling
         self.ceiling.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(-size.width / 2, size.height), toPoint: CGPointMake(size.width / 2, size.height))
@@ -299,7 +299,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.leftWall.color = UIColor.greenColor()
         self.leftWall.name = "Left Wall"
         self.leftWall.position = CGPoint(x: 0.0, y: size.height / 2)
-        self.leftWall.size = CGSizeMake(barrierFactor, self.frame.size.height)
+        self.leftWall.size = CGSizeMake(barrierFactor, size.height)
         
         //Create an edge based body for the left wall
         self.leftWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, -size.height / 2), toPoint: CGPointMake(0.0, size.height / 2))
@@ -320,7 +320,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.rightWall.name = "Right Wall"
         self.rightWall.color = UIColor.greenColor()
         self.rightWall.position = CGPoint(x: size.width - 30, y: size.height / 2) //Subtract barrierFactor from wall width
-        self.rightWall.size = CGSizeMake(barrierFactor, self.frame.size.height)
+        self.rightWall.size = CGSizeMake(barrierFactor, size.height)
         
         //Create an edge based body for the right wall
         self.rightWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(size.width, -size.height / 2), toPoint: CGPointMake(size.width, size.height / 2))
@@ -342,7 +342,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.ground.name = "Ground"
         self.ground.color = UIColor.redColor()
         self.ground.position = CGPointMake(size.width / 2, 0.0)
-        self.ground.size = CGSizeMake(self.frame.size.width, barrierFactor)
+        self.ground.size = CGSizeMake(size.width, barrierFactor)
         
         //Create an edge based body for the ground
         self.ground.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(-size.width / 2, 0.0), toPoint: CGPointMake(size.width, 0.0))
