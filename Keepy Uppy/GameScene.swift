@@ -155,16 +155,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 playSound("hit.mp3")
                 
                 /*Calculation algorithm constants*/
-                let pos = touch?.locationInNode(self)
-                let posX = pos?.x
-                let posY = pos?.y
-                let ballCenterX = ball.anchorPoint.x
-                let ballCenterY = ball.anchorPoint.y
-                let differenceRatioX = (abs(ballCenterX - posX!) % 100.0) / 100.0
-                let differenceRatioY = (abs(ballCenterY - posY!) % 100.0) / 100.0
+                let pos = touch!.locationInNode(self)
+                let posX = pos.x / size.width   //135 on left, 217 on the right
+                let posY = pos.y / size.height  //24
+                let ballCenterX = ball.anchorPoint.x    //0.5
+                let ballCenterY = ball.anchorPoint.y    //0.5
+                let differenceRatioX = (1.0 - abs(ballCenterX - posX))  //Maximum impulse at the center
+                let differenceRatioY = (1.0 - abs(ballCenterY - posY))  //Maximum impulse at the center
                 /*End of calculation algorithm constants*/
                 
-                moveBall(posX!, posY: posY!, ballCenterX: ballCenterX, ballCenterY: ballCenterY, differenceRatioX: differenceRatioX, differenceRatioY: differenceRatioY)
+                moveBall(posX, posY: posY, ballCenterX: ballCenterX, ballCenterY: ballCenterY, differenceRatioX: differenceRatioX, differenceRatioY: differenceRatioY)
                 
                 score++
                 scoreLabelNode.text = String(score)
@@ -176,19 +176,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func moveBall(posX: CGFloat, posY: CGFloat, ballCenterX: CGFloat, ballCenterY: CGFloat, differenceRatioX: CGFloat, differenceRatioY: CGFloat) -> Void {
         if posX < ballCenterX { //Ball moves right
             if chooseBall.ballType == BallType.BeachBall {
-                ball.physicsBody?.applyImpulse(CGVectorMake(impulseFactor * beachBallMultiplier * differenceRatioX, impulseFactor * beachBallMultiplier * differenceRatioY))
+                ball.physicsBody?.applyImpulse(CGVectorMake(impulseFactor % (beachBallMultiplier * differenceRatioX * impulseFactor), impulseFactor * beachBallMultiplier * differenceRatioY))
             } else if chooseBall.ballType == BallType.Basketball {
-                ball.physicsBody?.applyImpulse(CGVectorMake(impulseFactor * basketBallMultiplier * differenceRatioX, impulseFactor * basketBallMultiplier * differenceRatioY))
+                ball.physicsBody?.applyImpulse(CGVectorMake(impulseFactor % (basketBallMultiplier * differenceRatioX * impulseFactor), impulseFactor * basketBallMultiplier * differenceRatioY))
             } else {
-                ball.physicsBody?.applyImpulse(CGVectorMake(impulseFactor * bowlingBallMultiplier * differenceRatioX, impulseFactor * bowlingBallMultiplier * differenceRatioY))
+                ball.physicsBody?.applyImpulse(CGVectorMake(impulseFactor % (bowlingBallMultiplier * differenceRatioX * impulseFactor), impulseFactor * bowlingBallMultiplier * differenceRatioY))
             }
         } else if posX > ballCenterX {  //Ball moves left
             if chooseBall.ballType == BallType.BeachBall {
-                ball.physicsBody?.applyImpulse(CGVectorMake(-1 * impulseFactor * beachBallMultiplier * differenceRatioX, impulseFactor * beachBallMultiplier * differenceRatioY))
+                ball.physicsBody?.applyImpulse(CGVectorMake((-1 * impulseFactor) % (beachBallMultiplier * differenceRatioX * impulseFactor), impulseFactor * beachBallMultiplier * differenceRatioY))
             } else if chooseBall.ballType == BallType.Basketball {
-                ball.physicsBody?.applyImpulse(CGVectorMake(-1 * impulseFactor * basketBallMultiplier * differenceRatioX, impulseFactor * basketBallMultiplier * differenceRatioY))
+                ball.physicsBody?.applyImpulse(CGVectorMake((-1 * impulseFactor) % (basketBallMultiplier * differenceRatioX * impulseFactor), impulseFactor * basketBallMultiplier * differenceRatioY))
             } else {
-                ball.physicsBody?.applyImpulse(CGVectorMake(-1 * impulseFactor * bowlingBallMultiplier * differenceRatioX, impulseFactor * bowlingBallMultiplier * differenceRatioY))
+                ball.physicsBody?.applyImpulse(CGVectorMake((-1 * impulseFactor) % (bowlingBallMultiplier * differenceRatioX * impulseFactor), impulseFactor * bowlingBallMultiplier * differenceRatioY))
             }
         } else {    //Ball moves straight up
             if chooseBall.ballType == BallType.BeachBall {
