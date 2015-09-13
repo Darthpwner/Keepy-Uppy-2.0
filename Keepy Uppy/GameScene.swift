@@ -164,7 +164,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 //else if mouse is to the left
                 
-                moveBallRight()
+                //moveBallRight()
                 
                 //else (combination of both)
                 //move combined vector
@@ -271,34 +271,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(background)
     }
     
-//    /////
-//    self.ground.name = "Ground"
-//    self.ground.color = UIColor.redColor()
-//    self.ground.position = CGPointZero
-//    self.ground.size = CGSizeMake(self.frame.size.width, barrierFactor)
-//    
-//    //Create an edge based body for the ground
-//    self.ground.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, barrierFactor), toPoint: CGPointMake(self.frame.size.width, barrierFactor))
-//    
-//    self.ground.physicsBody?.categoryBitMask = groundCategory    //Assigns the bit mask category for ground
-//    self.ground.physicsBody?.contactTestBitMask = ballCategory  //Assigns the contacts that we care about for the ground
-//    
-//    self.ground.physicsBody?.affectedByGravity = false
-//    
-//    self.ground.physicsBody?.allowsRotation = false
-//    
-//    self.addChild(self.ground)
-
-    
     //4
     func setUpCeiling() -> Void {
         self.ceiling.name = "Ceiling"
         self.ceiling.color = UIColor.orangeColor()
-        self.ceiling.position = CGPointMake(size.width / 2, size.height)  //Subtract barrierFactor from ceiling height
+        self.ceiling.position = CGPointMake(size.width / 2, size.height)
         self.ceiling.size = CGSizeMake(self.frame.size.width, barrierFactor)
         
         //Create an edge based body for the ceiling
-        self.ceiling.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0, self.frame.size.height - barrierFactor), toPoint: CGPointMake(self.frame.size.width, self.frame.size.height - barrierFactor))
+        self.ceiling.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(size.width, -size.height / 2), toPoint: CGPointMake(size.width, size.height / 2))
         
         self.ceiling.physicsBody?.categoryBitMask = ceilingCategory //Assigns the bit mask category for the ceiling
         self.ceiling.physicsBody?.collisionBitMask = ballCategory //Assigns the collision we care about for the ceiling
@@ -337,7 +318,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /*Set up right wall*/
         self.rightWall.name = "Right Wall"
         self.rightWall.color = UIColor.greenColor()
-        self.rightWall.position = CGPoint(x: size.width - 10, y: size.height / 2) //Subtract barrierFactor from wall width
+        self.rightWall.position = CGPoint(x: size.width, y: size.height / 2) //Subtract barrierFactor from wall width
         self.rightWall.size = CGSizeMake(barrierFactor, self.frame.size.height)
         
         //Create an edge based body for the right wall
