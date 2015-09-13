@@ -16,7 +16,6 @@ import AVFoundation
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     /*Variables*/
-    //From Flappy Bird example
     var canRestart = Bool()
     var score: NSInteger = 0
     
@@ -164,7 +163,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 //else if mouse is to the left
                 
-                //moveBallRight()
+                moveBallRight()
                 
                 //else (combination of both)
                 //move combined vector
@@ -276,11 +275,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setUpCeiling() -> Void {
         self.ceiling.name = "Ceiling"
         self.ceiling.color = UIColor.orangeColor()
-        self.ceiling.position = CGPointMake(size.width / 2, size.height - 30)
+        self.ceiling.position = CGPointMake(size.width / 2, size.height)
         self.ceiling.size = CGSizeMake(size.width, barrierFactor)
         
         //Create an edge based body for the ceiling
-        self.ceiling.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(-size.width / 2, size.height), toPoint: CGPointMake(size.width / 2, size.height))
+        self.ceiling.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(-size.width / 2, 0.0), toPoint: CGPointMake(size.width / 2, 0.0))
         
         self.ceiling.physicsBody?.categoryBitMask = ceilingCategory //Assigns the bit mask category for the ceiling
         self.ceiling.physicsBody?.collisionBitMask = ballCategory //Assigns the collision we care about for the ceiling
@@ -319,11 +318,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /*Set up right wall*/
         self.rightWall.name = "Right Wall"
         self.rightWall.color = UIColor.greenColor()
-        self.rightWall.position = CGPoint(x: size.width - 30, y: size.height / 2) //Subtract barrierFactor from wall width
+        self.rightWall.position = CGPoint(x: size.width, y: size.height / 2) //Subtract barrierFactor from wall width
         self.rightWall.size = CGSizeMake(barrierFactor, size.height)
         
         //Create an edge based body for the right wall
-        self.rightWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(size.width, -size.height / 2), toPoint: CGPointMake(size.width, size.height / 2))
+        self.rightWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, -size.height / 2), toPoint: CGPointMake(0.0, size.height / 2))
         
         self.rightWall.physicsBody?.categoryBitMask = wallCategory  //Assign the bit mask category for the right wall
         self.rightWall.physicsBody?.collisionBitMask = ballCategory //Assigns the collision we care about for the right wall
@@ -384,7 +383,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         ball.anchorPoint = CGPointMake(anchorX, anchorY)
         
-        self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), self.frame.size.height)
+        self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), CGRectGetMidY( self.frame))
         
         self.ball.name = "ball"
         self.ball.userInteractionEnabled = true
@@ -434,7 +433,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 println(contact.bodyB)
             }
             
-            println("\n\n")
+            println("\n")
             
             score = 0
             scoreLabelNode.text = String(score)
@@ -448,11 +447,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             playGameplaySong.song.stop()
             playSound("gameover.mp3")   //Sound glitchy since the ball still bounces
             
-            //Problem is because contactDelegate is not set!
         } else if ( contact.bodyA.categoryBitMask & wallCategory) == wallCategory || ( contact.bodyB.categoryBitMask & wallCategory) == wallCategory {
             
             score++
             scoreLabelNode.text = String(score)
+            
+            if contact.bodyA == rightWall.physicsBody || contact.bodyB == rightWall.physicsBody {
+                println("RIGHT WALL")
+            }
+            
         } else {
             
             score += 2
