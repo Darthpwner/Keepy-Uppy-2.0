@@ -180,6 +180,10 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="l1e-dm-86X">
                                 <rect key="frame" x="152" y="407" width="268" height="186"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ePJ-Fg-mfm" appends="YES" id="edX-WT-ZHC"/>
+                                </connections>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-hZ-Uj6" userLabel="Description">
                                 <rect key="frame" x="116" y="200" width="369" height="199"/>
@@ -243,6 +247,11 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ShN-Wr-f5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ePJ-Fg-mfm">
+                    <connections>
+                        <segue destination="LVB-YS-i5n" kind="show" id="8CD-v6-FfR"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1006" y="246"/>
         </scene>
