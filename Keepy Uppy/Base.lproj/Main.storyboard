@@ -178,70 +178,51 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rules.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-v3-qhG">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="l1e-dm-86X">
-                                <rect key="frame" x="152" y="407" width="268" height="186"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ePJ-Fg-mfm" appends="YES" id="edX-WT-ZHC"/>
-                                </connections>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-hZ-Uj6" userLabel="Description">
-                                <rect key="frame" x="116" y="200" width="369" height="199"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-hZ-Uj6" userLabel="Description">
+                                <rect key="frame" x="116" y="161" width="369" height="199"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="199" id="TdL-PZ-iib"/>
-                                </constraints>
                                 <string key="text">Keep the ball in the air as long as possible! The balls have different levels of bounciness with the beach ball being the most bouncy, the basketball right in the middle, and the bowling ball being the least bouncy. The different background have various damping factors with the desert allowing the most air time, the beach being the happy medium, and the forest having the least air time. Each tap is worth 1 point. Each bounce off a wall is an extra point, and each bounce off the ceiling is an extra 2 points. Enjoy!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sui-X7-BHU" userLabel="Rules Subview">
-                                <rect key="frame" x="620" y="28" width="0.0" height="131"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUZ-gh-v2D" userLabel="Back Arrow">
+                                <rect key="frame" x="166" y="394" width="268" height="186"/>
+                                <state key="normal" image="Back Arrow.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-vu-A2n" userLabel="Rules View">
+                                <rect key="frame" x="-6" y="0.0" width="612" height="118.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfP-eG-0k1">
-                                        <rect key="frame" x="4" y="10" width="249" height="111"/>
-                                        <gestureRecognizers/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="lGU-ol-kJu">
+                                        <rect key="frame" x="10" y="10" width="592" height="98.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="580" id="FLh-wP-90O"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
-                                        <state key="normal" title="RULES">
-                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="FLh-wP-90O"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="GfP-eG-0k1" firstAttribute="leading" secondItem="sui-X7-BHU" secondAttribute="leading" constant="4" id="OiB-bT-5x8"/>
-                                    <constraint firstAttribute="centerY" secondItem="GfP-eG-0k1" secondAttribute="centerY" id="RSN-0w-riQ"/>
-                                    <constraint firstAttribute="centerX" secondItem="GfP-eG-0k1" secondAttribute="centerX" constant="-128.5" id="kZc-f2-qVu"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="l1e-dm-86X" firstAttribute="top" secondItem="lmb-hZ-Uj6" secondAttribute="bottom" constant="8" id="0tS-bX-aA3"/>
-                            <constraint firstItem="sui-X7-BHU" firstAttribute="top" secondItem="MSJ-4p-UgN" secondAttribute="topMargin" constant="28" id="3Ah-Gg-jae"/>
-                            <constraint firstItem="lmb-hZ-Uj6" firstAttribute="top" secondItem="sui-X7-BHU" secondAttribute="bottom" constant="41" id="3Nx-eR-VW6"/>
-                            <constraint firstItem="lmb-hZ-Uj6" firstAttribute="centerX" secondItem="PGR-v3-qhG" secondAttribute="centerX" id="8GA-gz-XcF"/>
-                            <constraint firstItem="sui-X7-BHU" firstAttribute="leading" secondItem="PGR-v3-qhG" secondAttribute="trailing" constant="20" id="BEZ-ln-QkQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PGR-v3-qhG" secondAttribute="trailing" constant="-16" id="Ckg-8C-eVw"/>
-                            <constraint firstItem="PGR-v3-qhG" firstAttribute="leading" secondItem="l1e-dm-86X" secondAttribute="trailing" constant="-420" id="N1s-IZ-74B"/>
-                            <constraint firstItem="PGR-v3-qhG" firstAttribute="top" secondItem="jAo-AD-1Gt" secondAttribute="bottom" constant="-20" id="O3R-it-lCL"/>
-                            <constraint firstItem="PGR-v3-qhG" firstAttribute="top" secondItem="sui-X7-BHU" secondAttribute="bottom" constant="-159" id="OQ5-rb-v4z"/>
+                            <constraint firstItem="PGR-v3-qhG" firstAttribute="top" secondItem="jAo-AD-1Gt" secondAttribute="bottom" constant="-20" id="Jet-7N-ODV"/>
+                            <constraint firstItem="wwY-cz-tvO" firstAttribute="top" secondItem="PGR-v3-qhG" secondAttribute="bottom" id="QJv-QD-wk6"/>
                             <constraint firstAttribute="centerY" secondItem="PGR-v3-qhG" secondAttribute="centerY" id="Vbv-ZK-r0x"/>
-                            <constraint firstItem="lmb-hZ-Uj6" firstAttribute="leading" secondItem="PGR-v3-qhG" secondAttribute="trailing" constant="-484" id="WbX-T9-0o1"/>
-                            <constraint firstItem="sui-X7-BHU" firstAttribute="centerX" secondItem="PGR-v3-qhG" secondAttribute="centerX" constant="320" id="YPk-IL-MXt"/>
-                            <constraint firstItem="PGR-v3-qhG" firstAttribute="bottom" secondItem="l1e-dm-86X" secondAttribute="bottom" constant="35" id="hwx-NQ-tc6"/>
-                            <constraint firstItem="PGR-v3-qhG" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" constant="-16" id="mdJ-hk-rYa"/>
-                            <constraint firstItem="wwY-cz-tvO" firstAttribute="top" secondItem="PGR-v3-qhG" secondAttribute="bottom" id="nCc-Es-4Cq"/>
-                            <constraint firstItem="l1e-dm-86X" firstAttribute="leading" secondItem="PGR-v3-qhG" secondAttribute="trailing" constant="-334" id="o1W-3Y-njK"/>
-                            <constraint firstItem="l1e-dm-86X" firstAttribute="top" secondItem="PGR-v3-qhG" secondAttribute="bottom" constant="8" symbolic="YES" id="wWF-hA-xwH"/>
+                            <constraint firstItem="PGR-v3-qhG" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" constant="-16" id="a3V-ud-zC1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PGR-v3-qhG" secondAttribute="trailing" constant="-16" id="eQC-Zb-5nW"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Vbv-ZK-r0x"/>
-                                <exclude reference="hwx-NQ-tc6"/>
-                                <exclude reference="o1W-3Y-njK"/>
-                                <exclude reference="wWF-hA-xwH"/>
                             </mask>
                         </variation>
                     </view>
@@ -493,7 +474,7 @@
         <image name="Rules.jpg" width="3840" height="2160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YS7-q0-uAq"/>
+        <segue reference="8CD-v6-FfR"/>
         <segue reference="vtN-6b-H2E"/>
         <segue reference="yhu-8F-ARz"/>
         <segue reference="oX6-TG-0GF"/>
