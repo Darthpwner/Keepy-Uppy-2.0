@@ -88,7 +88,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let ceilingCategory: UInt32 = 0x1 << 3
     /*End of Category bit masks*/
     
-    let playStartSong = PlayStartSong.sharedInstance
+    let playGameplaySong = PlayGameplaySong.sharedInstance
     
     /*End of Constants*/
 
@@ -432,7 +432,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             self.ball.speed = 0 //TODO: FIGURE OUT HOW TO STOP GAME!
             
-            playStartSong.song.stop()
+            playGameplaySong.song.stop()
             playSound("gameover.mp3")   //Sound glitchy
             
             //Problem is because contactDelegate is not set!
