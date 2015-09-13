@@ -175,14 +175,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rules.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-v3-qhG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rules.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-v3-qhG">
                                 <rect key="frame" x="16" y="20" width="568" height="580"/>
                             </imageView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-vu-A2n" userLabel="Rules View">
-                                <rect key="frame" x="199" y="1" width="201.5" height="119"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-vu-A2n" userLabel="Rules View">
+                                <rect key="frame" x="199" y="1" width="202" height="119"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="lGU-ol-kJu">
-                                        <rect key="frame" x="10" y="10" width="181.5" height="99"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="lGU-ol-kJu">
+                                        <rect key="frame" x="10" y="10" width="182" height="99"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="580" id="FLh-wP-90O"/>
                                         </constraints>
@@ -197,8 +197,14 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="lGU-ol-kJu" secondAttribute="centerY" id="IPG-Am-cOl"/>
+                                    <constraint firstAttribute="centerX" secondItem="lGU-ol-kJu" secondAttribute="centerX" id="OW6-UV-hNt"/>
+                                    <constraint firstItem="lGU-ol-kJu" firstAttribute="top" secondItem="RsA-vu-A2n" secondAttribute="top" constant="10" id="OWB-DI-oNl"/>
+                                    <constraint firstItem="lGU-ol-kJu" firstAttribute="leading" secondItem="RsA-vu-A2n" secondAttribute="leading" constant="10" id="QRD-Rd-X6p"/>
+                                </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-hZ-Uj6" userLabel="Description">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-hZ-Uj6" userLabel="Description">
                                 <rect key="frame" x="46" y="150" width="508" height="204"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Keep the ball in the air as long as possible! The balls have different levels of bounciness with the beach ball being the most bouncy, the basketball right in the middle, and the bowling ball being the least bouncy. The different background have various damping factors with the desert allowing the most air time, the beach being the happy medium, and the forest having the least air time. Each tap is worth 1 point. Each bounce off a wall is an extra point, and each bounce off the ceiling is an extra 2 points. Enjoy!</string>
@@ -217,22 +223,33 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PGR-v3-qhG" firstAttribute="centerX" secondItem="RsA-vu-A2n" secondAttribute="centerX" constant="0.25" id="6im-ft-bSU"/>
+                            <constraint firstItem="PGR-v3-qhG" firstAttribute="centerX" secondItem="RsA-vu-A2n" secondAttribute="centerX" id="6im-ft-bSU"/>
                             <constraint firstItem="wwY-cz-tvO" firstAttribute="top" secondItem="PGR-v3-qhG" secondAttribute="bottom" id="B7A-vh-P6Z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PGR-v3-qhG" secondAttribute="trailing" id="E85-Oz-axN"/>
-                            <constraint firstItem="iUZ-gh-v2D" firstAttribute="top" secondItem="lmb-hZ-Uj6" secondAttribute="bottom" constant="30" id="FK5-ZF-E3V"/>
-                            <constraint firstItem="lmb-hZ-Uj6" firstAttribute="top" secondItem="RsA-vu-A2n" secondAttribute="bottom" constant="30" id="Ffu-o3-Wg9"/>
-                            <constraint firstItem="PGR-v3-qhG" firstAttribute="top" secondItem="RsA-vu-A2n" secondAttribute="bottom" constant="-100" id="QgZ-Q3-wYg"/>
+                            <constraint firstItem="RsA-vu-A2n" firstAttribute="centerX" secondItem="lmb-hZ-Uj6" secondAttribute="centerX" id="F6S-4Y-xxF"/>
+                            <constraint firstItem="iUZ-gh-v2D" firstAttribute="top" secondItem="lmb-hZ-Uj6" secondAttribute="bottom" constant="20" id="FK5-ZF-E3V"/>
+                            <constraint firstItem="lmb-hZ-Uj6" firstAttribute="top" secondItem="RsA-vu-A2n" secondAttribute="bottom" constant="20" id="Ffu-o3-Wg9"/>
+                            <constraint firstItem="RsA-vu-A2n" firstAttribute="top" secondItem="MSJ-4p-UgN" secondAttribute="topMargin" constant="1" id="OTc-9d-BeT"/>
+                            <constraint firstAttribute="bottom" secondItem="RsA-vu-A2n" secondAttribute="bottom" constant="480" id="Otx-2z-Cy6"/>
+                            <constraint firstItem="lmb-hZ-Uj6" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" constant="30" id="QM2-MX-Nng"/>
+                            <constraint firstItem="PGR-v3-qhG" firstAttribute="top" secondItem="RsA-vu-A2n" secondAttribute="bottom" constant="20" id="QgZ-Q3-wYg"/>
                             <constraint firstItem="PGR-v3-qhG" firstAttribute="top" secondItem="jAo-AD-1Gt" secondAttribute="bottom" id="Udx-Ar-BVC"/>
                             <constraint firstAttribute="centerX" secondItem="lmb-hZ-Uj6" secondAttribute="centerX" id="aD0-Ln-FQb"/>
                             <constraint firstItem="PGR-v3-qhG" firstAttribute="trailing" secondItem="MSJ-4p-UgN" secondAttribute="trailingMargin" id="cHM-pz-MA8"/>
+                            <constraint firstItem="RsA-vu-A2n" firstAttribute="top" secondItem="MSJ-4p-UgN" secondAttribute="topMargin" constant="1" id="eZd-Ar-4bA"/>
+                            <constraint firstItem="RsA-vu-A2n" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leading" constant="199" id="j7V-Ey-D4h"/>
                             <constraint firstAttribute="centerX" secondItem="iUZ-gh-v2D" secondAttribute="centerX" id="lgq-W9-lmh"/>
-                            <constraint firstItem="wwY-cz-tvO" firstAttribute="top" secondItem="iUZ-gh-v2D" secondAttribute="bottom" constant="30" id="lo5-Nq-T6Q"/>
+                            <constraint firstItem="wwY-cz-tvO" firstAttribute="top" secondItem="iUZ-gh-v2D" secondAttribute="bottom" constant="20" id="lo5-Nq-T6Q"/>
                             <constraint firstItem="PGR-v3-qhG" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" id="nmG-cl-ClZ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="E85-Oz-axN"/>
+                                <exclude reference="QgZ-Q3-wYg"/>
+                                <exclude reference="Udx-Ar-BVC"/>
+                                <exclude reference="Otx-2z-Cy6"/>
+                                <exclude reference="eZd-Ar-4bA"/>
+                                <exclude reference="j7V-Ey-D4h"/>
                             </mask>
                         </variation>
                     </view>
