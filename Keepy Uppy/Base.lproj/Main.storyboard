@@ -216,6 +216,9 @@
                                 <state key="normal" image="Back Arrow.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="LVB-YS-i5n" kind="show" id="jdC-wa-qwK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -226,10 +229,7 @@
                             <constraint firstItem="iUZ-gh-v2D" firstAttribute="top" secondItem="lmb-hZ-Uj6" secondAttribute="bottom" constant="30" id="OPF-nO-7Li"/>
                             <constraint firstItem="wwY-cz-tvO" firstAttribute="top" secondItem="PGR-v3-qhG" secondAttribute="bottom" id="QJv-QD-wk6"/>
                             <constraint firstItem="RsA-vu-A2n" firstAttribute="centerX" secondItem="lmb-hZ-Uj6" secondAttribute="centerX" id="VDe-jX-ROm"/>
-                            <constraint firstAttribute="centerY" secondItem="PGR-v3-qhG" secondAttribute="centerY" id="Vbv-ZK-r0x"/>
                             <constraint firstItem="wwY-cz-tvO" firstAttribute="top" secondItem="iUZ-gh-v2D" secondAttribute="bottom" constant="30" id="YKH-R6-57A"/>
-                            <constraint firstItem="PGR-v3-qhG" firstAttribute="top" secondItem="RsA-vu-A2n" secondAttribute="bottom" constant="-119" id="Zlc-pV-lZY"/>
-                            <constraint firstItem="PGR-v3-qhG" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" constant="-16" id="a3V-ud-zC1"/>
                             <constraint firstItem="PGR-v3-qhG" firstAttribute="leading" secondItem="RsA-vu-A2n" secondAttribute="trailing" id="ctP-OA-zwr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PGR-v3-qhG" secondAttribute="trailing" constant="-16" id="eQC-Zb-5nW"/>
                             <constraint firstItem="RsA-vu-A2n" firstAttribute="top" secondItem="MSJ-4p-UgN" secondAttribute="topMargin" constant="1" id="gjz-pB-YLZ"/>
@@ -238,13 +238,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="lmb-hZ-Uj6" secondAttribute="trailing" constant="30" id="sYT-ZO-Bsr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iUZ-gh-v2D" secondAttribute="trailing" id="wEK-Fo-cLu"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Vbv-ZK-r0x"/>
-                                <exclude reference="Zlc-pV-lZY"/>
-                                <exclude reference="a3V-ud-zC1"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ShN-Wr-f5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
