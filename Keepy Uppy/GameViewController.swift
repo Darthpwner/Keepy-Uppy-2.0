@@ -17,11 +17,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     let playGameplaySong = PlayGameplaySong.sharedInstance
 
     override func viewDidLoad() {
-        println("SECOND")
-        
         super.viewDidLoad()
-        
-        //I am not sure what the code below does
         
         //Configure the view.
         let skView = view as! SKView

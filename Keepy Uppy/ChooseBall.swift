@@ -18,16 +18,13 @@ class ChooseBall: UIViewController {
     
     @IBAction func chooseBeachBall(sender: UIButton) {
         getBallType.ballType = BallType.BeachBall
-        println(getBallType.ballType)
     }
     
     @IBAction func chooseBasketball(sender: UIButton) {
          getBallType.ballType = BallType.Basketball
-        println(getBallType.ballType)
     }
     
     @IBAction func chooseBowlingBall(sender: UIButton) {
         getBallType.ballType = BallType.BowlingBall
-        println(getBallType.ballType)
     }
 }

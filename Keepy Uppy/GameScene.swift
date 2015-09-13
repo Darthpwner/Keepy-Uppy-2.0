@@ -159,7 +159,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 moveBallUp()
                 //else if off to the side
                 //if mouse is to the right
-                moveBallLeft()
+                
+                //moveBallLeft()
+                
                 //else if mouse is to the left
                 
                 //moveBallRight()
@@ -257,13 +259,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setUpPhysics() -> Void {
         self.physicsWorld.gravity = CGVectorMake( 0.0, -5.0 )
         self.physicsWorld.contactDelegate = self
-        
-        let physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
-        //Set the friction of that physicsBody to prevent the ball from slowing down when colliding with a border barrier
-        physicsBody.friction = 0
-        // we set the body defining the physics to our scene
-        self.physicsBody = physicsBody
 
+        //DELETE LATER!!!!!
+//        let physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
+//        //Set the friction of that physicsBody to prevent the ball from slowing down when colliding with a border barrier
+//        physicsBody.friction = 0
+//        // we set the body defining the physics to our scene
+//        self.physicsBody = physicsBody
+
+//        self.physicsBody?.categoryBitMask = physicsCategory
+//        self.physicsBody?.contactTestBitMask = groundCategory | ballCategory | ceilingCategory | wallCategory
     }
     
     //3
@@ -353,7 +358,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.ground.position = CGPointZero
         self.ground.size = CGSizeMake(self.frame.size.width, barrierFactor)
         
-        //Create an edge based body for the gorund
+        //Create an edge based body for the ground
         self.ground.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, barrierFactor), toPoint: CGPointMake(self.frame.size.width, barrierFactor))
         
         self.ground.physicsBody?.categoryBitMask = groundCategory    //Assigns the bit mask category for ground
@@ -406,7 +411,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.ball.physicsBody!.categoryBitMask = ballCategory    //Assigns the bit mask category for ball
         
         //12
-        self.ball.physicsBody!.collisionBitMask = wallCategory | ceilingCategory //Assigns the collisions that the ball can have
+        self.ball.physicsBody!.collisionBitMask = wallCategory | ceilingCategory | groundCategory //Assigns the collisions that the ball can have
 
         //Assigns the contacts that we care about for the ball
         //13
@@ -433,7 +438,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Called before each frame is rendered */
     }
     
-    //Handle contact between ball and ground
+    //Handle contact between nodes
     func didBeginContact(contact: SKPhysicsContact) {
         //The condition on left cause problems
         if ( contact.bodyA.categoryBitMask & groundCategory ) == groundCategory || ( contact.bodyB.categoryBitMask & groundCategory ) == groundCategory {
@@ -444,6 +449,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 println(contact.bodyA)
                 println(contact.bodyB)
             }
+            
+            println("\n\n")
             
             score = 0
             scoreLabelNode.text = String(score)
