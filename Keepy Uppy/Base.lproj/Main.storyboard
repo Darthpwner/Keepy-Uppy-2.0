@@ -414,6 +414,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVU-8E-Ns8" userLabel="Back Arrow">
+                                <rect key="frame" x="16" y="406" width="568" height="186"/>
+                                <state key="normal" image="Back Arrow.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="r2j-HC-Fb8" kind="show" id="vtN-6b-H2E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -421,6 +430,7 @@
                             <constraint firstItem="Qpy-yz-FYA" firstAttribute="centerX" secondItem="qS9-HL-rds" secondAttribute="centerX" id="B7i-H5-5tR"/>
                             <constraint firstItem="atY-VD-MFA" firstAttribute="trailing" secondItem="sN3-8J-zNh" secondAttribute="trailingMargin" id="DY0-dv-Ba0"/>
                             <constraint firstItem="Ro6-gK-RRm" firstAttribute="bottom" secondItem="5eP-uw-gwE" secondAttribute="top" id="GLu-nH-SQP"/>
+                            <constraint firstItem="FVU-8E-Ns8" firstAttribute="leading" secondItem="sN3-8J-zNh" secondAttribute="leadingMargin" id="GQV-FI-80o"/>
                             <constraint firstAttribute="centerY" secondItem="eS2-uD-Zs5" secondAttribute="centerY" id="HSI-0p-jdt"/>
                             <constraint firstItem="Qpy-yz-FYA" firstAttribute="height" secondItem="atY-VD-MFA" secondAttribute="height" id="NkO-3k-3yk"/>
                             <constraint firstItem="Qpy-yz-FYA" firstAttribute="height" secondItem="eS2-uD-Zs5" secondAttribute="height" id="OuH-kk-j7K"/>
@@ -433,9 +443,12 @@
                             <constraint firstItem="qS9-HL-rds" firstAttribute="leading" secondItem="sN3-8J-zNh" secondAttribute="leadingMargin" id="l52-aa-xwm"/>
                             <constraint firstAttribute="trailing" secondItem="Ro6-gK-RRm" secondAttribute="trailing" id="mmd-ak-LIS"/>
                             <constraint firstItem="atY-VD-MFA" firstAttribute="top" secondItem="Qpy-yz-FYA" secondAttribute="top" id="n0Q-Zi-GXj"/>
+                            <constraint firstItem="FVU-8E-Ns8" firstAttribute="top" secondItem="Qpy-yz-FYA" secondAttribute="bottom" constant="10" id="nth-qD-7oj"/>
                             <constraint firstItem="eS2-uD-Zs5" firstAttribute="leading" secondItem="qS9-HL-rds" secondAttribute="leading" id="qXh-kt-Eyg"/>
                             <constraint firstItem="qS9-HL-rds" firstAttribute="top" secondItem="h3x-L6-Lxj" secondAttribute="bottom" id="rAZ-AV-c94"/>
+                            <constraint firstItem="5eP-uw-gwE" firstAttribute="top" secondItem="FVU-8E-Ns8" secondAttribute="bottom" constant="8" id="swh-Rh-NM6"/>
                             <constraint firstItem="eS2-uD-Zs5" firstAttribute="bottom" secondItem="Qpy-yz-FYA" secondAttribute="bottom" id="xSv-if-edt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FVU-8E-Ns8" secondAttribute="trailing" id="xcK-AH-Xlx"/>
                             <constraint firstItem="Qpy-yz-FYA" firstAttribute="width" secondItem="eS2-uD-Zs5" secondAttribute="width" id="zVd-pE-W3X"/>
                         </constraints>
                     </view>
@@ -481,6 +494,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YS7-q0-uAq"/>
+        <segue reference="vtN-6b-H2E"/>
         <segue reference="yhu-8F-ARz"/>
         <segue reference="oX6-TG-0GF"/>
     </inferredMetricsTieBreakers>
