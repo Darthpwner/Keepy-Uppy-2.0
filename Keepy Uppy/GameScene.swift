@@ -17,14 +17,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     /*Variables*/
     //From Flappy Bird example
-    var temporaryBall: SKSpriteNode!
-    var moving:SKNode!
     var canRestart = Bool()
-    var scoreLabelNode:SKLabelNode!
     var score: NSInteger = 0
-    var background: SKSpriteNode!
-    var ball = SKSpriteNode()
     
+    var scoreLabelNode = SKLabelNode()
+    var background = SKSpriteNode()
+    var ball = SKSpriteNode()
     var ground = SKSpriteNode()
     var ceiling = SKSpriteNode()
     var leftWall = SKSpriteNode()
@@ -127,41 +125,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //Use this for gameplay
-    override func didMoveToView(view: SKView) {
-        
-        canRestart = false  //Prevent restarts
-        
-        setUpGameAnchor()
-        
-//        // we put contraints on the top, left, right, bottom so that our balls can bounce off them
-//        //self.frame confines the ball to the iOS screen
-        
-        //Fix later
-        let physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
-        //Set the friction of that physicsBody to prevent the ball from slowing down when colliding with a border barrier
-        physicsBody.friction = 0
-        // we set the body defining the physics to our scene
-        self.physicsBody = physicsBody
-        
-//       //WHY IS THIS NEEDED??????
-//        // SkShapeNode is a primitive for drawing like with the AS3 Drawing API
-//        // it has built in support for primitives like a circle, so we pass a radius
-//        let shape = SKShapeNode(circleOfRadius: 20)
-//        // we set the color and line style
-//        shape.strokeColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.5)
-//        shape.lineWidth = 4
-//
-//        // this is the most important line, we define the body
-//        ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width / 2.0)
-//        ball.physicsBody?.dynamic = true
-        
-//        assignPhysicsAttributes(chooseBall.ballType!, typeOfBackground: chooseBackground.backgroundType!)
-        
-        // this will allow the balls to rotate when bouncing off each other
-        ball.physicsBody!.allowsRotation = true
-        
-        self.physicsWorld.contactDelegate = self    //EXPERIMENTAL
-    }
+//    override func didMoveToView(view: SKView) {
+//        
+//        canRestart = false  //Prevent restarts
+//    }
     
     /*
         Directions in which the ball can move
@@ -290,18 +257,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setUpPhysics() -> Void {
         self.physicsWorld.gravity = CGVectorMake( 0.0, -5.0 )
         self.physicsWorld.contactDelegate = self
+        
+        let physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
+        //Set the friction of that physicsBody to prevent the ball from slowing down when colliding with a border barrier
+        physicsBody.friction = 0
+        // we set the body defining the physics to our scene
+        self.physicsBody = physicsBody
+
     }
     
     //3
     func setUpBackground() -> Void {
+        self.background.name = "Background"
         self.background.anchorPoint = CGPointMake(anchorX, anchorY)
         self.background.size.height = self.size.height
         self.background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+        
         self.addChild(background)
     }
     
     //4
     func setUpCeiling() -> Void {
+        self.ceiling.name = "Ceiling"
         self.ceiling.color = UIColor.orangeColor()
         self.ceiling.anchorPoint = CGPointZero
         self.ceiling.position = CGPointMake(0.0, self.frame.size.height - barrierFactor)  //Subtract barrierFactor from ceiling height
@@ -369,7 +346,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //6
     func setUpGround() -> Void {
         
-        //Change barrierFactor to something else
+        self.ground.name = "Ground"
         
         self.ground.color = UIColor.redColor()
         self.ground.anchorPoint = CGPointZero
@@ -400,9 +377,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.ball.setScale(bowlingBallScalingFactor)
         }
         
-        //
-        //WHY IS THIS NEEDED??????
-        
         // SkShapeNode is a primitive for drawing like with the AS3 Drawing API
         // it has built in support for primitives like a circle, so we pass a radius
         let shape = SKShapeNode(circleOfRadius: 20)
@@ -417,7 +391,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         assignPhysicsAttributes(chooseBall.ballType!, typeOfBackground: chooseBackground.backgroundType!)
         
         ball.physicsBody!.allowsRotation = true
-        //
 
         ball.anchorPoint = CGPointMake(anchorX, anchorY)
         
@@ -429,19 +402,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.physicsBody?.usesPreciseCollisionDetection = true
         
         //UNINITIALIZED
+        //2
         self.ball.physicsBody!.categoryBitMask = ballCategory    //Assigns the bit mask category for ball
+        
+        //12
         self.ball.physicsBody!.collisionBitMask = wallCategory | ceilingCategory //Assigns the collisions that the ball can have
 
         //Assigns the contacts that we care about for the ball
+        //13
         self.ball.physicsBody!.contactTestBitMask = groundCategory | wallCategory | ceilingCategory
         addChild(self.ball)
     }
     
     //8
     func setUpScore() -> Void {
+        self.scoreLabelNode.name = "Score"
         self.scoreLabelNode = SKLabelNode(fontNamed:"MarkerFelt-Wide")
         self.scoreLabelNode.fontColor = UIColor.redColor()  //Set font color as red
-        
+    
         //Sets score to be center of the screen
         self.scoreLabelNode.position = CGPointMake( CGRectGetMidX( self.frame ), CGRectGetMidY( self.frame))
         
@@ -457,6 +435,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Handle contact between ball and ground
     func didBeginContact(contact: SKPhysicsContact) {
+        //The condition on left cause problems
         if ( contact.bodyA.categoryBitMask & groundCategory ) == groundCategory || ( contact.bodyB.categoryBitMask & groundCategory ) == groundCategory {
 
             if contact.bodyA == leftWall.physicsBody || contact.bodyB == leftWall.physicsBody {
@@ -469,9 +448,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             score = 0
             scoreLabelNode.text = String(score)
             
+            //BUGGY enters this as soon as it enters the scene
             self.ball.physicsBody?.restitution = 0.0    //Prevents the ball from bouncing
             
             self.ball.userInteractionEnabled = false    //Not working?
+            //
             
             playGameplaySong.song.stop()
             playSound("gameover.mp3")   //Sound glitchy since the ball still bounces
