@@ -175,9 +175,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rules.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-v3-qhG">
-                                <rect key="frame" x="15.5" y="-1560" width="568.5" height="2160"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-vu-A2n" userLabel="Rules View">
                                 <rect key="frame" x="199" y="1" width="201.5" height="118.5"/>
                                 <subviews>
@@ -216,10 +213,13 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-hZ-Uj6" userLabel="Description">
                                 <rect key="frame" x="16" y="119" width="568" height="274.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Keep the ball in the air as long as possible! The balls have different levels of bounciness with the beach ball being the most bouncy, the basketball right in the middle, and the bowling ball being the least bouncy. The different background have various damping factors with the desert allowing the most air time, the beach being the happy medium, and the forest having the least air time. Each tap is worth 1 point, and each bounce off a wall is an extra point. Enjoy!</string>
+                                <string key="text">Keep the ball in the air as long as possible! The balls have different levels of bounciness:  beach ball (bounciest), basketball (medium bounce), and bowling ball (least bounce). The different background have various damping factors: desert (most air time), beach (medium air time), and forest (least air time). Each tap is worth 1 point, and each bounce off a wall is an extra point. Enjoy!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rules.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-v3-qhG">
+                                <rect key="frame" x="15" y="-1560" width="568.5" height="2160"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -244,13 +244,13 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Otx-2z-Cy6"/>
+                                <exclude reference="eZd-Ar-4bA"/>
+                                <exclude reference="j7V-Ey-D4h"/>
                                 <exclude reference="E85-Oz-axN"/>
                                 <exclude reference="QgZ-Q3-wYg"/>
                                 <exclude reference="Udx-Ar-BVC"/>
                                 <exclude reference="nmG-cl-ClZ"/>
-                                <exclude reference="Otx-2z-Cy6"/>
-                                <exclude reference="eZd-Ar-4bA"/>
-                                <exclude reference="j7V-Ey-D4h"/>
                             </mask>
                         </variation>
                     </view>
