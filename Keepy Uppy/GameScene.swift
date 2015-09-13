@@ -160,8 +160,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let posY = pos?.y
                 let ballCenterX = ball.anchorPoint.x
                 let ballCenterY = ball.anchorPoint.y
-                let differenceRatioX = abs(ballCenterX - posX!) / 100.0
-                let differenceRatioY = abs(ballCenterY - posY!) / 100.0
+                let differenceRatioX = (abs(ballCenterX - posX!) % 100.0) / 100.0
+                let differenceRatioY = (abs(ballCenterY - posY!) % 100.0) / 100.0
                 /*End of calculation algorithm constants*/
                 
                 moveBall(posX!, posY: posY!, ballCenterX: ballCenterX, ballCenterY: ballCenterY, differenceRatioX: differenceRatioX, differenceRatioY: differenceRatioY)
