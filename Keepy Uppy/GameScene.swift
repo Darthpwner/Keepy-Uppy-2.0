@@ -169,10 +169,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     */
     //Use to move the ball
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+
+        if !self.ball.userInteractionEnabled {
+            return
+        }
+            
         //Recognizes only a tap on the ball
         let touch = touches.first as? UITouch
         super.touchesBegan(touches , withEvent:event)
-        
+       
         let positionInScene = touch!.locationInNode(self)
         let touchedNode = self.nodeAtPoint(positionInScene)
         
@@ -393,7 +398,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), CGRectGetMidY( self.frame))
         
         self.ball.name = "ball"
-        self.ball.userInteractionEnabled = false
+        self.ball.userInteractionEnabled = true
         
         ball.physicsBody?.usesPreciseCollisionDetection = true
         
@@ -430,10 +435,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             score = 0
             scoreLabelNode.text = String(score)
             
-            self.ball.speed = 0 //TODO: FIGURE OUT HOW TO STOP GAME!
+            self.ball.physicsBody?.restitution = 0.0    //Prevents the ball from bouncing
+            
+            self.ball.userInteractionEnabled = false    //Not working?
             
             playGameplaySong.song.stop()
-            playSound("gameover.mp3")   //Sound glitchy
+            playSound("gameover.mp3")   //Sound glitchy since the ball still bounces
             
             //Problem is because contactDelegate is not set!
         } else if ( contact.bodyA.categoryBitMask & wallCategory) == wallCategory || ( contact.bodyB.categoryBitMask & wallCategory) == wallCategory {
@@ -446,6 +453,4 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             scoreLabelNode.text = String(score)
         }
     }
-    
-    
 }
