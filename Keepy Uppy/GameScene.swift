@@ -170,10 +170,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Use to move the ball
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
 
-        if !self.ball.userInteractionEnabled {
-            return
-        }
-            
+        //Disabled to test other features of the game
+//        if !self.ball.userInteractionEnabled {  //If the ball drops, stop playing
+//            return
+//        }
+        
         //Recognizes only a tap on the ball
         let touch = touches.first as? UITouch
         super.touchesBegan(touches , withEvent:event)
@@ -395,7 +396,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         ball.anchorPoint = CGPointMake(anchorX, anchorY)
         
-        self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), CGRectGetMidY( self.frame))
+        self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), self.frame.size.height)
         
         self.ball.name = "ball"
         self.ball.userInteractionEnabled = true
