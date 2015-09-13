@@ -98,15 +98,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         assignBackground()
         
-        //Create the Phyiscs of the game
+        //Create the Physics of the game
         setUpPhysics()  //2
         
         //Add background
         setUpBackground() //3
         
-        setUpCeiling()  //4 TODO
+        setUpCeiling()  //4 
         
-        setUpWalls()    //5 TODO
+        setUpWalls()    //5
         
         setUpGround()   //6
         
@@ -129,10 +129,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         canRestart = false  //Prevent restarts
         
         setUpGameAnchor()
-        /////////////////////////////////////////
         
         // we put contraints on the top, left, right, bottom so that our balls can bounce off them
-        
         //self.frame confines the ball to the iOS screen
         let physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
         //Set the friction of that physicsBody to prevent the ball from slowing down when colliding with a border barrier
@@ -301,6 +299,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.ceiling.physicsBody?.categoryBitMask = ceilingCategory //Assigns the bit mask category for the ceiling
         self.ceiling.physicsBody?.collisionBitMask = ballCategory //Assigns the collision we care about for the ceiling
+        self.ceiling.physicsBody?.contactTestBitMask = ballCategory  //Assigns the contacts that we care about for the ceiling
         
         self.ceiling.physicsBody?.affectedByGravity = false
         
@@ -322,6 +321,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.leftWall.physicsBody?.categoryBitMask = wallCategory   //Assign the bit mask category for the left wall
         self.leftWall.physicsBody?.collisionBitMask = ballCategory  //Assigns the collision we care about for the left wall
+        self.leftWall.physicsBody?.contactTestBitMask = ballCategory  //Assigns the contacts that we care about for the left wall
         
         self.leftWall.physicsBody?.affectedByGravity = false
         
@@ -341,7 +341,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.rightWall.physicsBody?.categoryBitMask = wallCategory  //Assign the bit mask category for the right wall
         self.rightWall.physicsBody?.collisionBitMask = ballCategory //Assigns the collision we care about for the right wall
-            
+        self.rightWall.physicsBody?.contactTestBitMask = ballCategory  //Assigns the contacts that we care about for the right wall
+        
         self.rightWall.physicsBody?.affectedByGravity = false
             
         self.rightWall.physicsBody?.allowsRotation = false
@@ -386,10 +387,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         ball.anchorPoint = CGPointMake(anchorX, anchorY)
         
-        /* Experiment where the ball drops*/
-        //self.ball.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
         self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), CGRectGetMidY( self.frame))
-        /**/
         
         self.ball.name = "ball"
         self.ball.userInteractionEnabled = false
@@ -398,9 +396,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.ball.physicsBody?.categoryBitMask = ballCategory    //Assigns the bit mask category for ball
         self.ball.physicsBody?.collisionBitMask = wallCategory | ceilingCategory //Assigns the collisions that the ball can have
-        self.ball.physicsBody?.contactTestBitMask = groundCategory   //Assigns the contacts that we care about for the ball
-        
-        addChild(self.ball)  //Add ball to the display list
+
+        //Assigns the contacts that we care about for the ball
+        self.ball.physicsBody?.contactTestBitMask = groundCategory | wallCategory | ceilingCategory
+        addChild(self.ball)
     }
     
     //8
@@ -430,7 +429,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             self.ball.speed = 0 //TODO: FIGURE OUT HOW TO STOP GAME!
             
-            playSound("gameover.mp3")
+            playSound("gameover.mp3")   //Sound glitchy
             
             //Problem is because contactDelegate is not set!
         } else if ( contact.bodyA.categoryBitMask & wallCategory) == wallCategory || ( contact.bodyB.categoryBitMask & wallCategory) == wallCategory {
@@ -443,4 +442,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             scoreLabelNode.text = String(score)
         }
     }
+    
+    
 }
