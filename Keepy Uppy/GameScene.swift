@@ -34,6 +34,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Determine background type
     let chooseBackground = GetBackgroundType.sharedInstance
     
+    //Constant factors for each ball
+    let ballFriction: CGFloat = 0.3
+    let ballMass: CGFloat = 0.5
+    
     //Restitution == how much energy the physics body loses when it bounces
     let basketballRestitution: CGFloat = 0.5
     let beachBallRestitution: CGFloat = 0.8
@@ -225,11 +229,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func assignPhysicsAttributes(typeOfBall: BallType, typeOfBackground: BackgroundType) -> Void {
         if typeOfBall == BallType.BeachBall {
-            setPhysicsAttributesBasedOnBall(0.3, restitution: beachBallRestitution, mass: 0.5)
+            setPhysicsAttributesBasedOnBall(ballFriction, restitution: beachBallRestitution, mass: ballMass)
         } else if typeOfBall == BallType.Basketball {
-            setPhysicsAttributesBasedOnBall(0.3, restitution: basketballRestitution, mass: 0.5)
+            setPhysicsAttributesBasedOnBall(ballFriction, restitution: basketballRestitution, mass: ballMass)
         } else {
-            setPhysicsAttributesBasedOnBall(0.3, restitution: bowlingBallRestitution, mass: 0.5)
+            setPhysicsAttributesBasedOnBall(ballFriction, restitution: bowlingBallRestitution, mass: ballMass)
         }
         
         if typeOfBackground == BackgroundType.Desert {
