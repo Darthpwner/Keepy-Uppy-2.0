@@ -23,7 +23,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var scoreLabelNode:SKLabelNode!
     var score: NSInteger = 0
     var background: SKSpriteNode!
-    var ball: SKSpriteNode!
+    var ball = SKSpriteNode()
     
     var ground = SKSpriteNode()
     var ceiling = SKSpriteNode()
@@ -133,27 +133,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         setUpGameAnchor()
         
-        // we put contraints on the top, left, right, bottom so that our balls can bounce off them
-        //self.frame confines the ball to the iOS screen
+//        // we put contraints on the top, left, right, bottom so that our balls can bounce off them
+//        //self.frame confines the ball to the iOS screen
+        
+        //Fix later
         let physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
         //Set the friction of that physicsBody to prevent the ball from slowing down when colliding with a border barrier
         physicsBody.friction = 0
         // we set the body defining the physics to our scene
         self.physicsBody = physicsBody
         
-        //WHY IS THIS NEEDED??????
-        // SkShapeNode is a primitive for drawing like with the AS3 Drawing API
-        // it has built in support for primitives like a circle, so we pass a radius
-        let shape = SKShapeNode(circleOfRadius: 20)
-        // we set the color and line style
-        shape.strokeColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.5)
-        shape.lineWidth = 4
-
-        // this is the most important line, we define the body
-        ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width / 2.0)
-        ball.physicsBody?.dynamic = true
+//       //WHY IS THIS NEEDED??????
+//        // SkShapeNode is a primitive for drawing like with the AS3 Drawing API
+//        // it has built in support for primitives like a circle, so we pass a radius
+//        let shape = SKShapeNode(circleOfRadius: 20)
+//        // we set the color and line style
+//        shape.strokeColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.5)
+//        shape.lineWidth = 4
+//
+//        // this is the most important line, we define the body
+//        ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width / 2.0)
+//        ball.physicsBody?.dynamic = true
         
-        assignPhysicsAttributes(chooseBall.ballType!, typeOfBackground: chooseBackground.backgroundType!)
+//        assignPhysicsAttributes(chooseBall.ballType!, typeOfBackground: chooseBackground.backgroundType!)
         
         // this will allow the balls to rotate when bouncing off each other
         ball.physicsBody!.allowsRotation = true
@@ -192,7 +194,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //if mouse is to the right
                 moveBallLeft()
                 //else if mouse is to the left
-                moveBallRight()
+                
+                //moveBallRight()
+                
                 //else (combination of both)
                 //move combined vector
                 
@@ -321,12 +325,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setUpWalls() -> Void {
         /*Set up left wall*/
         self.leftWall.color = UIColor.greenColor()
-        self.leftWall.anchorPoint = CGPointZero
-        self.leftWall.position = CGPointZero
+        self.leftWall.name = "Left Wall"
+        //self.leftWall.anchorPoint = CGPointZero
+        self.leftWall.position = CGPoint(x: 0.0, y: size.height / 2)
         self.leftWall.size = CGSizeMake(barrierFactor, self.frame.size.height)
         
         //Create an edge based body for the left wall
-        self.leftWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, barrierFactor), toPoint: CGPointMake(0.0, self.frame.size.height))
+        self.leftWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, -size.height / 2), toPoint: CGPointMake(0.0, size.height / 2))
         
         self.leftWall.physicsBody?.categoryBitMask = wallCategory   //Assign the bit mask category for the left wall
         self.leftWall.physicsBody?.collisionBitMask = ballCategory  //Assigns the collision we care about for the left wall
@@ -340,13 +345,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /*End of Set up left wall*/
             
         /*Set up right wall*/
+        self.rightWall.name = "Right Wall"
         self.rightWall.color = UIColor.brownColor()
-        self.rightWall.anchorPoint = CGPointMake(1, 0)
-        self.rightWall.position = CGPointMake(self.frame.size.width - barrierFactor, 0.0) //Subtract barrierFactor from wall width
+        //self.rightWall.anchorPoint = CGPointZero
+        self.rightWall.position = CGPoint(x: size.width - barrierFactor, y: size.height / 2) //Subtract barrierFactor from wall width
         self.rightWall.size = CGSizeMake(barrierFactor, self.frame.size.height)
         
         //Create an edge based body for the right wall
-        self.rightWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(self.frame.size.width - barrierFactor, 0.0), toPoint: CGPointMake(self.frame.size.width - barrierFactor, self.frame.size.height))
+        self.rightWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(size.width - barrierFactor, -size.height / 2), toPoint: CGPointMake(size.width - barrierFactor, size.height / 2))
         
         self.rightWall.physicsBody?.categoryBitMask = wallCategory  //Assign the bit mask category for the right wall
         self.rightWall.physicsBody?.collisionBitMask = ballCategory //Assigns the collision we care about for the right wall
@@ -393,6 +399,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else {
             self.ball.setScale(bowlingBallScalingFactor)
         }
+        
+        //
+        //WHY IS THIS NEEDED??????
+        
+        // SkShapeNode is a primitive for drawing like with the AS3 Drawing API
+        // it has built in support for primitives like a circle, so we pass a radius
+        let shape = SKShapeNode(circleOfRadius: 20)
+        // we set the color and line style
+        shape.strokeColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.5)
+        shape.lineWidth = 4
+        
+        // this is the most important line, we define the body
+        ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width / 2.0)
+        ball.physicsBody?.dynamic = true
+        
+        assignPhysicsAttributes(chooseBall.ballType!, typeOfBackground: chooseBackground.backgroundType!)
+        
+        ball.physicsBody!.allowsRotation = true
+        //
 
         ball.anchorPoint = CGPointMake(anchorX, anchorY)
         
@@ -403,11 +428,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         ball.physicsBody?.usesPreciseCollisionDetection = true
         
-        self.ball.physicsBody?.categoryBitMask = ballCategory    //Assigns the bit mask category for ball
-        self.ball.physicsBody?.collisionBitMask = wallCategory | ceilingCategory //Assigns the collisions that the ball can have
+        //UNINITIALIZED
+        self.ball.physicsBody!.categoryBitMask = ballCategory    //Assigns the bit mask category for ball
+        self.ball.physicsBody!.collisionBitMask = wallCategory | ceilingCategory //Assigns the collisions that the ball can have
 
         //Assigns the contacts that we care about for the ball
-        self.ball.physicsBody?.contactTestBitMask = groundCategory | wallCategory | ceilingCategory
+        self.ball.physicsBody!.contactTestBitMask = groundCategory | wallCategory | ceilingCategory
         addChild(self.ball)
     }
     
@@ -433,6 +459,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func didBeginContact(contact: SKPhysicsContact) {
         if ( contact.bodyA.categoryBitMask & groundCategory ) == groundCategory || ( contact.bodyB.categoryBitMask & groundCategory ) == groundCategory {
 
+            if contact.bodyA == leftWall.physicsBody || contact.bodyB == leftWall.physicsBody {
+                println("WALL")
+            } else {
+                println(contact.bodyA)
+                println(contact.bodyB)
+            }
+            
             score = 0
             scoreLabelNode.text = String(score)
             
