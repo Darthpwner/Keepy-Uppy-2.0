@@ -272,6 +272,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //4
+    //BUGGY
     func setUpCeiling() -> Void {
         self.ceiling.name = "Ceiling"
         self.ceiling.color = UIColor.orangeColor()
@@ -340,11 +341,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setUpGround() -> Void {
         self.ground.name = "Ground"
         self.ground.color = UIColor.redColor()
-        self.ground.position = CGPointZero
+        self.ground.position = CGPointMake(size.width / 2, 0.0)
         self.ground.size = CGSizeMake(self.frame.size.width, barrierFactor)
         
         //Create an edge based body for the ground
-        self.ground.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, barrierFactor), toPoint: CGPointMake(self.frame.size.width, barrierFactor))
+        self.ground.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(-size.width / 2, 0.0), toPoint: CGPointMake(size.width, 0.0))
         
         self.ground.physicsBody?.categoryBitMask = groundCategory    //Assigns the bit mask category for ground
         self.ground.physicsBody?.contactTestBitMask = ballCategory  //Assigns the contacts that we care about for the ground
