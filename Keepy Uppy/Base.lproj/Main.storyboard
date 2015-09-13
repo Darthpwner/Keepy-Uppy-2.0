@@ -178,9 +178,32 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rules.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-v3-qhG">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="l1e-dm-86X">
-                                <rect key="frame" x="266" y="35" width="268" height="530"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Back Arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="l1e-dm-86X">
+                                <rect key="frame" x="152" y="407" width="268" height="158"/>
                             </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sui-X7-BHU" userLabel="Start Subview">
+                                <rect key="frame" x="172" y="28" width="257" height="131"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfP-eG-0k1">
+                                        <rect key="frame" x="4" y="10" width="249" height="111"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
+                                        <state key="normal" title="RULES">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="GfP-eG-0k1" secondAttribute="bottom" constant="10" id="5Lq-Dr-fET"/>
+                                    <constraint firstAttribute="centerX" secondItem="GfP-eG-0k1" secondAttribute="centerX" id="Adk-xF-csW"/>
+                                    <constraint firstAttribute="trailing" secondItem="GfP-eG-0k1" secondAttribute="trailing" constant="20" id="Hnd-cI-l9t"/>
+                                    <constraint firstItem="GfP-eG-0k1" firstAttribute="leading" secondItem="sui-X7-BHU" secondAttribute="leading" constant="20" id="SB7-OT-h4L"/>
+                                    <constraint firstAttribute="centerY" secondItem="GfP-eG-0k1" secondAttribute="centerY" id="VdE-aY-aMX"/>
+                                    <constraint firstItem="GfP-eG-0k1" firstAttribute="top" secondItem="sui-X7-BHU" secondAttribute="top" constant="10" id="eZF-VC-UFl"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
