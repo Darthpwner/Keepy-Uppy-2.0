@@ -149,33 +149,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
        
         let positionInScene = touch!.locationInNode(self)
         let touchedNode = self.nodeAtPoint(positionInScene)
-        
-        /*Magic algorithm, thanks Charlie*/
-        //
-        let pos = touch?.locationInNode(self)
-        //
-        
+    
         if let name = touchedNode.name {
             if name == "ball" {
                 playSound("hit.mp3")
                 
-                //Algorithm for coming up
-                println(ball.position)
+                /*Calculation algorithm constants*/
+                let pos = touch?.locationInNode(self)
+                let posX = pos?.x
+                let posY = pos?.y
+                let ballCenterX = ball.anchorPoint.x
+                let ballCenterY = ball.anchorPoint.y
+                let differenceRatioX = abs(ballCenterX - posX!) / 100.0
+                let differenceRatioY = abs(ballCenterY - posY!) / 100.0
+                /*End of calculation algorithm constants*/
                 
-                
-                //if directly underneath
-                moveBallUp()
-                //else if off to the side
-                //if mouse is to the right
-                
-                moveBallLeft()
-                
-                //else if mouse is to the left
-                
-                moveBallRight()
-                
-                //else (combination of both)
-                //move combined vector
+                moveBall(posX!, posY: posY!, ballCenterX: ballCenterX, ballCenterY: ballCenterY, differenceRatioX: differenceRatioX, differenceRatioY: differenceRatioY)
                 
                 score++
                 scoreLabelNode.text = String(score)
@@ -183,27 +172,36 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    /*Moving the ball*/
-    func moveBallUp() -> Void {
-        if chooseBall.ballType == BallType.BeachBall {
-            ball.physicsBody?.applyImpulse(CGVectorMake(0, impulseFactor * beachBallMultiplier))
-        } else if chooseBall.ballType == BallType.Basketball {
-            ball.physicsBody?.applyImpulse(CGVectorMake(0, impulseFactor * basketBallMultiplier))
-        } else {
-            ball.physicsBody?.applyImpulse(CGVectorMake(0, impulseFactor * bowlingBallMultiplier))
+    /*Calculation algorithm math*/
+    func moveBall(posX: CGFloat, posY: CGFloat, ballCenterX: CGFloat, ballCenterY: CGFloat, differenceRatioX: CGFloat, differenceRatioY: CGFloat) -> Void {
+        if posX < ballCenterX { //Ball moves right
+            if chooseBall.ballType == BallType.BeachBall {
+                ball.physicsBody?.applyImpulse(CGVectorMake(impulseFactor * beachBallMultiplier * differenceRatioX, impulseFactor * beachBallMultiplier * differenceRatioY))
+            } else if chooseBall.ballType == BallType.Basketball {
+                ball.physicsBody?.applyImpulse(CGVectorMake(impulseFactor * basketBallMultiplier * differenceRatioX, impulseFactor * basketBallMultiplier * differenceRatioY))
+            } else {
+                ball.physicsBody?.applyImpulse(CGVectorMake(impulseFactor * bowlingBallMultiplier * differenceRatioX, impulseFactor * bowlingBallMultiplier * differenceRatioY))
+            }
+        } else if posX > ballCenterX {  //Ball moves left
+            if chooseBall.ballType == BallType.BeachBall {
+                ball.physicsBody?.applyImpulse(CGVectorMake(-1 * impulseFactor * beachBallMultiplier * differenceRatioX, impulseFactor * beachBallMultiplier * differenceRatioY))
+            } else if chooseBall.ballType == BallType.Basketball {
+                ball.physicsBody?.applyImpulse(CGVectorMake(-1 * impulseFactor * basketBallMultiplier * differenceRatioX, impulseFactor * basketBallMultiplier * differenceRatioY))
+            } else {
+                ball.physicsBody?.applyImpulse(CGVectorMake(-1 * impulseFactor * bowlingBallMultiplier * differenceRatioX, impulseFactor * bowlingBallMultiplier * differenceRatioY))
+            }
+        } else {    //Ball moves straight up
+            if chooseBall.ballType == BallType.BeachBall {
+                ball.physicsBody?.applyImpulse(CGVectorMake(0, impulseFactor * beachBallMultiplier * differenceRatioY))
+            } else if chooseBall.ballType == BallType.Basketball {
+                ball.physicsBody?.applyImpulse(CGVectorMake(0, impulseFactor * basketBallMultiplier * differenceRatioY))
+            } else {
+                ball.physicsBody?.applyImpulse(CGVectorMake(0, impulseFactor * bowlingBallMultiplier * differenceRatioY))
+            }
         }
-        
     }
+    /*End of Calculation algorithm math*/
     
-    func moveBallLeft() -> Void {
-        var random = -1 * CGFloat(Float(arc4random()))
-        ball.physicsBody?.applyImpulse(CGVectorMake(random % impulseFactor, 0))
-    }
-    
-    func moveBallRight() -> Void {
-        var random = CGFloat(Float(arc4random()))
-        ball.physicsBody?.applyImpulse(CGVectorMake(random % impulseFactor, 0))
-    }
     /*End of Moving the ball*/
     
     func assignBall() -> Void {
@@ -389,6 +387,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.physicsBody!.allowsRotation = true
 
         ball.anchorPoint = CGPointMake(anchorX, anchorY)
+        
         
         self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), (9 * size.height) / 10)
         
