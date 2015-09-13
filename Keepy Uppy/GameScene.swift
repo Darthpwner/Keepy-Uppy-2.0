@@ -8,6 +8,7 @@
 
 //Actual game play scene
 import SpriteKit
+import AVFoundation
 
 //Scoring algorithm: Tap the ball -> +1 , Hit a wall -> +1 , Hit the ceiling -> + 2
 //Max possible points per tap: +7 -> Tap the ball, Hit a wall, Hit the ceiling, hit the other wall
@@ -86,6 +87,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let wallCategory: UInt32 = 0x1 << 2
     let ceilingCategory: UInt32 = 0x1 << 3
     /*End of Category bit masks*/
+    
+    let playStartSong = PlayStartSong.sharedInstance
     
     /*End of Constants*/
 
@@ -429,6 +432,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             self.ball.speed = 0 //TODO: FIGURE OUT HOW TO STOP GAME!
             
+            playStartSong.song.stop()
             playSound("gameover.mp3")   //Sound glitchy
             
             //Problem is because contactDelegate is not set!

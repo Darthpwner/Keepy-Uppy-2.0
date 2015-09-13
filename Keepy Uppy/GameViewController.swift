@@ -14,7 +14,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var scene: GameScene!
     
-    var song: AVAudioPlayer = AVAudioPlayer()
+    let playGameplaySong = PlayGameplaySong.sharedInstance
 
     override func viewDidLoad() {
         println("SECOND")
@@ -40,21 +40,12 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         skView.presentScene(scene)
         
         //Plays gameplay song
-        prepareAudios()
-        song.play()
+        playGameplaySong.prepareAudios()
+        playGameplaySong.song.play()
     }
     
     override func prefersStatusBarHidden() -> Bool {
         return true
-    }
-    
-    func prepareAudios() {
-        
-        var path = NSBundle.mainBundle().pathForResource("gameplay", ofType: "mp3")
-        song = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path!), error: nil)
-        song.prepareToPlay()
-        
-        song.numberOfLoops = -1 //Makes the song play repeatedly
     }
     
     //Gameplay Functions
