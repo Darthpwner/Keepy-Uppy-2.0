@@ -166,7 +166,7 @@
         <!--Rules Page-->
         <scene sceneID="Wii-kh-cMt">
             <objects>
-                <viewController storyboardIdentifier="Rules Page" title="Rules Page" id="wRl-LG-uTJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Rules Page" title="Rules Page" id="wRl-LG-uTJ" customClass="RulesPage" customModule="Keepy_Uppy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jAo-AD-1Gt"/>
                         <viewControllerLayoutGuide type="bottom" id="wwY-cz-tvO"/>
@@ -175,14 +175,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rules.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-v3-qhG">
-                                <rect key="frame" x="14.5" y="-1560" width="569.5" height="2160"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rules.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-v3-qhG">
+                                <rect key="frame" x="14" y="-1560" width="569.5" height="2160"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-vu-A2n" userLabel="Rules View">
-                                <rect key="frame" x="199" y="1" width="201.5" height="118.5"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-vu-A2n" userLabel="Rules View">
+                                <rect key="frame" x="199" y="1" width="201.5" height="88"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="lGU-ol-kJu">
-                                        <rect key="frame" x="10" y="10" width="181.5" height="98.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="lGU-ol-kJu">
+                                        <rect key="frame" x="10" y="10" width="181.5" height="68"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="580" id="FLh-wP-90O"/>
                                         </constraints>
@@ -213,10 +213,19 @@
                                     <segue destination="LVB-YS-i5n" kind="show" id="jdC-wa-qwK"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-hZ-Uj6" userLabel="Description">
-                                <rect key="frame" x="66" y="207" width="469" height="119.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-hZ-Uj6" userLabel="Description">
+                                <rect key="frame" x="65" y="147" width="469" height="226"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Keep the ball in the air as long as possible! The balls have different levels of bounciness:  beach ball (bounciest), basketball (medium bounce), and bowling ball (least bounce). The different background have various damping factors: desert (most air time), beach (medium air time), and forest (least air time). Each tap is worth 1 point, and each bounce off a wall is an extra point. Enjoy!</string>
+                                <mutableString key="text">• Keep the ball in the air as long as possible! 
+• Each ball has a different level of bounciness:
+Beach Ball (most bounce)
+Basketball (medium bounce)
+Bowling Ball (least bounce) 
+• Each background has a different damping factor: 
+Desert (most air time)
+Beach (medium air time)
+Forest (least air time). 
+• Each tap is worth 1 point, and each bounce off a wall is an extra point Enjoy!</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -254,6 +263,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="rules" destination="lmb-hZ-Uj6" id="UHM-Bb-GJU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ShN-Wr-f5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="ePJ-Fg-mfm">
