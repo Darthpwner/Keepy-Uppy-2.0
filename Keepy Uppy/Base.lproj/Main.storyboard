@@ -218,14 +218,14 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <mutableString key="text">• Keep the ball in the air as long as possible! 
 • Each ball has a different level of bounciness:
-Beach Ball (most bounce)
-Basketball (medium bounce)
-Bowling Ball (least bounce) 
+- Beach Ball (most bounce)
+- Basketball (medium bounce)
+- Bowling Ball (least bounce) 
 • Each background has a different damping factor: 
-Desert (most air time)
-Beach (medium air time)
-Forest (least air time). 
-• Each tap is worth 1 point, and each bounce off a wall is an extra point Enjoy!</mutableString>
+- Desert (most air time)
+- Beach (medium air time)
+- Forest (least air time). 
+• Each tap is worth 1 point, and each bounce off a wall is an extra point.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
