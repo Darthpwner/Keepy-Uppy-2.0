@@ -36,6 +36,7 @@
 		6B6C8D091B9BAC85008678EC /* Beach Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D081B9BAC85008678EC /* Beach Ball.png */; };
 		6B6C8D0F1B9BAE94008678EC /* Bowling Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */; };
 		6B8B55561BA80A100091CAC0 /* scorepoints.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B8B55551BA80A100091CAC0 /* scorepoints.mp3 */; };
+		6B8B55581BA80B9C0091CAC0 /* RulesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8B55571BA80B9C0091CAC0 /* RulesPage.swift */; };
 		6B94375C1B9C0F080049AA91 /* PlayStartSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */; };
 		6B94375E1B9C1A090049AA91 /* TitlePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94375D1B9C1A090049AA91 /* TitlePage.swift */; };
 		6BD2D38B1B9D05EE0052FBA7 /* Bouncing Ball.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6BD2D38A1B9D05EE0052FBA7 /* Bouncing Ball.gif */; };
@@ -94,6 +95,7 @@
 		6B6C8D081B9BAC85008678EC /* Beach Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Beach Ball.png"; sourceTree = "<group>"; };
 		6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bowling Ball.png"; sourceTree = "<group>"; };
 		6B8B55551BA80A100091CAC0 /* scorepoints.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = scorepoints.mp3; sourceTree = "<group>"; };
+		6B8B55571BA80B9C0091CAC0 /* RulesPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesPage.swift; sourceTree = "<group>"; };
 		6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayStartSong.swift; sourceTree = "<group>"; };
 		6B94375D1B9C1A090049AA91 /* TitlePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlePage.swift; sourceTree = "<group>"; };
 		6BD2D38A1B9D05EE0052FBA7 /* Bouncing Ball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Bouncing Ball.gif"; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				6B5D0E051BA0A4810052AC3C /* GameScene.sks */,
 				6B6897141B98B2CA00C5069E /* GameScene.swift */,
 				6B6897161B98B2CA00C5069E /* GameViewController.swift */,
+				6B8B55571BA80B9C0091CAC0 /* RulesPage.swift */,
 				6B94375D1B9C1A090049AA91 /* TitlePage.swift */,
 				6B0E5DD61B9FF31000866FE8 /* GetBallType.swift */,
 				6B0E5DDA1B9FF5D000866FE8 /* GetBackgroundType.swift */,
@@ -353,6 +356,7 @@
 				6BD797EE1B9FC23C0055D558 /* Beach.swift in Sources */,
 				6B6897B01B994BAD00C5069E /* Basketball.swift in Sources */,
 				6BD797F01B9FC2420055D558 /* Forest.swift in Sources */,
+				6B8B55581BA80B9C0091CAC0 /* RulesPage.swift in Sources */,
 				6B6897151B98B2CA00C5069E /* GameScene.swift in Sources */,
 				6B0E5DDB1B9FF5D000866FE8 /* GetBackgroundType.swift in Sources */,
 				6B6897C01B9970E500C5069E /* ChooseBackground.swift in Sources */,
