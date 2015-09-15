@@ -74,7 +74,6 @@
                                         </variation>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="yKy-R0-3OX" appends="YES" id="6AK-2r-2B8"/>
-                                            <outletCollection property="gestureRecognizers" destination="yKy-R0-3OX" appends="YES" id="Ubt-4Z-xqb"/>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yid-iL-fny" userLabel="Start Main View">
@@ -155,7 +154,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="yKy-R0-3OX">
+                <tapGestureRecognizer id="yKy-R0-3OX" userLabel="Go to Rules Page">
                     <connections>
                         <segue destination="wRl-LG-uTJ" kind="show" id="PIL-7a-oOu"/>
                     </connections>
@@ -256,11 +255,6 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ShN-Wr-f5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="ePJ-Fg-mfm">
-                    <connections>
-                        <segue destination="LVB-YS-i5n" kind="show" id="8CD-v6-FfR"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1006" y="246"/>
         </scene>
@@ -480,10 +474,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vqK-4S-LO1" appends="YES" id="GJT-dU-I2X"/>
+                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7e-fV-kAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vqK-4S-LO1" userLabel="Go to Title Page"/>
             </objects>
             <point key="canvasLocation" x="328" y="2731"/>
         </scene>
@@ -502,7 +500,7 @@
         <image name="Rules.jpg" width="3840" height="2160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8CD-v6-FfR"/>
+        <segue reference="iLp-cx-b3u"/>
         <segue reference="vtN-6b-H2E"/>
         <segue reference="yhu-8F-ARz"/>
         <segue reference="oX6-TG-0GF"/>
