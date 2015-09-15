@@ -178,8 +178,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rules.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vC5-rT-gO4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="MTj-IG-zKn">
-                                <rect key="frame" x="10" y="9" width="592" height="98.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="MTj-IG-zKn">
+                                <rect key="frame" x="16" y="20" width="568" height="98.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="580" id="jVh-69-C91"/>
                                 </constraints>
@@ -192,7 +192,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFo-aJ-ry4">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFo-aJ-ry4">
                                 <rect key="frame" x="16" y="414" width="568" height="186"/>
                                 <state key="normal" image="Back Arrow.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -201,8 +201,8 @@
                                     <segue destination="LVB-YS-i5n" kind="show" id="iLp-cx-b3u"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ln-At-qzb" userLabel="Description">
-                                <rect key="frame" x="84" y="222" width="444" height="156"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ln-At-qzb" userLabel="Description">
+                                <rect key="frame" x="16" y="117" width="568" height="295.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">• Keep the ball in the air as long as possible! 
 • Each ball has a different level of bounciness:
