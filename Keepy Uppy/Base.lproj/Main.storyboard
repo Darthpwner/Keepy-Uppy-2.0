@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LVB-YS-i5n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mTD-M6-FWm">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="rcJ-iR-Lnc">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="mTD-M6-FWm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aCx-SV-H3h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LVB-YS-i5n" kind="relationship" relationship="rootViewController" id="bzY-Tz-soK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aeg-k9-6ja" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-439" y="246"/>
+        </scene>
         <!--Title Page-->
         <scene sceneID="CtS-rA-C9T">
             <objects>
@@ -18,14 +34,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-1j-TOz">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-1j-TOz">
                                 <rect key="frame" x="-16" y="0.0" width="632" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7tb-9Z-Fxe" userLabel="Keepy Uppy View">
-                                        <rect key="frame" x="10" y="10" width="612" height="118.5"/>
+                                        <rect key="frame" x="10" y="10" width="612" height="119"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
-                                                <rect key="frame" x="10" y="10" width="592" height="98.5"/>
+                                                <rect key="frame" x="10" y="10" width="592" height="99"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="580" id="pb1-O6-tbV"/>
                                                 </constraints>
@@ -49,10 +65,10 @@
                                             <constraint firstAttribute="trailing" secondItem="dbZ-Ff-5GE" secondAttribute="trailing" constant="10" id="vMu-4n-7Ue"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEy-Ec-54G" userLabel="Bouncing Ball View">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wEy-Ec-54G" userLabel="Bouncing Ball View">
                                         <rect key="frame" x="0.0" y="128" width="632" height="300"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Bouncing Ball.gif" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-nN-Twa">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" image="Bouncing Ball.gif" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-nN-Twa">
                                                 <rect key="frame" x="0.0" y="0.0" width="632" height="300"/>
                                             </imageView>
                                         </subviews>
@@ -76,13 +92,13 @@
                                             <outletCollection property="gestureRecognizers" destination="yKy-R0-3OX" appends="YES" id="6AK-2r-2B8"/>
                                         </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yid-iL-fny" userLabel="Start Main View">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yid-iL-fny" userLabel="Start Main View">
                                         <rect key="frame" x="10" y="428" width="612" height="172"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Mc-I4-IRT" userLabel="Start Subview">
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Mc-I4-IRT" userLabel="Start Subview">
                                                 <rect key="frame" x="177" y="20" width="257" height="131"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
                                                         <rect key="frame" x="20" y="10" width="217" height="111"/>
                                                         <gestureRecognizers/>
                                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
@@ -148,6 +164,7 @@
                             <constraint firstItem="Nes-1j-TOz" firstAttribute="top" secondItem="PCf-gQ-wO7" secondAttribute="bottom" constant="-20" id="yTx-V9-ugu"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Abk-fl-1Fo"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="animation" destination="IQa-nN-Twa" id="oXi-jz-a80"/>
@@ -179,7 +196,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="MTj-IG-zKn">
-                                <rect key="frame" x="16" y="20" width="568" height="98.5"/>
+                                <rect key="frame" x="16" y="20" width="568" height="99"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="580" id="jVh-69-C91"/>
                                 </constraints>
@@ -311,7 +328,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rSS-7z-2ho">
-                                <rect key="frame" x="16" y="20" width="568" height="98.5"/>
+                                <rect key="frame" x="16" y="20" width="568" height="99"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -502,8 +519,8 @@
         <image name="Rules.jpg" width="3840" height="2160"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="bzY-Tz-soK"/>
         <segue reference="HFi-7Q-Rq1"/>
-        <segue reference="iLp-cx-b3u"/>
         <segue reference="yhu-8F-ARz"/>
         <segue reference="oX6-TG-0GF"/>
     </inferredMetricsTieBreakers>
