@@ -29,6 +29,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     /*End of variables*/
     
     /*Constants*/
+    let gravityConstant: CGFloat = -6.0  //Constant for Physics World
+    
     //Determine ball type
     let chooseBall = GetBallType.sharedInstance
     //Determine background type
@@ -139,7 +141,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         //Keep ball in static position until user taps the screen
         if !gameStarted {
-            self.physicsWorld.gravity = CGVectorMake( 0.0, -5.0 )
+            self.physicsWorld.gravity = CGVectorMake( 0.0, gravityConstant)
+            gameStarted = true
         }
         
         //Disabled to test other features of the game
