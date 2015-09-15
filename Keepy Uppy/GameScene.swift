@@ -117,15 +117,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         setUpScoreZone()    //4
         
-        setUpCeiling()
+        setUpCeiling()  //5
         
-        setUpWalls()    //5
+        setUpWalls()    //6
         
-        setUpGround()   //6
+        setUpGround()   //7
         
-        setUpBall() //7
+        setUpBall() //8
         
-        setUpScore() //8
+        setUpScore() //9
     }
 
     required init(coder decoder: NSCoder) {
@@ -315,6 +315,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(self.scoreZone)
     }
 
+    //5
     func setUpCeiling() -> Void {
         self.ceiling.name = "Ceiling"
         self.ceiling.color = UIColor.orangeColor()
@@ -335,7 +336,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(self.ceiling)
     }
     
-    //5
+    //6
     func setUpWalls() -> Void {
         /*Set up left wall*/
         self.leftWall.color = UIColor.greenColor()
@@ -381,7 +382,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /*End of Set up right wall*/
     }
     
-    //6
+    //7
     func setUpGround() -> Void {
         self.ground.name = "Ground"
         self.ground.color = UIColor.redColor()
@@ -401,7 +402,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(self.ground)
     }
     
-    //7
+    //8
     func setUpBall() -> Void {
         if chooseBall.ballType == BallType.BeachBall {
             self.ball.setScale(beachBallScalingFactor)
@@ -445,7 +446,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(self.ball)
     }
     
-    //8
+    //9
     func setUpScore() -> Void {
         self.scoreLabelNode.name = "Score"
         self.scoreLabelNode = SKLabelNode(fontNamed:"MarkerFelt-Wide")
