@@ -145,12 +145,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         runAction(SKAction.playSoundFileNamed(sound, waitForCompletion: false))
     }
     
-    //Use this for gameplay
-//    override func didMoveToView(view: SKView) {
-//        
-//        canRestart = false  //Prevent restarts
-//    }
-    
     /*
         Directions in which the ball can move
                     ^
@@ -201,7 +195,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     moveBall(posX, posY: posY, ballCenterX: ballCenterX, ballCenterY: ballCenterY, differenceRatioX: differenceRatioX, differenceRatioY: differenceRatioY)
                     
                     if rawPosY <= size.height / 5 { //Tap in the danger zone
-                        pointsObtained += 4
+                        pointsObtained += 3
                         println(pointsObtained)
                     } else {    //Tap in the middle zone
                         pointsObtained++
@@ -525,7 +519,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             pointsObtained++
         } else if ( contact.bodyA.categoryBitMask & ceilingCategory) == ceilingCategory || ( contact.bodyB.categoryBitMask & ceilingCategory) == ceilingCategory {  //Ball hits ceiling
             
-            pointsObtained += 2
+            pointsObtained += 3
         } else { //Ball goes through scoreZone
             let posOfBall: CGFloat = ball.position.y
 
