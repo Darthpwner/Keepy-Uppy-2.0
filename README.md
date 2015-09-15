@@ -1,14 +1,22 @@
 # Keepy-Uppy-2.0
-The goal of Keepy Uppy is to keep a ball in the air as long as possible to 
-score points. Players can accumulate more points by doing various tricks.
-A player can select from three balls (beach ball, basketball, and bowling ball)
-and each ball has unique bounciness, mass, and friction properties. The physics
-engine is derived from SpriteKit. Each of the three possible backgrounds
-(desert, beach, and forest) has unique characteristics as well.
+The goal is to keep the ball in the air as long as possible and try to 
+accumulate points!
 
-The game consists of four UIViewControllers: 1) Title Page, 2) Choose Ball
-Page, 3) Choose Background Page, 4) GamePlay Page
+Each ball has a different level of bounciness:
+- Beach Ball (most bounce)
+- Basketball (medium bounce)
+- Bowling Ball (least bounce)
 
-Scoring: The scoring system is pretty simple. A single tap earns you 1 point,
-colliding against either the left wall or the right wall will earn you 2 points
-, and colliding against the ceiling earns you 3 points
+Each background has a different damping factor:
+- Desert (most air time)
+- Beach (medium air time)
+- Forest (least air time)
+
+Scoring and Rules: You cannot tap the ball when it is in the score zone.
+Your score is only incremented if you get the ball above the score zone.
+Each tap in the middle zone is worth 1 point.
+- Colliding with a wall earns an additional point.
+- Colliding with the ceiling earns an extra 3 points.
+Taps in the danger zone (below the red line) are worth 3 points.
+
+UI Design: I used 
