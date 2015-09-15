@@ -480,9 +480,6 @@
                         </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <connections>
-                        <outlet property="returnToTitlePage" destination="SMg-fh-5R7" id="vye-vs-Pns"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7e-fV-kAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Td3-lg-Ngb" userLabel="Exit" sceneMemberID="exit"/>

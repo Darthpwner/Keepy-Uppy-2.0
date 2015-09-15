@@ -519,7 +519,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             playSound("gameover.mp3")
             
             //Return to home screen if you tap the screen after the game ends
-            gameEnded = true
+            gameEnded = true            
         } else if ( contact.bodyA.categoryBitMask & wallCategory) == wallCategory || (contact.bodyB.categoryBitMask & wallCategory) == wallCategory { //Ball hits a wall
             
             pointsObtained++

@@ -14,10 +14,10 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var scene: GameScene!
     
-    @IBOutlet weak var returnToTitlePage: UITapGestureRecognizer!
-    
     @IBAction func unwindToContainerVC(segue: UIStoryboardSegue) {
-        
+        if scene.gameEnded == true {
+            navigationController?.popToRootViewControllerAnimated(true)
+        }
     }
     
     let playGameplaySong = PlayGameplaySong.sharedInstance
