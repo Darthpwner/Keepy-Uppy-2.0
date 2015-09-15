@@ -22,6 +22,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var ball = SKSpriteNode()
     var scoreZone = SKSpriteNode()
     var ground = SKSpriteNode()
+    var ceiling = SKSpriteNode()
     var leftWall = SKSpriteNode()
     var rightWall = SKSpriteNode()
     
@@ -31,7 +32,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     /*End of variables*/
     
     /*Constants*/
-    let gravityConstant: CGFloat = -6.0  //Constant for Physics World
+    let gravityConstant: CGFloat = -9.8  //Constant for Physics World
     
     //Determine ball type
     let chooseBall = GetBallType.sharedInstance
@@ -92,7 +93,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let groundCategory: UInt32 = 0x1 << 0
     let ballCategory: UInt32 = 0x1 << 1
     let wallCategory: UInt32 = 0x1 << 2
-    let scoreZoneCategory: UInt32 = 0x1 << 3
+    let ceilingCategory: UInt32 = 0x1 << 3
+    let scoreZoneCategory: UInt32 = 0x1 << 4
     /*End of Category bit masks*/
     
     let playGameplaySong = PlayGameplaySong.sharedInstance
@@ -115,6 +117,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setUpBackground() //3
         
         setUpScoreZone()    //4
+        
+        setUpCeiling()
         
         setUpWalls()    //5
         
@@ -185,6 +189,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     moveBall(posX, posY: posY, ballCenterX: ballCenterX, ballCenterY: ballCenterY, differenceRatioX: differenceRatioX, differenceRatioY: differenceRatioY)
                 
                     pointsObtained++
+                    println(pointsObtained)
                 }
             }
         }
@@ -316,6 +321,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(self.scoreZone)
     }
 
+    func setUpCeiling() -> Void {
+        self.ceiling.name = "Ceiling"
+        self.ceiling.color = UIColor.orangeColor()
+        self.ceiling.position = CGPointMake(size.width / 2, size.height)
+        self.ceiling.size = CGSizeMake(size.width, barrierFactor)
+        
+        //Create an edge based body for the ceiling
+        self.ceiling.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(-size.width / 2, 0.0), toPoint: CGPointMake(size.width / 2, 0.0))
+        
+        self.ceiling.physicsBody?.categoryBitMask = ceilingCategory //Assigns the bit mask category for the ceiling
+        self.ceiling.physicsBody?.collisionBitMask = ballCategory //Assigns the collision we care about for the ceiling
+        self.ceiling.physicsBody?.contactTestBitMask = ballCategory  //Assigns the contacts that we care about for the ceiling
+        
+        self.ceiling.physicsBody?.affectedByGravity = false
+        
+        self.ground.physicsBody?.allowsRotation = false
+        
+        self.addChild(self.ceiling)
+    }
     
     //5
     func setUpWalls() -> Void {
@@ -411,7 +435,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.anchorPoint = CGPointMake(anchorX, anchorY)
         
         //Start the ball at the score zone
-        self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), size.height / 2)
+        self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), (4 * size.height) / 5)
         
         self.ball.name = "ball"
         self.ball.userInteractionEnabled = true
@@ -420,7 +444,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         self.ball.physicsBody!.categoryBitMask = ballCategory    //Assigns the bit mask category for ball
         
-        self.ball.physicsBody!.collisionBitMask = wallCategory | groundCategory //Assigns the collisions that the ball can have
+        self.ball.physicsBody!.collisionBitMask = wallCategory | groundCategory | ceilingCategory //Assigns the collisions that the ball can have
 
         //Assigns the contacts that we care about for the ball
         self.ball.physicsBody!.contactTestBitMask = groundCategory | scoreZoneCategory
@@ -462,6 +486,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else if ( contact.bodyA.categoryBitMask & wallCategory) == wallCategory || (contact.bodyB.categoryBitMask & wallCategory) == wallCategory { //Ball hits a wall
             
             pointsObtained++
+        } else if ( contact.bodyA.categoryBitMask & ceilingCategory) == ceilingCategory || ( contact.bodyB.categoryBitMask & ceilingCategory) == ceilingCategory {  //Ball hits ceiling
+            
+            pointsObtained += 2
         } else { //Ball goes through scoreZone
             let posOfBall: CGFloat = ball.position.y
 
