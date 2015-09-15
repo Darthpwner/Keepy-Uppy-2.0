@@ -16,6 +16,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     /*Variables*/
     var canRestart = Bool()
     var gameStarted: Bool = false
+    var gameEnded: Bool = false
     
     var scoreLabelNode = SKLabelNode()  //Displays points when ball is moved above scoreZone
     var background = SKSpriteNode()
@@ -155,6 +156,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if !gameStarted {
             self.physicsWorld.gravity = CGVectorMake( 0.0, gravityConstant)
             gameStarted = true
+        } else if gameEnded {
+            //Create a button to return to the home page
+            println("FUCK")
         }
         
         //Recognizes only a tap on the ball
@@ -477,7 +481,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.ball.userInteractionEnabled = true //Prevents user from making the tap noise if they try to tap the ball
             
             playGameplaySong.song.stop()
-            playSound("gameover.mp3")   //Sound glitchy since the ball still bounces
+            playSound("gameover.mp3")
+            
+            //Return to home screen if you tap the screen after the game ends
+            gameEnded = true
         } else if ( contact.bodyA.categoryBitMask & wallCategory) == wallCategory || (contact.bodyB.categoryBitMask & wallCategory) == wallCategory { //Ball hits a wall
             
             pointsObtained++

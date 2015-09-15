@@ -474,14 +474,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="vqK-4S-LO1" appends="YES" id="GJT-dU-I2X"/>
-                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7e-fV-kAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="vqK-4S-LO1" userLabel="Go to Title Page"/>
+                <tapGestureRecognizer id="vqK-4S-LO1" userLabel="Go to Title Page">
+                    <connections>
+                        <segue destination="LVB-YS-i5n" kind="show" id="3MR-X9-MHN"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="328" y="2731"/>
         </scene>
@@ -500,9 +501,9 @@
         <image name="Rules.jpg" width="3840" height="2160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iLp-cx-b3u"/>
-        <segue reference="vtN-6b-H2E"/>
-        <segue reference="yhu-8F-ARz"/>
+        <segue reference="3MR-X9-MHN"/>
         <segue reference="oX6-TG-0GF"/>
+        <segue reference="yhu-8F-ARz"/>
+        <segue reference="vtN-6b-H2E"/>
     </inferredMetricsTieBreakers>
 </document>
