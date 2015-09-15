@@ -26,7 +26,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var leftWall = SKSpriteNode()
     var rightWall = SKSpriteNode()
     
-    var lives: Int = 1
     var score: NSInteger = 0    //Updated when ball is above scoreZone
     var pointsObtained: NSInteger = 0   //Used whenever the ball is tapped or a wall is struck
     /*End of variables*/
@@ -157,11 +156,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.physicsWorld.gravity = CGVectorMake( 0.0, gravityConstant)
             gameStarted = true
         }
-        
-        //Disabled to test other features of the game
-//        if !self.ball.userInteractionEnabled {  //If the ball drops, stop playing
-//            return
-//        } //FIX THIS BUG
         
         //Recognizes only a tap on the ball
         let touch = touches.first as? UITouch
@@ -477,8 +471,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             pointsObtained = 0
             score = 0
             scoreLabelNode.text = String(score)
-            
-            //self.ball.physicsBody?.restitution = 0.0    //Prevents the ball from bouncing
+
             self.ball.userInteractionEnabled = false
             
             playGameplaySong.song.stop()
