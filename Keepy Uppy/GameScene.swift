@@ -137,14 +137,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Use to move the ball
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
 
+        //Keep ball in static position until user taps the screen
+        if !gameStarted {
+            self.physicsWorld.gravity = CGVectorMake( 0.0, -5.0 )
+        }
+        
         //Disabled to test other features of the game
 //        if !self.ball.userInteractionEnabled {  //If the ball drops, stop playing
 //            return
 //        } //FIX THIS BUG
-        
-        if !gameStarted {
-            //Keep ball in static position
-        }
         
         //Recognizes only a tap on the ball
         let touch = touches.first as? UITouch
@@ -266,7 +267,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     //2
     func setUpPhysics() -> Void {
-        self.physicsWorld.gravity = CGVectorMake( 0.0, -5.0 )
+        //Keep user static until game starts
+        self.physicsWorld.gravity = CGVectorMake( 0.0, 0.0 )
         self.physicsWorld.contactDelegate = self
     }
     

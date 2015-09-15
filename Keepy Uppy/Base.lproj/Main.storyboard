@@ -201,8 +201,8 @@
                                     <segue destination="LVB-YS-i5n" kind="show" id="iLp-cx-b3u"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ln-At-qzb" userLabel="Description">
-                                <rect key="frame" x="60" y="205" width="481" height="188.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ln-At-qzb" userLabel="Description">
+                                <rect key="frame" x="16" y="118.5" width="568" height="295.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">• Keep the ball in the air as long as possible! 
 • Each ball has a different level of bounciness:
