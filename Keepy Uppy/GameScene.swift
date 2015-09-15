@@ -83,6 +83,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let barrierFactor: CGFloat = 1.0
     /*Sets a barrier factor (ground and wall)*/
     
+    //scoreZone thickness
+    let scoreZoneThickness: CGFloat = 5.0
+    /*Sets the scoreZone thickness constant*/
+    
     //Category bit masks
     let groundCategory: UInt32 = 0x1 << 0
     let ballCategory: UInt32 = 0x1 << 1
@@ -294,7 +298,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.scoreZone.name = "scoreZone"
         self.scoreZone.color = UIColor.redColor()
         self.scoreZone.position = CGPointMake(size.width / 2, (3 * size.height) / 4)
-        self.scoreZone.size = CGSizeMake(size.width, barrierFactor)
+        self.scoreZone.size = CGSizeMake(size.width,scoreZoneThickness)
         
         self.scoreZone.physicsBody?.affectedByGravity = false
         
@@ -398,7 +402,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.anchorPoint = CGPointMake(anchorX, anchorY)
         
         
-        self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), (size.height))
+        self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), (3 * size.height) / 4)
         
         self.ball.name = "ball"
         self.ball.userInteractionEnabled = true
