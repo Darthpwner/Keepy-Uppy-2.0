@@ -164,13 +164,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let positionInScene = touch!.locationInNode(self)
         let touchedNode = self.nodeAtPoint(positionInScene)
     
+        tapBall(touchedNode, touchParam: touch)
+    }
+    
+    func tapBall(touchedNode: SKNode, touchParam: UITouch?) {
         if let name = touchedNode.name {
             if name == "ball" {
-                let pos = touch!.locationInNode(self)
+                let pos = touchParam!.locationInNode(self)
                 let rawPosY = pos.y
                 if rawPosY <= (4 * size.height) / 5 {
                     playSound("hit.mp3")
-                
+                    
                     /*Calculation algorithm constants*/
                     let posX = pos.x / size.width   //0 to 1
                     let posY = pos.y / size.height  //0 to 1
@@ -179,9 +183,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     let differenceRatioX = (1.0 - abs(ballCenterX - posX))  //Maximum impulse at the center (0 to 1)
                     let differenceRatioY = (1.0 - abs(ballCenterY - posY))  //Maximum impulse at the center (0 to 1)
                     /*End of calculation algorithm constants*/
-                
+                    
                     moveBall(posX, posY: posY, ballCenterX: ballCenterX, ballCenterY: ballCenterY, differenceRatioX: differenceRatioX, differenceRatioY: differenceRatioY)
-                
+                    
                     pointsObtained++
                     println(pointsObtained)
                 }
