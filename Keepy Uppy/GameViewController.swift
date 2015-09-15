@@ -16,8 +16,19 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBAction func unwindToContainerVC(segue: UIStoryboardSegue) {
         if scene.gameEnded == true {
+            println(self.navigationController)
             navigationController?.popToRootViewControllerAnimated(true)
         }
+    }
+    
+    @IBAction func onTapped(sender: AnyObject) {
+        if scene.gameEnded == true {
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
     
     let playGameplaySong = PlayGameplaySong.sharedInstance
@@ -40,6 +51,9 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
 
         // Present the scene.
         skView.presentScene(scene)
+        
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("onTapped:"))
+        skView.addGestureRecognizer(tapRecognizer)
         
         //Plays gameplay song
         playGameplaySong.prepareAudios()
