@@ -452,16 +452,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Handle contact between nodes
     func didBeginContact(contact: SKPhysicsContact) {
-        
-        println("contact Body A: \(contact.bodyA.categoryBitMask)")
-        println(contact.bodyA.categoryBitMask & scoreZoneCategory)
-        println("contact Body B: \(contact.bodyB.categoryBitMask)")
-        println(contact.bodyB.categoryBitMask & scoreZoneCategory)
-        println("\n")
-        
         if ( contact.bodyA.categoryBitMask & groundCategory ) == groundCategory || ( contact.bodyB.categoryBitMask & groundCategory ) == groundCategory {   //Ball hits ground
-            
-            println("CONTACT WITH GROUND BITCH")
             
             score = 0
             scoreLabelNode.text = String(score)
@@ -471,22 +462,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             playGameplaySong.song.stop()
             playSound("gameover.mp3")   //Sound glitchy since the ball still bounces
-        }
-            
-        else if ( contact.bodyA.categoryBitMask & wallCategory) == wallCategory || (contact.bodyB.categoryBitMask & wallCategory) == wallCategory { //Ball hits a wall
-            
-            println("Contact WITH WALL FUCK")
+        } else if ( contact.bodyA.categoryBitMask & wallCategory) == wallCategory || (contact.bodyB.categoryBitMask & wallCategory) == wallCategory { //Ball hits a wall
             
             pointsObtained++
             scoreLabelNode.text = String(score)
-        }
-            
-        //NOT DETECTING THIS
-        else { //Ball goes through scoreZone
-            println("CONTACT WITH THE SCORE ZONE")
+        } else { //Ball goes through scoreZone
             let posOfBall: CGFloat = ball.position.y
-            println(posOfBall)
-            println((4 * size.height) / 5)
+
             if posOfBall > (4 * size.height) / 5 {
                 println(pointsObtained)
                 println(score)
