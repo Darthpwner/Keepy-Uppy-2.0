@@ -420,7 +420,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // this is the most important line, we define the body
         ball.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.size.width / 2.0)
-        ball.physicsBody?.dynamic = true
+        ball.physicsBody?.dynamic = true    //Enable ball to move
         
         assignPhysicsAttributes(chooseBall.ballType!, typeOfBackground: chooseBackground.backgroundType!)
         
@@ -432,7 +432,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), (4 * size.height) / 5)
         
         self.ball.name = "ball"
-        self.ball.userInteractionEnabled = true
+        self.ball.userInteractionEnabled = false    //Needs to be false to allow contact
         
         ball.physicsBody?.usesPreciseCollisionDetection = true
 
@@ -467,12 +467,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Handle contact between nodes
     func didBeginContact(contact: SKPhysicsContact) {
         if ( contact.bodyA.categoryBitMask & groundCategory ) == groundCategory || ( contact.bodyB.categoryBitMask & groundCategory ) == groundCategory {   //Ball hits ground
-            
-            pointsObtained = 0
-            score = 0
-            scoreLabelNode.text = String(score)
 
-            self.ball.userInteractionEnabled = false
+            self.ball.physicsBody?.dynamic = false  //Prevents user from tapping the ball when it hits the ground
             
             playGameplaySong.song.stop()
             playSound("gameover.mp3")   //Sound glitchy since the ball still bounces
