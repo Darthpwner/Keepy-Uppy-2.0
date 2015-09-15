@@ -167,6 +167,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else if gameEnded {
             //Create a button to return to the home page
             println("FUCK")
+            //Create a NAVIGATION VIEW CONTROLLER DARIN
             //Return to homepage
         }
         
