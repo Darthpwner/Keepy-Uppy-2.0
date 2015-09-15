@@ -192,7 +192,16 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ln-At-qzb" userLabel="Description">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFo-aJ-ry4">
+                                <rect key="frame" x="16" y="414" width="568" height="186"/>
+                                <state key="normal" image="Back Arrow.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LVB-YS-i5n" kind="show" id="iLp-cx-b3u"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ln-At-qzb" userLabel="Description">
                                 <rect key="frame" x="84" y="222" width="444" height="156"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">• Keep the ball in the air as long as possible! 
@@ -208,38 +217,40 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFo-aJ-ry4">
-                                <rect key="frame" x="16" y="414" width="568" height="186"/>
-                                <state key="normal" image="Back Arrow.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="LVB-YS-i5n" kind="show" id="iLp-cx-b3u"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="DFo-aJ-ry4" secondAttribute="trailing" id="0c7-Fi-FcU"/>
                             <constraint firstAttribute="centerX" secondItem="MTj-IG-zKn" secondAttribute="centerX" id="1C9-HA-9VB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9ln-At-qzb" secondAttribute="trailing" constant="56" id="1Xx-Bl-6yu"/>
                             <constraint firstItem="vC5-rT-gO4" firstAttribute="top" secondItem="jAo-AD-1Gt" secondAttribute="bottom" constant="-20" id="3eb-0u-Ptj"/>
+                            <constraint firstItem="DFo-aJ-ry4" firstAttribute="top" secondItem="9ln-At-qzb" secondAttribute="bottom" constant="36" id="7yi-9g-tN6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vC5-rT-gO4" secondAttribute="trailing" constant="-16" id="D90-eD-PTK"/>
                             <constraint firstAttribute="centerX" secondItem="DFo-aJ-ry4" secondAttribute="centerX" id="EY4-Cl-BlF"/>
+                            <constraint firstItem="9ln-At-qzb" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" constant="68" id="Rsj-TX-0bb"/>
+                            <constraint firstItem="9ln-At-qzb" firstAttribute="leading" secondItem="vC5-rT-gO4" secondAttribute="trailing" constant="-516" id="Zrb-OF-cxE"/>
+                            <constraint firstItem="9ln-At-qzb" firstAttribute="leading" secondItem="vC5-rT-gO4" secondAttribute="trailing" constant="-516" id="bP6-Wv-yJp"/>
                             <constraint firstItem="wwY-cz-tvO" firstAttribute="top" secondItem="DFo-aJ-ry4" secondAttribute="bottom" id="d5N-40-LYQ"/>
-                            <constraint firstItem="MTj-IG-zKn" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" constant="-6" id="fH8-8W-PqL"/>
+                            <constraint firstItem="MTj-IG-zKn" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" id="fH8-8W-PqL"/>
                             <constraint firstAttribute="centerX" secondItem="9ln-At-qzb" secondAttribute="centerX" id="irm-tY-OZx"/>
                             <constraint firstItem="DFo-aJ-ry4" firstAttribute="top" secondItem="9ln-At-qzb" secondAttribute="bottom" constant="22" id="ixr-tP-vNs"/>
                             <constraint firstItem="vC5-rT-gO4" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" constant="-16" id="lXZ-OK-p2V"/>
                             <constraint firstItem="wwY-cz-tvO" firstAttribute="top" secondItem="vC5-rT-gO4" secondAttribute="bottom" id="mh4-lQ-vhB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MTj-IG-zKn" secondAttribute="trailing" constant="-18" id="muj-Mt-Ych"/>
-                            <constraint firstItem="MTj-IG-zKn" firstAttribute="top" secondItem="jAo-AD-1Gt" secondAttribute="bottom" constant="-9.5" id="sLa-Tm-XWq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MTj-IG-zKn" secondAttribute="trailing" id="muj-Mt-Ych"/>
+                            <constraint firstItem="9ln-At-qzb" firstAttribute="top" secondItem="MTj-IG-zKn" secondAttribute="bottom" constant="114.5" id="pmg-L2-Adi"/>
+                            <constraint firstItem="9ln-At-qzb" firstAttribute="trailing" secondItem="vC5-rT-gO4" secondAttribute="trailing" constant="-72" id="pne-L2-tuC"/>
+                            <constraint firstItem="MTj-IG-zKn" firstAttribute="top" secondItem="jAo-AD-1Gt" secondAttribute="bottom" id="sLa-Tm-XWq"/>
                             <constraint firstItem="9ln-At-qzb" firstAttribute="top" secondItem="MTj-IG-zKn" secondAttribute="bottom" constant="77" id="tqu-zI-9pn"/>
                             <constraint firstItem="DFo-aJ-ry4" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" id="uah-yV-LpI"/>
-                            <constraint firstAttribute="centerY" secondItem="9ln-At-qzb" secondAttribute="centerY" id="udS-Na-oSd"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Zrb-OF-cxE"/>
+                                <exclude reference="bP6-Wv-yJp"/>
                                 <exclude reference="irm-tY-OZx"/>
+                                <exclude reference="pne-L2-tuC"/>
+                                <exclude reference="tqu-zI-9pn"/>
+                                <exclude reference="ixr-tP-vNs"/>
                             </mask>
                         </variation>
                     </view>
