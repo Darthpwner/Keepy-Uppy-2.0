@@ -296,9 +296,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.scoreZone.position = CGPointMake(size.width / 2, (3 * size.height) / 4)
         self.scoreZone.size = CGSizeMake(size.width, barrierFactor)
         
-        //Create an edge based body for the scoreZone
-        self.scoreZone.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(-size.width / 2, 0.0), toPoint: CGPointMake(size.width, 0.0))
-        
         self.scoreZone.physicsBody?.affectedByGravity = false
         
         self.scoreZone.physicsBody?.allowsRotation = false
