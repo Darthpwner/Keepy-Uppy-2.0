@@ -218,7 +218,7 @@
                                     <segue destination="LVB-YS-i5n" kind="show" id="iLp-cx-b3u"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ln-At-qzb" userLabel="Description">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ln-At-qzb" userLabel="Description">
                                 <rect key="frame" x="16" y="118" width="568" height="296"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <mutableString key="text">• Keep the ball in the air as long as possible and try to accumulate points!
