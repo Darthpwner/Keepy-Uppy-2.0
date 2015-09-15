@@ -20,6 +20,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var scoreLabelNode = SKLabelNode()
     var background = SKSpriteNode()
     var ball = SKSpriteNode()
+    var scoreZone = SKSpriteNode()
     var ground = SKSpriteNode()
     var leftWall = SKSpriteNode()
     var rightWall = SKSpriteNode()
@@ -107,13 +108,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Add background
         setUpBackground() //3
         
-        setUpWalls()    //4
+        setUpscoreZone()    //4
         
-        setUpGround()   //5
+        setUpWalls()    //5
         
-        setUpBall() //6
+        setUpGround()   //6
         
-        setUpScore() //7
+        setUpBall() //7
+        
+        setUpScore() //8
     }
 
     required init(coder decoder: NSCoder) {
@@ -286,6 +289,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //4
+    //BUGGY
+    func setUpscoreZone() -> Void {
+        self.scoreZone.name = "scoreZone"
+        self.scoreZone.color = UIColor.redColor()
+        self.scoreZone.position = CGPointMake(size.width / 2, (3 * size.height) / 4)
+        self.scoreZone.size = CGSizeMake(size.width, barrierFactor)
+        
+        //Create an edge based body for the scoreZone
+        self.scoreZone.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(-size.width / 2, 0.0), toPoint: CGPointMake(size.width, 0.0))
+        
+        self.scoreZone.physicsBody?.affectedByGravity = false
+        
+        self.scoreZone.physicsBody?.allowsRotation = false
+        
+        self.addChild(self.scoreZone)
+    }
+
+    
+    //5
     func setUpWalls() -> Void {
         /*Set up left wall*/
         self.leftWall.color = UIColor.greenColor()
@@ -331,7 +353,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /*End of Set up right wall*/
     }
     
-    //5
+    //6
     func setUpGround() -> Void {
         self.ground.name = "Ground"
         self.ground.color = UIColor.redColor()
@@ -351,7 +373,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(self.ground)
     }
     
-    //6
+    //7
     func setUpBall() -> Void {
         if chooseBall.ballType == BallType.BeachBall {
             self.ball.setScale(beachBallScalingFactor)
@@ -395,7 +417,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(self.ball)
     }
     
-    //7
+    //8
     func setUpScore() -> Void {
         self.scoreLabelNode.name = "Score"
         self.scoreLabelNode = SKLabelNode(fontNamed:"MarkerFelt-Wide")
