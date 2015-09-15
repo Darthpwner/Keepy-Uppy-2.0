@@ -17,7 +17,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var canRestart = Bool()
     var gameStarted: Bool = false
     
-    var scoreLabelNode = SKLabelNode()
+    var scoreLabelNode = SKLabelNode()  //Displays points when ball is moved above scoreZone
     var background = SKSpriteNode()
     var ball = SKSpriteNode()
     var scoreZone = SKSpriteNode()
@@ -26,7 +26,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var rightWall = SKSpriteNode()
     
     var lives: Int = 1
-    var score: NSInteger = 0
+    var score: NSInteger = 0    //Updated when ball is above scoreZone
+    var pointsObtained: NSInteger = 0   //Used whenever the ball is tapped or a wall is struck
     /*End of variables*/
     
     /*Constants*/
@@ -180,8 +181,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 moveBall(posX, posY: posY, ballCenterX: ballCenterX, ballCenterY: ballCenterY, differenceRatioX: differenceRatioX, differenceRatioY: differenceRatioY)
                 
-                score++
-                scoreLabelNode.text = String(score)
+                pointsObtained++
+                println(pointsObtained)
+                if posY > (3 * size.height) / 4 {
+                    println(pointsObtained)
+                    println(score)
+                    score += pointsObtained
+                    scoreLabelNode.text = String(score)
+                    pointsObtained = 0
+                }
+//                score++
+//                scoreLabelNode.text = String(score)
             }
         }
     }
@@ -401,7 +411,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         ball.anchorPoint = CGPointMake(anchorX, anchorY)
         
-        
+        //Start the ball at the score zone
         self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), (3 * size.height) / 4)
         
         self.ball.name = "ball"
@@ -452,7 +462,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             playSound("gameover.mp3")   //Sound glitchy since the ball still bounces
             
         } else {
-            score++
+            pointsObtained++
             scoreLabelNode.text = String(score)
         }
     }
