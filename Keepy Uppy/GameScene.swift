@@ -171,6 +171,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 /*Calculation algorithm constants*/
                 let pos = touch!.locationInNode(self)
+                let rawPosY = pos.y //Raw y-coordinate of ball
                 let posX = pos.x / size.width   //0 to 1
                 let posY = pos.y / size.height  //0 to 1
                 let ballCenterX = ball.anchorPoint.x    //0.5
@@ -182,8 +183,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 moveBall(posX, posY: posY, ballCenterX: ballCenterX, ballCenterY: ballCenterY, differenceRatioX: differenceRatioX, differenceRatioY: differenceRatioY)
                 
                 pointsObtained++
-                println(pointsObtained)
-                if posY > (3 * size.height) / 4 {
+                println(rawPosY)
+                println((3 * size.height)/4 )
+                if rawPosY > (3 * size.height) / 4 {
                     println(pointsObtained)
                     println(score)
                     score += pointsObtained
