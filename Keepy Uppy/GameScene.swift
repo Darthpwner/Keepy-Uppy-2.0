@@ -469,6 +469,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if ( contact.bodyA.categoryBitMask & groundCategory ) == groundCategory || ( contact.bodyB.categoryBitMask & groundCategory ) == groundCategory {   //Ball hits ground
 
             self.ball.physicsBody?.dynamic = false  //Prevents user from tapping the ball when it hits the ground
+            self.ball.userInteractionEnabled = true //Prevents user from making the tap noise if they try to tap the ball
             
             playGameplaySong.song.stop()
             playSound("gameover.mp3")   //Sound glitchy since the ball still bounces
@@ -482,6 +483,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let posOfBall: CGFloat = ball.position.y
 
             if posOfBall > (4 * size.height) / 5 {
+                playSound("scorepoints.mp3")
                 score += pointsObtained
                 scoreLabelNode.text = String(score)
                 pointsObtained = 0

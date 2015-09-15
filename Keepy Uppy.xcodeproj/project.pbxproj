@@ -35,6 +35,7 @@
 		6B6C8D071B9BAC7B008678EC /* Basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D061B9BAC7B008678EC /* Basketball.png */; };
 		6B6C8D091B9BAC85008678EC /* Beach Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D081B9BAC85008678EC /* Beach Ball.png */; };
 		6B6C8D0F1B9BAE94008678EC /* Bowling Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */; };
+		6B8B55561BA80A100091CAC0 /* scorepoints.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B8B55551BA80A100091CAC0 /* scorepoints.mp3 */; };
 		6B94375C1B9C0F080049AA91 /* PlayStartSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */; };
 		6B94375E1B9C1A090049AA91 /* TitlePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94375D1B9C1A090049AA91 /* TitlePage.swift */; };
 		6BD2D38B1B9D05EE0052FBA7 /* Bouncing Ball.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6BD2D38A1B9D05EE0052FBA7 /* Bouncing Ball.gif */; };
@@ -92,6 +93,7 @@
 		6B6C8D061B9BAC7B008678EC /* Basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Basketball.png; sourceTree = "<group>"; };
 		6B6C8D081B9BAC85008678EC /* Beach Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Beach Ball.png"; sourceTree = "<group>"; };
 		6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bowling Ball.png"; sourceTree = "<group>"; };
+		6B8B55551BA80A100091CAC0 /* scorepoints.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = scorepoints.mp3; sourceTree = "<group>"; };
 		6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayStartSong.swift; sourceTree = "<group>"; };
 		6B94375D1B9C1A090049AA91 /* TitlePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlePage.swift; sourceTree = "<group>"; };
 		6BD2D38A1B9D05EE0052FBA7 /* Bouncing Ball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Bouncing Ball.gif"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				6B68973D1B98B62800C5069E /* gameover.mp3 */,
 				6BD8E0641B9EB5710010E257 /* gameplay.mp3 */,
 				6B6897451B98B6D100C5069E /* hit.mp3 */,
+				6B8B55551BA80A100091CAC0 /* scorepoints.mp3 */,
 				6B6897471B98B96000C5069E /* start.mp3 */,
 			);
 			path = Sounds;
@@ -310,6 +313,7 @@
 				6B68971F1B98B2CA00C5069E /* LaunchScreen.xib in Resources */,
 				6BD2D38B1B9D05EE0052FBA7 /* Bouncing Ball.gif in Resources */,
 				6B6C8D071B9BAC7B008678EC /* Basketball.png in Resources */,
+				6B8B55561BA80A100091CAC0 /* scorepoints.mp3 in Resources */,
 				6B6897461B98B6D100C5069E /* hit.mp3 in Resources */,
 				6B5D0E061BA0A4810052AC3C /* GameScene.sks in Resources */,
 				6B6897541B98BF5A00C5069E /* Desert.jpg in Resources */,
