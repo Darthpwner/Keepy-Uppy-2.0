@@ -186,8 +186,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                     pointsObtained++
                 }
-//                score++
-//                scoreLabelNode.text = String(score)
             }
         }
     }
@@ -299,15 +297,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //4
-    //BUGGY
     func setUpScoreZone() -> Void {
         self.scoreZone.name = "scoreZone"
         self.scoreZone.color = UIColor.redColor()
         self.scoreZone.position = CGPointMake(size.width / 2, (4 * size.height) / 5)
         self.scoreZone.size = CGSizeMake(size.width,scoreZoneThickness)
         
-        //Create an edge based body for the ground
-        //BUG HERE: MAKE THIS TRANSPARENT
+        //Create an edge based body for the scoreZone
         self.scoreZone.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(-size.width / 2, 0.0), toPoint: CGPointMake(size.width, 0.0))
         
         self.scoreZone.physicsBody?.categoryBitMask = scoreZoneCategory
@@ -454,6 +450,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func didBeginContact(contact: SKPhysicsContact) {
         if ( contact.bodyA.categoryBitMask & groundCategory ) == groundCategory || ( contact.bodyB.categoryBitMask & groundCategory ) == groundCategory {   //Ball hits ground
             
+            pointsObtained = 0
             score = 0
             scoreLabelNode.text = String(score)
             
@@ -465,13 +462,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else if ( contact.bodyA.categoryBitMask & wallCategory) == wallCategory || (contact.bodyB.categoryBitMask & wallCategory) == wallCategory { //Ball hits a wall
             
             pointsObtained++
-            scoreLabelNode.text = String(score)
         } else { //Ball goes through scoreZone
             let posOfBall: CGFloat = ball.position.y
 
             if posOfBall > (4 * size.height) / 5 {
-                println(pointsObtained)
-                println(score)
                 score += pointsObtained
                 scoreLabelNode.text = String(score)
                 pointsObtained = 0
