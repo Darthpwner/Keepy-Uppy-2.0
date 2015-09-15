@@ -170,7 +170,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if name == "ball" {
                 let pos = touch!.locationInNode(self)
                 let rawPosY = pos.y
-                if rawPosY < (3 * size.height) / 4 {
+                if rawPosY <= (4 * size.height) / 5 {
                     playSound("hit.mp3")
                 
                     /*Calculation algorithm constants*/
@@ -303,7 +303,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setUpscoreZone() -> Void {
         self.scoreZone.name = "scoreZone"
         self.scoreZone.color = UIColor.redColor()
-        self.scoreZone.position = CGPointMake(size.width / 2, (3 * size.height) / 4)
+        self.scoreZone.position = CGPointMake(size.width / 2, (4 * size.height) / 5)
         self.scoreZone.size = CGSizeMake(size.width,scoreZoneThickness)
         
         self.scoreZone.physicsBody?.categoryBitMask = scoreZoneCategory
@@ -411,7 +411,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.anchorPoint = CGPointMake(anchorX, anchorY)
         
         //Start the ball at the score zone
-        self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), (3 * size.height) / 4)
+        self.ball.position = CGPointMake( CGRectGetMidX( self.frame ), (4 * size.height) / 5)
         
         self.ball.name = "ball"
         self.ball.userInteractionEnabled = true
@@ -461,8 +461,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else if (contact.bodyA.categoryBitMask & scoreZoneCategory) == scoreZoneCategory || (contact.bodyB.categoryBitMask & scoreZoneCategory) == scoreZoneCategory {    //Ball goes through scoreZone
             let posOfBall: CGFloat = ball.position.y
             println(posOfBall)
-            println((3 * size.height) / 4 )
-            if posOfBall > (3 * size.height) / 4 {
+            println((4 * size.height) / 5)
+            if posOfBall > (4 * size.height) / 5{
                 println(pointsObtained)
                 println(score)
                 score += pointsObtained
