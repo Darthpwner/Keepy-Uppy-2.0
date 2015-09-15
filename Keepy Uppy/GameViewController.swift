@@ -14,6 +14,12 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var scene: GameScene!
     
+    @IBOutlet weak var returnToTitlePage: UITapGestureRecognizer!
+    
+    @IBAction func unwindToContainerVC(segue: UIStoryboardSegue) {
+        
+    }
+    
     let playGameplaySong = PlayGameplaySong.sharedInstance
 
     override func viewDidLoad() {

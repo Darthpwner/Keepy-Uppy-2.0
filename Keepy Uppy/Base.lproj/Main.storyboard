@@ -151,6 +151,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="animation" destination="IQa-nN-Twa" id="oXi-jz-a80"/>
+                        <segue destination="Td3-lg-Ngb" kind="unwind" unwindAction="unwindToContainerVC:" id="g1c-Ti-Va7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
@@ -191,7 +192,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFo-aJ-ry4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFo-aJ-ry4" userLabel="Go to Title Page">
                                 <rect key="frame" x="16" y="414" width="568" height="186"/>
                                 <state key="normal" image="Back Arrow.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -315,7 +316,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPU-YY-N1x" userLabel="Back Arrow">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPU-YY-N1x" userLabel="Go to Title Page">
                                 <rect key="frame" x="16" y="414" width="568" height="186"/>
                                 <state key="normal" image="Back Arrow.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -417,7 +418,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVU-8E-Ns8" userLabel="Back Arrow">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVU-8E-Ns8" userLabel="Go to Choose Ball Page">
                                 <rect key="frame" x="16" y="406" width="568" height="186"/>
                                 <state key="normal" image="Back Arrow.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -472,17 +473,20 @@
                     <view key="view" contentMode="scaleToFill" id="1af-vJ-B3L" userLabel="Game View" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="SMg-fh-5R7" appends="YES" id="f71-Y0-Qde"/>
+                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="returnToTitlePage" destination="SMg-fh-5R7" id="vye-vs-Pns"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7e-fV-kAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="vqK-4S-LO1" userLabel="Go to Title Page">
-                    <connections>
-                        <segue destination="LVB-YS-i5n" kind="show" id="3MR-X9-MHN"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <exit id="Td3-lg-Ngb" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="SMg-fh-5R7" userLabel="Go to Title Page"/>
             </objects>
             <point key="canvasLocation" x="328" y="2731"/>
         </scene>
@@ -501,9 +505,9 @@
         <image name="Rules.jpg" width="3840" height="2160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3MR-X9-MHN"/>
-        <segue reference="oX6-TG-0GF"/>
+        <segue reference="HFi-7Q-Rq1"/>
+        <segue reference="iLp-cx-b3u"/>
         <segue reference="yhu-8F-ARz"/>
-        <segue reference="vtN-6b-H2E"/>
+        <segue reference="oX6-TG-0GF"/>
     </inferredMetricsTieBreakers>
 </document>

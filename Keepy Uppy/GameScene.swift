@@ -22,6 +22,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var background = SKSpriteNode()
     var ball = SKSpriteNode()
     var scoreZone = SKSpriteNode()
+    var dangerZone = SKSpriteNode()
     var ground = SKSpriteNode()
     var ceiling = SKSpriteNode()
     var leftWall = SKSpriteNode()
@@ -89,12 +90,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let scoreZoneThickness: CGFloat = 5.0
     /*Sets the scoreZone thickness constant*/
     
+    //dangerZone thickness
+    let dangerZoneThickness: CGFloat = 5.0
+    /*Sets the dangerZone thickness constant*/
+    
     //Category bit masks
     let groundCategory: UInt32 = 0x1 << 0
     let ballCategory: UInt32 = 0x1 << 1
     let wallCategory: UInt32 = 0x1 << 2
     let ceilingCategory: UInt32 = 0x1 << 3
     let scoreZoneCategory: UInt32 = 0x1 << 4
+    let dangerZoneCategory: UInt32 = 0x1 << 5
     /*End of Category bit masks*/
     
     let playGameplaySong = PlayGameplaySong.sharedInstance
@@ -118,15 +124,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         setUpScoreZone()    //4
         
-        setUpCeiling()  //5
+        setUpDangerZone()   //5
         
-        setUpWalls()    //6
+        setUpCeiling()  //6
         
-        setUpGround()   //7
+        setUpWalls()    //7
         
-        setUpBall() //8
+        setUpGround()   //8
         
-        setUpScore() //9
+        setUpBall() //9
+        
+        setUpScore() //10
     }
 
     required init(coder decoder: NSCoder) {
@@ -159,6 +167,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else if gameEnded {
             //Create a button to return to the home page
             println("FUCK")
+            //Return to homepage
         }
         
         //Recognizes only a tap on the ball
@@ -190,8 +199,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                     moveBall(posX, posY: posY, ballCenterX: ballCenterX, ballCenterY: ballCenterY, differenceRatioX: differenceRatioX, differenceRatioY: differenceRatioY)
                     
-                    pointsObtained++
-                    println(pointsObtained)
+                    if rawPosY <= size.height / 5 { //Tap in the danger zone
+                        pointsObtained += 4
+                        println(pointsObtained)
+                    } else {    //Tap in the middle zone
+                        pointsObtained++
+                        println(pointsObtained)
+                    }
                 }
             }
         }
@@ -306,7 +320,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //4
     func setUpScoreZone() -> Void {
         self.scoreZone.name = "scoreZone"
-        self.scoreZone.color = UIColor.redColor()
+        self.scoreZone.color = UIColor.blackColor()
         self.scoreZone.position = CGPointMake(size.width / 2, (4 * size.height) / 5)
         self.scoreZone.size = CGSizeMake(size.width,scoreZoneThickness)
         
@@ -323,6 +337,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(self.scoreZone)
     }
 
+    //5
+    func setUpDangerZone() -> Void {
+        self.dangerZone.name = "dangerZone"
+        self.dangerZone.color = UIColor.redColor()
+        self.dangerZone.position = CGPointMake(size.width / 2, size.height / 5)
+        self.dangerZone.size = CGSizeMake(size.width, dangerZoneThickness)
+    
+        //Create an edge based body for the scoreZone
+        self.dangerZone.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(-size.width / 2, 0.0), toPoint: CGPointMake(size.width, 0.0))
+    
+        self.dangerZone.physicsBody?.categoryBitMask = dangerZoneCategory
+        self.dangerZone.physicsBody?.contactTestBitMask = ballCategory
+    
+        self.dangerZone.physicsBody?.affectedByGravity = false
+    
+        self.dangerZone.physicsBody?.allowsRotation = false
+    
+        self.addChild(self.dangerZone)
+    }
+    
     //5
     func setUpCeiling() -> Void {
         self.ceiling.name = "Ceiling"
@@ -450,7 +484,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.ball.physicsBody!.collisionBitMask = wallCategory | groundCategory | ceilingCategory //Assigns the collisions that the ball can have
 
         //Assigns the contacts that we care about for the ball
-        self.ball.physicsBody!.contactTestBitMask = groundCategory | scoreZoneCategory
+        self.ball.physicsBody!.contactTestBitMask = groundCategory | scoreZoneCategory | dangerZoneCategory
         addChild(self.ball)
     }
     
@@ -458,7 +492,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setUpScore() -> Void {
         self.scoreLabelNode.name = "Score"
         self.scoreLabelNode = SKLabelNode(fontNamed:"MarkerFelt-Wide")
-        self.scoreLabelNode.fontColor = UIColor.redColor()  //Set font color as red
+        self.scoreLabelNode.fontColor = UIColor.blackColor()  //Set font color as red
     
         //Sets score to be center of the screen
         self.scoreLabelNode.position = CGPointMake( CGRectGetMidX( self.frame ), CGRectGetMidY( self.frame))
