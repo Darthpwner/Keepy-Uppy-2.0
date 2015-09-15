@@ -205,7 +205,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-hZ-Uj6" userLabel="Description">
                                 <rect key="frame" x="16" y="186" width="568" height="228"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">• Keep the ball in the air as long as possible! 
+                                <string key="text">• Keep the ball in the air as long as possible! 
 • Each ball has a different level of bounciness:
 - Beach Ball (most bounce)
 - Basketball (medium bounce)
@@ -214,7 +214,7 @@
 - Desert (most air time)
 - Beach (medium air time)
 - Forest (least air time). 
-• Each tap is worth 1 point, and each bounce off a wall is an extra point.</mutableString>
+• Each tap is worth 1 point, and each bounce off a wall is an extra point.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -254,18 +254,15 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="SXg-PT-W6X"/>
-                                <exclude reference="aAe-n2-K5Y"/>
                                 <exclude reference="IlI-Kv-OGh"/>
                                 <exclude reference="SIw-uK-thl"/>
                                 <exclude reference="z8v-2r-d6y"/>
+                                <exclude reference="SXg-PT-W6X"/>
+                                <exclude reference="aAe-n2-K5Y"/>
                                 <exclude reference="s0Z-79-gnc"/>
                             </mask>
                         </variation>
                     </view>
-                    <connections>
-                        <outlet property="rules" destination="lmb-hZ-Uj6" id="UHM-Bb-GJU"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ShN-Wr-f5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="ePJ-Fg-mfm">
