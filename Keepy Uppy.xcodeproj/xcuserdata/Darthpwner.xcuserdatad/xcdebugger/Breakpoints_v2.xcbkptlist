@@ -1622,7 +1622,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "viewDidLoad()"
+            landmarkName = "onTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
