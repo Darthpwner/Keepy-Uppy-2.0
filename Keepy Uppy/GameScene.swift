@@ -92,6 +92,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let groundCategory: UInt32 = 0x1 << 0
     let ballCategory: UInt32 = 0x1 << 1
     let wallCategory: UInt32 = 0x1 << 2
+    let scoreZoneCategory: UInt32 = 0x1 << 3
     /*End of Category bit masks*/
     
     let playGameplaySong = PlayGameplaySong.sharedInstance
@@ -167,30 +168,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
         if let name = touchedNode.name {
             if name == "ball" {
-                playSound("hit.mp3")
-                
-                /*Calculation algorithm constants*/
                 let pos = touch!.locationInNode(self)
-                let rawPosY = pos.y //Raw y-coordinate of ball
-                let posX = pos.x / size.width   //0 to 1
-                let posY = pos.y / size.height  //0 to 1
-                let ballCenterX = ball.anchorPoint.x    //0.5
-                let ballCenterY = ball.anchorPoint.y    //0.5
-                let differenceRatioX = (1.0 - abs(ballCenterX - posX))  //Maximum impulse at the center (0 to 1)
-                let differenceRatioY = (1.0 - abs(ballCenterY - posY))  //Maximum impulse at the center (0 to 1)
-                /*End of calculation algorithm constants*/
+                let rawPosY = pos.y
+                if rawPosY < (3 * size.height) / 4 {
+                    playSound("hit.mp3")
                 
-                moveBall(posX, posY: posY, ballCenterX: ballCenterX, ballCenterY: ballCenterY, differenceRatioX: differenceRatioX, differenceRatioY: differenceRatioY)
+                    /*Calculation algorithm constants*/
+                    let posX = pos.x / size.width   //0 to 1
+                    let posY = pos.y / size.height  //0 to 1
+                    let ballCenterX = ball.anchorPoint.x    //0.5
+                    let ballCenterY = ball.anchorPoint.y    //0.5
+                    let differenceRatioX = (1.0 - abs(ballCenterX - posX))  //Maximum impulse at the center (0 to 1)
+                    let differenceRatioY = (1.0 - abs(ballCenterY - posY))  //Maximum impulse at the center (0 to 1)
+                    /*End of calculation algorithm constants*/
                 
-                pointsObtained++
-                println(rawPosY)
-                println((3 * size.height)/4 )
-                if rawPosY > (3 * size.height) / 4 {
-                    println(pointsObtained)
-                    println(score)
-                    score += pointsObtained
-                    scoreLabelNode.text = String(score)
-                    pointsObtained = 0
+                    moveBall(posX, posY: posY, ballCenterX: ballCenterX, ballCenterY: ballCenterY, differenceRatioX: differenceRatioX, differenceRatioY: differenceRatioY)
+                
+                    pointsObtained++
                 }
 //                score++
 //                scoreLabelNode.text = String(score)
@@ -312,6 +306,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.scoreZone.position = CGPointMake(size.width / 2, (3 * size.height) / 4)
         self.scoreZone.size = CGSizeMake(size.width,scoreZoneThickness)
         
+        self.scoreZone.physicsBody?.categoryBitMask = scoreZoneCategory
+        self.scoreZone.physicsBody?.contactTestBitMask = ballCategory
+        
         self.scoreZone.physicsBody?.affectedByGravity = false
         
         self.scoreZone.physicsBody?.allowsRotation = false
@@ -426,7 +423,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.ball.physicsBody!.collisionBitMask = wallCategory | groundCategory //Assigns the collisions that the ball can have
 
         //Assigns the contacts that we care about for the ball
-        self.ball.physicsBody!.contactTestBitMask = groundCategory
+        self.ball.physicsBody!.contactTestBitMask = groundCategory | scoreZoneCategory
         addChild(self.ball)
     }
     
@@ -451,8 +448,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Handle contact between nodes
     func didBeginContact(contact: SKPhysicsContact) {
-        //The condition on left cause problems
-        if ( contact.bodyA.categoryBitMask & groundCategory ) == groundCategory || ( contact.bodyB.categoryBitMask & groundCategory ) == groundCategory {
+        if ( contact.bodyA.categoryBitMask & groundCategory ) == groundCategory || ( contact.bodyB.categoryBitMask & groundCategory ) == groundCategory {   //Ball hits ground
             
             score = 0
             scoreLabelNode.text = String(score)
@@ -462,8 +458,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             playGameplaySong.song.stop()
             playSound("gameover.mp3")   //Sound glitchy since the ball still bounces
+        } else if (contact.bodyA.categoryBitMask & scoreZoneCategory) == scoreZoneCategory || (contact.bodyB.categoryBitMask & scoreZoneCategory) == scoreZoneCategory {    //Ball goes through scoreZone
+            let posOfBall: CGFloat = ball.position.y
+            println(posOfBall)
+            println((3 * size.height) / 4 )
+            if posOfBall > (3 * size.height) / 4 {
+                println(pointsObtained)
+                println(score)
+                score += pointsObtained
+                scoreLabelNode.text = String(score)
+                pointsObtained = 0
+            }
             
-        } else {
+        } else {    //Ball hits wall
             pointsObtained++
             scoreLabelNode.text = String(score)
         }
