@@ -454,7 +454,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             score = 0
             scoreLabelNode.text = String(score)
             
-            self.ball.physicsBody?.restitution = 0.0    //Prevents the ball from bouncing
+            //self.ball.physicsBody?.restitution = 0.0    //Prevents the ball from bouncing
             self.ball.userInteractionEnabled = false
             
             playGameplaySong.song.stop()
