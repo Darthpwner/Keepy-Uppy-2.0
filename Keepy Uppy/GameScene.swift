@@ -357,7 +357,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(self.dangerZone)
     }
     
-    //5
+    //6
     func setUpCeiling() -> Void {
         self.ceiling.name = "Ceiling"
         self.ceiling.color = UIColor.orangeColor()
@@ -378,7 +378,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(self.ceiling)
     }
     
-    //6
+    //7
     func setUpWalls() -> Void {
         /*Set up left wall*/
         self.leftWall.color = UIColor.greenColor()
@@ -424,7 +424,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /*End of Set up right wall*/
     }
     
-    //7
+    //8
     func setUpGround() -> Void {
         self.ground.name = "Ground"
         self.ground.color = UIColor.redColor()
@@ -444,7 +444,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(self.ground)
     }
     
-    //8
+    //9
     func setUpBall() -> Void {
         if chooseBall.ballType == BallType.BeachBall {
             self.ball.setScale(beachBallScalingFactor)
@@ -488,7 +488,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(self.ball)
     }
     
-    //9
+    //10
     func setUpScore() -> Void {
         self.scoreLabelNode.name = "Score"
         self.scoreLabelNode = SKLabelNode(fontNamed:"MarkerFelt-Wide")
