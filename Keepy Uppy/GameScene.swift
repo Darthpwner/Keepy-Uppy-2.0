@@ -158,11 +158,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if !gameStarted {
             self.physicsWorld.gravity = CGVectorMake( 0.0, gravityConstant)
             gameStarted = true
-        } else if gameEnded {
-            //Create a button to return to the home page
-            println("FUCK")
-            //Create a NAVIGATION VIEW CONTROLLER DARIN
-            //Return to homepage
         }
         
         //Recognizes only a tap on the ball
