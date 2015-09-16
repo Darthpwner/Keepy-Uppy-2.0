@@ -24,12 +24,23 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @IBAction func onTapped(sender: AnyObject) {
-        if scene.gameEnded == true {
-            self.navigationController?.popToRootViewControllerAnimated(true)
+        delay(2.0) {
+            if self.scene.gameEnded == true {
+                self.navigationController?.popToRootViewControllerAnimated(true)
             
-            //Replay the start song when you reset to the main menu
-            restartStartSong()
+                //Replay the start song when you reset to the main menu
+                self.restartStartSong()
+            }
         }
+    }
+
+    func delay(delay:Double, closure:()->()) {
+    dispatch_after(
+        dispatch_time(
+            DISPATCH_TIME_NOW,
+            Int64(delay * Double(NSEC_PER_SEC))
+        ),
+        dispatch_get_main_queue(), closure)
     }
     
     func restartStartSong() -> Void {
