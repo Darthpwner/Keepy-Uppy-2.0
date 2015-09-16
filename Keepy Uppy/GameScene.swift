@@ -520,7 +520,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.highScoreLabelNode.zPosition = 100
         self.highScoreLabelNode.text = String(highScore)
-        self.addChild(scoreLabelNode)
+        self.addChild(highScoreLabelNode)
     }
     
     //Load previous high scores
