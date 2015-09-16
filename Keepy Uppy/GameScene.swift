@@ -191,10 +191,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                     if rawPosY <= size.height / 5 { //Tap in the danger zone
                         pointsObtained += 3
-                        println(pointsObtained)
+                        //println(pointsObtained)
                     } else {    //Tap in the middle zone
                         pointsObtained++
-                        println(pointsObtained)
+                        //println(pointsObtained)
                     }
                 }
             }

@@ -26,7 +26,7 @@ class TitlePage: UIViewController {
         
         //Plays start song
         playStartSong.prepareAudios()
-        playStartSong.song.play()
+        playStartSong.song.play()   //Keeps getting called
     }
     
     override func prefersStatusBarHidden() -> Bool {

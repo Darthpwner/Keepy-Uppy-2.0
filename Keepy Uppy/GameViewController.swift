@@ -24,6 +24,8 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func onTapped(sender: AnyObject) {
         if scene.gameEnded == true {
             self.navigationController?.popToRootViewControllerAnimated(true)
+            
+            //Play song?
         }
     }
     
