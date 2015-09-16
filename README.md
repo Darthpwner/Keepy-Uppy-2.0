@@ -70,3 +70,4 @@ Choose Ball because it restarts the song.
 5) Make the Choose Ball and Choose Background pages more lively. It seems a bit
 dull for now.
 6) Refactor the code to adhere more closely to MVC principles.
+7) Fix Rules sizing problem on 4S
