@@ -62,12 +62,9 @@ provided directional control. For example, clicking on the left should have the
 ball jump to the right, whereas clicking on the right should have the ball jump
 to the left.
 
-Notable bugs that I need to fix: 1) Fix the sounds on real iOS devices.
-2) Fix the start song when you go back to the Title Page from Rules Page or
-Choose Ball because it restarts the song.
-3) Play the start song if you need to restart the game.
-4) Fix the Rules Page UI
-5) Make the Choose Ball and Choose Background pages more lively. It seems a bit
+Notable bugs that I need to fix: 1) Ask people input about high scores
+2) Fix the Rules Page UI
+3) Fix Rules sizing problem on 4S
+4) Make the Choose Ball and Choose Background pages more lively. It seems a bit
 dull for now.
-6) Refactor the code to adhere more closely to MVC principles.
-7) Fix Rules sizing problem on 4S
+5) Refactor the code to adhere more closely to MVC principles.
