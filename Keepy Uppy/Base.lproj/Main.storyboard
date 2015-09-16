@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Restart -->
         <scene sceneID="rcJ-iR-Lnc">
             <objects>
-                <navigationController navigationBarHidden="YES" id="mTD-M6-FWm" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="mTD-M6-FWm" userLabel="Restart " sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aCx-SV-H3h">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -221,7 +221,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ln-At-qzb" userLabel="Description">
                                 <rect key="frame" x="16" y="118" width="568" height="296"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">• Keep the ball in the air as long as possible and try to accumulate points!
+                                <string key="text">• Keep the ball in the air as long as possible and try to accumulate points!
 • Each ball has a different level of bounciness:
 - Beach Ball (most bounce)
 - Basketball (medium bounce)
@@ -234,7 +234,7 @@
 • Your score is only incremented if you get the ball above the score zone.
 • Each tap in the middle zone is worth 1 point. Colliding with a wall earns an additional point, and colliding with the ceiling earns an extra 3 points.
 • Taps in the danger zone (below the red line) are worth 3 points.
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -496,15 +496,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="SMg-fh-5R7" appends="YES" id="f71-Y0-Qde"/>
-                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7e-fV-kAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Td3-lg-Ngb" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="SMg-fh-5R7" userLabel="Go to Title Page"/>
             </objects>
             <point key="canvasLocation" x="328" y="2731"/>
         </scene>
@@ -523,9 +519,9 @@
         <image name="Rules.jpg" width="3840" height="2160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vtN-6b-H2E"/>
         <segue reference="yhu-8F-ARz"/>
+        <segue reference="HFi-7Q-Rq1"/>
+        <segue reference="bzY-Tz-soK"/>
         <segue reference="oX6-TG-0GF"/>
-        <segue reference="YS7-q0-uAq"/>
     </inferredMetricsTieBreakers>
 </document>
