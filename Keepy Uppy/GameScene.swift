@@ -20,6 +20,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var scoreLabelNode = SKLabelNode()  //Displays points when ball is moved above scoreZone
     var highScoreLabelNode = SKLabelNode()  //Displays the high score when the game is over
+    var highScoreMessageNode = SKLabelNode()   //Message if you set a high score
     
     var background = SKSpriteNode()
     var ball = SKSpriteNode()
@@ -499,32 +500,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     /*End of setup functions*/
     
     /*High score functions*/
-    
-    //Set up high score after game ends
-    func setUpHighScore() -> Void {
+    //Sets the message to be displayed if the user sets the high score
+    func setUpHighScoreMessage() -> Void {
+        self.highScoreMessageNode.name = "highScoreMessage"
+        self.highScoreMessageNode = SKLabelNode(fontNamed: "MarkerFelt-Wide")
+        self.highScoreMessageNode.fontColor = UIColor.redColor()    //Set the font color as red
         
-        if score > highScore {
-            highScore = score
-            
-            var highScoreDefault = NSUserDefaults.standardUserDefaults()
-            highScoreDefault.setValue(highScore, forKey: "highScore")
-            highScoreDefault.synchronize()
-        }
-        
-        self.highScoreLabelNode.name = "highScore"
-        self.highScoreLabelNode = SKLabelNode(fontNamed:"MarkerFelt-Wide")
-        self.highScoreLabelNode.fontColor = UIColor.whiteColor()    //Set font color as white
-        
-        //Sets score to be center of the screen
-        self.highScoreLabelNode.position = CGPointMake( CGRectGetMidX( self.frame ), (6 * self.frame.height) / 10)
-        
-        self.highScoreLabelNode.zPosition = 100
-        self.highScoreLabelNode.text = String(highScore)
-        self.addChild(highScoreLabelNode)
+        //Sets high score message to be below the score
+        self.highScoreMessageNode.position = CGPointMake(CGRectGetMidX(self.frame), (4 * self.frame.height) / 10)
+        self.highScoreMessageNode.zPosition = 100
+        self.highScoreMessageNode.text = String("New High Score!")
+        self.addChild(highScoreMessageNode)
     }
     
     //Load previous high scores
-    func loadPreviousHighScore() {
+    func loadPreviousHighScore() -> Void {
         var highScoreDefault = NSUserDefaults.standardUserDefaults()
         
         if highScoreDefault.valueForKey("highScore") != nil {
@@ -532,6 +522,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    //Set up high score after game ends
+    func setUpHighScore() -> Void {
+        
+        loadPreviousHighScore() //Get the previous high score
+        
+        if score > highScore {
+            highScore = score
+            
+            var highScoreDefault = NSUserDefaults.standardUserDefaults()
+            highScoreDefault.setValue(highScore, forKey: "highScore")
+            highScoreDefault.synchronize()
+            
+            setUpHighScoreMessage() //Print high score message if a new high score was obtained
+        }
+        
+        self.highScoreLabelNode.name = "highScore"
+        self.highScoreLabelNode = SKLabelNode(fontNamed:"MarkerFelt-Wide")
+        self.highScoreLabelNode.fontColor = UIColor.redColor()    //Set font color as red
+        
+        //Sets high score to be above the score
+        self.highScoreLabelNode.position = CGPointMake( CGRectGetMidX( self.frame ), (6 * self.frame.height) / 10)
+        
+        self.highScoreLabelNode.zPosition = 100
+        self.highScoreLabelNode.text = String(highScore)
+        self.addChild(highScoreLabelNode)
+    }
     /*End of High score functions*/
     
     override func update(currentTime: CFTimeInterval) {
