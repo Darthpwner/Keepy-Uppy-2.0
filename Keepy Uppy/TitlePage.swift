@@ -15,7 +15,7 @@ class TitlePage: UIViewController {
     var scene: GameScene!
     
     override func viewDidLoad() {
-        let playStartSong = PlayStartSong.sharedInstance
+        let playStartSong = PlayStartSong.sharedInstance    //Move the constant assignment in here to prevent reinstantiating
         
         //Add the bouncing ball GIF
         var strImg: String = "http://www.platformtennis.org/Assets/Assets/images/Bouncing+Ball+Yellow.gif"

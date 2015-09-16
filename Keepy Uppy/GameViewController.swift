@@ -14,6 +14,8 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var scene: GameScene!
     
+    let playStartSong = PlayStartSong.sharedInstance    //Move the constant assignment in here to prevent reinstantiating
+    
     @IBAction func unwindToContainerVC(segue: UIStoryboardSegue) {
         if scene.gameEnded == true {
             println(self.navigationController)
@@ -25,8 +27,14 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         if scene.gameEnded == true {
             self.navigationController?.popToRootViewControllerAnimated(true)
             
-            //Play song?
+            //Replay the start song when you reset to the main menu
+            restartStartSong()
         }
+    }
+    
+    func restartStartSong() -> Void {
+        playStartSong.prepareAudios()
+        playStartSong.song.play()
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
