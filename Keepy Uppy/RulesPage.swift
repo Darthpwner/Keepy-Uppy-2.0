@@ -9,4 +9,8 @@
 import UIKit
 
 //Created just to avoid Console Output messages
-class RulesPage: UIViewController {}
+class RulesPage: UIViewController {
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+}

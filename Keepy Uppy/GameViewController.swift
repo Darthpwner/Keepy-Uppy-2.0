@@ -61,6 +61,6 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     override func prefersStatusBarHidden() -> Bool {
-        return true
+        return true 
     }
 }
