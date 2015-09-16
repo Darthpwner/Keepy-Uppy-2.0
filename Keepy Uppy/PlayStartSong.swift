@@ -13,6 +13,7 @@ import AVFoundation //Needed to play sounds
 class PlayStartSong {
     
     var song: AVAudioPlayer = AVAudioPlayer()
+    var songStarted: Bool = false
     
     class var sharedInstance: PlayStartSong {
         struct Static {

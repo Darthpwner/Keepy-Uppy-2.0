@@ -14,10 +14,9 @@ class TitlePage: UIViewController {
     
     var scene: GameScene!
     
-    let playStartSong = PlayStartSong.sharedInstance
-    
     override func viewDidLoad() {
-  
+        let playStartSong = PlayStartSong.sharedInstance
+        
         //Add the bouncing ball GIF
         var strImg: String = "http://www.platformtennis.org/Assets/Assets/images/Bouncing+Ball+Yellow.gif"
         animateGif(strImg)
@@ -25,8 +24,11 @@ class TitlePage: UIViewController {
         super.viewDidLoad()
         
         //Plays start song
-        playStartSong.prepareAudios()
-        playStartSong.song.play()   //Keeps getting called
+        if playStartSong.songStarted == false {
+            playStartSong.prepareAudios()
+            playStartSong.song.play()   //Keeps getting called
+            playStartSong.songStarted = true
+        }
     }
     
     override func prefersStatusBarHidden() -> Bool {
