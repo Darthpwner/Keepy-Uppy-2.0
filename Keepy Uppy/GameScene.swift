@@ -504,10 +504,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setUpHighScoreMessage() -> Void {
         self.highScoreMessageNode.name = "highScoreMessage"
         self.highScoreMessageNode = SKLabelNode(fontNamed: "MarkerFelt-Wide")
-        self.highScoreMessageNode.fontColor = UIColor.redColor()    //Set the font color as red
+        self.highScoreMessageNode.fontColor = UIColor.whiteColor()    //Set the font color as red
         
-        //Sets high score message to be below the score
-        self.highScoreMessageNode.position = CGPointMake(CGRectGetMidX(self.frame), (4 * self.frame.height) / 10)
+        //Sets high score message to be above the score
+        self.highScoreMessageNode.position = CGPointMake(CGRectGetMidX(self.frame), (6 * self.frame.height) / 10)
         self.highScoreMessageNode.zPosition = 100
         self.highScoreMessageNode.text = String("New High Score!")
         self.addChild(highScoreMessageNode)
@@ -539,10 +539,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.highScoreLabelNode.name = "highScore"
         self.highScoreLabelNode = SKLabelNode(fontNamed:"MarkerFelt-Wide")
-        self.highScoreLabelNode.fontColor = UIColor.redColor()    //Set font color as red
+        self.highScoreLabelNode.fontColor = UIColor.whiteColor()    //Set font color as red
         
-        //Sets high score to be above the score
-        self.highScoreLabelNode.position = CGPointMake( CGRectGetMidX( self.frame ), (6 * self.frame.height) / 10)
+        //Sets high score to be below the score
+        self.highScoreLabelNode.position = CGPointMake( CGRectGetMidX( self.frame ), (4 * self.frame.height) / 10)
         
         self.highScoreLabelNode.zPosition = 100
         self.highScoreLabelNode.text = String(highScore)
