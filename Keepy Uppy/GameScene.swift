@@ -21,6 +21,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var scoreLabelNode = SKLabelNode()  //Displays points when ball is moved above scoreZone
     var highScoreLabelNode = SKLabelNode()  //Displays the high score when the game is over
     var highScoreMessageNode = SKLabelNode()   //Message if you set a high score
+    var scoreStringNode = SKLabelNode() //Displays "Score: "
+    var highScoreStringNode = SKLabelNode() //Displays "Best: "
     
     var background = SKSpriteNode()
     var ball = SKSpriteNode()
@@ -498,7 +500,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(scoreLabelNode)
     }
     /*End of setup functions*/
-    
     /*High score functions*/
     //Sets the message to be displayed if the user sets the high score
     func setUpHighScoreMessage() -> Void {
@@ -520,6 +521,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if highScoreDefault.valueForKey("highScore") != nil {
             highScore = highScoreDefault.valueForKey("highScore") as! NSInteger!
         }
+    }
+    
+    //Set up string nodes for display
+    func setUpStringNodes() -> Void {
+        //Set up score string node
+        self.scoreStringNode.name = "scoreStringNode"
+        self.scoreStringNode = SKLabelNode(fontNamed: "MarkerFelt-Wide")
+        self.scoreStringNode.fontColor = UIColor.orangeColor()    //Set the font color as orange
+        
+        //Sets score string node to be left of score
+        self.scoreStringNode.position = CGPointMake( (3 * self.frame.width) / 10, CGRectGetMidY( self.frame ))
+        self.scoreStringNode.zPosition = 100
+        self.scoreStringNode.text = String("Score: ")
+        self.addChild(scoreStringNode)
+        
+        //Set up high score string node
+        self.highScoreStringNode.name = "highScoreStringNode"
+        self.highScoreStringNode = SKLabelNode(fontNamed: "MarkerFelt-Wide")
+        self.highScoreStringNode.fontColor = UIColor.orangeColor()    //Set the font color as orange
+        
+        //Sets score string node to be left of score
+        self.highScoreStringNode.position = CGPointMake( (3 * self.frame.width) / 10, (4 * self.frame.height) / 10)
+        self.highScoreStringNode.zPosition = 100
+        self.highScoreStringNode.text = String("Best: ")
+        self.addChild(highScoreStringNode)
     }
     
     //Set up high score after game ends
@@ -547,6 +573,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.highScoreLabelNode.zPosition = 100
         self.highScoreLabelNode.text = String(highScore)
         self.addChild(highScoreLabelNode)
+        
+        setUpStringNodes()  //Set up the "Score: " and "Best: " label
     }
     /*End of High score functions*/
     
