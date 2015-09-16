@@ -10,7 +10,7 @@
 import SpriteKit
 import AVFoundation
 
-//Scoring algorithm: Tap the ball -> +1 , Hit a wall -> +1
+//Scoring algorithm: Tap the ball in middle zone -> +1 , Hit a wall -> +1, Hit the ceiling -> +3, Tap in the danger zone -> +3
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     /*Variables*/
