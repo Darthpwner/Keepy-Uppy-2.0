@@ -45,19 +45,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let ballMass: CGFloat = 0.5
     
     //Restitution == how much energy the physics body loses when it bounces
+    let beachBallRestitution: CGFloat = 1.0
     let basketballRestitution: CGFloat = 0.5
-    let beachBallRestitution: CGFloat = 0.8
-    let bowlingBallRestitution: CGFloat = 0.2
+    let bowlingBallRestitution: CGFloat = 0.0
     
     //Linear damping == simulates fluid or air friction forces on the body
-    let desertLinearDamping: CGFloat = 0.2
+    let desertLinearDamping: CGFloat = 0.0
     let beachLinearDamping: CGFloat = 0.5
-    let forestLinearDamping: CGFloat = 0.8
+    let forestLinearDamping: CGFloat = 1.0
     
     //Angular damping == reduces the body’s rotational velocity
-    let desertAngularDamping: CGFloat = 0.2
+    let desertAngularDamping: CGFloat = 0.0
     let beachAngularDamping: CGFloat = 0.5
-    let forestAngularDamping: CGFloat = 0.8
+    let forestAngularDamping: CGFloat = 1.0
     
     //Beach ball scaling factor
     let beachBallScalingFactor: CGFloat = 0.1

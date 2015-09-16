@@ -550,7 +550,7 @@
             startingLineNumber = "57"
             endingLineNumber = "57"
             landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1177,7 +1177,7 @@
             startingLineNumber = "58"
             endingLineNumber = "58"
             landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1605,7 +1605,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
-            endingLineNumber = "43">
+            endingLineNumber = "43"
+            landmarkName = "GameViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
