@@ -105,6 +105,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     let playGameplaySong = PlayGameplaySong.sharedInstance
     
+    var timeDelay = 2.65    //Length of gameover.mp3
     /*End of Constants*/
 
     override init(size: CGSize) {
@@ -497,6 +498,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Called before each frame is rendered */
     }
     
+    //http://stackoverflow.com/questions/24034544/dispatch-after-gcd-in-swift
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
     //Handle contact between nodes
     func didBeginContact(contact: SKPhysicsContact) {
         if ( contact.bodyA.categoryBitMask & groundCategory ) == groundCategory || ( contact.bodyB.categoryBitMask & groundCategory ) == groundCategory {   //Ball hits ground
@@ -508,7 +519,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             playSound("gameover.mp3")
             
             //Return to home screen if you tap the screen after the game ends
-            gameEnded = true            
+            delay(timeDelay) {
+                self.gameEnded = true
+            }
         } else if ( contact.bodyA.categoryBitMask & wallCategory) == wallCategory || (contact.bodyB.categoryBitMask & wallCategory) == wallCategory { //Ball hits a wall
             
             pointsObtained++

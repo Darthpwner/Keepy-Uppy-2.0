@@ -13,7 +13,7 @@ import AVFoundation
 class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var scene: GameScene!
-    
+
     let playStartSong = PlayStartSong.sharedInstance    //Move the constant assignment in here to prevent reinstantiating
     
     @IBAction func unwindToContainerVC(segue: UIStoryboardSegue) {
@@ -24,23 +24,12 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @IBAction func onTapped(sender: AnyObject) {
-        delay(2.0) {
-            if self.scene.gameEnded == true {
-                self.navigationController?.popToRootViewControllerAnimated(true)
+        if self.scene.gameEnded == true {
+            self.navigationController?.popToRootViewControllerAnimated(true)
             
-                //Replay the start song when you reset to the main menu
-                self.restartStartSong()
-            }
+            //Replay the start song when you reset to the main menu
+            self.restartStartSong()
         }
-    }
-
-    func delay(delay:Double, closure:()->()) {
-    dispatch_after(
-        dispatch_time(
-            DISPATCH_TIME_NOW,
-            Int64(delay * Double(NSEC_PER_SEC))
-        ),
-        dispatch_get_main_queue(), closure)
     }
     
     func restartStartSong() -> Void {
