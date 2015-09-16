@@ -358,7 +358,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //6
     func setUpCeiling() -> Void {
         self.ceiling.name = "Ceiling"
-        self.ceiling.color = UIColor.orangeColor()
         self.ceiling.position = CGPointMake(size.width / 2, size.height)
         self.ceiling.size = CGSizeMake(size.width, barrierFactor)
         
@@ -379,7 +378,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //7
     func setUpWalls() -> Void {
         /*Set up left wall*/
-        self.leftWall.color = UIColor.greenColor()
         self.leftWall.name = "Left Wall"
         self.leftWall.position = CGPoint(x: 0.0, y: size.height / 2)
         self.leftWall.size = CGSizeMake(barrierFactor, size.height)
@@ -402,7 +400,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         /*Set up right wall*/
         self.rightWall.name = "Right Wall"
-        self.rightWall.color = UIColor.greenColor()
         self.rightWall.position = CGPoint(x: size.width, y: size.height / 2) //Subtract barrierFactor from wall width
         self.rightWall.size = CGSizeMake(barrierFactor, size.height)
         
@@ -425,7 +422,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //8
     func setUpGround() -> Void {
         self.ground.name = "Ground"
-        self.ground.color = UIColor.redColor()
         self.ground.position = CGPointMake(size.width / 2, 0.0)
         self.ground.size = CGSizeMake(size.width, barrierFactor)
         
