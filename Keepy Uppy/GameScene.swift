@@ -69,9 +69,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Beach ball scaling factor
     let beachBallScalingFactor: CGFloat = 0.1
     //Basketball scaling factor
-    let basketBallScalingFactor: CGFloat = 0.3
+    let basketBallScalingFactor: CGFloat = 0.1
     //Bowling ball scaling factor
-    let bowlingBallScalingFactor: CGFloat = 0.5
+    let bowlingBallScalingFactor: CGFloat = 0.1
     
     //Impulse factor
     let impulseFactor: CGFloat = 100.0

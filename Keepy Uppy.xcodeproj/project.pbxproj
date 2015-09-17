@@ -52,7 +52,6 @@
 		6BD8A76C1BA4FB2F00A240CE /* PlayGameplaySong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8A76B1BA4FB2F00A240CE /* PlayGameplaySong.swift */; };
 		6BD8E0651B9EB5710010E257 /* gameplay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6BD8E0641B9EB5710010E257 /* gameplay.mp3 */; };
 		6BD927AA1BAB5B900039E0E3 /* Back Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A01BAB5B900039E0E3 /* Back Arrow.png */; };
-		6BD927AB1BAB5B900039E0E3 /* Basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A11BAB5B900039E0E3 /* Basketball.png */; };
 		6BD927AC1BAB5B900039E0E3 /* Beach Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A21BAB5B900039E0E3 /* Beach Ball.png */; };
 		6BD927AD1BAB5B900039E0E3 /* Beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A31BAB5B900039E0E3 /* Beach.jpg */; };
 		6BD927AE1BAB5B900039E0E3 /* Bowling Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A41BAB5B900039E0E3 /* Bowling Ball.png */; };
@@ -61,6 +60,8 @@
 		6BD927B11BAB5B900039E0E3 /* Desert.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A71BAB5B900039E0E3 /* Desert.jpg */; };
 		6BD927B21BAB5B900039E0E3 /* Forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A81BAB5B900039E0E3 /* Forest.jpg */; };
 		6BD927B31BAB5B900039E0E3 /* Rules.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A91BAB5B900039E0E3 /* Rules.jpg */; };
+		6BEF28421BAB5EED00DB93ED /* Bouncing Ball.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6BEF28411BAB5EED00DB93ED /* Bouncing Ball.gif */; };
+		6BEF28441BAB5FFE00DB93ED /* Basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BEF28431BAB5FFE00DB93ED /* Basketball.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,7 +126,6 @@
 		6BD8A76B1BA4FB2F00A240CE /* PlayGameplaySong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayGameplaySong.swift; sourceTree = "<group>"; };
 		6BD8E0641B9EB5710010E257 /* gameplay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameplay.mp3; sourceTree = "<group>"; };
 		6BD927A01BAB5B900039E0E3 /* Back Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Back Arrow.png"; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Back Arrow.png"; sourceTree = "<group>"; };
-		6BD927A11BAB5B900039E0E3 /* Basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Basketball.png; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Basketball.png"; sourceTree = "<group>"; };
 		6BD927A21BAB5B900039E0E3 /* Beach Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Beach Ball.png"; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Beach Ball.png"; sourceTree = "<group>"; };
 		6BD927A31BAB5B900039E0E3 /* Beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Beach.jpg; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Beach.jpg"; sourceTree = "<group>"; };
 		6BD927A41BAB5B900039E0E3 /* Bowling Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bowling Ball.png"; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Bowling Ball.png"; sourceTree = "<group>"; };
@@ -134,6 +134,8 @@
 		6BD927A71BAB5B900039E0E3 /* Desert.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Desert.jpg; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Desert.jpg"; sourceTree = "<group>"; };
 		6BD927A81BAB5B900039E0E3 /* Forest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Forest.jpg; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Forest.jpg"; sourceTree = "<group>"; };
 		6BD927A91BAB5B900039E0E3 /* Rules.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Rules.jpg; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Rules.jpg"; sourceTree = "<group>"; };
+		6BEF28411BAB5EED00DB93ED /* Bouncing Ball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Bouncing Ball.gif"; sourceTree = "<group>"; };
+		6BEF28431BAB5FFE00DB93ED /* Basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Basketball.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,9 +214,10 @@
 			isa = PBXGroup;
 			children = (
 				6BD927A01BAB5B900039E0E3 /* Back Arrow.png */,
-				6BD927A11BAB5B900039E0E3 /* Basketball.png */,
+				6BEF28431BAB5FFE00DB93ED /* Basketball.png */,
 				6BD927A21BAB5B900039E0E3 /* Beach Ball.png */,
 				6BD927A31BAB5B900039E0E3 /* Beach.jpg */,
+				6BEF28411BAB5EED00DB93ED /* Bouncing Ball.gif */,
 				6BD927A41BAB5B900039E0E3 /* Bowling Ball.png */,
 				6BD927A51BAB5B900039E0E3 /* Choose Background.jpg */,
 				6BD927A61BAB5B900039E0E3 /* Choose Ball.jpg */,
@@ -358,7 +361,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B68971F1B98B2CA00C5069E /* LaunchScreen.xib in Resources */,
-				6BD927AB1BAB5B900039E0E3 /* Basketball.png in Resources */,
 				6BD927B01BAB5B900039E0E3 /* Choose Ball.jpg in Resources */,
 				6B8B55BE1BA9ED3F0091CAC0 /* Icon-60.png in Resources */,
 				6B8B55561BA80A100091CAC0 /* scorepoints.mp3 in Resources */,
@@ -376,6 +378,7 @@
 				6B8B55BF1BA9ED3F0091CAC0 /* Icon-60@2x.png in Resources */,
 				6BD927AD1BAB5B900039E0E3 /* Beach.jpg in Resources */,
 				6B8B55B81BA9ED3F0091CAC0 /* Icon-29.png in Resources */,
+				6BEF28441BAB5FFE00DB93ED /* Basketball.png in Resources */,
 				6B8B55BB1BA9ED3F0091CAC0 /* Icon-40.png in Resources */,
 				6B68971C1B98B2CA00C5069E /* Images.xcassets in Resources */,
 				6BD927B31BAB5B900039E0E3 /* Rules.jpg in Resources */,
@@ -384,6 +387,7 @@
 				6B8B55C21BA9ED3F0091CAC0 /* Icon-76@2x.png in Resources */,
 				6B8B55C31BA9ED3F0091CAC0 /* Icon-76@3x.png in Resources */,
 				6BD927AF1BAB5B900039E0E3 /* Choose Background.jpg in Resources */,
+				6BEF28421BAB5EED00DB93ED /* Bouncing Ball.gif in Resources */,
 				6B8B55B91BA9ED3F0091CAC0 /* Icon-29@2x.png in Resources */,
 				6BD8E0651B9EB5710010E257 /* gameplay.mp3 in Resources */,
 				6BD927B11BAB5B900039E0E3 /* Desert.jpg in Resources */,

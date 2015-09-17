@@ -18,7 +18,7 @@ enum BackgroundType: Int, Printable {
         case .Beach:
             return "Beach Background.jpg"
         case .Forest:
-            return "Forest Background.png"
+            return "Forest Background.jpg"
         }
     }
 }
