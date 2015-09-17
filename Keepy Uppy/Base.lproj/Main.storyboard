@@ -201,10 +201,9 @@
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ln-At-qzb" userLabel="Description">
-                                <rect key="frame" x="16" y="117.5" width="568" height="267"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">• Keep the ball in the air as long as possible and try to accumulate points!
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ln-At-qzb" userLabel="Description">
+                                <rect key="frame" x="16" y="118" width="568" height="295.5"/>
+                                <mutableString key="text">• Keep the ball in the air as long as possible and try to accumulate points!
 • Each ball has a different level of bounciness:
 - Beach Ball (most bounce)
 - Basketball (medium bounce)
@@ -217,8 +216,8 @@
 • Your score is only incremented if you get the ball above the score zone.
 • Each tap in the middle zone is worth 1 point. Colliding with a wall earns an additional point, and colliding with the ceiling earns an extra 3 points.
 • Taps in the danger zone (below the red line) are worth 3 points.
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFo-aJ-ry4" userLabel="Go to Title Page">
@@ -237,7 +236,7 @@
                             <constraint firstItem="9ln-At-qzb" firstAttribute="trailing" secondItem="MSJ-4p-UgN" secondAttribute="trailingMargin" id="GVL-ci-5QC"/>
                             <constraint firstItem="MTj-IG-zKn" firstAttribute="top" secondItem="jAo-AD-1Gt" secondAttribute="bottom" id="K3I-hx-PB4"/>
                             <constraint firstItem="vC5-rT-gO4" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" constant="-16" id="Lfs-DE-SPW"/>
-                            <constraint firstItem="9ln-At-qzb" firstAttribute="top" secondItem="MTj-IG-zKn" secondAttribute="bottom" constant="-1" id="PfX-pw-uiQ"/>
+                            <constraint firstItem="9ln-At-qzb" firstAttribute="top" secondItem="MTj-IG-zKn" secondAttribute="bottom" id="PfX-pw-uiQ"/>
                             <constraint firstItem="wwY-cz-tvO" firstAttribute="top" secondItem="DFo-aJ-ry4" secondAttribute="bottom" id="SEb-V4-bAC"/>
                             <constraint firstItem="9ln-At-qzb" firstAttribute="leading" secondItem="vC5-rT-gO4" secondAttribute="trailing" constant="-516" id="Zrb-OF-cxE"/>
                             <constraint firstItem="DFo-aJ-ry4" firstAttribute="trailing" secondItem="MSJ-4p-UgN" secondAttribute="trailingMargin" id="aPO-SY-2zh"/>
@@ -245,7 +244,7 @@
                             <constraint firstItem="MTj-IG-zKn" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" id="hgh-8B-aIF"/>
                             <constraint firstAttribute="centerX" secondItem="9ln-At-qzb" secondAttribute="centerX" id="irm-tY-OZx"/>
                             <constraint firstItem="DFo-aJ-ry4" firstAttribute="top" secondItem="9ln-At-qzb" secondAttribute="bottom" constant="22" id="ixr-tP-vNs"/>
-                            <constraint firstItem="DFo-aJ-ry4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9ln-At-qzb" secondAttribute="bottom" id="kAK-QL-wrD"/>
+                            <constraint firstItem="DFo-aJ-ry4" firstAttribute="top" secondItem="9ln-At-qzb" secondAttribute="bottom" id="kAK-QL-wrD"/>
                             <constraint firstItem="9ln-At-qzb" firstAttribute="trailing" secondItem="vC5-rT-gO4" secondAttribute="trailing" constant="-72" id="pne-L2-tuC"/>
                             <constraint firstItem="9ln-At-qzb" firstAttribute="leading" secondItem="MSJ-4p-UgN" secondAttribute="leadingMargin" id="rem-Xy-vAo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vC5-rT-gO4" secondAttribute="trailing" constant="-16" id="rzx-ZF-utf"/>
