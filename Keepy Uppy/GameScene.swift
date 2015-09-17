@@ -486,7 +486,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setUpScore() -> Void {
         self.scoreLabelNode.name = "Score"
         self.scoreLabelNode = SKLabelNode(fontNamed:"MarkerFelt-Wide")
-        self.scoreLabelNode.fontColor = UIColor.blackColor()  //Set font color as black
+        self.scoreLabelNode.fontColor = UIColor.whiteColor()  //Set font color as white
     
         //Sets score to be center of the screen
         self.scoreLabelNode.position = CGPointMake( CGRectGetMidX( self.frame ), CGRectGetMidY( self.frame))
