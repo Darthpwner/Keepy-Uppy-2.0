@@ -17,23 +17,15 @@
 		6B68971C1B98B2CA00C5069E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B68971B1B98B2CA00C5069E /* Images.xcassets */; };
 		6B68971F1B98B2CA00C5069E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B68971D1B98B2CA00C5069E /* LaunchScreen.xib */; };
 		6B68972B1B98B2CA00C5069E /* Keepy_UppyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68972A1B98B2CA00C5069E /* Keepy_UppyTests.swift */; };
-		6B6897351B98B4D300C5069E /* Beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897341B98B4D300C5069E /* Beach.jpg */; };
 		6B6897421B98B62800C5069E /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B68973D1B98B62800C5069E /* gameover.mp3 */; };
 		6B6897461B98B6D100C5069E /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897451B98B6D100C5069E /* hit.mp3 */; };
 		6B6897481B98B96000C5069E /* start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897471B98B96000C5069E /* start.mp3 */; };
-		6B6897501B98BEAB00C5069E /* Forest.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B68974F1B98BEAB00C5069E /* Forest.png */; };
-		6B6897541B98BF5A00C5069E /* Desert.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897531B98BF5A00C5069E /* Desert.jpg */; };
 		6B6897B01B994BAD00C5069E /* Basketball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6897AF1B994BAD00C5069E /* Basketball.swift */; };
 		6B6897B21B994BC200C5069E /* BeachBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6897B11B994BC200C5069E /* BeachBall.swift */; };
 		6B6897B41B994BCF00C5069E /* BowlingBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6897B31B994BCF00C5069E /* BowlingBall.swift */; };
 		6B6897B61B994BF700C5069E /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6897B51B994BF700C5069E /* Ball.swift */; };
-		6B6897B81B995F0800C5069E /* Choose Ball Screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897B71B995F0800C5069E /* Choose Ball Screen.jpg */; };
-		6B6897BC1B99687C00C5069E /* Choose Background Screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B6897BB1B99687C00C5069E /* Choose Background Screen.jpg */; };
 		6B6897BE1B9970DD00C5069E /* ChooseBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6897BD1B9970DD00C5069E /* ChooseBall.swift */; };
 		6B6897C01B9970E500C5069E /* ChooseBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6897BF1B9970E500C5069E /* ChooseBackground.swift */; };
-		6B6C8D071B9BAC7B008678EC /* Basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D061B9BAC7B008678EC /* Basketball.png */; };
-		6B6C8D091B9BAC85008678EC /* Beach Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D081B9BAC85008678EC /* Beach Ball.png */; };
-		6B6C8D0F1B9BAE94008678EC /* Bowling Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */; };
 		6B8B55561BA80A100091CAC0 /* scorepoints.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B8B55551BA80A100091CAC0 /* scorepoints.mp3 */; };
 		6B8B55581BA80B9C0091CAC0 /* RulesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8B55571BA80B9C0091CAC0 /* RulesPage.swift */; };
 		6B8B55B81BA9ED3F0091CAC0 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8B55AA1BA9ED3F0091CAC0 /* Icon-29.png */; };
@@ -52,7 +44,6 @@
 		6B8B55C51BA9ED3F0091CAC0 /* iTunesArtwork-512@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8B55B71BA9ED3F0091CAC0 /* iTunesArtwork-512@2x.png */; };
 		6B94375C1B9C0F080049AA91 /* PlayStartSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */; };
 		6B94375E1B9C1A090049AA91 /* TitlePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94375D1B9C1A090049AA91 /* TitlePage.swift */; };
-		6BD2D38B1B9D05EE0052FBA7 /* Bouncing Ball.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6BD2D38A1B9D05EE0052FBA7 /* Bouncing Ball.gif */; };
 		6BD2D3971B9D5BF20052FBA7 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD2D3961B9D5BF20052FBA7 /* UIImage+animatedGIF.m */; };
 		6BD797EA1B9FC2280055D558 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD797E91B9FC2280055D558 /* Background.swift */; };
 		6BD797EC1B9FC2350055D558 /* Desert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD797EB1B9FC2350055D558 /* Desert.swift */; };
@@ -60,8 +51,16 @@
 		6BD797F01B9FC2420055D558 /* Forest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD797EF1B9FC2420055D558 /* Forest.swift */; };
 		6BD8A76C1BA4FB2F00A240CE /* PlayGameplaySong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8A76B1BA4FB2F00A240CE /* PlayGameplaySong.swift */; };
 		6BD8E0651B9EB5710010E257 /* gameplay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6BD8E0641B9EB5710010E257 /* gameplay.mp3 */; };
-		6BD9D01F1BA571410072C586 /* Rules.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BD9D01E1BA571410072C586 /* Rules.jpg */; };
-		6BD9D0231BA573C60072C586 /* Back Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD9D0221BA573C60072C586 /* Back Arrow.png */; };
+		6BD927AA1BAB5B900039E0E3 /* Back Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A01BAB5B900039E0E3 /* Back Arrow.png */; };
+		6BD927AB1BAB5B900039E0E3 /* Basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A11BAB5B900039E0E3 /* Basketball.png */; };
+		6BD927AC1BAB5B900039E0E3 /* Beach Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A21BAB5B900039E0E3 /* Beach Ball.png */; };
+		6BD927AD1BAB5B900039E0E3 /* Beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A31BAB5B900039E0E3 /* Beach.jpg */; };
+		6BD927AE1BAB5B900039E0E3 /* Bowling Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A41BAB5B900039E0E3 /* Bowling Ball.png */; };
+		6BD927AF1BAB5B900039E0E3 /* Choose Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A51BAB5B900039E0E3 /* Choose Background.jpg */; };
+		6BD927B01BAB5B900039E0E3 /* Choose Ball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A61BAB5B900039E0E3 /* Choose Ball.jpg */; };
+		6BD927B11BAB5B900039E0E3 /* Desert.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A71BAB5B900039E0E3 /* Desert.jpg */; };
+		6BD927B21BAB5B900039E0E3 /* Forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A81BAB5B900039E0E3 /* Forest.jpg */; };
+		6BD927B31BAB5B900039E0E3 /* Rules.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BD927A91BAB5B900039E0E3 /* Rules.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,23 +88,15 @@
 		6B6897241B98B2CA00C5069E /* Keepy UppyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Keepy UppyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B6897291B98B2CA00C5069E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B68972A1B98B2CA00C5069E /* Keepy_UppyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keepy_UppyTests.swift; sourceTree = "<group>"; };
-		6B6897341B98B4D300C5069E /* Beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Beach.jpg; sourceTree = "<group>"; };
 		6B68973D1B98B62800C5069E /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameover.mp3; sourceTree = "<group>"; };
 		6B6897451B98B6D100C5069E /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
 		6B6897471B98B96000C5069E /* start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start.mp3; sourceTree = "<group>"; };
-		6B68974F1B98BEAB00C5069E /* Forest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Forest.png; sourceTree = "<group>"; };
-		6B6897531B98BF5A00C5069E /* Desert.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Desert.jpg; sourceTree = "<group>"; };
 		6B6897AF1B994BAD00C5069E /* Basketball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Basketball.swift; sourceTree = "<group>"; };
 		6B6897B11B994BC200C5069E /* BeachBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeachBall.swift; sourceTree = "<group>"; };
 		6B6897B31B994BCF00C5069E /* BowlingBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BowlingBall.swift; sourceTree = "<group>"; };
 		6B6897B51B994BF700C5069E /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
-		6B6897B71B995F0800C5069E /* Choose Ball Screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Choose Ball Screen.jpg"; sourceTree = "<group>"; };
-		6B6897BB1B99687C00C5069E /* Choose Background Screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Choose Background Screen.jpg"; sourceTree = "<group>"; };
 		6B6897BD1B9970DD00C5069E /* ChooseBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBall.swift; sourceTree = "<group>"; };
 		6B6897BF1B9970E500C5069E /* ChooseBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBackground.swift; sourceTree = "<group>"; };
-		6B6C8D061B9BAC7B008678EC /* Basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Basketball.png; sourceTree = "<group>"; };
-		6B6C8D081B9BAC85008678EC /* Beach Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Beach Ball.png"; sourceTree = "<group>"; };
-		6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bowling Ball.png"; sourceTree = "<group>"; };
 		6B8B55551BA80A100091CAC0 /* scorepoints.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = scorepoints.mp3; sourceTree = "<group>"; };
 		6B8B55571BA80B9C0091CAC0 /* RulesPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesPage.swift; sourceTree = "<group>"; };
 		6B8B55AA1BA9ED3F0091CAC0 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
@@ -124,7 +115,6 @@
 		6B8B55B71BA9ED3F0091CAC0 /* iTunesArtwork-512@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork-512@2x.png"; sourceTree = "<group>"; };
 		6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayStartSong.swift; sourceTree = "<group>"; };
 		6B94375D1B9C1A090049AA91 /* TitlePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlePage.swift; sourceTree = "<group>"; };
-		6BD2D38A1B9D05EE0052FBA7 /* Bouncing Ball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Bouncing Ball.gif"; sourceTree = "<group>"; };
 		6BD2D3941B9D5BF10052FBA7 /* Keepy Uppy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Keepy Uppy-Bridging-Header.h"; sourceTree = "<group>"; };
 		6BD2D3951B9D5BF20052FBA7 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		6BD2D3961B9D5BF20052FBA7 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
@@ -134,8 +124,16 @@
 		6BD797EF1B9FC2420055D558 /* Forest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forest.swift; sourceTree = "<group>"; };
 		6BD8A76B1BA4FB2F00A240CE /* PlayGameplaySong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayGameplaySong.swift; sourceTree = "<group>"; };
 		6BD8E0641B9EB5710010E257 /* gameplay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameplay.mp3; sourceTree = "<group>"; };
-		6BD9D01E1BA571410072C586 /* Rules.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rules.jpg; sourceTree = "<group>"; };
-		6BD9D0221BA573C60072C586 /* Back Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back Arrow.png"; sourceTree = "<group>"; };
+		6BD927A01BAB5B900039E0E3 /* Back Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Back Arrow.png"; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Back Arrow.png"; sourceTree = "<group>"; };
+		6BD927A11BAB5B900039E0E3 /* Basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Basketball.png; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Basketball.png"; sourceTree = "<group>"; };
+		6BD927A21BAB5B900039E0E3 /* Beach Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Beach Ball.png"; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Beach Ball.png"; sourceTree = "<group>"; };
+		6BD927A31BAB5B900039E0E3 /* Beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Beach.jpg; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Beach.jpg"; sourceTree = "<group>"; };
+		6BD927A41BAB5B900039E0E3 /* Bowling Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bowling Ball.png"; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Bowling Ball.png"; sourceTree = "<group>"; };
+		6BD927A51BAB5B900039E0E3 /* Choose Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Choose Background.jpg"; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Choose Background.jpg"; sourceTree = "<group>"; };
+		6BD927A61BAB5B900039E0E3 /* Choose Ball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Choose Ball.jpg"; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Choose Ball.jpg"; sourceTree = "<group>"; };
+		6BD927A71BAB5B900039E0E3 /* Desert.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Desert.jpg; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Desert.jpg"; sourceTree = "<group>"; };
+		6BD927A81BAB5B900039E0E3 /* Forest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Forest.jpg; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Forest.jpg"; sourceTree = "<group>"; };
+		6BD927A91BAB5B900039E0E3 /* Rules.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Rules.jpg; path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0/Free Images/Rules.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,17 +211,16 @@
 		6B68970E1B98B2CA00C5069E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6BD9D0221BA573C60072C586 /* Back Arrow.png */,
-				6B6C8D061B9BAC7B008678EC /* Basketball.png */,
-				6B6897341B98B4D300C5069E /* Beach.jpg */,
-				6B6C8D081B9BAC85008678EC /* Beach Ball.png */,
-				6BD2D38A1B9D05EE0052FBA7 /* Bouncing Ball.gif */,
-				6B6C8D0E1B9BAE94008678EC /* Bowling Ball.png */,
-				6B6897BB1B99687C00C5069E /* Choose Background Screen.jpg */,
-				6B6897B71B995F0800C5069E /* Choose Ball Screen.jpg */,
-				6B6897531B98BF5A00C5069E /* Desert.jpg */,
-				6B68974F1B98BEAB00C5069E /* Forest.png */,
-				6BD9D01E1BA571410072C586 /* Rules.jpg */,
+				6BD927A01BAB5B900039E0E3 /* Back Arrow.png */,
+				6BD927A11BAB5B900039E0E3 /* Basketball.png */,
+				6BD927A21BAB5B900039E0E3 /* Beach Ball.png */,
+				6BD927A31BAB5B900039E0E3 /* Beach.jpg */,
+				6BD927A41BAB5B900039E0E3 /* Bowling Ball.png */,
+				6BD927A51BAB5B900039E0E3 /* Choose Background.jpg */,
+				6BD927A61BAB5B900039E0E3 /* Choose Ball.jpg */,
+				6BD927A71BAB5B900039E0E3 /* Desert.jpg */,
+				6BD927A81BAB5B900039E0E3 /* Forest.jpg */,
+				6BD927A91BAB5B900039E0E3 /* Rules.jpg */,
 				6B68970F1B98B2CA00C5069E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -360,37 +357,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B6C8D0F1B9BAE94008678EC /* Bowling Ball.png in Resources */,
 				6B68971F1B98B2CA00C5069E /* LaunchScreen.xib in Resources */,
-				6BD2D38B1B9D05EE0052FBA7 /* Bouncing Ball.gif in Resources */,
-				6B6C8D071B9BAC7B008678EC /* Basketball.png in Resources */,
+				6BD927AB1BAB5B900039E0E3 /* Basketball.png in Resources */,
+				6BD927B01BAB5B900039E0E3 /* Choose Ball.jpg in Resources */,
 				6B8B55BE1BA9ED3F0091CAC0 /* Icon-60.png in Resources */,
 				6B8B55561BA80A100091CAC0 /* scorepoints.mp3 in Resources */,
+				6BD927B21BAB5B900039E0E3 /* Forest.jpg in Resources */,
 				6B6897461B98B6D100C5069E /* hit.mp3 in Resources */,
+				6BD927AE1BAB5B900039E0E3 /* Bowling Ball.png in Resources */,
+				6BD927AC1BAB5B900039E0E3 /* Beach Ball.png in Resources */,
 				6B5D0E061BA0A4810052AC3C /* GameScene.sks in Resources */,
+				6BD927AA1BAB5B900039E0E3 /* Back Arrow.png in Resources */,
 				6B8B55BC1BA9ED3F0091CAC0 /* Icon-40@2x.png in Resources */,
-				6B6897541B98BF5A00C5069E /* Desert.jpg in Resources */,
-				6B6897501B98BEAB00C5069E /* Forest.png in Resources */,
 				6B8B55BD1BA9ED3F0091CAC0 /* Icon-40@3x.png in Resources */,
 				6B8B55BA1BA9ED3F0091CAC0 /* Icon-29@3x.png in Resources */,
 				6B8B55C11BA9ED3F0091CAC0 /* Icon-76.png in Resources */,
 				6B8B55C01BA9ED3F0091CAC0 /* Icon-60@3x.png in Resources */,
 				6B8B55BF1BA9ED3F0091CAC0 /* Icon-60@2x.png in Resources */,
+				6BD927AD1BAB5B900039E0E3 /* Beach.jpg in Resources */,
 				6B8B55B81BA9ED3F0091CAC0 /* Icon-29.png in Resources */,
-				6BD9D0231BA573C60072C586 /* Back Arrow.png in Resources */,
 				6B8B55BB1BA9ED3F0091CAC0 /* Icon-40.png in Resources */,
 				6B68971C1B98B2CA00C5069E /* Images.xcassets in Resources */,
+				6BD927B31BAB5B900039E0E3 /* Rules.jpg in Resources */,
 				6B6897481B98B96000C5069E /* start.mp3 in Resources */,
 				6B8B55C51BA9ED3F0091CAC0 /* iTunesArtwork-512@2x.png in Resources */,
 				6B8B55C21BA9ED3F0091CAC0 /* Icon-76@2x.png in Resources */,
 				6B8B55C31BA9ED3F0091CAC0 /* Icon-76@3x.png in Resources */,
-				6B6897351B98B4D300C5069E /* Beach.jpg in Resources */,
-				6B6897B81B995F0800C5069E /* Choose Ball Screen.jpg in Resources */,
+				6BD927AF1BAB5B900039E0E3 /* Choose Background.jpg in Resources */,
 				6B8B55B91BA9ED3F0091CAC0 /* Icon-29@2x.png in Resources */,
-				6BD9D01F1BA571410072C586 /* Rules.jpg in Resources */,
 				6BD8E0651B9EB5710010E257 /* gameplay.mp3 in Resources */,
-				6B6C8D091B9BAC85008678EC /* Beach Ball.png in Resources */,
-				6B6897BC1B99687C00C5069E /* Choose Background Screen.jpg in Resources */,
+				6BD927B11BAB5B900039E0E3 /* Desert.jpg in Resources */,
 				6B68971A1B98B2CA00C5069E /* Main.storyboard in Resources */,
 				6B8B55C41BA9ED3F0091CAC0 /* iTunesArtwork-512.png in Resources */,
 				6B6897421B98B62800C5069E /* gameover.mp3 in Resources */,

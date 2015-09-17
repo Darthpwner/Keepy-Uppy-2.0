@@ -51,7 +51,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         skView.multipleTouchEnabled = false
         
         //TEMPORARY
-        //skView.showsFPS = true
+        skView.showsFPS = true
         skView.showsNodeCount = true
         ////////////////////////////
         

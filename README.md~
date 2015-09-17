@@ -62,8 +62,9 @@ provided directional control. For example, clicking on the left should have the
 ball jump to the right, whereas clicking on the right should have the ball jump
 to the left.
 
-Notable bugs that I need to fix: 1) Use royalty free music and images :(
-2) Ask people input about high scores
-2) Make the Choose Ball and Choose Background pages more lively. It seems a bit
+Notable bugs that I need to fix: 1) Ask people input about high scores
+2) Fix the Rules Page UI
+3) Fix Rules sizing problem on 4S
+4) Make the Choose Ball and Choose Background pages more lively. It seems a bit
 dull for now.
-3) Refactor the code to adhere more closely to MVC principles.
+5) Refactor the code to adhere more closely to MVC principles.
