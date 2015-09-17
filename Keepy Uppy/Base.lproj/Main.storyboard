@@ -201,25 +201,6 @@
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ln-At-qzb" userLabel="Description">
-                                <rect key="frame" x="16" y="118" width="568" height="295.5"/>
-                                <string key="text">• Keep the ball in the air as long as possible and try to accumulate points!
-• Each ball has a different level of bounciness:
-- Beach Ball (most bounce)
-- Basketball (medium bounce)
-- Bowling Ball (least bounce) 
-• Each background has a different damping factor: 
-- Desert (most air time)
-- Beach (medium air time)
-- Forest (least air time). 
-• You cannot tap the ball when it is in the score zone.
-• Your score is only incremented if you get the ball above the score zone.
-• Each tap in the middle zone is worth 1 point. Colliding with a wall earns an additional point, and colliding with the ceiling earns an extra 3 points.
-• Taps in the danger zone (below the red line) are worth 3 points.
-</string>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFo-aJ-ry4" userLabel="Go to Title Page">
                                 <rect key="frame" x="16" y="414" width="568" height="186"/>
                                 <state key="normal" image="Back Arrow.png">
@@ -229,6 +210,20 @@
                                     <segue destination="LVB-YS-i5n" kind="show" id="iLp-cx-b3u"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ln-At-qzb" userLabel="Description">
+                                <rect key="frame" x="16" y="117" width="568" height="295.5"/>
+                                <mutableString key="text">• Keep the ball in the air as long as possible and try to accumulate points!
+• When the game starts, tap the screen to drop the ball.
+• You cannot tap the ball when it is in the score zone (above the black horizontal line).
+• Your score is only incremented if you get the ball above the score zone.
+• Each tap in the middle zone is worth 1 point. 
+- Colliding with a wall earns 1 extra point. 
+- Colliding with the ceiling earns an extra 3 points.
+• Taps in the danger zone (below the red line) are worth 3 points.
+• When the game ends, tap the screen to return to the home page.</mutableString>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -570,7 +565,7 @@
         <image name="Rules.jpg" width="3840" height="2160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YS7-q0-uAq"/>
+        <segue reference="iLp-cx-b3u"/>
         <segue reference="vtN-6b-H2E"/>
         <segue reference="yhu-8F-ARz"/>
         <segue reference="oX6-TG-0GF"/>
