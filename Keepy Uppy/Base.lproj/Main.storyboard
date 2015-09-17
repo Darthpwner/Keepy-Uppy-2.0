@@ -203,7 +203,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ln-At-qzb" userLabel="Description">
                                 <rect key="frame" x="16" y="118" width="568" height="295.5"/>
-                                <mutableString key="text">• Keep the ball in the air as long as possible and try to accumulate points!
+                                <string key="text">• Keep the ball in the air as long as possible and try to accumulate points!
 • Each ball has a different level of bounciness:
 - Beach Ball (most bounce)
 - Basketball (medium bounce)
@@ -216,7 +216,7 @@
 • Your score is only incremented if you get the ball above the score zone.
 • Each tap in the middle zone is worth 1 point. Colliding with a wall earns an additional point, and colliding with the ceiling earns an extra 3 points.
 • Taps in the danger zone (below the red line) are worth 3 points.
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -284,6 +284,12 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Choose Ball Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="U8z-BR-7Ij">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rSS-7z-2ho">
+                                <rect key="frame" x="16" y="20" width="568" height="180.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3F-Na-wee" userLabel="Beach Ball">
                                 <rect key="frame" x="16" y="221" width="176" height="158"/>
                                 <gestureRecognizers/>
@@ -320,12 +326,6 @@
                                     <segue destination="wBn-0a-jPG" kind="show" id="3eZ-j1-xFl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rSS-7z-2ho">
-                                <rect key="frame" x="16" y="20" width="568" height="99"/>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPU-YY-N1x" userLabel="Go to Title Page">
                                 <rect key="frame" x="16" y="414" width="568" height="186"/>
                                 <state key="normal" image="Back Arrow.png">
@@ -335,28 +335,61 @@
                                     <segue destination="LVB-YS-i5n" kind="show" id="YS7-q0-uAq"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Most Bounce" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="7Rz-b6-fv6">
+                                <rect key="frame" x="43" y="150" width="123" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Least Bounce" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="CY8-Zo-sRe">
+                                <rect key="frame" x="409" y="200.5" width="175" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Medium Bounce" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="7Cp-TV-e7E">
+                                <rect key="frame" x="229" y="151" width="152" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7Cp-TV-e7E" firstAttribute="top" secondItem="rSS-7z-2ho" secondAttribute="bottom" id="18S-V1-z99"/>
+                            <constraint firstItem="CY8-Zo-sRe" firstAttribute="centerX" secondItem="9Cv-yL-g9N" secondAttribute="centerX" id="1Fn-33-WYI"/>
                             <constraint firstItem="rSS-7z-2ho" firstAttribute="top" secondItem="8io-fK-Mpn" secondAttribute="bottom" id="1MD-gD-iAb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CY8-Zo-sRe" secondAttribute="trailing" id="30C-iO-gKh"/>
+                            <constraint firstItem="7Cp-TV-e7E" firstAttribute="top" secondItem="rSS-7z-2ho" secondAttribute="bottom" constant="32.5" id="5gb-xK-6sj"/>
                             <constraint firstItem="9Cv-yL-g9N" firstAttribute="leading" secondItem="cny-Ib-fge" secondAttribute="trailing" constant="20" id="7Q5-RS-rNv"/>
                             <constraint firstItem="cny-Ib-fge" firstAttribute="height" secondItem="9Cv-yL-g9N" secondAttribute="height" id="90k-xj-XZv"/>
+                            <constraint firstItem="7Rz-b6-fv6" firstAttribute="top" secondItem="rSS-7z-2ho" secondAttribute="bottom" id="DYM-LZ-zDX"/>
                             <constraint firstItem="rSS-7z-2ho" firstAttribute="leading" secondItem="dLU-Cl-CIg" secondAttribute="leadingMargin" id="FSU-F5-sar"/>
+                            <constraint firstItem="7Cp-TV-e7E" firstAttribute="leading" secondItem="7Rz-b6-fv6" secondAttribute="trailing" constant="20" id="Fce-Fw-aIt"/>
                             <constraint firstItem="qPU-YY-N1x" firstAttribute="top" secondItem="cny-Ib-fge" secondAttribute="bottom" constant="35" id="Gy9-x9-UHj"/>
+                            <constraint firstItem="7Rz-b6-fv6" firstAttribute="leading" secondItem="dLU-Cl-CIg" secondAttribute="leadingMargin" constant="27" id="HGU-Hh-txe"/>
                             <constraint firstAttribute="centerY" secondItem="r3F-Na-wee" secondAttribute="centerY" id="KeQ-cj-VMa"/>
+                            <constraint firstItem="CY8-Zo-sRe" firstAttribute="leading" secondItem="7Cp-TV-e7E" secondAttribute="trailing" constant="20" id="L0G-LC-j69"/>
+                            <constraint firstItem="r3F-Na-wee" firstAttribute="top" secondItem="7Rz-b6-fv6" secondAttribute="bottom" id="MZ1-VN-Fpa"/>
                             <constraint firstAttribute="trailing" secondItem="U8z-BR-7Ij" secondAttribute="trailing" id="NVy-3P-C3t"/>
+                            <constraint firstItem="7Rz-b6-fv6" firstAttribute="height" secondItem="7Cp-TV-e7E" secondAttribute="height" id="Q9A-pz-DVh"/>
                             <constraint firstItem="qPU-YY-N1x" firstAttribute="leading" secondItem="dLU-Cl-CIg" secondAttribute="leadingMargin" id="RgD-oe-u7f"/>
+                            <constraint firstItem="7Rz-b6-fv6" firstAttribute="width" secondItem="r3F-Na-wee" secondAttribute="width" id="Rlm-JR-fBy"/>
                             <constraint firstItem="cny-Ib-fge" firstAttribute="width" secondItem="9Cv-yL-g9N" secondAttribute="width" id="TmN-J6-YKb"/>
                             <constraint firstItem="9Cv-yL-g9N" firstAttribute="trailing" secondItem="dLU-Cl-CIg" secondAttribute="trailingMargin" id="UEo-bb-J4v"/>
+                            <constraint firstItem="9Cv-yL-g9N" firstAttribute="top" secondItem="CY8-Zo-sRe" secondAttribute="bottom" id="UMD-qC-C1X"/>
                             <constraint firstItem="rSS-7z-2ho" firstAttribute="leading" secondItem="r3F-Na-wee" secondAttribute="leading" id="W0U-rf-bkz"/>
                             <constraint firstItem="r3F-Na-wee" firstAttribute="height" secondItem="cny-Ib-fge" secondAttribute="height" id="X28-yf-GVx"/>
                             <constraint firstItem="U8z-BR-7Ij" firstAttribute="leading" secondItem="dLU-Cl-CIg" secondAttribute="leading" id="YM3-PO-8Vh"/>
                             <constraint firstItem="U8z-BR-7Ij" firstAttribute="bottom" secondItem="UY2-3V-Th9" secondAttribute="top" id="aqa-9R-mpY"/>
                             <constraint firstItem="rSS-7z-2ho" firstAttribute="centerX" secondItem="U8z-BR-7Ij" secondAttribute="centerX" id="cmi-QT-aUs"/>
+                            <constraint firstItem="cny-Ib-fge" firstAttribute="top" secondItem="7Cp-TV-e7E" secondAttribute="bottom" id="ffX-Od-DZp"/>
                             <constraint firstItem="U8z-BR-7Ij" firstAttribute="centerY" secondItem="9Cv-yL-g9N" secondAttribute="centerY" id="hlv-NT-bDm"/>
                             <constraint firstItem="U8z-BR-7Ij" firstAttribute="centerY" secondItem="r3F-Na-wee" secondAttribute="centerY" id="iAt-bM-yZW"/>
                             <constraint firstItem="U8z-BR-7Ij" firstAttribute="top" secondItem="dLU-Cl-CIg" secondAttribute="top" id="ie6-Wi-gSd"/>
+                            <constraint firstItem="CY8-Zo-sRe" firstAttribute="top" secondItem="rSS-7z-2ho" secondAttribute="bottom" id="lfO-4c-4i9"/>
                             <constraint firstItem="r3F-Na-wee" firstAttribute="width" secondItem="cny-Ib-fge" secondAttribute="width" id="oIo-xC-HrD"/>
+                            <constraint firstItem="7Rz-b6-fv6" firstAttribute="centerX" secondItem="r3F-Na-wee" secondAttribute="centerX" constant="0.5" id="qXR-pF-LbU"/>
                             <constraint firstItem="U8z-BR-7Ij" firstAttribute="centerY" secondItem="cny-Ib-fge" secondAttribute="centerY" id="qdc-wI-Qtt"/>
                             <constraint firstItem="cny-Ib-fge" firstAttribute="leading" secondItem="r3F-Na-wee" secondAttribute="trailing" constant="20" id="rRl-Ie-YJp"/>
                             <constraint firstItem="rSS-7z-2ho" firstAttribute="trailing" secondItem="9Cv-yL-g9N" secondAttribute="trailing" id="thN-eW-RU9"/>
@@ -364,6 +397,11 @@
                             <constraint firstItem="9Cv-yL-g9N" firstAttribute="trailing" secondItem="dLU-Cl-CIg" secondAttribute="trailingMargin" id="xD4-5Y-GZi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qPU-YY-N1x" secondAttribute="trailing" id="zAB-Kw-7CR"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5gb-xK-6sj"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
@@ -508,8 +546,8 @@
         <image name="Rules.jpg" width="3840" height="2160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HFi-7Q-Rq1"/>
         <segue reference="iLp-cx-b3u"/>
+        <segue reference="HFi-7Q-Rq1"/>
         <segue reference="yhu-8F-ARz"/>
         <segue reference="oX6-TG-0GF"/>
     </inferredMetricsTieBreakers>
