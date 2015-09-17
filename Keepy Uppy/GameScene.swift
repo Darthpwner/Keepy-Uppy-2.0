@@ -257,7 +257,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else if chooseBackground.backgroundType == BackgroundType.Beach {
             background = SKSpriteNode(imageNamed: "Beach.jpg")
         } else {
-            background = SKSpriteNode(imageNamed: "Forest.png")
+            background = SKSpriteNode(imageNamed: "Forest.jpg")
         }
     }
     

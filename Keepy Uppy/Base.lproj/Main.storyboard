@@ -278,7 +278,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Choose Ball Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="U8z-BR-7Ij">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Choose Ball.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="U8z-BR-7Ij">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rSS-7z-2ho">
@@ -410,7 +410,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Choose Background Screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ro6-gK-RRm">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Choose Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ro6-gK-RRm">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS2-uD-Zs5" userLabel="Desert">
@@ -441,7 +441,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atY-VD-MFA" userLabel="Forest">
                                 <rect key="frame" x="408" y="204" width="176" height="192"/>
                                 <gestureRecognizers/>
-                                <state key="normal" image="Forest.png">
+                                <state key="normal" image="Forest.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -555,20 +555,20 @@
     </scenes>
     <resources>
         <image name="Back Arrow.png" width="1280" height="974"/>
-        <image name="Basketball.png" width="1204" height="1280"/>
-        <image name="Beach Ball.png" width="1280" height="1278"/>
+        <image name="Basketball.png" width="1280" height="1280"/>
+        <image name="Beach Ball.png" width="1280" height="1280"/>
         <image name="Beach.jpg" width="1981" height="1460"/>
         <image name="Bouncing Ball.gif" width="250" height="300"/>
         <image name="Bowling Ball.png" width="1280" height="1280"/>
-        <image name="Choose Background Screen.jpg" width="265" height="190"/>
-        <image name="Choose Ball Screen.jpg" width="3264" height="2448"/>
+        <image name="Choose Background.jpg" width="1280" height="1280"/>
+        <image name="Choose Ball.jpg" width="1280" height="847"/>
         <image name="Desert.jpg" width="1280" height="853"/>
-        <image name="Forest.png" width="900" height="473"/>
+        <image name="Forest.jpg" width="2035" height="1409"/>
         <image name="Rules.jpg" width="1280" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="iLp-cx-b3u"/>
-        <segue reference="vtN-6b-H2E"/>
+        <segue reference="HFi-7Q-Rq1"/>
         <segue reference="yhu-8F-ARz"/>
         <segue reference="oX6-TG-0GF"/>
     </inferredMetricsTieBreakers>
