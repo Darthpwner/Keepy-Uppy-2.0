@@ -22,7 +22,3 @@ enum BackgroundType: Int, Printable {
         }
     }
 }
-
-public class Background {
-    init() {}   //TODO
-}

@@ -24,16 +24,3 @@ enum BallType: Int, Printable {
         }
     }
 }
-
-//Worry about this later
-public class Ball {
-    var mass: CGFloat
-    var friction: CGFloat
-    var restitution: CGFloat
-    
-    init(mass: CGFloat, friction: CGFloat, restitution: CGFloat) {
-        self.mass = mass
-        self.friction = friction
-        self.restitution = restitution
-    }
-}
