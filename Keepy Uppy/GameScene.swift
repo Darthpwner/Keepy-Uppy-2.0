@@ -530,6 +530,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.scoreStringNode.position = CGPointMake( (3 * self.frame.width) / 10, CGRectGetMidY( self.frame ))
         self.scoreStringNode.zPosition = 100
         self.scoreStringNode.text = String("Score: ")
+        
+        //Set the constraints
+        let scoreHorizontalConstraint = NSLayoutConstraint (item: scoreStringNode,
+            attribute: NSLayoutAttribute.Width,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: scoreLabelNode,
+            attribute: NSLayoutAttribute.NotAnAttribute,
+            multiplier: 1,
+            constant: 10)
+        self.view!.addConstraint(scoreHorizontalConstraint)
+        
         self.addChild(scoreStringNode)
         
         //Set up high score string node
@@ -541,6 +552,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.highScoreStringNode.position = CGPointMake( (3 * self.frame.width) / 10, (4 * self.frame.height) / 10)
         self.highScoreStringNode.zPosition = 100
         self.highScoreStringNode.text = String("Best: ")
+        
+        //Set the constraints
+        let highScoreHorizontalConstraint = NSLayoutConstraint (item: highScoreStringNode,
+            attribute: NSLayoutAttribute.Width,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: highScoreLabelNode,
+            attribute: NSLayoutAttribute.NotAnAttribute,
+            multiplier: 1,
+            constant: 10)
+        self.view!.addConstraint(highScoreHorizontalConstraint)
+        
         self.addChild(highScoreStringNode)
     }
     
