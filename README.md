@@ -46,12 +46,18 @@ start the game over.
 Images: The images were simple background and ball images obtained off Google 
 Images. All rights reserved to the owners of the images.
 
-Sounds: The sounds were adopted from another project tutorial I was working on
+Sounds: 
+Original:
+The sounds were adopted from another project tutorial I was working on
 called Swiftris. I obtained the gameover.mp3 and scorepoints.mp3 sounds from 
 Swiftris. I found the hit.mp3 sound on the Internet. The gameplay.mp3 and 
 start.mp3 are from "Sweet Georgia Brown" by Brother Bones and "Wimbledon - 
 Intro - Theme Song". All rights are reserved for the owners of these two audio
 tracks.
+Modified:
+The sounds were now taken off various free to download sites. All of the music
+is approved for usage if I give the owners credit, which I did on the splash
+screen.
 
 Challenges I encountered: One of the biggest challenges was creating the ball
 bouncing algorithm. At MHacks 6, I was fortunate enough to have the guidance
@@ -60,10 +66,13 @@ SKSpriteNode's position. From here, I created an algorithm based on the ratio
 of the ball's Anchor Point relative to the position where it was tapped. This
 provided directional control. For example, clicking on the left should have the
 ball jump to the right, whereas clicking on the right should have the ball jump
-to the left.
+to the left. It was also very annoying having to deal with copyright issues, so
+I had to use royalty free music and stock images.
 
-Notable bugs that I need to fix: 1) Use royalty free music and images :(
-2) Ask people input about high scores
+Notable bugs that I need to fix: 1) Ask people input about high scores
 2) Make the Choose Ball and Choose Background pages more lively. It seems a bit
 dull for now.
 3) Refactor the code to adhere more closely to MVC principles.
+
+Official release versions:
+Keepy Uppy 1.0: bb5d5cc80956678ff6a3f1f2ccebf96857cc30e6
