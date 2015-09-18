@@ -52,7 +52,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         
         /*Debug info*/
         //skView.showsFPS = true
-        //skView.showsNodeCount = true
+        skView.showsNodeCount = true
         
         // Create and configure the scene.
         scene = GameScene(size: skView.bounds.size)

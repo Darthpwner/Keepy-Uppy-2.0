@@ -21,8 +21,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var scoreLabelNode = SKLabelNode()  //Displays points when ball is moved above scoreZone
     var highScoreLabelNode = SKLabelNode()  //Displays the high score when the game is over
     var highScoreMessageNode = SKLabelNode()   //Message if you set a high score
-    var scoreStringNode = SKLabelNode() //Displays "Score: "
-    var highScoreStringNode = SKLabelNode() //Displays "Best: "
     
     var background = SKSpriteNode()
     var ball = SKSpriteNode()
@@ -519,53 +517,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    //Set up string nodes for display
-    func setUpStringNodes() -> Void {
-        //Set up score string node
-        self.scoreStringNode.name = "scoreStringNode"
-        self.scoreStringNode = SKLabelNode(fontNamed: "MarkerFelt-Wide")
-        self.scoreStringNode.fontColor = UIColor.orangeColor()
-        
-        //Sets score string node to be left of score
-        self.scoreStringNode.position = CGPointMake( (3 * self.frame.width) / 10, CGRectGetMidY( self.frame ))
-        self.scoreStringNode.zPosition = 100
-        self.scoreStringNode.text = String("Score: ")
-        
-        //Set the constraints
-        let scoreHorizontalConstraint = NSLayoutConstraint (item: scoreStringNode,
-            attribute: NSLayoutAttribute.Width,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: scoreLabelNode,
-            attribute: NSLayoutAttribute.NotAnAttribute,
-            multiplier: 1,
-            constant: 10)
-        self.view!.addConstraint(scoreHorizontalConstraint)
-        
-        self.addChild(scoreStringNode)
-        
-        //Set up high score string node
-        self.highScoreStringNode.name = "highScoreStringNode"
-        self.highScoreStringNode = SKLabelNode(fontNamed: "MarkerFelt-Wide")
-        self.highScoreStringNode.fontColor = UIColor.orangeColor()    //Set the font color as orange
-        
-        //Sets score string node to be left of score
-        self.highScoreStringNode.position = CGPointMake( (3 * self.frame.width) / 10, (4 * self.frame.height) / 10)
-        self.highScoreStringNode.zPosition = 100
-        self.highScoreStringNode.text = String("Best: ")
-        
-        //Set the constraints
-        let highScoreHorizontalConstraint = NSLayoutConstraint (item: highScoreStringNode,
-            attribute: NSLayoutAttribute.Width,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: highScoreLabelNode,
-            attribute: NSLayoutAttribute.NotAnAttribute,
-            multiplier: 1,
-            constant: 10)
-        self.view!.addConstraint(highScoreHorizontalConstraint)
-        
-        self.addChild(highScoreStringNode)
-    }
-    
     //Set up high score after game ends
     func setUpHighScore() -> Void {
         
@@ -589,10 +540,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.highScoreLabelNode.position = CGPointMake( CGRectGetMidX( self.frame ), (4 * self.frame.height) / 10)
         
         self.highScoreLabelNode.zPosition = 100
-        self.highScoreLabelNode.text = String(highScore)
+        self.highScoreLabelNode.text = String("Best: \(highScore)")
         self.addChild(highScoreLabelNode)
-        
-        setUpStringNodes()  //Set up the "Score: " and "Best: " label
     }
     /*End of High score functions*/
     
@@ -610,6 +559,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             dispatch_get_main_queue(), closure)
     }
     
+    func setUpEndOfGameScore() -> Void {
+        scoreLabelNode.removeFromParent()   //Remove from parent
+        self.scoreLabelNode.text = String("Score: \(score)")    //Update the Score text
+        self.addChild(scoreLabelNode)   //Readd it back to the tree
+    }
+    
+    func setUpEndOfGameScoreDisplay() -> Void {
+        setUpEndOfGameScore()   //Update the score message
+        setUpHighScore()    //Display high score
+    }
+    
     //Handle contact between nodes
     func didBeginContact(contact: SKPhysicsContact) {
         if ( contact.bodyA.categoryBitMask & groundCategory ) == groundCategory || ( contact.bodyB.categoryBitMask & groundCategory ) == groundCategory {   //Ball hits ground
@@ -620,8 +580,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             playGameplaySong.song.stop()
             playSound("gameover-2.0.mp3")
             
-            //Set up the high score display
-            setUpHighScore()
+            //Set up the end of game score display
+            setUpEndOfGameScoreDisplay()
             
             //Return to home screen if you tap the screen after the game ends
             delay(timeDelay) {
