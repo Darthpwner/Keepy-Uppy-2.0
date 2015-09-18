@@ -383,7 +383,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.leftWall.size = CGSizeMake(barrierFactor, size.height)
         
         //Create an edge based body for the left wall
-        
         //Left wall extends from bottom of the screen all the way to twice the height of the screen from the center
         self.leftWall.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0.0, -size.height / 2), toPoint: CGPointMake(0.0, size.height * 2))
         
@@ -486,8 +485,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setUpScore() -> Void {
         self.scoreLabelNode.name = "Score"
         self.scoreLabelNode = SKLabelNode(fontNamed:"MarkerFelt-Wide")
-        self.scoreLabelNode.fontColor = UIColor.whiteColor()  //Set font color as white
-    
+        self.scoreLabelNode.fontColor = UIColor.whiteColor()
+        
         //Sets score to be center of the screen
         self.scoreLabelNode.position = CGPointMake( CGRectGetMidX( self.frame ), CGRectGetMidY( self.frame))
         
@@ -496,12 +495,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(scoreLabelNode)
     }
     /*End of setup functions*/
+    
     /*High score functions*/
     //Sets the message to be displayed if the user sets the high score
     func setUpHighScoreMessage() -> Void {
         self.highScoreMessageNode.name = "highScoreMessage"
         self.highScoreMessageNode = SKLabelNode(fontNamed: "MarkerFelt-Wide")
-        self.highScoreMessageNode.fontColor = UIColor.whiteColor()    //Set the font color as red
+        self.highScoreMessageNode.fontColor = UIColor.whiteColor()
         
         //Sets high score message to be above the score
         self.highScoreMessageNode.position = CGPointMake(CGRectGetMidX(self.frame), (6 * self.frame.height) / 10)
@@ -524,7 +524,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Set up score string node
         self.scoreStringNode.name = "scoreStringNode"
         self.scoreStringNode = SKLabelNode(fontNamed: "MarkerFelt-Wide")
-        self.scoreStringNode.fontColor = UIColor.orangeColor()    //Set the font color as orange
+        self.scoreStringNode.fontColor = UIColor.orangeColor()
         
         //Sets score string node to be left of score
         self.scoreStringNode.position = CGPointMake( (3 * self.frame.width) / 10, CGRectGetMidY( self.frame ))
@@ -561,7 +561,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.highScoreLabelNode.name = "highScore"
         self.highScoreLabelNode = SKLabelNode(fontNamed:"MarkerFelt-Wide")
-        self.highScoreLabelNode.fontColor = UIColor.whiteColor()    //Set font color as red
+        self.highScoreLabelNode.fontColor = UIColor.whiteColor()    
         
         //Sets high score to be below the score
         self.highScoreLabelNode.position = CGPointMake( CGRectGetMidX( self.frame ), (4 * self.frame.height) / 10)
