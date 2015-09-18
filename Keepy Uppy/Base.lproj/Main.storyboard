@@ -174,7 +174,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="yKy-R0-3OX" userLabel="Go to Rules Page">
                     <connections>
-                        <segue destination="wRl-LG-uTJ" kind="show" identifier="Rules Page Segue" id="PIL-7a-oOu"/>
+                        <segue destination="wRl-LG-uTJ" kind="show" identifier="" id="PIL-7a-oOu"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -571,7 +571,7 @@
         <image name="Rules.jpg" width="1280" height="1280"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bzY-Tz-soK"/>
+        <segue reference="mew-oB-n3e"/>
         <segue reference="HFi-7Q-Rq1"/>
         <segue reference="yhu-8F-ARz"/>
         <segue reference="oX6-TG-0GF"/>
