@@ -107,7 +107,7 @@
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="r2j-HC-Fb8" kind="show" id="HFi-7Q-Rq1"/>
+                                                            <segue destination="r2j-HC-Fb8" kind="show" identifier="" id="HFi-7Q-Rq1"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -168,13 +168,13 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="animation" destination="IQa-nN-Twa" id="oXi-jz-a80"/>
-                        <segue destination="Td3-lg-Ngb" kind="unwind" unwindAction="unwindToContainerVC:" id="g1c-Ti-Va7"/>
+                        <segue destination="Td3-lg-Ngb" kind="unwind" identifier="Unwind to Scene Exit Placeholder" unwindAction="unwindToContainerVC:" id="g1c-Ti-Va7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="yKy-R0-3OX" userLabel="Go to Rules Page">
                     <connections>
-                        <segue destination="wRl-LG-uTJ" kind="show" id="PIL-7a-oOu"/>
+                        <segue destination="wRl-LG-uTJ" kind="show" identifier="Rules Page Segue" id="PIL-7a-oOu"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
