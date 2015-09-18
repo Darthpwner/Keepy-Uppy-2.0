@@ -62,6 +62,10 @@
 		6BEF28541BAB679500DB93ED /* Beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BEF28531BAB679500DB93ED /* Beach.jpg */; };
 		6BEF28581BAB761900DB93ED /* Back Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BEF28571BAB761900DB93ED /* Back Arrow.png */; };
 		6BEF285A1BAB782C00DB93ED /* Rules.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BEF28591BAB782C00DB93ED /* Rules.jpg */; };
+		6BEF285E1BABAD6000DB93ED /* gameover-2.0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6BEF285D1BABAD6000DB93ED /* gameover-2.0.mp3 */; };
+		6BEF28601BABB01A00DB93ED /* start-2.0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6BEF285F1BABB01A00DB93ED /* start-2.0.mp3 */; };
+		6BEF28621BABB01F00DB93ED /* gameplay-2.0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6BEF28611BABB01F00DB93ED /* gameplay-2.0.mp3 */; };
+		6BEF28641BABB14A00DB93ED /* scorepoints-2.0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6BEF28631BABB14A00DB93ED /* scorepoints-2.0.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +140,10 @@
 		6BEF28531BAB679500DB93ED /* Beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Beach.jpg; sourceTree = "<group>"; };
 		6BEF28571BAB761900DB93ED /* Back Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back Arrow.png"; sourceTree = "<group>"; };
 		6BEF28591BAB782C00DB93ED /* Rules.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rules.jpg; sourceTree = "<group>"; };
+		6BEF285D1BABAD6000DB93ED /* gameover-2.0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "gameover-2.0.mp3"; sourceTree = "<group>"; };
+		6BEF285F1BABB01A00DB93ED /* start-2.0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "start-2.0.mp3"; sourceTree = "<group>"; };
+		6BEF28611BABB01F00DB93ED /* gameplay-2.0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "gameplay-2.0.mp3"; sourceTree = "<group>"; };
+		6BEF28631BABB14A00DB93ED /* scorepoints-2.0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "scorepoints-2.0.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,10 +258,14 @@
 			isa = PBXGroup;
 			children = (
 				6B68973D1B98B62800C5069E /* gameover.mp3 */,
+				6BEF285D1BABAD6000DB93ED /* gameover-2.0.mp3 */,
 				6BD8E0641B9EB5710010E257 /* gameplay.mp3 */,
+				6BEF28611BABB01F00DB93ED /* gameplay-2.0.mp3 */,
 				6B6897451B98B6D100C5069E /* hit.mp3 */,
 				6B8B55551BA80A100091CAC0 /* scorepoints.mp3 */,
+				6BEF28631BABB14A00DB93ED /* scorepoints-2.0.mp3 */,
 				6B6897471B98B96000C5069E /* start.mp3 */,
+				6BEF285F1BABB01A00DB93ED /* start-2.0.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -377,7 +389,10 @@
 				6B8B55C01BA9ED3F0091CAC0 /* Icon-60@3x.png in Resources */,
 				6B8B55BF1BA9ED3F0091CAC0 /* Icon-60@2x.png in Resources */,
 				6B8B55B81BA9ED3F0091CAC0 /* Icon-29.png in Resources */,
+				6BEF28641BABB14A00DB93ED /* scorepoints-2.0.mp3 in Resources */,
+				6BEF285E1BABAD6000DB93ED /* gameover-2.0.mp3 in Resources */,
 				6BEF28441BAB5FFE00DB93ED /* Basketball.png in Resources */,
+				6BEF28601BABB01A00DB93ED /* start-2.0.mp3 in Resources */,
 				6B8B55BB1BA9ED3F0091CAC0 /* Icon-40.png in Resources */,
 				6B68971C1B98B2CA00C5069E /* Images.xcassets in Resources */,
 				6B6897481B98B96000C5069E /* start.mp3 in Resources */,
@@ -394,6 +409,7 @@
 				6B8B55C41BA9ED3F0091CAC0 /* iTunesArtwork-512.png in Resources */,
 				6B6897421B98B62800C5069E /* gameover.mp3 in Resources */,
 				6BEF28541BAB679500DB93ED /* Beach.jpg in Resources */,
+				6BEF28621BABB01F00DB93ED /* gameplay-2.0.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

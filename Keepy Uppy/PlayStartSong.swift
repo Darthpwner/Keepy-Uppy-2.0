@@ -28,7 +28,7 @@ class PlayStartSong {
     
     func prepareAudios() {
         
-        var path = NSBundle.mainBundle().pathForResource("start", ofType: "mp3")
+        var path = NSBundle.mainBundle().pathForResource("start-2.0", ofType: "mp3")
         song = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path!), error: nil)
         song.prepareToPlay()
         

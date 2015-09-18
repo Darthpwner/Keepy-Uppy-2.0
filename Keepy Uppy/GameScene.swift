@@ -112,7 +112,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     let playGameplaySong = PlayGameplaySong.sharedInstance
     
-    var timeDelay = 2.65    //Length of gameover.mp3
+    var timeDelay = 2.43    //Length of gameover-2.0.mp3
     /*End of Constants*/
 
     override init(size: CGSize) {
@@ -596,7 +596,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.ball.userInteractionEnabled = true //Prevents user from making the tap noise if they try to tap the ball
             
             playGameplaySong.song.stop()
-            playSound("gameover.mp3")
+            playSound("gameover-2.0.mp3")
             
             //Set up the high score display
             setUpHighScore()
@@ -615,7 +615,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let posOfBall: CGFloat = ball.position.y
 
             if posOfBall > (4 * size.height) / 5 {
-                playSound("scorepoints.mp3")
+                playSound("scorepoints-2.0.mp3")
                 score += pointsObtained
                 scoreLabelNode.text = String(score)
                 pointsObtained = 0
