@@ -60,6 +60,7 @@
 		6BEF28601BABB01A00DB93ED /* start-2.0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6BEF285F1BABB01A00DB93ED /* start-2.0.mp3 */; };
 		6BEF28621BABB01F00DB93ED /* gameplay-2.0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6BEF28611BABB01F00DB93ED /* gameplay-2.0.mp3 */; };
 		6BEF28641BABB14A00DB93ED /* scorepoints-2.0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6BEF28631BABB14A00DB93ED /* scorepoints-2.0.mp3 */; };
+		6BEF286C1BABF5FA00DB93ED /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BEF286B1BABF5FA00DB93ED /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,8 @@
 		6BEF285F1BABB01A00DB93ED /* start-2.0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "start-2.0.mp3"; sourceTree = "<group>"; };
 		6BEF28611BABB01F00DB93ED /* gameplay-2.0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "gameplay-2.0.mp3"; sourceTree = "<group>"; };
 		6BEF28631BABB14A00DB93ED /* scorepoints-2.0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "scorepoints-2.0.mp3"; sourceTree = "<group>"; };
+		6BEF286A1BABF5F800DB93ED /* Keepy Uppy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Keepy Uppy.entitlements"; sourceTree = "<group>"; };
+		6BEF286B1BABF5FA00DB93ED /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BEF286C1BABF5FA00DB93ED /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +159,7 @@
 		6B6897021B98B2CA00C5069E = {
 			isa = PBXGroup;
 			children = (
+				6BEF286B1BABF5FA00DB93ED /* CloudKit.framework */,
 				6B68970D1B98B2CA00C5069E /* Keepy Uppy */,
 				6B6897271B98B2CA00C5069E /* Keepy UppyTests */,
 				6B68970C1B98B2CA00C5069E /* Products */,
@@ -173,6 +178,7 @@
 		6B68970D1B98B2CA00C5069E /* Keepy Uppy */ = {
 			isa = PBXGroup;
 			children = (
+				6BEF286A1BABF5F800DB93ED /* Keepy Uppy.entitlements */,
 				6B6897101B98B2CA00C5069E /* AppDelegate.swift */,
 				6B6897B51B994BF700C5069E /* Ball.swift */,
 				6BD797E91B9FC2280055D558 /* Background.swift */,
@@ -323,6 +329,15 @@
 				TargetAttributes = {
 					6B68970A1B98B2CA00C5069E = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 2MALMEWT6X;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					6B6897231B98B2CA00C5069E = {
 						CreatedOnToolsVersion = 6.4;
@@ -550,10 +565,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Keepy Uppy/Keepy Uppy.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Keepy Uppy/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Keepy Uppy/Keepy Uppy-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -565,10 +584,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Keepy Uppy/Keepy Uppy.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Keepy Uppy/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Keepy Uppy/Keepy Uppy-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
