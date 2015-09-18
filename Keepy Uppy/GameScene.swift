@@ -615,10 +615,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let posOfBall: CGFloat = ball.position.y
 
             if posOfBall > (4 * size.height) / 5 {
-                playSound("scorepoints-2.0.mp3")
-                score += pointsObtained
-                scoreLabelNode.text = String(score)
-                pointsObtained = 0
+                if gameStarted {
+                    playSound("scorepoints-2.0.mp3")
+                    score += pointsObtained
+                    scoreLabelNode.text = String(score)
+                    pointsObtained = 0
+                }
             }
         }
     }

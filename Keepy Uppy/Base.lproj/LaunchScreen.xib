@@ -17,9 +17,9 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLF-k8-xS0" userLabel="Credits">
-                    <rect key="frame" x="0.0" y="148.5" width="480" height="183.5"/>
+                    <rect key="frame" x="0.0" y="106.5" width="480" height="267"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <string key="text">Credits and Licensing:
+                    <mutableString key="text">Credits and Licensing:
 • "Kawai Kitsune", "Wallpaper"
 Kevin MacLeod (incompetech.com)
 Licensed under Creative Commons: By Attribution 3.0
@@ -28,7 +28,9 @@ http://creativecommons.org/licenses/by/3.0/
 rhodemas 
 (freesound.org)
 Licensed under Creative Commons: By Attribution 3.0
-http://creativecommons.org/licenses/by/3.0/</string>
+http://creativecommons.org/licenses/by/3.0/
+• "Ball Bouncing Yellow.gif" Christina Kelly platformtennis.org Licensed under Creative Commons: By Attribution 3.0
+http://creativecommons.org/licenses/by/3.0/</mutableString>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
