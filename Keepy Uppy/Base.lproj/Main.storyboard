@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mTD-M6-FWm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mTD-M6-FWm">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -35,13 +36,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-1j-TOz">
-                                <rect key="frame" x="-16" y="0.0" width="632" height="600"/>
+                                <rect key="frame" x="-12" y="0.0" width="624" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7tb-9Z-Fxe" userLabel="Keepy Uppy View">
-                                        <rect key="frame" x="10" y="10" width="612" height="119"/>
+                                        <rect key="frame" x="10" y="10" width="604" height="118"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keepy Uppy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Ff-5GE">
-                                                <rect key="frame" x="10" y="10" width="592" height="99"/>
+                                                <rect key="frame" x="10" y="10" width="584" height="98.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="580" id="pb1-O6-tbV"/>
                                                 </constraints>
@@ -66,10 +67,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEy-Ec-54G" userLabel="Bouncing Ball View">
-                                        <rect key="frame" x="0.0" y="128" width="632" height="300"/>
+                                        <rect key="frame" x="0.0" y="128" width="624" height="300"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Bouncing Ball.gif" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-nN-Twa">
-                                                <rect key="frame" x="0.0" y="0.0" width="632" height="300"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="624" height="300"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -93,10 +94,10 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yid-iL-fny" userLabel="Start Main View">
-                                        <rect key="frame" x="10" y="428" width="612" height="172"/>
+                                        <rect key="frame" x="10" y="428" width="604" height="171.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Mc-I4-IRT" userLabel="Start Subview">
-                                                <rect key="frame" x="177" y="20" width="257" height="131"/>
+                                                <rect key="frame" x="173" y="20.5" width="257" height="131"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-ok-cqe">
                                                         <rect key="frame" x="20" y="10" width="217" height="111"/>
@@ -193,16 +194,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rules.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vC5-rT-gO4">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="4" y="0.0" width="592" height="600"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="MTj-IG-zKn">
-                                <rect key="frame" x="16" y="20" width="568" height="166"/>
+                                <rect key="frame" x="20" y="20" width="560" height="166"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ln-At-qzb" userLabel="Description">
-                                <rect key="frame" x="16" y="186" width="568" height="228"/>
+                                <rect key="frame" x="20" y="186" width="560" height="228"/>
                                 <string key="text">• Keep the ball in the air as long as possible and try to accumulate points!
 • When the game starts, tap the screen to drop the ball.
 • You cannot tap the ball when it is in the score zone (above the black horizontal line).
@@ -217,7 +218,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5i-we-caa" userLabel="Go to Title Page">
-                                <rect key="frame" x="16" y="414" width="568" height="186"/>
+                                <rect key="frame" x="20" y="414" width="560" height="186"/>
                                 <state key="normal" image="Back Arrow.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -286,13 +287,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rSS-7z-2ho">
-                                <rect key="frame" x="16" y="20" width="567.5" height="180.5"/>
+                                <rect key="frame" x="20" y="20" width="561" height="181.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3F-Na-wee" userLabel="Beach Ball">
-                                <rect key="frame" x="16" y="221" width="176" height="158"/>
+                                <rect key="frame" x="20" y="222" width="173.5" height="155"/>
                                 <gestureRecognizers/>
                                 <state key="normal" image="Beach Ball.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -303,7 +304,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cny-Ib-fge" userLabel="Basketball">
-                                <rect key="frame" x="212" y="221" width="176" height="158"/>
+                                <rect key="frame" x="213" y="222" width="172.5" height="155"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cny-Ib-fge" secondAttribute="height" multiplier="88:79" id="CSM-T8-lJR"/>
@@ -317,7 +318,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cv-yL-g9N" userLabel="Bowling Ball">
-                                <rect key="frame" x="408" y="221" width="176" height="158"/>
+                                <rect key="frame" x="407" y="221" width="173" height="158"/>
                                 <gestureRecognizers/>
                                 <state key="normal" image="Bowling Ball.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -328,7 +329,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPU-YY-N1x" userLabel="Go to Title Page">
-                                <rect key="frame" x="16" y="414" width="568" height="186"/>
+                                <rect key="frame" x="20" y="412" width="560" height="188"/>
                                 <state key="normal" image="Back Arrow.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -337,19 +338,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium Bounce" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="7Cp-TV-e7E">
-                                <rect key="frame" x="212" y="200" width="175.5" height="20.5"/>
+                                <rect key="frame" x="213" y="202" width="173.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Least Bounce" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="CY8-Zo-sRe">
-                                <rect key="frame" x="408" y="200" width="176" height="20.5"/>
+                                <rect key="frame" x="406" y="201" width="173.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Bounce" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="7Rz-b6-fv6">
-                                <rect key="frame" x="16" y="200" width="176" height="20.5"/>
+                                <rect key="frame" x="20" y="202" width="173.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -395,6 +396,12 @@
                             <constraint firstItem="UY2-3V-Th9" firstAttribute="top" secondItem="qPU-YY-N1x" secondAttribute="bottom" id="wIj-9G-xSc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qPU-YY-N1x" secondAttribute="trailing" id="zAB-Kw-7CR"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="18S-V1-z99"/>
+                                <exclude reference="90k-xj-XZv"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
@@ -417,7 +424,7 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Choose Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ro6-gK-RRm">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS2-uD-Zs5" userLabel="Desert">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS2-uD-Zs5" userLabel="Desert">
                                 <rect key="frame" x="16" y="204" width="176" height="192"/>
                                 <gestureRecognizers/>
                                 <state key="normal" image="Desert.jpg">
@@ -428,7 +435,7 @@
                                     <segue destination="HZj-Dy-ZAq" kind="show" id="agb-z5-gzf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpy-yz-FYA" userLabel="Beach">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpy-yz-FYA" userLabel="Beach">
                                 <rect key="frame" x="212" y="204" width="176" height="192"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -442,7 +449,7 @@
                                     <segue destination="HZj-Dy-ZAq" kind="show" id="oX6-TG-0GF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atY-VD-MFA" userLabel="Forest">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atY-VD-MFA" userLabel="Forest">
                                 <rect key="frame" x="408" y="204" width="176" height="192"/>
                                 <gestureRecognizers/>
                                 <state key="normal" image="Forest.jpg">
@@ -453,13 +460,13 @@
                                     <segue destination="HZj-Dy-ZAq" kind="show" id="hAo-KS-RG6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="qS9-HL-rds">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="qS9-HL-rds">
                                 <rect key="frame" x="16" y="20" width="568" height="163"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="48"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVU-8E-Ns8" userLabel="Go to Choose Ball Page">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVU-8E-Ns8" userLabel="Go to Choose Ball Page">
                                 <rect key="frame" x="16" y="406" width="568" height="186"/>
                                 <state key="normal" image="Back Arrow.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -468,19 +475,19 @@
                                     <segue destination="r2j-HC-Fb8" kind="show" id="vtN-6b-H2E"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium Air Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="z7Y-iv-dDn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Medium Air Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="z7Y-iv-dDn">
                                 <rect key="frame" x="212" y="183" width="176" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Least Air Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="OVT-4r-Ndb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Least Air Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="OVT-4r-Ndb">
                                 <rect key="frame" x="408" y="183" width="176" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Air Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="b7S-6i-mfK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Most Air Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="b7S-6i-mfK">
                                 <rect key="frame" x="16" y="183" width="176" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -571,7 +578,7 @@
         <image name="Rules.jpg" width="1280" height="1280"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mew-oB-n3e"/>
+        <segue reference="YS7-q0-uAq"/>
         <segue reference="HFi-7Q-Rq1"/>
         <segue reference="yhu-8F-ARz"/>
         <segue reference="oX6-TG-0GF"/>
