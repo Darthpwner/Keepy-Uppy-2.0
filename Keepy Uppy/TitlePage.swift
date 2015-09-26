@@ -18,7 +18,7 @@ class TitlePage: UIViewController {
         let playStartSong = PlayStartSong.sharedInstance    //Move the constant assignment in here to prevent reinstantiating
         
         //Add the bouncing ball GIF
-        var strImg: String = "http://www.platformtennis.org/Assets/Assets/images/Bouncing+Ball+Yellow.gif"
+        let strImg: String = "http://www.platformtennis.org/Assets/Assets/images/Bouncing+Ball+Yellow.gif"
         animateGif(strImg)
         
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class TitlePage: UIViewController {
     }
     
     func animateGif(strImg: String) -> Void {
-        var url: NSURL = NSURL(string: strImg)!
+        let url: NSURL = NSURL(string: strImg)!
         
         animation.image = UIImage.animatedImageWithAnimatedGIFURL(url)
     }

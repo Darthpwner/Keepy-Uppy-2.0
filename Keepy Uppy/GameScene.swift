@@ -60,9 +60,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let forestLinearDamping: CGFloat = 0.8
     
     //Angular damping == reduces the body’s rotational velocity
-    let desertAngularDamping: CGFloat = 0.0
+    let desertAngularDamping: CGFloat = 0.2
     let beachAngularDamping: CGFloat = 0.5
-    let forestAngularDamping: CGFloat = 1.0
+    let forestAngularDamping: CGFloat = 0.8
     
     //Beach ball scaling factor
     let beachBallScalingFactor: CGFloat = 0.1
@@ -158,7 +158,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 <-  O ->
     */
     //Use to move the ball
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
 
         //Keep ball in static position until user taps the screen
         if !gameStarted {
@@ -510,7 +510,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Load previous high scores
     func loadPreviousHighScore() -> Void {
-        var highScoreDefault = NSUserDefaults.standardUserDefaults()
+        let highScoreDefault = NSUserDefaults.standardUserDefaults()
         
         if highScoreDefault.valueForKey("highScore") != nil {
             highScore = highScoreDefault.valueForKey("highScore") as! NSInteger!
@@ -525,7 +525,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if score > highScore {
             highScore = score
             
-            var highScoreDefault = NSUserDefaults.standardUserDefaults()
+            let highScoreDefault = NSUserDefaults.standardUserDefaults()
             highScoreDefault.setValue(highScore, forKey: "highScore")
             highScoreDefault.synchronize()
             

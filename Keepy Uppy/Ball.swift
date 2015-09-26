@@ -10,7 +10,7 @@ import SpriteKit
 
 let NumberOfBalls: UInt32 = 3
 
-enum BallType: Int, Printable {
+enum BallType: Int, CustomStringConvertible {
     case Basketball = 0, BeachBall, BowlingBall
     
     var description: String {

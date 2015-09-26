@@ -28,7 +28,7 @@ class PlayGameplaySong {
     func prepareAudios() {
         
         var path = NSBundle.mainBundle().pathForResource("gameplay-2.0", ofType: "mp3")
-        song = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path!), error: nil)
+        song = try? AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path!))!
         song.prepareToPlay()
         
         song.numberOfLoops = -1 //Makes the song play repeatedly

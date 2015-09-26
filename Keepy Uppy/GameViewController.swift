@@ -18,7 +18,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBAction func unwindToContainerVC(segue: UIStoryboardSegue) {
         if scene.gameEnded == true {
-            println(self.navigationController)
+            print(self.navigationController)
             navigationController?.popToRootViewControllerAnimated(true)
         }
     }

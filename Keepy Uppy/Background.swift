@@ -8,7 +8,7 @@
 
 let NumberOfBackgrounds: UInt32 = 3
 
-enum BackgroundType: Int, Printable {
+enum BackgroundType: Int, CustomStringConvertible {
     case Desert = 0, Beach, Forest
     
     var description: String {
