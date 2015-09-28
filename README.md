@@ -69,10 +69,11 @@ ball jump to the right, whereas clicking on the right should have the ball jump
 to the left. It was also very annoying having to deal with copyright issues, so
 I had to use royalty free music and stock images.
 
-Notable bugs that I need to fix: 1) Ask people input about high scores
-2) Make the Choose Ball and Choose Background pages more lively. It seems a bit
+Notable bugs that I need to fix: 1) Memory Leak on the Back Buttons
+2) Rules Page on iPhone 6 and 6S don't scroll down
+3) Make the Choose Ball and Choose Background pages more lively. It seems a bit
 dull for now.
-3) Refactor the code to adhere more closely to MVC principles.
+4) Refactor the code to adhere more closely to MVC principles.
 
 Official release versions:
 Keepy Uppy 1.0: bb5d5cc80956678ff6a3f1f2ccebf96857cc30e6

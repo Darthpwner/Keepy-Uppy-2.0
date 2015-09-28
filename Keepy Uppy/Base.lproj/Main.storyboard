@@ -583,9 +583,9 @@
         <image name="Rules.jpg" width="1280" height="1280"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oX6-TG-0GF"/>
+        <segue reference="HFi-7Q-Rq1"/>
+        <segue reference="mew-oB-n3e"/>
         <segue reference="yhu-8F-ARz"/>
-        <segue reference="vtN-6b-H2E"/>
-        <segue reference="YS7-q0-uAq"/>
+        <segue reference="oX6-TG-0GF"/>
     </inferredMetricsTieBreakers>
 </document>
