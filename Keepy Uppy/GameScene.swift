@@ -167,7 +167,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         //Recognizes only a tap on the ball
-        let touch = touches.first as? UITouch
+        let touch = touches.first as UITouch!
         super.touchesBegan(touches, withEvent:event)
        
         let positionInScene = touch!.locationInNode(self)
