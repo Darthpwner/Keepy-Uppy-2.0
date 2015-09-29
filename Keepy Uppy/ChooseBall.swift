@@ -29,7 +29,7 @@ class ChooseBall: UIViewController {
         getBallType.ballType = BallType.BowlingBall
     }
         
-    @IBAction func unwindToChooseBallFromChooseBackground(segue: UIStoryboardSegue) {}
+    @IBAction func unwindToChooseBall(segue: UIStoryboardSegue) {}
     
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 //        let sourceVC = segue.sourceViewController as? ChooseBall

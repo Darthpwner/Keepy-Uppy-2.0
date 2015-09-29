@@ -35,12 +35,10 @@ class TitlePage: UIViewController {
         return true
     }
     
-    @IBAction func unwindToTitleViewControllerFromChooseBall(segue: UIStoryboardSegue) {
+    @IBAction func unwindToTitleViewController(segue: UIStoryboardSegue) {
         //TODO
         //let source = segue.sourceViewController
     }
-    
-    @IBAction func unwindToTitleViewControllerFromRulesPage(segue: UIStoryboardSegue) {}
     
     func animateGif(strImg: String) -> Void {
         let url: NSURL = NSURL(string: strImg)!

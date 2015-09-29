@@ -180,12 +180,9 @@
 				6B6897101B98B2CA00C5069E /* AppDelegate.swift */,
 				6BFB98BB1BBAF78200E23CDA /* Model */,
 				6BFB98BC1BBAF7CD00E23CDA /* Controller */,
-				6BFB98B91BBAF34D00E23CDA /* Gameplay.swift */,
 				6BFB98BD1BBB08F900E23CDA /* View */,
-				6B0E5DD61B9FF31000866FE8 /* GetBallType.swift */,
-				6B0E5DDA1B9FF5D000866FE8 /* GetBackgroundType.swift */,
-				6BD8A76B1BA4FB2F00A240CE /* PlayGameplaySong.swift */,
-				6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */,
+				6B9C767F1BBB0B3A009803F4 /* Singletons */,
+				6BFB98B91BBAF34D00E23CDA /* Gameplay.swift */,
 				6BD2D3941B9D5BF10052FBA7 /* Keepy Uppy-Bridging-Header.h */,
 				6BD2D3961B9D5BF20052FBA7 /* UIImage+animatedGIF.m */,
 				6BD2D3951B9D5BF20052FBA7 /* UIImage+animatedGIF.h */,
@@ -273,6 +270,17 @@
 			path = "Keepy Uppy App Icons/Keepy Uppy App Icons 2.0";
 			sourceTree = "<group>";
 		};
+		6B9C767F1BBB0B3A009803F4 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				6B0E5DD61B9FF31000866FE8 /* GetBallType.swift */,
+				6B0E5DDA1B9FF5D000866FE8 /* GetBackgroundType.swift */,
+				6BD8A76B1BA4FB2F00A240CE /* PlayGameplaySong.swift */,
+				6B94375B1B9C0F080049AA91 /* PlayStartSong.swift */,
+			);
+			name = Singletons;
+			sourceTree = "<group>";
+		};
 		6BFB98BB1BBAF78200E23CDA /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,11 +293,11 @@
 		6BFB98BC1BBAF7CD00E23CDA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6B6897BD1B9970DD00C5069E /* ChooseBall.swift */,
+				6B6897BF1B9970E500C5069E /* ChooseBackground.swift */,
+				6B6897161B98B2CA00C5069E /* GameViewController.swift */,
 				6B8B55571BA80B9C0091CAC0 /* RulesPage.swift */,
 				6B94375D1B9C1A090049AA91 /* TitlePage.swift */,
-				6B6897BD1B9970DD00C5069E /* ChooseBall.swift */,
-				6B6897161B98B2CA00C5069E /* GameViewController.swift */,
-				6B6897BF1B9970E500C5069E /* ChooseBackground.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -297,8 +305,8 @@
 		6BFB98BD1BBB08F900E23CDA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6B6897141B98B2CA00C5069E /* GameScene.swift */,
 				6B5D0E051BA0A4810052AC3C /* GameScene.sks */,
+				6B6897141B98B2CA00C5069E /* GameScene.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
