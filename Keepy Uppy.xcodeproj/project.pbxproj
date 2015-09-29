@@ -181,8 +181,7 @@
 				6BFB98BB1BBAF78200E23CDA /* Model */,
 				6BFB98BC1BBAF7CD00E23CDA /* Controller */,
 				6BFB98B91BBAF34D00E23CDA /* Gameplay.swift */,
-				6B5D0E051BA0A4810052AC3C /* GameScene.sks */,
-				6B6897141B98B2CA00C5069E /* GameScene.swift */,
+				6BFB98BD1BBB08F900E23CDA /* View */,
 				6B0E5DD61B9FF31000866FE8 /* GetBallType.swift */,
 				6B0E5DDA1B9FF5D000866FE8 /* GetBackgroundType.swift */,
 				6BD8A76B1BA4FB2F00A240CE /* PlayGameplaySong.swift */,
@@ -293,6 +292,15 @@
 				6B6897BF1B9970E500C5069E /* ChooseBackground.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		6BFB98BD1BBB08F900E23CDA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B6897141B98B2CA00C5069E /* GameScene.swift */,
+				6B5D0E051BA0A4810052AC3C /* GameScene.sks */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
