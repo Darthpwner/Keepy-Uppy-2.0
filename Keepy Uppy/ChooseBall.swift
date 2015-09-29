@@ -11,6 +11,7 @@ import UIKit
 class ChooseBall: UIViewController {
     
     let getBallType = GetBallType.sharedInstance
+//    var gameplay: Gameplay
     
     override func prefersStatusBarHidden() -> Bool {
         return true
@@ -27,4 +28,20 @@ class ChooseBall: UIViewController {
     @IBAction func chooseBowlingBall(sender: UIButton) {
         getBallType.ballType = BallType.BowlingBall
     }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        let sourceVC = segue.sourceViewController as? ChooseBall
+//        let destinationVC = segue.destinationViewController as? ChooseBackground
+//        switch (segue.identifier!) {
+//        case "beachBall":
+//            break
+////            destinationVC?.gameplay.ballType = BallType.BeachBall
+//        case "basketball":
+//            break
+//        case "bowlingBall":
+//            break
+//        default:
+//            break
+//        }
+//    }
 }

@@ -13,6 +13,8 @@ class ChooseBackground: UIViewController {
     let playStartSong = PlayStartSong.sharedInstance
     let getBackgroundType = GetBackgroundType.sharedInstance
     
+//    var gameplay: Gameplay
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
