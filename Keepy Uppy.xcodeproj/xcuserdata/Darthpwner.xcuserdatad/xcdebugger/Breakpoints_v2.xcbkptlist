@@ -488,7 +488,7 @@
             startingLineNumber = "119"
             endingLineNumber = "119"
             landmarkName = "init(size:)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -519,8 +519,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "594"
             endingLineNumber = "594"
-            landmarkName = "didBeginContact(_:)"
-            landmarkType = "5">
+            landmarkName = "didBeginContact(contact:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -535,8 +535,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "600"
             endingLineNumber = "600"
-            landmarkName = "didBeginContact(_:)"
-            landmarkType = "5">
+            landmarkName = "didBeginContact(contact:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -955,7 +955,7 @@
             startingLineNumber = "124"
             endingLineNumber = "124"
             landmarkName = "init(size:)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1065,7 +1065,7 @@
             startingLineNumber = "120"
             endingLineNumber = "120"
             landmarkName = "init(size:)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1081,7 +1081,7 @@
             startingLineNumber = "121"
             endingLineNumber = "121"
             landmarkName = "init(size:)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1097,7 +1097,7 @@
             startingLineNumber = "146"
             endingLineNumber = "146"
             landmarkName = "init(coder:)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1129,7 +1129,7 @@
             startingLineNumber = "545"
             endingLineNumber = "545"
             landmarkName = "setUpHighScore()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1336,7 +1336,7 @@
             startingLineNumber = "544"
             endingLineNumber = "544"
             landmarkName = "setUpHighScore()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
